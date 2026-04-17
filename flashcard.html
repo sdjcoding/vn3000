@@ -58,6 +58,8 @@ h1{font-size:16px;color:var(--accent);font-weight:700}
 .ch.toggle.on{background:var(--gold);color:#fff;border-color:var(--gold)}
 .ch.toggle.mastered.on{background:var(--success);border-color:var(--success)}
 .ch.toggle.order.on{background:var(--accent);border-color:var(--accent)}
+.ch.toggle.audio.on{background:#ec4899;border-color:#ec4899;color:#fff}
+.ch.toggle.audio.playing{animation:pulse 1.2s ease-in-out infinite}
 .status{
   padding:6px 12px;font-size:11px;color:var(--muted);
   background:var(--card);border-bottom:1px solid var(--border);
@@ -149,9 +151,7 @@ main{
 .icon-btn:hover{background:var(--border)}
 .icon-btn.on[data-type="bookmark"]{background:var(--gold);color:#fff;border-color:var(--gold)}
 .icon-btn.on[data-type="mastered"]{background:var(--success);color:#fff;border-color:var(--success)}
-.icon-btn[data-type="speak"]{margin-right:auto}
-.icon-btn.playing{background:var(--accent);color:#fff;border-color:var(--accent);animation:pulse 1.2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.65}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
 .flip-hint{
   font-size:10px;color:var(--muted);text-align:center;
   letter-spacing:.06em;margin:0;
@@ -220,6 +220,7 @@ main{
     <span class="ch toggle" id="onlyBm">☆ 只看收藏</span>
     <span class="ch toggle mastered" id="hideMs">✓ 隐藏已掌握</span>
     <span class="ch toggle order" id="orderToggle">📋 顺序</span>
+    <span class="ch toggle audio" id="audioToggle">🔇 静音</span>
   </div>
 </header>
 <div class="status">
@@ -241,7 +242,6 @@ main{
           <div class="en-word" id="fEn"></div>
         </div>
         <div class="card-bottom">
-          <button class="icon-btn" data-type="speak" id="fSpeak" title="朗读越南语 (P)">🔊</button>
           <button class="icon-btn" data-type="bookmark" id="fBm">☆</button>
           <button class="icon-btn" data-type="mastered" id="fMs">✓</button>
         </div>
@@ -258,14 +258,13 @@ main{
           <div class="en-ex" id="bEnEx"></div>
         </div>
         <div class="card-bottom">
-          <button class="icon-btn" data-type="speak" id="bSpeak" title="朗读越南语例句 (P)">🔊</button>
           <button class="icon-btn" data-type="bookmark" id="bBm">☆</button>
           <button class="icon-btn" data-type="mastered" id="bMs">✓</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="flip-hint">点击卡片翻面 · Space 翻面 · ←/→ 切换 · P 朗读 · 手机滑动</div>
+  <div class="flip-hint">点击卡片翻面 · Space 翻面 · ←/→ 切换 · 手机滑动</div>
   <div class="nav-bar">
     <button class="nav-btn" id="prevBtn">← 上一张</button>
     <button class="nav-btn" id="nextBtn">下一张 →</button>
@@ -289,34 +288,32 @@ if ("speechSynthesis" in window) {
   speechSynthesis.addEventListener?.("voiceschanged", loadVoices);
 }
 
-function speak(text, btnId) {
+function speak(text) {
   if (!("speechSynthesis" in window) || !text) return;
   speechSynthesis.cancel();
-  document.querySelectorAll(".icon-btn.playing").forEach(b => b.classList.remove("playing"));
-  const btn = btnId ? document.getElementById(btnId) : null;
-  btn?.classList.add("playing");
+  const audioBtn = document.getElementById("audioToggle");
+  audioBtn?.classList.add("playing");
   const u = new SpeechSynthesisUtterance(text);
   u.lang = "vi-VN";
   if (viVoice) u.voice = viVoice;
   u.rate = 0.9;
   u.pitch = 1.0;
-  const clear = () => btn?.classList.remove("playing");
+  const clear = () => audioBtn?.classList.remove("playing");
   u.onend = clear;
   u.onerror = clear;
   speechSynthesis.speak(u);
 }
 
-function speakCurrent() {
-  if (current.length === 0) return;
+function autoPlayCurrent() {
+  if (!S.audioOn || current.length === 0) return;
   const d = current[idx];
   const isBack = document.getElementById("card").classList.contains("flipped");
-  if (isBack) speak(d.vn_ex, "bSpeak");
-  else speak(d.vn, "fSpeak");
+  speak(isBack ? d.vn_ex : d.vn);
 }
 
 function stopSpeak() {
   if ("speechSynthesis" in window) speechSynthesis.cancel();
-  document.querySelectorAll(".icon-btn.playing").forEach(b => b.classList.remove("playing"));
+  document.getElementById("audioToggle")?.classList.remove("playing");
 }
 
 function loadState() {
@@ -329,12 +326,13 @@ function loadState() {
       hideMastered: !!s.hideMastered,
       onlyBookmarked: !!s.onlyBookmarked,
       order: s.order === "random" ? "random" : "sequential",
+      audioOn: !!s.audioOn,
       mastered: Array.isArray(s.mastered) ? s.mastered : [],
       bookmarked: Array.isArray(s.bookmarked) ? s.bookmarked : [],
       theme: s.theme || null,
     };
   } catch(e) {
-    return { version:1, position:1, category:"all", hideMastered:false, onlyBookmarked:false, order:"sequential", mastered:[], bookmarked:[], theme:null };
+    return { version:1, position:1, category:"all", hideMastered:false, onlyBookmarked:false, order:"sequential", audioOn:false, mastered:[], bookmarked:[], theme:null };
   }
 }
 
@@ -347,6 +345,7 @@ function saveState() {
       hideMastered: S.hideMastered,
       onlyBookmarked: S.onlyBookmarked,
       order: S.order,
+      audioOn: S.audioOn,
       mastered: S.mastered,
       bookmarked: S.bookmarked,
       theme: S.theme,
@@ -458,6 +457,22 @@ function setCategory(c) {
 
 function toggleFlip() {
   document.getElementById("card").classList.toggle("flipped");
+  stopSpeak();
+  if (S.audioOn) setTimeout(autoPlayCurrent, 120);
+}
+
+function toggleAudio() {
+  S.audioOn = !S.audioOn;
+  updateAudioButton();
+  saveState();
+  if (S.audioOn) autoPlayCurrent();
+  else stopSpeak();
+}
+
+function updateAudioButton() {
+  const btn = document.getElementById("audioToggle");
+  if (S.audioOn) { btn.textContent = "🔊 朗读"; btn.classList.add("on"); }
+  else { btn.textContent = "🔇 静音"; btn.classList.remove("on"); }
 }
 
 function nav(delta) {
@@ -469,6 +484,7 @@ function nav(delta) {
   stopSpeak();
   render(true);
   saveState();
+  if (S.audioOn) setTimeout(autoPlayCurrent, 120);
 }
 
 function toggleOrder() {
@@ -570,16 +586,7 @@ document.getElementById("orderToggle").addEventListener("click", toggleOrder);
     toggleMastered();
   });
 });
-document.getElementById("fSpeak").addEventListener("click", (e) => {
-  e.stopPropagation();
-  if (current.length === 0) return;
-  speak(current[idx].vn, "fSpeak");
-});
-document.getElementById("bSpeak").addEventListener("click", (e) => {
-  e.stopPropagation();
-  if (current.length === 0) return;
-  speak(current[idx].vn_ex, "bSpeak");
-});
+document.getElementById("audioToggle").addEventListener("click", toggleAudio);
 
 document.getElementById("themeBtn").addEventListener("click", () => {
   const cur = document.documentElement.getAttribute("data-theme");
@@ -608,9 +615,6 @@ document.addEventListener("keydown", (e) => {
   } else if (e.key === "ArrowRight") {
     e.preventDefault();
     nav(1);
-  } else if (e.key === "p" || e.key === "P") {
-    e.preventDefault();
-    speakCurrent();
   }
 });
 
@@ -633,6 +637,7 @@ document.querySelectorAll("#filterBar [data-cat]").forEach(el => {
 document.getElementById("onlyBm").classList.toggle("on", S.onlyBookmarked);
 document.getElementById("hideMs").classList.toggle("on", S.hideMastered);
 updateOrderButton();
+updateAudioButton();
 initTheme();
 applyFilter();
 render(true);
