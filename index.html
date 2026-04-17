@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>VN 3000 · 闪卡</title>
+<style>
+:root{
+  --bg:#f8fafc; --card:#fff; --soft:#f1f5f9; --text:#0f172a; --muted:#64748b;
+  --border:#e2e8f0; --accent:#1e40af;
+  --vn:#1e3a5f; --jp:#1a1a1a; --en:#64748b;
+  --core-bg:#dbeafe; --core:#1e40af;
+  --biz-bg:#fef3c7; --biz:#92400e;
+  --daily-bg:#dcfce7; --daily:#166534;
+  --gold:#f59e0b; --success:#16a34a;
+  --sh:0 4px 16px rgba(0,0,0,.06);
+}
+[data-theme="dark"]{
+  --bg:#0f172a; --card:#1e293b; --soft:#334155; --text:#f1f5f9; --muted:#94a3b8;
+  --border:#334155; --accent:#60a5fa;
+  --vn:#93c5fd; --jp:#e2e8f0; --en:#cbd5e1;
+  --core-bg:#1e3a8a; --core:#93c5fd;
+  --biz-bg:#78350f; --biz:#fde68a;
+  --daily-bg:#14532d; --daily:#bbf7d0;
+  --gold:#fbbf24; --success:#4ade80;
+  --sh:0 4px 16px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.5;
+  -webkit-tap-highlight-color:transparent;overflow-x:hidden;
+  transition:background .2s,color .2s;
+}
+ruby{ruby-align:center}
+rt{font-size:.5em;color:var(--muted);font-weight:normal}
+header{
+  position:sticky;top:0;z-index:100;background:var(--card);
+  border-bottom:1px solid var(--border);padding:10px 12px;box-shadow:var(--sh);
+}
+.htop{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}
+h1{font-size:16px;color:var(--accent);font-weight:700}
+.theme-btn{
+  background:var(--soft);border:1px solid var(--border);color:var(--text);
+  padding:6px 10px;border-radius:6px;cursor:pointer;font-size:12px;
+}
+.filters{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+.ch{
+  padding:5px 11px;border:1px solid var(--border);border-radius:14px;
+  background:var(--soft);color:var(--text);font-size:11px;cursor:pointer;
+  user-select:none;font-weight:600;
+}
+.ch.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.ch.toggle{background:transparent}
+.ch.toggle.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+.ch.toggle.mastered.on{background:var(--success);border-color:var(--success)}
+.status{
+  padding:6px 12px;font-size:11px;color:var(--muted);
+  background:var(--card);border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.clear-btn{
+  font-size:10px;color:var(--muted);background:none;border:none;
+  cursor:pointer;text-decoration:underline;padding:2px 6px;
+}
+main{
+  padding:16px 12px;max-width:640px;margin:0 auto;
+  min-height:calc(100vh - 160px);
+  display:flex;flex-direction:column;align-items:center;
+}
+.scene{
+  perspective:1400px;width:100%;max-width:560px;
+  aspect-ratio:3/4;margin-bottom:14px;
+}
+.card{
+  position:relative;width:100%;height:100%;
+  transform-style:preserve-3d;-webkit-transform-style:preserve-3d;
+  transition:transform .5s cubic-bezier(.4,0,.2,1);cursor:pointer;
+}
+.card.flipped{transform:rotateY(180deg)}
+.face{
+  position:absolute;inset:0;
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:16px;box-shadow:var(--sh);
+  padding:22px 20px;
+  display:flex;flex-direction:column;overflow:hidden;
+}
+.back{transform:rotateY(180deg)}
+.card-top{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:8px;gap:8px;
+}
+.badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:8px}
+.b-Core{background:var(--core-bg);color:var(--core)}
+.b-Business{background:var(--biz-bg);color:var(--biz)}
+.b-Daily{background:var(--daily-bg);color:var(--daily)}
+.tag-badge{font-size:10px;color:var(--muted);flex:1;text-align:center}
+.num{font-size:10px;color:var(--muted);font-weight:700}
+.body{
+  flex:1;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  text-align:center;overflow-y:auto;padding:8px 0;
+}
+/* Front: words, hierarchy VN > JP > EN */
+.vn-word{
+  font-size:40px;font-weight:700;color:var(--vn);
+  line-height:1.15;word-wrap:break-word;
+  margin-bottom:16px;padding-bottom:14px;
+  border-bottom:1px dashed var(--border);width:100%;
+}
+.jp-word{
+  font-size:22px;font-weight:600;color:var(--jp);
+  line-height:1.4;margin-bottom:10px;width:100%;
+}
+.en-word{
+  font-size:14px;font-weight:500;color:var(--en);
+  line-height:1.4;width:100%;opacity:.9;
+}
+/* Back: example sentences, hierarchy VN > JP > EN */
+.vn-ex{
+  font-size:24px;font-weight:600;color:var(--vn);
+  line-height:1.45;word-wrap:break-word;
+  margin-bottom:14px;padding-bottom:12px;
+  border-bottom:1px dashed var(--border);width:100%;
+}
+.jp-ex{
+  font-size:17px;color:var(--jp);line-height:1.6;
+  margin-bottom:12px;padding-bottom:10px;
+  border-bottom:1px dashed var(--border);width:100%;
+}
+.en-ex{
+  font-size:12px;color:var(--en);font-style:italic;
+  line-height:1.5;opacity:.85;width:100%;
+}
+.card-bottom{
+  display:flex;gap:10px;justify-content:flex-end;margin-top:8px;
+}
+.icon-btn{
+  background:var(--soft);border:1px solid var(--border);color:var(--muted);
+  width:36px;height:36px;border-radius:18px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;cursor:pointer;transition:all .15s;
+}
+.icon-btn:hover{background:var(--border)}
+.icon-btn.on[data-type="bookmark"]{background:var(--gold);color:#fff;border-color:var(--gold)}
+.icon-btn.on[data-type="mastered"]{background:var(--success);color:#fff;border-color:var(--success)}
+.flip-hint{
+  font-size:10px;color:var(--muted);text-align:center;
+  letter-spacing:.06em;margin:2px 0 10px;
+}
+.nav-bar{
+  display:flex;gap:10px;width:100%;max-width:560px;
+}
+.nav-btn{
+  flex:1;padding:14px;border:1px solid var(--border);
+  border-radius:10px;background:var(--card);color:var(--text);
+  font-size:14px;font-weight:600;cursor:pointer;
+}
+.nav-btn:active{background:var(--soft)}
+.nav-btn:disabled{opacity:.4;cursor:not-allowed}
+.nav-btn-mid{flex:0 0 56px;padding:14px 0;font-size:20px}
+.empty{text-align:center;padding:60px 20px;color:var(--muted);font-size:14px}
+@media (max-width:500px){
+  .vn-word{font-size:32px}
+  .jp-word{font-size:18px}
+  .en-word{font-size:12px}
+  .vn-ex{font-size:19px}
+  .jp-ex{font-size:14px}
+  .en-ex{font-size:11px}
+  .face{padding:16px 14px}
+  h1{font-size:14px}
+  .scene{aspect-ratio:2/3}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="htop">
+    <h1>VN 3000 · 越南语闪卡</h1>
+    <button class="theme-btn" id="themeBtn">🌙 Dark</button>
+  </div>
+  <div class="filters" id="filterBar">
+    <span class="ch on" data-cat="all">All</span>
+    <span class="ch" data-cat="Core">Core</span>
+    <span class="ch" data-cat="Business">Business</span>
+    <span class="ch" data-cat="Daily">Daily</span>
+    <span class="ch toggle" id="onlyBm">☆ 只看收藏</span>
+    <span class="ch toggle mastered" id="hideMs">✓ 隐藏已掌握</span>
+  </div>
+</header>
+<div class="status">
+  <span id="progress">0 / 0</span>
+  <span id="masteredCount">已掌握 0 / 0</span>
+  <button class="clear-btn" id="clearBtn">清除标记</button>
+</div>
+<main>
+  <div class="scene" id="scene">
+    <div class="card" id="card">
+      <div class="face front">
+        <div class="card-top">
+          <span class="badge" id="fCat">Core</span>
+          <span class="num" id="fNum">#001</span>
+        </div>
+        <div class="body">
+          <div class="vn-word" id="fVn"></div>
+          <div class="jp-word" id="fJp"></div>
+          <div class="en-word" id="fEn"></div>
+        </div>
+        <div class="card-bottom">
+          <button class="icon-btn" data-type="bookmark" id="fBm">☆</button>
+          <button class="icon-btn" data-type="mastered" id="fMs">✓</button>
+        </div>
+      </div>
+      <div class="face back">
+        <div class="card-top">
+          <span class="badge" id="bCat">Core</span>
+          <span class="tag-badge" id="bTag"></span>
+          <span class="num" id="bNum">#001</span>
+        </div>
+        <div class="body">
+          <div class="vn-ex" id="bVnEx"></div>
+          <div class="jp-ex" id="bJpEx"></div>
+          <div class="en-ex" id="bEnEx"></div>
+        </div>
+        <div class="card-bottom">
+          <button class="icon-btn" data-type="bookmark" id="bBm">☆</button>
+          <button class="icon-btn" data-type="mastered" id="bMs">✓</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flip-hint">点击卡片翻面 · Space 翻面 · ←/→ 切换 · R 随机 · 手机滑动</div>
+  <div class="nav-bar">
+    <button class="nav-btn" id="prevBtn">← 上一张</button>
+    <button class="nav-btn nav-btn-mid" id="randomBtn" title="随机一张 (R)">🔀</button>
+    <button class="nav-btn" id="nextBtn">下一张 →</button>
+  </div>
+  <div class="empty" id="emptyMsg" style="display:none">没有匹配的卡片。请调整筛选条件。</div>
+</main>
+<script>
+const D=[{"no": 1, "cat": "Core", "freq": "A", "vn": "Xin chào", "vn_ex": "Xin chào, rất vui được gặp anh.", "jp": "こんにちは", "jp_ex": "こんにちは、お<ruby>会<rt>あ</rt></ruby>いできて<ruby>嬉<rt>うれ</rt></ruby>しいです。", "en": "Hello", "en_ex": "Hello, nice to meet you.", "tag": "Greeting"}, {"no": 2, "cat": "Core", "freq": "A", "vn": "Cảm ơn", "vn_ex": "Cảm ơn anh rất nhiều.", "jp": "ありがとう", "jp_ex": "<ruby>本当<rt>ほんとう</rt></ruby>にありがとうございます。", "en": "Thank you", "en_ex": "Thank you very much.", "tag": "Greeting"}, {"no": 3, "cat": "Core", "freq": "A", "vn": "Xin lỗi", "vn_ex": "Xin lỗi, tôi đến muộn.", "jp": "すみません", "jp_ex": "すみません、<ruby>遅<rt>おく</rt></ruby>れました。", "en": "Sorry / Excuse me", "en_ex": "Sorry, I'm late.", "tag": "Greeting"}, {"no": 4, "cat": "Core", "freq": "A", "vn": "Tạm biệt", "vn_ex": "Tạm biệt, hẹn gặp lại.", "jp": "さようなら", "jp_ex": "さようなら、また<ruby>会<rt>あ</rt></ruby>いましょう。", "en": "Goodbye", "en_ex": "Goodbye, see you again.", "tag": "Greeting"}, {"no": 5, "cat": "Core", "freq": "A", "vn": "Vâng", "vn_ex": "Vâng, tôi hiểu rồi.", "jp": "はい", "jp_ex": "はい、<ruby>分<rt>わ</rt></ruby>かりました。", "en": "Yes", "en_ex": "Yes, I understand.", "tag": "Response"}, {"no": 6, "cat": "Core", "freq": "A", "vn": "Không", "vn_ex": "Không, không phải vậy.", "jp": "いいえ / ない", "jp_ex": "いいえ、そうではありません。", "en": "No / Not", "en_ex": "No, that's not it.", "tag": "Response"}, {"no": 7, "cat": "Core", "freq": "A", "vn": "Có", "vn_ex": "Tôi có một cuộc họp.", "jp": "ある / はい", "jp_ex": "<ruby>会議<rt>かいぎ</rt></ruby>があります。", "en": "Have / Yes", "en_ex": "I have a meeting.", "tag": "Response"}, {"no": 8, "cat": "Core", "freq": "A", "vn": "Được", "vn_ex": "Thế cũng được.", "jp": "できる / いい", "jp_ex": "それでも<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>です。", "en": "OK / Can", "en_ex": "That's fine too.", "tag": "Response"}, {"no": 9, "cat": "Core", "freq": "A", "vn": "Dạ", "vn_ex": "Dạ, tôi nghe rõ.", "jp": "はい（<ruby>丁寧<rt>ていねい</rt></ruby>）", "jp_ex": "はい、よく<ruby>聞<rt>き</rt></ruby>こえます。", "en": "Yes (polite, Southern)", "en_ex": "Yes, I can hear you clearly.", "tag": "Response"}, {"no": 10, "cat": "Core", "freq": "A", "vn": "Không sao", "vn_ex": "Không sao, đừng lo.", "jp": "<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>", "jp_ex": "<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>です、<ruby>心配<rt>しんぱい</rt></ruby>しないで。", "en": "It's OK / No problem", "en_ex": "It's OK, don't worry.", "tag": "Response"}, {"no": 11, "cat": "Core", "freq": "A", "vn": "Xin", "vn_ex": "Xin anh đợi một chút.", "jp": "お<ruby>願<rt>ねが</rt></ruby>いします", "jp_ex": "お<ruby>願<rt>ねが</rt></ruby>いします、<ruby>少<rt>すこ</rt></ruby>しお<ruby>待<rt>ま</rt></ruby>ちください。", "en": "Please", "en_ex": "Please wait a moment.", "tag": "Request"}, {"no": 12, "cat": "Core", "freq": "A", "vn": "Chào buổi sáng", "vn_ex": "Chào buổi sáng, hôm nay đẹp trời quá!", "jp": "おはようございます", "jp_ex": "おはようございます、<ruby>今日<rt>きょう</rt></ruby>はいい<ruby>天気<rt>てんき</rt></ruby>ですね！", "en": "Good morning", "en_ex": "Good morning, beautiful day today!", "tag": "Greeting"}, {"no": 13, "cat": "Core", "freq": "A", "vn": "Chào buổi tối", "vn_ex": "Chào buổi tối, anh ăn gì chưa?", "jp": "こんばんは", "jp_ex": "こんばんは、もう<ruby>食<rt>た</rt></ruby>べましたか。", "en": "Good evening", "en_ex": "Good evening, have you eaten yet?", "tag": "Greeting"}, {"no": 14, "cat": "Core", "freq": "A", "vn": "Chúc ngủ ngon", "vn_ex": "Chúc ngủ ngon, ngày mai gặp.", "jp": "おやすみなさい", "jp_ex": "おやすみなさい、<ruby>明日<rt>あした</rt></ruby><ruby>会<rt>あ</rt></ruby>いましょう。", "en": "Good night", "en_ex": "Good night, see you tomorrow.", "tag": "Greeting"}, {"no": 15, "cat": "Core", "freq": "A", "vn": "Hẹn gặp lại", "vn_ex": "Hẹn gặp lại lần sau.", "jp": "またお<ruby>会<rt>あ</rt></ruby>いしましょう", "jp_ex": "また<ruby>次回<rt>じかい</rt></ruby>お<ruby>会<rt>あ</rt></ruby>いしましょう。", "en": "See you again", "en_ex": "See you next time.", "tag": "Greeting"}, {"no": 16, "cat": "Core", "freq": "A", "vn": "Rất vui được gặp", "vn_ex": "Rất vui được gặp anh.", "jp": "お<ruby>会<rt>あ</rt></ruby>いできて<ruby>嬉<rt>うれ</rt></ruby>しいです", "jp_ex": "お<ruby>会<rt>あ</rt></ruby>いできてとても<ruby>嬉<rt>うれ</rt></ruby>しいです。", "en": "Nice to meet you", "en_ex": "Very glad to meet you.", "tag": "Greeting"}, {"no": 17, "cat": "Core", "freq": "A", "vn": "Khỏe", "vn_ex": "Anh có khỏe không?", "jp": "<ruby>元気<rt>げんき</rt></ruby>", "jp_ex": "お<ruby>元気<rt>げんき</rt></ruby>ですか。", "en": "Well / Healthy", "en_ex": "Are you well?", "tag": "Greeting"}, {"no": 18, "cat": "Core", "freq": "A", "vn": "Bình thường", "vn_ex": "Tôi bình thường thôi.", "jp": "まあまあ / <ruby>普通<rt>ふつう</rt></ruby>", "jp_ex": "まあまあです。", "en": "So-so / Normal", "en_ex": "I'm so-so.", "tag": "Greeting"}, {"no": 19, "cat": "Core", "freq": "A", "vn": "Lâu rồi không gặp", "vn_ex": "Lâu rồi không gặp anh!", "jp": "<ruby>久<rt>ひさ</rt></ruby>しぶり", "jp_ex": "お<ruby>久<rt>ひさ</rt></ruby>しぶりです！", "en": "Long time no see", "en_ex": "Long time no see!", "tag": "Greeting"}, {"no": 20, "cat": "Core", "freq": "A", "vn": "Chúc mừng", "vn_ex": "Chúc mừng anh thăng chức!", "jp": "おめでとう", "jp_ex": "<ruby>昇進<rt>しょうしん</rt></ruby>おめでとうございます！", "en": "Congratulations", "en_ex": "Congratulations on your promotion!", "tag": "Greeting"}, {"no": 21, "cat": "Core", "freq": "A", "vn": "Tôi", "vn_ex": "Tôi là người Hàn Quốc.", "jp": "<ruby>私<rt>わたし</rt></ruby>", "jp_ex": "<ruby>私<rt>わたし</rt></ruby>は<ruby>韓国人<rt>かんこくじん</rt></ruby>です。", "en": "I", "en_ex": "I am Korean.", "tag": "Pronoun"}, {"no": 22, "cat": "Core", "freq": "A", "vn": "Anh", "vn_ex": "Anh tên là gì?", "jp": "あなた(<ruby>年上<rt>としうえ</rt></ruby><ruby>男性<rt>だんせい</rt></ruby>)", "jp_ex": "お<ruby>名前<rt>なまえ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。", "en": "You (older male)", "en_ex": "What is your name?", "tag": "Pronoun"}, {"no": 23, "cat": "Core", "freq": "A", "vn": "Chị", "vn_ex": "Chị Lan đang bận.", "jp": "あなた(<ruby>年上<rt>としうえ</rt></ruby><ruby>女性<rt>じょせい</rt></ruby>)", "jp_ex": "ランさんは<ruby>忙<rt>いそが</rt></ruby>しいです。", "en": "You (older female)", "en_ex": "Ms. Lan is busy.", "tag": "Pronoun"}, {"no": 24, "cat": "Core", "freq": "A", "vn": "Em", "vn_ex": "Em còn trẻ lắm.", "jp": "あなた(<ruby>年下<rt>としした</rt></ruby>)", "jp_ex": "あなたはまだ<ruby>若<rt>わか</rt></ruby>いですね。", "en": "You (younger)", "en_ex": "You are still young.", "tag": "Pronoun"}, {"no": 25, "cat": "Core", "freq": "A", "vn": "Bạn", "vn_ex": "Bạn khỏe không?", "jp": "<ruby>友達<rt>ともだち</rt></ruby> / あなた", "jp_ex": "お<ruby>元気<rt>げんき</rt></ruby>ですか。", "en": "Friend / You", "en_ex": "How are you?", "tag": "Pronoun"}, {"no": 26, "cat": "Core", "freq": "A", "vn": "Chúng tôi", "vn_ex": "Chúng tôi đến từ Hàn Quốc.", "jp": "<ruby>私<rt>わたし</rt></ruby>たち", "jp_ex": "<ruby>私<rt>わたし</rt></ruby>たちは<ruby>韓国<rt>かんこく</rt></ruby>から<ruby>来<rt>き</rt></ruby>ました。", "en": "We (exclusive)", "en_ex": "We are from Korea.", "tag": "Pronoun"}, {"no": 27, "cat": "Core", "freq": "A", "vn": "Chúng ta", "vn_ex": "Chúng ta cùng làm việc nhé.", "jp": "<ruby>私<rt>わたし</rt></ruby>たち（<ruby>全員<rt>ぜんいん</rt></ruby>）", "jp_ex": "<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>仕事<rt>しごと</rt></ruby>しましょう。", "en": "We (inclusive)", "en_ex": "Let's work together.", "tag": "Pronoun"}, {"no": 28, "cat": "Core", "freq": "A", "vn": "Họ", "vn_ex": "Họ đến từ Hà Nội.", "jp": "<ruby>彼<rt>かれ</rt></ruby>ら", "jp_ex": "<ruby>彼<rt>かれ</rt></ruby>らはハノイから<ruby>来<rt>き</rt></ruby>ました。", "en": "They", "en_ex": "They are from Hanoi.", "tag": "Pronoun"}, {"no": 29, "cat": "Core", "freq": "A", "vn": "Ông", "vn_ex": "Ông ấy là chủ tịch.", "jp": "おじいさん / <ruby>社長<rt>しゃちょう</rt></ruby>", "jp_ex": "あの<ruby>方<rt>かた</rt></ruby>は<ruby>会長<rt>かいちょう</rt></ruby>です。", "en": "He (elder/sir) / Grandfather", "en_ex": "He is the chairman.", "tag": "Pronoun"}, {"no": 30, "cat": "Core", "freq": "A", "vn": "Bà", "vn_ex": "Bà ấy rất tốt bụng.", "jp": "おばあさん / <ruby>奥様<rt>おくさま</rt></ruby>", "jp_ex": "あの<ruby>方<rt>かた</rt></ruby>はとても<ruby>親切<rt>しんせつ</rt></ruby>です。", "en": "She (elder/madam) / Grandmother", "en_ex": "She is very kind.", "tag": "Pronoun"}, {"no": 31, "cat": "Core", "freq": "A", "vn": "Nó", "vn_ex": "Nó là con trai tôi.", "jp": "あの<ruby>子<rt>こ</rt></ruby>", "jp_ex": "あの<ruby>子<rt>こ</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>の<ruby>息子<rt>むすこ</rt></ruby>です。", "en": "He/She/It (informal)", "en_ex": "He is my son.", "tag": "Pronoun"}, {"no": 32, "cat": "Core", "freq": "A", "vn": "Ai", "vn_ex": "Ai đang gọi tôi?", "jp": "<ruby>誰<rt>だれ</rt></ruby>", "jp_ex": "<ruby>誰<rt>だれ</rt></ruby>が<ruby>私<rt>わたし</rt></ruby>を<ruby>呼<rt>よ</rt></ruby>んでいますか。", "en": "Who", "en_ex": "Who is calling me?", "tag": "Pronoun"}, {"no": 33, "cat": "Core", "freq": "A", "vn": "Mình", "vn_ex": "Mình đi ăn nhé.", "jp": "<ruby>私<rt>わたし</rt></ruby>たち（<ruby>親<rt>した</rt></ruby>しい）", "jp_ex": "<ruby>一緒<rt>いっしょ</rt></ruby>にご<ruby>飯<rt>はん</rt></ruby><ruby>行<rt>い</rt></ruby>こう。", "en": "We (intimate) / I", "en_ex": "Let's go eat.", "tag": "Pronoun"}, {"no": 34, "cat": "Core", "freq": "A", "vn": "Các anh", "vn_ex": "Các anh nghĩ sao?", "jp": "<ruby>皆<rt>みな</rt></ruby>さん", "jp_ex": "<ruby>皆<rt>みな</rt></ruby>さんはどう<ruby>思<rt>おも</rt></ruby>いますか。", "en": "You (plural)", "en_ex": "What do you all think?", "tag": "Pronoun"}, {"no": 35, "cat": "Core", "freq": "A", "vn": "Gì", "vn_ex": "Anh cần gì?", "jp": "<ruby>何<rt>なに</rt></ruby>", "jp_ex": "<ruby>何<rt>なに</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>ですか。", "en": "What", "en_ex": "What do you need?", "tag": "Question"}, {"no": 36, "cat": "Core", "freq": "A", "vn": "Ở đâu", "vn_ex": "Khách sạn ở đâu?", "jp": "どこ", "jp_ex": "ホテルはどこですか。", "en": "Where", "en_ex": "Where is the hotel?", "tag": "Question"}, {"no": 37, "cat": "Core", "freq": "A", "vn": "Khi nào", "vn_ex": "Khi nào chúng ta gặp?", "jp": "いつ", "jp_ex": "いつ<ruby>会<rt>あ</rt></ruby>いましょうか。", "en": "When", "en_ex": "When shall we meet?", "tag": "Question"}, {"no": 38, "cat": "Core", "freq": "A", "vn": "Bao nhiêu", "vn_ex": "Cái này bao nhiêu tiền?", "jp": "いくら / いくつ", "jp_ex": "これはいくらですか。", "en": "How much / many", "en_ex": "How much is this?", "tag": "Question"}, {"no": 39, "cat": "Core", "freq": "A", "vn": "Tại sao", "vn_ex": "Tại sao anh đến muộn?", "jp": "なぜ", "jp_ex": "なぜ<ruby>遅<rt>おく</rt></ruby>れましたか。", "en": "Why", "en_ex": "Why are you late?", "tag": "Question"}, {"no": 40, "cat": "Core", "freq": "A", "vn": "Như thế nào", "vn_ex": "Làm như thế nào?", "jp": "どうやって", "jp_ex": "どうやってやりますか。", "en": "How", "en_ex": "How do you do it?", "tag": "Question"}, {"no": 41, "cat": "Core", "freq": "A", "vn": "Có phải không", "vn_ex": "Anh có phải là người Nhật không?", "jp": "〜ですか", "jp_ex": "<ruby>日本人<rt>にほんじん</rt></ruby>ですか。", "en": "Is it...? (confirmation)", "en_ex": "Are you Japanese?", "tag": "Question"}, {"no": 42, "cat": "Core", "freq": "A", "vn": "Bao lâu", "vn_ex": "Đi mất bao lâu?", "jp": "どのくらい", "jp_ex": "どのくらいかかりますか。", "en": "How long", "en_ex": "How long does it take?", "tag": "Question"}, {"no": 43, "cat": "Core", "freq": "A", "vn": "Mấy", "vn_ex": "Bây giờ mấy giờ?", "jp": "<ruby>何<rt>なん</rt></ruby>（<ruby>数<rt>かず</rt></ruby>）", "jp_ex": "<ruby>今<rt>いま</rt></ruby><ruby>何時<rt>なんじ</rt></ruby>ですか。", "en": "How many / What (number)", "en_ex": "What time is it now?", "tag": "Question"}, {"no": 44, "cat": "Core", "freq": "A", "vn": "Nào", "vn_ex": "Cái nào tốt hơn?", "jp": "どれ / どの", "jp_ex": "どちらが<ruby>良<rt>よ</rt></ruby>いですか。", "en": "Which", "en_ex": "Which one is better?", "tag": "Question"}, {"no": 45, "cat": "Core", "freq": "A", "vn": "Đâu", "vn_ex": "Anh đi đâu?", "jp": "どこ", "jp_ex": "どこに<ruby>行<rt>い</rt></ruby>きますか。", "en": "Where (casual)", "en_ex": "Where are you going?", "tag": "Question"}, {"no": 46, "cat": "Core", "freq": "A", "vn": "Sao", "vn_ex": "Sao anh biết?", "jp": "なぜ / どうして", "jp_ex": "どうして<ruby>知<rt>し</rt></ruby>っているの。", "en": "Why / How (casual)", "en_ex": "How do you know?", "tag": "Question"}, {"no": 47, "cat": "Core", "freq": "A", "vn": "Là", "vn_ex": "Tôi là giám đốc.", "jp": "~です / ~である", "jp_ex": "<ruby>私<rt>わたし</rt></ruby>はディレクターです。", "en": "To be", "en_ex": "I am a director.", "tag": "Verb"}, {"no": 48, "cat": "Core", "freq": "A", "vn": "Đi", "vn_ex": "Chúng ta đi ăn tối nhé.", "jp": "<ruby>行<rt>い</rt></ruby>く", "jp_ex": "<ruby>夕食<rt>ゆうしょく</rt></ruby>に<ruby>行<rt>い</rt></ruby>きましょう。", "en": "To go", "en_ex": "Let's go to dinner.", "tag": "Verb"}, {"no": 49, "cat": "Core", "freq": "A", "vn": "Đến", "vn_ex": "Anh đến lúc mấy giờ?", "jp": "<ruby>来<rt>く</rt></ruby>る / <ruby>到着<rt>とうちゃく</rt></ruby>する", "jp_ex": "<ruby>何時<rt>なんじ</rt></ruby>に<ruby>来<rt>き</rt></ruby>ますか。", "en": "To come / arrive", "en_ex": "What time are you coming?", "tag": "Verb"}, {"no": 50, "cat": "Core", "freq": "A", "vn": "Ăn", "vn_ex": "Anh đã ăn cơm chưa?", "jp": "<ruby>食<rt>た</rt></ruby>べる", "jp_ex": "ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べましたか。", "en": "To eat", "en_ex": "Have you eaten?", "tag": "Verb"}, {"no": 51, "cat": "Core", "freq": "A", "vn": "Uống", "vn_ex": "Uống cà phê không?", "jp": "<ruby>飲<rt>の</rt></ruby>む", "jp_ex": "コーヒーを<ruby>飲<rt>の</rt></ruby>みますか。", "en": "To drink", "en_ex": "Want some coffee?", "tag": "Verb"}, {"no": 52, "cat": "Core", "freq": "A", "vn": "Làm", "vn_ex": "Anh làm nghề gì?", "jp": "する / <ruby>働<rt>はたら</rt></ruby>く", "jp_ex": "お<ruby>仕事<rt>しごと</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。", "en": "To do / work", "en_ex": "What do you do?", "tag": "Verb"}, {"no": 53, "cat": "Core", "freq": "A", "vn": "Nói", "vn_ex": "Xin nói chậm một chút.", "jp": "<ruby>話<rt>はな</rt></ruby>す", "jp_ex": "<ruby>少<rt>すこ</rt></ruby>しゆっくり<ruby>話<rt>はな</rt></ruby>してください。", "en": "To speak", "en_ex": "Please speak slowly.", "tag": "Verb"}, {"no": 54, "cat": "Core", "freq": "A", "vn": "Biết", "vn_ex": "Tôi không biết.", "jp": "<ruby>知<rt>し</rt></ruby>っている", "jp_ex": "<ruby>分<rt>わ</rt></ruby>かりません。", "en": "To know", "en_ex": "I don't know.", "tag": "Verb"}, {"no": 55, "cat": "Core", "freq": "A", "vn": "Hiểu", "vn_ex": "Anh hiểu không?", "jp": "<ruby>理解<rt>りかい</rt></ruby>する", "jp_ex": "<ruby>分<rt>わ</rt></ruby>かりましたか。", "en": "To understand", "en_ex": "Do you understand?", "tag": "Verb"}, {"no": 56, "cat": "Core", "freq": "A", "vn": "Muốn", "vn_ex": "Tôi muốn uống nước.", "jp": "~したい", "jp_ex": "<ruby>水<rt>みず</rt></ruby>が<ruby>飲<rt>の</rt></ruby>みたいです。", "en": "To want", "en_ex": "I want to drink water.", "tag": "Verb"}, {"no": 57, "cat": "Core", "freq": "A", "vn": "Cần", "vn_ex": "Tôi cần giúp đỡ.", "jp": "<ruby>必要<rt>ひつよう</rt></ruby>だ", "jp_ex": "<ruby>助<rt>たす</rt></ruby>けが<ruby>必要<rt>ひつよう</rt></ruby>です。", "en": "To need", "en_ex": "I need help.", "tag": "Verb"}, {"no": 58, "cat": "Core", "freq": "A", "vn": "Thích", "vn_ex": "Tôi thích ăn phở.", "jp": "<ruby>好<rt>す</rt></ruby>き", "jp_ex": "フォーが<ruby>好<rt>す</rt></ruby>きです。", "en": "To like", "en_ex": "I like pho.", "tag": "Verb"}, {"no": 59, "cat": "Core", "freq": "A", "vn": "Cho", "vn_ex": "Cho tôi xem cái này.", "jp": "くれる / あげる", "jp_ex": "これを<ruby>見<rt>み</rt></ruby>せてください。", "en": "To give / let", "en_ex": "Let me see this.", "tag": "Verb"}, {"no": 60, "cat": "Core", "freq": "A", "vn": "Xem", "vn_ex": "Xem menu đi.", "jp": "<ruby>見<rt>み</rt></ruby>る", "jp_ex": "メニューを<ruby>見<rt>み</rt></ruby>ましょう。", "en": "To see / look", "en_ex": "Let's see the menu.", "tag": "Verb"}, {"no": 61, "cat": "Core", "freq": "A", "vn": "Nghe", "vn_ex": "Tôi nghe rồi.", "jp": "<ruby>聞<rt>き</rt></ruby>く", "jp_ex": "<ruby>聞<rt>き</rt></ruby>きました。", "en": "To hear / listen", "en_ex": "I heard it.", "tag": "Verb"}, {"no": 62, "cat": "Core", "freq": "A", "vn": "Nghĩ", "vn_ex": "Tôi nghĩ vậy.", "jp": "<ruby>思<rt>おも</rt></ruby>う", "jp_ex": "そう<ruby>思<rt>おも</rt></ruby>います。", "en": "To think", "en_ex": "I think so.", "tag": "Verb"}, {"no": 63, "cat": "Core", "freq": "A", "vn": "Gọi", "vn_ex": "Gọi taxi giúp tôi.", "jp": "<ruby>呼<rt>よ</rt></ruby>ぶ / <ruby>注文<rt>ちゅうもん</rt></ruby>する", "jp_ex": "タクシーを<ruby>呼<rt>よ</rt></ruby>んでください。", "en": "To call / order", "en_ex": "Please call a taxi.", "tag": "Verb"}, {"no": 64, "cat": "Core", "freq": "A", "vn": "Đợi", "vn_ex": "Xin đợi một chút.", "jp": "<ruby>待<rt>ま</rt></ruby>つ", "jp_ex": "<ruby>少<rt>すこ</rt></ruby>しお<ruby>待<rt>ま</rt></ruby>ちください。", "en": "To wait", "en_ex": "Please wait a moment.", "tag": "Verb"}, {"no": 65, "cat": "Core", "freq": "A", "vn": "Mua", "vn_ex": "Tôi muốn mua cái này.", "jp": "<ruby>買<rt>か</rt></ruby>う", "jp_ex": "これを<ruby>買<rt>か</rt></ruby>いたいです。", "en": "To buy", "en_ex": "I want to buy this.", "tag": "Verb"}, {"no": 66, "cat": "Core", "freq": "A", "vn": "Bán", "vn_ex": "Cái này có bán không?", "jp": "<ruby>売<rt>う</rt></ruby>る", "jp_ex": "これは<ruby>売<rt>う</rt></ruby>っていますか。", "en": "To sell", "en_ex": "Is this for sale?", "tag": "Verb"}, {"no": 67, "cat": "Core", "freq": "A", "vn": "Trả", "vn_ex": "Tôi trả tiền.", "jp": "<ruby>払<rt>はら</rt></ruby>う / <ruby>返<rt>かえ</rt></ruby>す", "jp_ex": "<ruby>私<rt>わたし</rt></ruby>が<ruby>払<rt>はら</rt></ruby>います。", "en": "To pay / return", "en_ex": "I'll pay.", "tag": "Verb"}, {"no": 68, "cat": "Core", "freq": "A", "vn": "Lấy", "vn_ex": "Lấy cái kia giúp tôi.", "jp": "<ruby>取<rt>と</rt></ruby>る", "jp_ex": "あれを<ruby>取<rt>と</rt></ruby>ってください。", "en": "To take / get", "en_ex": "Please get that for me.", "tag": "Verb"}, {"no": 69, "cat": "Core", "freq": "A", "vn": "Mở", "vn_ex": "Mở cửa giúp tôi.", "jp": "<ruby>開<rt>あ</rt></ruby>ける", "jp_ex": "ドアを<ruby>開<rt>あ</rt></ruby>けてください。", "en": "To open", "en_ex": "Please open the door.", "tag": "Verb"}, {"no": 70, "cat": "Core", "freq": "A", "vn": "Đóng", "vn_ex": "Đóng cửa lại.", "jp": "<ruby>閉<rt>し</rt></ruby>める", "jp_ex": "ドアを<ruby>閉<rt>し</rt></ruby>めてください。", "en": "To close", "en_ex": "Close the door.", "tag": "Verb"}, {"no": 71, "cat": "Core", "freq": "A", "vn": "Viết", "vn_ex": "Viết tên ở đây.", "jp": "<ruby>書<rt>か</rt></ruby>く", "jp_ex": "ここに<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いてください。", "en": "To write", "en_ex": "Write your name here.", "tag": "Verb"}, {"no": 72, "cat": "Core", "freq": "A", "vn": "Đọc", "vn_ex": "Đọc hợp đồng kỹ nhé.", "jp": "<ruby>読<rt>よ</rt></ruby>む", "jp_ex": "<ruby>契約書<rt>けいやくしょ</rt></ruby>をよく<ruby>読<rt>よ</rt></ruby>んでください。", "en": "To read", "en_ex": "Read the contract carefully.", "tag": "Verb"}, {"no": 73, "cat": "Core", "freq": "A", "vn": "Hỏi", "vn_ex": "Tôi muốn hỏi một câu.", "jp": "<ruby>質問<rt>しつもん</rt></ruby>する", "jp_ex": "<ruby>一<rt>ひと</rt></ruby>つ<ruby>質問<rt>しつもん</rt></ruby>したいです。", "en": "To ask", "en_ex": "I want to ask a question.", "tag": "Verb"}, {"no": 74, "cat": "Core", "freq": "A", "vn": "Trả lời", "vn_ex": "Xin trả lời trước thứ sáu.", "jp": "<ruby>答<rt>こた</rt></ruby>える / <ruby>返事<rt>へんじ</rt></ruby>する", "jp_ex": "<ruby>金曜日<rt>きんようび</rt></ruby>までにお<ruby>返事<rt>へんじ</rt></ruby>ください。", "en": "To answer / reply", "en_ex": "Please reply by Friday.", "tag": "Verb"}, {"no": 75, "cat": "Core", "freq": "A", "vn": "Bắt đầu", "vn_ex": "Cuộc họp bắt đầu rồi.", "jp": "<ruby>始<rt>はじ</rt></ruby>まる / <ruby>始<rt>はじ</rt></ruby>める", "jp_ex": "<ruby>会議<rt>かいぎ</rt></ruby>が<ruby>始<rt>はじ</rt></ruby>まりました。", "en": "To start / begin", "en_ex": "The meeting has started.", "tag": "Verb"}, {"no": 76, "cat": "Core", "freq": "A", "vn": "Kết thúc", "vn_ex": "Cuộc họp kết thúc lúc 5 giờ.", "jp": "<ruby>終<rt>お</rt></ruby>わる", "jp_ex": "<ruby>会議<rt>かいぎ</rt></ruby>は5<ruby>時<rt>じ</rt></ruby>に<ruby>終<rt>お</rt></ruby>わります。", "en": "To end / finish", "en_ex": "The meeting ends at 5.", "tag": "Verb"}, {"no": 77, "cat": "Core", "freq": "A", "vn": "Giúp", "vn_ex": "Giúp tôi một chút.", "jp": "<ruby>手伝<rt>てつだ</rt></ruby>う / <ruby>助<rt>たす</rt></ruby>ける", "jp_ex": "ちょっと<ruby>手伝<rt>てつだ</rt></ruby>ってください。", "en": "To help", "en_ex": "Help me a little.", "tag": "Verb"}, {"no": 78, "cat": "Core", "freq": "A", "vn": "Học", "vn_ex": "Tôi đang học tiếng Việt.", "jp": "<ruby>勉強<rt>べんきょう</rt></ruby>する / <ruby>学<rt>まな</rt></ruby>ぶ", "jp_ex": "ベトナム<ruby>語<rt>ご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しています。", "en": "To study / learn", "en_ex": "I'm studying Vietnamese.", "tag": "Verb"}, {"no": 79, "cat": "Core", "freq": "A", "vn": "Sống", "vn_ex": "Tôi sống ở Seoul.", "jp": "<ruby>住<rt>す</rt></ruby>む / <ruby>生<rt>い</rt></ruby>きる", "jp_ex": "ソウルに<ruby>住<rt>す</rt></ruby>んでいます。", "en": "To live", "en_ex": "I live in Seoul.", "tag": "Verb"}, {"no": 80, "cat": "Core", "freq": "A", "vn": "Làm việc", "vn_ex": "Tôi làm việc ở đây.", "jp": "<ruby>働<rt>はたら</rt></ruby>く", "jp_ex": "ここで<ruby>働<rt>はたら</rt></ruby>いています。", "en": "To work", "en_ex": "I work here.", "tag": "Verb"}, {"no": 81, "cat": "Core", "freq": "A", "vn": "Một", "vn_ex": "Một cái này.", "jp": "<ruby>一<rt>いち</rt></ruby> / 1", "jp_ex": "これを<ruby>一<rt>ひと</rt></ruby>つ。", "en": "One", "en_ex": "One of these.", "tag": "Number"}, {"no": 82, "cat": "Core", "freq": "A", "vn": "Hai", "vn_ex": "Hai người.", "jp": "<ruby>二<rt>に</rt></ruby> / 2", "jp_ex": "2<ruby>人<rt>にん</rt></ruby>です。", "en": "Two", "en_ex": "Two people.", "tag": "Number"}, {"no": 83, "cat": "Core", "freq": "A", "vn": "Ba", "vn_ex": "Ba giờ chiều.", "jp": "<ruby>三<rt>さん</rt></ruby> / 3", "jp_ex": "<ruby>午後<rt>ごご</rt></ruby>3<ruby>時<rt>じ</rt></ruby>。", "en": "Three", "en_ex": "3 PM.", "tag": "Number"}, {"no": 84, "cat": "Core", "freq": "A", "vn": "Bốn", "vn_ex": "Bốn ngày nữa.", "jp": "<ruby>四<rt>よん</rt></ruby> / 4", "jp_ex": "あと4<ruby>日<rt>にち</rt></ruby>。", "en": "Four", "en_ex": "In four days.", "tag": "Number"}, {"no": 85, "cat": "Core", "freq": "A", "vn": "Năm", "vn_ex": "Năm phút thôi.", "jp": "<ruby>五<rt>ご</rt></ruby> / 5", "jp_ex": "5<ruby>分<rt>ふん</rt></ruby>だけ。", "en": "Five", "en_ex": "Just five minutes.", "tag": "Number"}, {"no": 86, "cat": "Core", "freq": "A", "vn": "Sáu", "vn_ex": "Sáu giờ sáng.", "jp": "<ruby>六<rt>ろく</rt></ruby> / 6", "jp_ex": "<ruby>朝<rt>あさ</rt></ruby>6<ruby>時<rt>じ</rt></ruby>。", "en": "Six", "en_ex": "6 AM.", "tag": "Number"}, {"no": 87, "cat": "Core", "freq": "A", "vn": "Bảy", "vn_ex": "Bảy ngày một tuần.", "jp": "<ruby>七<rt>なな</rt></ruby> / 7", "jp_ex": "1<ruby>週間<rt>しゅうかん</rt></ruby>は7<ruby>日<rt>にち</rt></ruby>。", "en": "Seven", "en_ex": "Seven days a week.", "tag": "Number"}, {"no": 88, "cat": "Core", "freq": "A", "vn": "Tám", "vn_ex": "Tám triệu đồng.", "jp": "<ruby>八<rt>はち</rt></ruby> / 8", "jp_ex": "800<ruby>万<rt>まん</rt></ruby>ドン。", "en": "Eight", "en_ex": "8 million dong.", "tag": "Number"}, {"no": 89, "cat": "Core", "freq": "A", "vn": "Chín", "vn_ex": "Chín giờ tối.", "jp": "<ruby>九<rt>きゅう</rt></ruby> / 9", "jp_ex": "<ruby>夜<rt>よる</rt></ruby>9<ruby>時<rt>じ</rt></ruby>。", "en": "Nine", "en_ex": "9 PM.", "tag": "Number"}, {"no": 90, "cat": "Core", "freq": "A", "vn": "Mười", "vn_ex": "Mười phút nữa.", "jp": "<ruby>十<rt>じゅう</rt></ruby> / 10", "jp_ex": "あと10<ruby>分<rt>ぷん</rt></ruby>。", "en": "Ten", "en_ex": "In 10 minutes.", "tag": "Number"}, {"no": 91, "cat": "Core", "freq": "A", "vn": "Trăm", "vn_ex": "Một trăm đô la.", "jp": "<ruby>百<rt>ひゃく</rt></ruby>", "jp_ex": "100ドル。", "en": "Hundred", "en_ex": "100 dollars.", "tag": "Number"}, {"no": 92, "cat": "Core", "freq": "A", "vn": "Nghìn", "vn_ex": "Năm nghìn đồng.", "jp": "<ruby>千<rt>せん</rt></ruby>", "jp_ex": "5<ruby>千<rt>せん</rt></ruby>ドン。", "en": "Thousand", "en_ex": "5,000 dong.", "tag": "Number"}, {"no": 93, "cat": "Core", "freq": "A", "vn": "Triệu", "vn_ex": "Hai triệu đồng.", "jp": "<ruby>百万<rt>ひゃくまん</rt></ruby>", "jp_ex": "200<ruby>万<rt>まん</rt></ruby>ドン。", "en": "Million", "en_ex": "2 million dong.", "tag": "Number"}, {"no": 94, "cat": "Core", "freq": "A", "vn": "Hôm nay", "vn_ex": "Hôm nay anh có rảnh không?", "jp": "<ruby>今日<rt>きょう</rt></ruby>", "jp_ex": "<ruby>今日<rt>きょう</rt></ruby>お<ruby>時間<rt>じかん</rt></ruby>ありますか。", "en": "Today", "en_ex": "Are you free today?", "tag": "Time"}, {"no": 95, "cat": "Core", "freq": "A", "vn": "Ngày mai", "vn_ex": "Ngày mai gặp nhé.", "jp": "<ruby>明日<rt>あした</rt></ruby>", "jp_ex": "<ruby>明日<rt>あした</rt></ruby><ruby>会<rt>あ</rt></ruby>いましょう。", "en": "Tomorrow", "en_ex": "See you tomorrow.", "tag": "Time"}, {"no": 96, "cat": "Core", "freq": "A", "vn": "Hôm qua", "vn_ex": "Hôm qua tôi rất bận.", "jp": "<ruby>昨日<rt>きのう</rt></ruby>", "jp_ex": "<ruby>昨日<rt>きのう</rt></ruby>はとても<ruby>忙<rt>いそが</rt></ruby>しかったです。", "en": "Yesterday", "en_ex": "I was very busy yesterday.", "tag": "Time"}, {"no": 97, "cat": "Core", "freq": "A", "vn": "Tuần", "vn_ex": "Tuần sau họp nhé.", "jp": "<ruby>週<rt>しゅう</rt></ruby>", "jp_ex": "<ruby>来週<rt>らいしゅう</rt></ruby><ruby>会議<rt>かいぎ</rt></ruby>しましょう。", "en": "Week", "en_ex": "Let's meet next week.", "tag": "Time"}, {"no": 98, "cat": "Core", "freq": "A", "vn": "Tháng", "vn_ex": "Tháng này bận lắm.", "jp": "<ruby>月<rt>つき</rt></ruby>", "jp_ex": "<ruby>今月<rt>こんげつ</rt></ruby>はとても<ruby>忙<rt>いそが</rt></ruby>しいです。", "en": "Month", "en_ex": "This month is very busy.", "tag": "Time"}, {"no": 99, "cat": "Core", "freq": "A", "vn": "Năm", "vn_ex": "Năm nay là 2026.", "jp": "<ruby>年<rt>ねん</rt></ruby>", "jp_ex": "<ruby>今年<rt>ことし</rt></ruby>は2026<ruby>年<rt>ねん</rt></ruby>です。", "en": "Year", "en_ex": "This year is 2026.", "tag": "Time"}, {"no": 100, "cat": "Core", "freq": "A", "vn": "Giờ", "vn_ex": "Bây giờ mấy giờ?", "jp": "<ruby>時<rt>じ</rt></ruby> / <ruby>時間<rt>じかん</rt></ruby>", "jp_ex": "<ruby>今<rt>いま</rt></ruby><ruby>何時<rt>なんじ</rt></ruby>ですか。", "en": "Hour / Time", "en_ex": "What time is it now?", "tag": "Time"}, {"no": 101, "cat": "Core", "freq": "A", "vn": "Tốt", "vn_ex": "Rất tốt, cảm ơn anh.", "jp": "<ruby>良<rt>よ</rt></ruby>い / いい", "jp_ex": "とても<ruby>良<rt>よ</rt></ruby>いです、ありがとう。", "en": "Good", "en_ex": "Very good, thank you.", "tag": "Adjective"}, {"no": 102, "cat": "Core", "freq": "A", "vn": "Xấu", "vn_ex": "Thời tiết xấu quá.", "jp": "<ruby>悪<rt>わる</rt></ruby>い", "jp_ex": "<ruby>天気<rt>てんき</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>いです。", "en": "Bad", "en_ex": "The weather is bad.", "tag": "Adjective"}, {"no": 103, "cat": "Core", "freq": "A", "vn": "Lớn", "vn_ex": "Công ty này rất lớn.", "jp": "<ruby>大<rt>おお</rt></ruby>きい", "jp_ex": "この<ruby>会社<rt>かいしゃ</rt></ruby>はとても<ruby>大<rt>おお</rt></ruby>きいです。", "en": "Big / Large", "en_ex": "This company is very big.", "tag": "Adjective"}, {"no": 104, "cat": "Core", "freq": "A", "vn": "Nhỏ", "vn_ex": "Văn phòng hơi nhỏ.", "jp": "<ruby>小<rt>ちい</rt></ruby>さい", "jp_ex": "オフィスはちょっと<ruby>小<rt>ちい</rt></ruby>さいです。", "en": "Small", "en_ex": "The office is a bit small.", "tag": "Adjective"}, {"no": 105, "cat": "Core", "freq": "A", "vn": "Nhiều", "vn_ex": "Có nhiều người lắm.", "jp": "<ruby>多<rt>おお</rt></ruby>い / たくさん", "jp_ex": "<ruby>人<rt>ひと</rt></ruby>がたくさんいます。", "en": "Many / Much", "en_ex": "There are many people.", "tag": "Adjective"}, {"no": 106, "cat": "Core", "freq": "A", "vn": "Ít", "vn_ex": "Thời gian còn ít.", "jp": "<ruby>少<rt>すく</rt></ruby>ない", "jp_ex": "<ruby>時間<rt>じかん</rt></ruby>が<ruby>少<rt>すく</rt></ruby>ないです。", "en": "Few / Little", "en_ex": "There is little time left.", "tag": "Adjective"}, {"no": 107, "cat": "Core", "freq": "A", "vn": "Nhanh", "vn_ex": "Nhanh lên, muộn rồi!", "jp": "<ruby>速<rt>はや</rt></ruby>い", "jp_ex": "<ruby>急<rt>いそ</rt></ruby>いで、<ruby>遅<rt>おく</rt></ruby>れるよ！", "en": "Fast / Quick", "en_ex": "Hurry up, we're late!", "tag": "Adjective"}, {"no": 108, "cat": "Core", "freq": "A", "vn": "Chậm", "vn_ex": "Đi chậm một chút.", "jp": "<ruby>遅<rt>おそ</rt></ruby>い", "jp_ex": "もう<ruby>少<rt>すこ</rt></ruby>しゆっくり<ruby>行<rt>い</rt></ruby>きましょう。", "en": "Slow", "en_ex": "Go a little slower.", "tag": "Adjective"}, {"no": 109, "cat": "Core", "freq": "A", "vn": "Mới", "vn_ex": "Cái này mới mua.", "jp": "<ruby>新<rt>あたら</rt></ruby>しい", "jp_ex": "これは<ruby>新<rt>あたら</rt></ruby>しく<ruby>買<rt>か</rt></ruby>いました。", "en": "New", "en_ex": "I just bought this.", "tag": "Adjective"}, {"no": 110, "cat": "Core", "freq": "A", "vn": "Cũ", "vn_ex": "Điện thoại cũ rồi.", "jp": "<ruby>古<rt>ふる</rt></ruby>い", "jp_ex": "<ruby>携帯<rt>けいたい</rt></ruby>が<ruby>古<rt>ふる</rt></ruby>くなりました。", "en": "Old (things)", "en_ex": "The phone is old now.", "tag": "Adjective"}, {"no": 111, "cat": "Core", "freq": "A", "vn": "Đẹp", "vn_ex": "Thành phố này rất đẹp.", "jp": "<ruby>綺麗<rt>きれい</rt></ruby>", "jp_ex": "この<ruby>街<rt>まち</rt></ruby>はとても<ruby>綺麗<rt>きれい</rt></ruby>です。", "en": "Beautiful", "en_ex": "This city is beautiful.", "tag": "Adjective"}, {"no": 112, "cat": "Core", "freq": "A", "vn": "Đắt", "vn_ex": "Đắt quá!", "jp": "<ruby>高<rt>たか</rt></ruby>い", "jp_ex": "<ruby>高<rt>たか</rt></ruby>すぎます！", "en": "Expensive", "en_ex": "Too expensive!", "tag": "Adjective"}, {"no": 113, "cat": "Core", "freq": "A", "vn": "Rẻ", "vn_ex": "Ở đây rẻ hơn.", "jp": "<ruby>安<rt>やす</rt></ruby>い", "jp_ex": "ここの<ruby>方<rt>ほう</rt></ruby>が<ruby>安<rt>やす</rt></ruby>いです。", "en": "Cheap", "en_ex": "It's cheaper here.", "tag": "Adjective"}, {"no": 114, "cat": "Core", "freq": "A", "vn": "Nóng", "vn_ex": "Hôm nay nóng quá.", "jp": "<ruby>暑<rt>あつ</rt></ruby>い", "jp_ex": "<ruby>今日<rt>きょう</rt></ruby>はとても<ruby>暑<rt>あつ</rt></ruby>いです。", "en": "Hot", "en_ex": "It's very hot today.", "tag": "Adjective"}, {"no": 115, "cat": "Core", "freq": "A", "vn": "Lạnh", "vn_ex": "Hàn Quốc mùa đông lạnh lắm.", "jp": "<ruby>寒<rt>さむ</rt></ruby>い", "jp_ex": "<ruby>韓国<rt>かんこく</rt></ruby>の<ruby>冬<rt>ふゆ</rt></ruby>はとても<ruby>寒<rt>さむ</rt></ruby>いです。", "en": "Cold", "en_ex": "Korean winter is very cold.", "tag": "Adjective"}, {"no": 116, "cat": "Core", "freq": "A", "vn": "Ngon", "vn_ex": "Món này rất ngon.", "jp": "<ruby>美味<rt>おい</rt></ruby>しい", "jp_ex": "この<ruby>料理<rt>りょうり</rt></ruby>はとても<ruby>美味<rt>おい</rt></ruby>しいです。", "en": "Delicious", "en_ex": "This dish is delicious.", "tag": "Adjective"}, {"no": 117, "cat": "Core", "freq": "A", "vn": "Dễ", "vn_ex": "Tiếng Việt không dễ.", "jp": "<ruby>簡単<rt>かんたん</rt></ruby>", "jp_ex": "ベトナム<ruby>語<rt>ご</rt></ruby>は<ruby>簡単<rt>かんたん</rt></ruby>ではありません。", "en": "Easy", "en_ex": "Vietnamese is not easy.", "tag": "Adjective"}, {"no": 118, "cat": "Core", "freq": "A", "vn": "Khó", "vn_ex": "Bài này khó quá.", "jp": "<ruby>難<rt>むずか</rt></ruby>しい", "jp_ex": "この<ruby>問題<rt>もんだい</rt></ruby>は<ruby>難<rt>むずか</rt></ruby>しすぎます。", "en": "Difficult", "en_ex": "This is too difficult.", "tag": "Adjective"}, {"no": 119, "cat": "Core", "freq": "A", "vn": "Quan trọng", "vn_ex": "Cuộc họp này rất quan trọng.", "jp": "<ruby>重要<rt>じゅうよう</rt></ruby>", "jp_ex": "この<ruby>会議<rt>かいぎ</rt></ruby>はとても<ruby>重要<rt>じゅうよう</rt></ruby>です。", "en": "Important", "en_ex": "This meeting is very important.", "tag": "Adjective"}, {"no": 120, "cat": "Core", "freq": "A", "vn": "Bận", "vn_ex": "Hôm nay tôi rất bận.", "jp": "<ruby>忙<rt>いそが</rt></ruby>しい", "jp_ex": "<ruby>今日<rt>きょう</rt></ruby>はとても<ruby>忙<rt>いそが</rt></ruby>しいです。", "en": "Busy", "en_ex": "I'm very busy today.", "tag": "Adjective"}, {"no": 121, "cat": "Business", "freq": "A", "vn": "Hợp đồng", "vn_ex": "Chúng ta ký hợp đồng chưa?", "jp": "<ruby>契約<rt>けいやく</rt></ruby>", "jp_ex": "<ruby>契約<rt>けいやく</rt></ruby>はもう<ruby>結<rt>むす</rt></ruby>びましたか。", "en": "Contract", "en_ex": "Have we signed the contract?", "tag": "Negotiation"}, {"no": 122, "cat": "Business", "freq": "A", "vn": "Công ty", "vn_ex": "Công ty chúng tôi ở Seoul.", "jp": "<ruby>会社<rt>かいしゃ</rt></ruby>", "jp_ex": "<ruby>私<rt>わたし</rt></ruby>たちの<ruby>会社<rt>かいしゃ</rt></ruby>はソウルにあります。", "en": "Company", "en_ex": "Our company is in Seoul.", "tag": "Organization"}, {"no": 123, "cat": "Business", "freq": "A", "vn": "Giám đốc", "vn_ex": "Giám đốc sẽ đến ngay.", "jp": "<ruby>社長<rt>しゃちょう</rt></ruby> / ディレクター", "jp_ex": "<ruby>社長<rt>しゃちょう</rt></ruby>がすぐ<ruby>来<rt>き</rt></ruby>ます。", "en": "Director / CEO", "en_ex": "The director is coming soon.", "tag": "Title"}, {"no": 124, "cat": "Business", "freq": "A", "vn": "Cuộc họp", "vn_ex": "Cuộc họp bắt đầu lúc 10 giờ.", "jp": "<ruby>会議<rt>かいぎ</rt></ruby>", "jp_ex": "<ruby>会議<rt>かいぎ</rt></ruby>は10<ruby>時<rt>じ</rt></ruby>に<ruby>始<rt>はじ</rt></ruby>まります。", "en": "Meeting", "en_ex": "The meeting starts at 10.", "tag": "Meeting"}, {"no": 125, "cat": "Business", "freq": "A", "vn": "Đối tác", "vn_ex": "Đây là đối tác Việt Nam.", "jp": "パートナー / <ruby>取引先<rt>とりひきさき</rt></ruby>", "jp_ex": "こちらがベトナムのパートナーです。", "en": "Partner", "en_ex": "This is our Vietnamese partner.", "tag": "Introduction"}, {"no": 126, "cat": "Business", "freq": "A", "vn": "Dự án", "vn_ex": "Dự án này rất quan trọng.", "jp": "プロジェクト", "jp_ex": "このプロジェクトはとても<ruby>重要<rt>じゅうよう</rt></ruby>です。", "en": "Project", "en_ex": "This project is very important.", "tag": "Work"}, {"no": 127, "cat": "Business", "freq": "A", "vn": "Giá", "vn_ex": "Giá bao nhiêu một cái?", "jp": "<ruby>価格<rt>かかく</rt></ruby>", "jp_ex": "1<ruby>個<rt>こ</rt></ruby>いくらですか。", "en": "Price", "en_ex": "How much per unit?", "tag": "Negotiation"}, {"no": 128, "cat": "Business", "freq": "A", "vn": "Giảm giá", "vn_ex": "Có thể giảm giá không?", "jp": "<ruby>値引<rt>ねび</rt></ruby>き / <ruby>割引<rt>わりびき</rt></ruby>", "jp_ex": "<ruby>値引<rt>ねび</rt></ruby>きできますか。", "en": "Discount", "en_ex": "Can you give a discount?", "tag": "Negotiation"}, {"no": 129, "cat": "Business", "freq": "A", "vn": "Chất lượng", "vn_ex": "Chất lượng rất tốt.", "jp": "<ruby>品質<rt>ひんしつ</rt></ruby>", "jp_ex": "<ruby>品質<rt>ひんしつ</rt></ruby>はとても<ruby>良<rt>よ</rt></ruby>いです。", "en": "Quality", "en_ex": "The quality is excellent.", "tag": "Product"}, {"no": 130, "cat": "Business", "freq": "A", "vn": "Số lượng", "vn_ex": "Số lượng là bao nhiêu?", "jp": "<ruby>数量<rt>すうりょう</rt></ruby>", "jp_ex": "<ruby>数量<rt>すうりょう</rt></ruby>はいくつですか。", "en": "Quantity", "en_ex": "What is the quantity?", "tag": "Order"}, {"no": 131, "cat": "Business", "freq": "A", "vn": "Thanh toán", "vn_ex": "Thanh toán bằng gì?", "jp": "<ruby>支払<rt>しはら</rt></ruby>う", "jp_ex": "<ruby>何<rt>なに</rt></ruby>で<ruby>支払<rt>しはら</rt></ruby>いますか。", "en": "To pay", "en_ex": "How will you pay?", "tag": "Payment"}, {"no": 132, "cat": "Business", "freq": "A", "vn": "Hóa đơn", "vn_ex": "Xin cho tôi hóa đơn.", "jp": "<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>", "jp_ex": "<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>をください。", "en": "Invoice / Receipt", "en_ex": "Please give me the receipt.", "tag": "Payment"}, {"no": 133, "cat": "Business", "freq": "A", "vn": "Khách hàng", "vn_ex": "Khách hàng là số một.", "jp": "<ruby>顧客<rt>こきゃく</rt></ruby>", "jp_ex": "<ruby>顧客<rt>こきゃく</rt></ruby><ruby>第一<rt>だいいち</rt></ruby>です。", "en": "Customer", "en_ex": "The customer is number one.", "tag": "Sales"}, {"no": 134, "cat": "Business", "freq": "A", "vn": "Sản phẩm", "vn_ex": "Sản phẩm này rất mới.", "jp": "<ruby>製品<rt>せいひん</rt></ruby>", "jp_ex": "この<ruby>製品<rt>せいひん</rt></ruby>はとても<ruby>新<rt>あたら</rt></ruby>しいです。", "en": "Product", "en_ex": "This product is very new.", "tag": "Product"}, {"no": 135, "cat": "Business", "freq": "A", "vn": "Thị trường", "vn_ex": "Thị trường Việt Nam đang phát triển.", "jp": "<ruby>市場<rt>しじょう</rt></ruby>", "jp_ex": "ベトナム<ruby>市場<rt>しじょう</rt></ruby>は<ruby>成長中<rt>せいちょうちゅう</rt></ruby>です。", "en": "Market", "en_ex": "The Vietnamese market is growing.", "tag": "Strategy"}, {"no": 136, "cat": "Business", "freq": "A", "vn": "Đầu tư", "vn_ex": "Chúng tôi muốn đầu tư ở Việt Nam.", "jp": "<ruby>投資<rt>とうし</rt></ruby>する", "jp_ex": "ベトナムに<ruby>投資<rt>とうし</rt></ruby>したいです。", "en": "To invest", "en_ex": "We want to invest in Vietnam.", "tag": "Investment"}, {"no": 137, "cat": "Business", "freq": "A", "vn": "Hợp tác", "vn_ex": "Mong được hợp tác lâu dài.", "jp": "<ruby>協力<rt>きょうりょく</rt></ruby>する", "jp_ex": "<ruby>長期的<rt>ちょうきてき</rt></ruby>な<ruby>協力<rt>きょうりょく</rt></ruby>を<ruby>望<rt>のぞ</rt></ruby>みます。", "en": "To cooperate", "en_ex": "We hope for long-term cooperation.", "tag": "Negotiation"}, {"no": 138, "cat": "Business", "freq": "A", "vn": "Điều khoản", "vn_ex": "Điều khoản này cần xem lại.", "jp": "<ruby>条項<rt>じょうこう</rt></ruby>", "jp_ex": "この<ruby>条項<rt>じょうこう</rt></ruby>は<ruby>見直<rt>みなお</rt></ruby>しが<ruby>必要<rt>ひつよう</rt></ruby>です。", "en": "Clause / Terms", "en_ex": "This clause needs review.", "tag": "Contract"}, {"no": 139, "cat": "Business", "freq": "A", "vn": "Đề nghị", "vn_ex": "Tôi có một đề nghị.", "jp": "<ruby>提案<rt>ていあん</rt></ruby>", "jp_ex": "<ruby>提案<rt>ていあん</rt></ruby>が<ruby>一<rt>ひと</rt></ruby>つあります。", "en": "Proposal", "en_ex": "I have a proposal.", "tag": "Negotiation"}, {"no": 140, "cat": "Business", "freq": "A", "vn": "Chấp nhận", "vn_ex": "Chúng tôi chấp nhận điều kiện.", "jp": "<ruby>承諾<rt>しょうだく</rt></ruby>する", "jp_ex": "<ruby>条件<rt>じょうけん</rt></ruby>を<ruby>受<rt>う</rt></ruby>け<ruby>入<rt>い</rt></ruby>れます。", "en": "To accept", "en_ex": "We accept the terms.", "tag": "Negotiation"}, {"no": 141, "cat": "Business", "freq": "A", "vn": "Từ chối", "vn_ex": "Xin từ chối một cách lịch sự.", "jp": "<ruby>断<rt>ことわ</rt></ruby>る", "jp_ex": "<ruby>丁重<rt>ていちょう</rt></ruby>にお<ruby>断<rt>ことわ</rt></ruby>りします。", "en": "To reject", "en_ex": "We politely decline.", "tag": "Negotiation"}, {"no": 142, "cat": "Business", "freq": "B", "vn": "Văn phòng", "vn_ex": "Văn phòng ở tầng 5.", "jp": "<ruby>事務所<rt>じむしょ</rt></ruby>", "jp_ex": "<ruby>事務所<rt>じむしょ</rt></ruby>は5<ruby>階<rt>かい</rt></ruby>です。", "en": "Office", "en_ex": "The office is on the 5th floor.", "tag": "Location"}, {"no": 143, "cat": "Business", "freq": "B", "vn": "Nhân viên", "vn_ex": "Công ty có 50 nhân viên.", "jp": "<ruby>社員<rt>しゃいん</rt></ruby>", "jp_ex": "<ruby>会社<rt>かいしゃ</rt></ruby>には50<ruby>人<rt>にん</rt></ruby>の<ruby>社員<rt>しゃいん</rt></ruby>がいます。", "en": "Employee", "en_ex": "The company has 50 employees.", "tag": "Organization"}, {"no": 144, "cat": "Business", "freq": "B", "vn": "Lịch trình", "vn_ex": "Lịch trình ngày mai thế nào?", "jp": "スケジュール / <ruby>日程<rt>にってい</rt></ruby>", "jp_ex": "<ruby>明日<rt>あした</rt></ruby>のスケジュールはどうですか。", "en": "Schedule", "en_ex": "How is tomorrow's schedule?", "tag": "Schedule"}, {"no": 145, "cat": "Business", "freq": "B", "vn": "Xác nhận", "vn_ex": "Xin xác nhận lại giúp tôi.", "jp": "<ruby>確認<rt>かくにん</rt></ruby>する", "jp_ex": "<ruby>再度<rt>さいど</rt></ruby>ご<ruby>確認<rt>かくにん</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", "en": "To confirm", "en_ex": "Please confirm again.", "tag": "Confirmation"}, {"no": 146, "cat": "Business", "freq": "B", "vn": "Gửi", "vn_ex": "Tôi sẽ gửi email cho anh.", "jp": "<ruby>送<rt>おく</rt></ruby>る", "jp_ex": "メールをお<ruby>送<rt>おく</rt></ruby>りします。", "en": "To send", "en_ex": "I will send you an email.", "tag": "Contact"}, {"no": 147, "cat": "Business", "freq": "B", "vn": "Tài liệu", "vn_ex": "Tài liệu đây ạ.", "jp": "<ruby>資料<rt>しりょう</rt></ruby>", "jp_ex": "<ruby>資料<rt>しりょう</rt></ruby>はこちらです。", "en": "Document", "en_ex": "Here is the document.", "tag": "Work"}, {"no": 148, "cat": "Business", "freq": "B", "vn": "Báo cáo", "vn_ex": "Báo cáo đã xong chưa?", "jp": "<ruby>報告書<rt>ほうこくしょ</rt></ruby>", "jp_ex": "<ruby>報告書<rt>ほうこくしょ</rt></ruby>はもう<ruby>終<rt>お</rt></ruby>わりましたか。", "en": "Report", "en_ex": "Is the report done?", "tag": "Work"}, {"no": 149, "cat": "Business", "freq": "B", "vn": "Thời hạn", "vn_ex": "Thời hạn là thứ sáu.", "jp": "<ruby>締切<rt>しめきり</rt></ruby>", "jp_ex": "<ruby>締切<rt>しめきり</rt></ruby>は<ruby>金曜日<rt>きんようび</rt></ruby>です。", "en": "Deadline", "en_ex": "The deadline is Friday.", "tag": "Schedule"}, {"no": 150, "cat": "Business", "freq": "B", "vn": "Giao hàng", "vn_ex": "Khi nào giao hàng?", "jp": "<ruby>納品<rt>のうひん</rt></ruby> / <ruby>配送<rt>はいそう</rt></ruby>", "jp_ex": "いつ<ruby>納品<rt>のうひん</rt></ruby>されますか。", "en": "To deliver", "en_ex": "When will it be delivered?", "tag": "Logistics"}, {"no": 151, "cat": "Business", "freq": "B", "vn": "Phòng họp", "vn_ex": "Phòng họp ở đâu?", "jp": "<ruby>会議室<rt>かいぎしつ</rt></ruby>", "jp_ex": "<ruby>会議室<rt>かいぎしつ</rt></ruby>はどこですか。", "en": "Meeting room", "en_ex": "Where is the meeting room?", "tag": "Meeting"}, {"no": 152, "cat": "Business", "freq": "B", "vn": "Trình bày", "vn_ex": "Tôi sẽ trình bày kế hoạch.", "jp": "プレゼンする / <ruby>発表<rt>はっぴょう</rt></ruby>する", "jp_ex": "<ruby>計画<rt>けいかく</rt></ruby>をプレゼンします。", "en": "To present", "en_ex": "I will present the plan.", "tag": "Meeting"}, {"no": 153, "cat": "Business", "freq": "B", "vn": "Đồng ý", "vn_ex": "Tôi đồng ý với anh.", "jp": "<ruby>同意<rt>どうい</rt></ruby>する", "jp_ex": "あなたに<ruby>同意<rt>どうい</rt></ruby>します。", "en": "To agree", "en_ex": "I agree with you.", "tag": "Negotiation"}, {"no": 154, "cat": "Business", "freq": "B", "vn": "Phản đối", "vn_ex": "Tôi phản đối điều này.", "jp": "<ruby>反対<rt>はんたい</rt></ruby>する", "jp_ex": "これには<ruby>反対<rt>はんたい</rt></ruby>します。", "en": "To oppose", "en_ex": "I oppose this.", "tag": "Negotiation"}, {"no": 155, "cat": "Business", "freq": "B", "vn": "Thương lượng", "vn_ex": "Chúng ta cần thương lượng thêm.", "jp": "<ruby>交渉<rt>こうしょう</rt></ruby>する", "jp_ex": "もう<ruby>少<rt>すこ</rt></ruby>し<ruby>交渉<rt>こうしょう</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>です。", "en": "To negotiate", "en_ex": "We need to negotiate more.", "tag": "Negotiation"}, {"no": 156, "cat": "Business", "freq": "B", "vn": "Chiến lược", "vn_ex": "Chiến lược kinh doanh mới.", "jp": "<ruby>戦略<rt>せんりゃく</rt></ruby>", "jp_ex": "<ruby>新<rt>あたら</rt></ruby>しいビジネス<ruby>戦略<rt>せんりゃく</rt></ruby>。", "en": "Strategy", "en_ex": "New business strategy.", "tag": "Strategy"}, {"no": 157, "cat": "Business", "freq": "B", "vn": "Lợi nhuận", "vn_ex": "Lợi nhuận tăng 20%.", "jp": "<ruby>利益<rt>りえき</rt></ruby>", "jp_ex": "<ruby>利益<rt>りえき</rt></ruby>が20%<ruby>増<rt>ふ</rt></ruby>えました。", "en": "Profit", "en_ex": "Profit increased by 20%.", "tag": "Finance"}, {"no": 158, "cat": "Business", "freq": "B", "vn": "Doanh thu", "vn_ex": "Doanh thu năm nay tốt hơn.", "jp": "<ruby>売上<rt>うりあげ</rt></ruby>", "jp_ex": "<ruby>今年<rt>ことし</rt></ruby>の<ruby>売上<rt>うりあげ</rt></ruby>は<ruby>良<rt>よ</rt></ruby>いです。", "en": "Revenue", "en_ex": "Revenue is better this year.", "tag": "Finance"}, {"no": 159, "cat": "Business", "freq": "B", "vn": "Chi phí", "vn_ex": "Chi phí quá cao.", "jp": "<ruby>費用<rt>ひよう</rt></ruby> / コスト", "jp_ex": "コストが<ruby>高<rt>たか</rt></ruby>すぎます。", "en": "Cost", "en_ex": "The cost is too high.", "tag": "Finance"}, {"no": 160, "cat": "Business", "freq": "B", "vn": "Ngân sách", "vn_ex": "Ngân sách có hạn.", "jp": "<ruby>予算<rt>よさん</rt></ruby>", "jp_ex": "<ruby>予算<rt>よさん</rt></ruby>に<ruby>限<rt>かぎ</rt></ruby>りがあります。", "en": "Budget", "en_ex": "The budget is limited.", "tag": "Finance"}, {"no": 161, "cat": "Business", "freq": "B", "vn": "Hạn chót", "vn_ex": "Hạn chót là cuối tháng.", "jp": "<ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>り", "jp_ex": "<ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>りは<ruby>月末<rt>げつまつ</rt></ruby>です。", "en": "Deadline", "en_ex": "The deadline is end of month.", "tag": "Schedule"}, {"no": 162, "cat": "Business", "freq": "B", "vn": "Kế hoạch", "vn_ex": "Kế hoạch cho quý tới.", "jp": "<ruby>計画<rt>けいかく</rt></ruby>", "jp_ex": "<ruby>来期<rt>らいき</rt></ruby>の<ruby>計画<rt>けいかく</rt></ruby>。", "en": "Plan", "en_ex": "Plan for next quarter.", "tag": "Strategy"}, {"no": 163, "cat": "Business", "freq": "B", "vn": "Mục tiêu", "vn_ex": "Mục tiêu năm nay là gì?", "jp": "<ruby>目標<rt>もくひょう</rt></ruby>", "jp_ex": "<ruby>今年<rt>ことし</rt></ruby>の<ruby>目標<rt>もくひょう</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。", "en": "Goal / Target", "en_ex": "What is this year's goal?", "tag": "Strategy"}, {"no": 164, "cat": "Business", "freq": "B", "vn": "Cạnh tranh", "vn_ex": "Cạnh tranh rất khốc liệt.", "jp": "<ruby>競争<rt>きょうそう</rt></ruby>", "jp_ex": "<ruby>競争<rt>きょうそう</rt></ruby>がとても<ruby>激<rt>はげ</rt></ruby>しいです。", "en": "Competition", "en_ex": "Competition is very fierce.", "tag": "Strategy"}, {"no": 165, "cat": "Business", "freq": "B", "vn": "Rủi ro", "vn_ex": "Rủi ro khá cao.", "jp": "リスク / <ruby>危険<rt>きけん</rt></ruby>", "jp_ex": "リスクがかなり<ruby>高<rt>たか</rt></ruby>いです。", "en": "Risk", "en_ex": "The risk is quite high.", "tag": "Strategy"}, {"no": 166, "cat": "Business", "freq": "B", "vn": "Cơ hội", "vn_ex": "Đây là cơ hội tốt.", "jp": "チャンス / <ruby>機会<rt>きかい</rt></ruby>", "jp_ex": "これは<ruby>良<rt>よ</rt></ruby>いチャンスです。", "en": "Opportunity", "en_ex": "This is a good opportunity.", "tag": "Strategy"}, {"no": 167, "cat": "Business", "freq": "B", "vn": "Phê duyệt", "vn_ex": "Đã được phê duyệt chưa?", "jp": "<ruby>承認<rt>しょうにん</rt></ruby>する", "jp_ex": "もう<ruby>承認<rt>しょうにん</rt></ruby>されましたか。", "en": "To approve", "en_ex": "Has it been approved?", "tag": "Process"}, {"no": 168, "cat": "Business", "freq": "B", "vn": "Ký tên", "vn_ex": "Ký tên ở đây.", "jp": "<ruby>署名<rt>しょめい</rt></ruby>する / サインする", "jp_ex": "ここにサインしてください。", "en": "To sign", "en_ex": "Sign here.", "tag": "Contract"}, {"no": 169, "cat": "Business", "freq": "B", "vn": "Điều kiện", "vn_ex": "Điều kiện này chấp nhận được.", "jp": "<ruby>条件<rt>じょうけん</rt></ruby>", "jp_ex": "この<ruby>条件<rt>じょうけん</rt></ruby>は<ruby>受<rt>う</rt></ruby>け<ruby>入<rt>い</rt></ruby>れられます。", "en": "Condition / Terms", "en_ex": "These terms are acceptable.", "tag": "Contract"}, {"no": 170, "cat": "Business", "freq": "B", "vn": "Bảo hành", "vn_ex": "Bảo hành bao lâu?", "jp": "<ruby>保証<rt>ほしょう</rt></ruby>", "jp_ex": "<ruby>保証<rt>ほしょう</rt></ruby>はどのくらいですか。", "en": "Warranty", "en_ex": "How long is the warranty?", "tag": "Product"}, {"no": 171, "cat": "Business", "freq": "B", "vn": "Mẫu", "vn_ex": "Cho tôi xem mẫu.", "jp": "サンプル / <ruby>見本<rt>みほん</rt></ruby>", "jp_ex": "サンプルを<ruby>見<rt>み</rt></ruby>せてください。", "en": "Sample", "en_ex": "Let me see a sample.", "tag": "Product"}, {"no": 172, "cat": "Business", "freq": "B", "vn": "Đơn hàng", "vn_ex": "Đơn hàng đã được xử lý.", "jp": "<ruby>注文<rt>ちゅうもん</rt></ruby>", "jp_ex": "<ruby>注文<rt>ちゅうもん</rt></ruby>は<ruby>処理<rt>しょり</rt></ruby>されました。", "en": "Order", "en_ex": "The order has been processed.", "tag": "Order"}, {"no": 173, "cat": "Business", "freq": "B", "vn": "Xuất khẩu", "vn_ex": "Chúng tôi xuất khẩu sang Nhật.", "jp": "<ruby>輸出<rt>ゆしゅつ</rt></ruby>する", "jp_ex": "<ruby>日本<rt>にほん</rt></ruby>に<ruby>輸出<rt>ゆしゅつ</rt></ruby>しています。", "en": "To export", "en_ex": "We export to Japan.", "tag": "Trade"}, {"no": 174, "cat": "Business", "freq": "B", "vn": "Nhập khẩu", "vn_ex": "Nhập khẩu nguyên liệu từ Trung Quốc.", "jp": "<ruby>輸入<rt>ゆにゅう</rt></ruby>する", "jp_ex": "<ruby>中国<rt>ちゅうごく</rt></ruby>から<ruby>原料<rt>げんりょう</rt></ruby>を<ruby>輸入<rt>ゆにゅう</rt></ruby>しています。", "en": "To import", "en_ex": "We import materials from China.", "tag": "Trade"}, {"no": 175, "cat": "Business", "freq": "B", "vn": "Thuế", "vn_ex": "Thuế ở Việt Nam thế nào?", "jp": "<ruby>税金<rt>ぜいきん</rt></ruby>", "jp_ex": "ベトナムの<ruby>税金<rt>ぜいきん</rt></ruby>はどうですか。", "en": "Tax", "en_ex": "How are taxes in Vietnam?", "tag": "Finance"}, {"no": 176, "cat": "Business", "freq": "B", "vn": "Vốn", "vn_ex": "Cần thêm vốn đầu tư.", "jp": "<ruby>資本<rt>しほん</rt></ruby> / <ruby>資金<rt>しきん</rt></ruby>", "jp_ex": "<ruby>追加<rt>ついか</rt></ruby>の<ruby>投資資金<rt>とうししきん</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>です。", "en": "Capital", "en_ex": "We need more investment capital.", "tag": "Finance"}, {"no": 177, "cat": "Business", "freq": "B", "vn": "Cổ đông", "vn_ex": "Cổ đông yêu cầu báo cáo.", "jp": "<ruby>株主<rt>かぶぬし</rt></ruby>", "jp_ex": "<ruby>株主<rt>かぶぬし</rt></ruby>が<ruby>報告<rt>ほうこく</rt></ruby>を<ruby>求<rt>もと</rt></ruby>めています。", "en": "Shareholder", "en_ex": "Shareholders are requesting a report.", "tag": "Finance"}, {"no": 178, "cat": "Business", "freq": "B", "vn": "Thành công", "vn_ex": "Dự án đã thành công.", "jp": "<ruby>成功<rt>せいこう</rt></ruby>する", "jp_ex": "プロジェクトは<ruby>成功<rt>せいこう</rt></ruby>しました。", "en": "To succeed", "en_ex": "The project was successful.", "tag": "Result"}, {"no": 179, "cat": "Business", "freq": "B", "vn": "Thất bại", "vn_ex": "Kế hoạch bị thất bại.", "jp": "<ruby>失敗<rt>しっぱい</rt></ruby>する", "jp_ex": "<ruby>計画<rt>けいかく</rt></ruby>は<ruby>失敗<rt>しっぱい</rt></ruby>しました。", "en": "To fail", "en_ex": "The plan failed.", "tag": "Result"}, {"no": 180, "cat": "Business", "freq": "B", "vn": "Phát triển", "vn_ex": "Công ty đang phát triển nhanh.", "jp": "<ruby>発展<rt>はってん</rt></ruby>する / <ruby>成長<rt>せいちょう</rt></ruby>する", "jp_ex": "<ruby>会社<rt>かいしゃ</rt></ruby>は<ruby>急速<rt>きゅうそく</rt></ruby>に<ruby>成長<rt>せいちょう</rt></ruby>しています。", "en": "To develop / grow", "en_ex": "The company is growing fast.", "tag": "Strategy"}, {"no": 181, "cat": "Business", "freq": "B", "vn": "Giải quyết", "vn_ex": "Cần giải quyết vấn đề này.", "jp": "<ruby>解決<rt>かいけつ</rt></ruby>する", "jp_ex": "この<ruby>問題<rt>もんだい</rt></ruby>を<ruby>解決<rt>かいけつ</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>があります。", "en": "To solve", "en_ex": "We need to solve this problem.", "tag": "Process"}, {"no": 182, "cat": "Business", "freq": "B", "vn": "Quyết định", "vn_ex": "Ai quyết định việc này?", "jp": "<ruby>決定<rt>けってい</rt></ruby>する", "jp_ex": "<ruby>誰<rt>だれ</rt></ruby>がこれを<ruby>決<rt>き</rt></ruby>めますか。", "en": "To decide", "en_ex": "Who decides this?", "tag": "Process"}, {"no": 183, "cat": "Business", "freq": "B", "vn": "Họp mặt", "vn_ex": "Họp mặt với đối tác chiều nay.", "jp": "<ruby>面談<rt>めんだん</rt></ruby> / ミーティング", "jp_ex": "<ruby>今日<rt>きょう</rt></ruby>の<ruby>午後<rt>ごご</rt></ruby>パートナーと<ruby>面談<rt>めんだん</rt></ruby>があります。", "en": "Meeting (face-to-face)", "en_ex": "Meeting with partners this afternoon.", "tag": "Meeting"}, {"no": 184, "cat": "Business", "freq": "B", "vn": "Cam kết", "vn_ex": "Chúng tôi cam kết chất lượng.", "jp": "コミットする / <ruby>約束<rt>やくそく</rt></ruby>する", "jp_ex": "<ruby>品質<rt>ひんしつ</rt></ruby>を<ruby>約束<rt>やくそく</rt></ruby>します。", "en": "To commit", "en_ex": "We commit to quality.", "tag": "Negotiation"}, {"no": 185, "cat": "Business", "freq": "B", "vn": "Nhà cung cấp", "vn_ex": "Nhà cung cấp ở đâu?", "jp": "サプライヤー / <ruby>仕入<rt>しい</rt></ruby>れ<ruby>先<rt>さき</rt></ruby>", "jp_ex": "サプライヤーはどこですか。", "en": "Supplier", "en_ex": "Where is the supplier?", "tag": "Trade"}, {"no": 186, "cat": "Business", "freq": "B", "vn": "Phân phối", "vn_ex": "Phân phối sản phẩm toàn quốc.", "jp": "<ruby>流通<rt>りゅうつう</rt></ruby> / <ruby>配布<rt>はいふ</rt></ruby>", "jp_ex": "<ruby>全国<rt>ぜんこく</rt></ruby>に<ruby>製品<rt>せいひん</rt></ruby>を<ruby>流通<rt>りゅうつう</rt></ruby>させます。", "en": "Distribution", "en_ex": "Distribute products nationwide.", "tag": "Trade"}, {"no": 187, "cat": "Business", "freq": "B", "vn": "Quảng cáo", "vn_ex": "Quảng cáo trên mạng xã hội.", "jp": "<ruby>広告<rt>こうこく</rt></ruby>", "jp_ex": "SNSで<ruby>広告<rt>こうこく</rt></ruby>をします。", "en": "Advertising", "en_ex": "Advertising on social media.", "tag": "Marketing"}, {"no": 188, "cat": "Business", "freq": "B", "vn": "Thương hiệu", "vn_ex": "Thương hiệu rất quan trọng.", "jp": "ブランド", "jp_ex": "ブランドはとても<ruby>重要<rt>じゅうよう</rt></ruby>です。", "en": "Brand", "en_ex": "Brand is very important.", "tag": "Marketing"}, {"no": 189, "cat": "Daily", "freq": "A", "vn": "Cơm", "vn_ex": "Ăn cơm với tôi nhé.", "jp": "ご<ruby>飯<rt>はん</rt></ruby>", "jp_ex": "<ruby>一緒<rt>いっしょ</rt></ruby>にご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べましょう。", "en": "Rice / Meal", "en_ex": "Let's eat together.", "tag": "Meal"}, {"no": 190, "cat": "Daily", "freq": "A", "vn": "Phở", "vn_ex": "Tôi thích ăn phở bò.", "jp": "フォー", "jp_ex": "<ruby>牛肉<rt>ぎゅうにく</rt></ruby>フォーが<ruby>好<rt>す</rt></ruby>きです。", "en": "Pho", "en_ex": "I like beef pho.", "tag": "Food"}, {"no": 191, "cat": "Daily", "freq": "A", "vn": "Cà phê", "vn_ex": "Đi uống cà phê không?", "jp": "コーヒー", "jp_ex": "コーヒーを<ruby>飲<rt>の</rt></ruby>みに<ruby>行<rt>い</rt></ruby>きませんか。", "en": "Coffee", "en_ex": "Shall we get coffee?", "tag": "Drink"}, {"no": 192, "cat": "Daily", "freq": "A", "vn": "Bia", "vn_ex": "Một chai bia nữa.", "jp": "ビール", "jp_ex": "ビールをもう1<ruby>本<rt>ぽん</rt></ruby>。", "en": "Beer", "en_ex": "One more beer.", "tag": "Drink"}, {"no": 193, "cat": "Daily", "freq": "A", "vn": "Rượu", "vn_ex": "Rượu này mạnh lắm.", "jp": "お<ruby>酒<rt>さけ</rt></ruby>", "jp_ex": "このお<ruby>酒<rt>さけ</rt></ruby>は<ruby>強<rt>つよ</rt></ruby>いです。", "en": "Liquor / Alcohol", "en_ex": "This liquor is strong.", "tag": "Drink"}, {"no": 194, "cat": "Daily", "freq": "A", "vn": "Nước", "vn_ex": "Cho tôi một cốc nước.", "jp": "<ruby>水<rt>みず</rt></ruby>", "jp_ex": "<ruby>水<rt>みず</rt></ruby>を1<ruby>杯<rt>ぱい</rt></ruby>ください。", "en": "Water", "en_ex": "Give me a glass of water.", "tag": "Drink"}, {"no": 195, "cat": "Daily", "freq": "A", "vn": "Trà", "vn_ex": "Uống trà đá đi.", "jp": "お<ruby>茶<rt>ちゃ</rt></ruby>", "jp_ex": "アイスティーを<ruby>飲<rt>の</rt></ruby>みましょう。", "en": "Tea", "en_ex": "Let's have iced tea.", "tag": "Drink"}, {"no": 196, "cat": "Daily", "freq": "A", "vn": "Nhà hàng", "vn_ex": "Nhà hàng này rất nổi tiếng.", "jp": "レストラン", "jp_ex": "このレストランはとても<ruby>有名<rt>ゆうめい</rt></ruby>です。", "en": "Restaurant", "en_ex": "This restaurant is famous.", "tag": "Location"}, {"no": 197, "cat": "Daily", "freq": "A", "vn": "Quán", "vn_ex": "Quán này ngon lắm.", "jp": "お<ruby>店<rt>みせ</rt></ruby>", "jp_ex": "この<ruby>店<rt>みせ</rt></ruby>はとても<ruby>美味<rt>おい</rt></ruby>しいです。", "en": "Shop / Eatery", "en_ex": "This place is delicious.", "tag": "Location"}, {"no": 198, "cat": "Daily", "freq": "A", "vn": "Gọi món", "vn_ex": "Gọi món đi anh.", "jp": "<ruby>注文<rt>ちゅうもん</rt></ruby>する", "jp_ex": "<ruby>注文<rt>ちゅうもん</rt></ruby>しましょう。", "en": "To order (food)", "en_ex": "Let's order.", "tag": "Meal"}, {"no": 199, "cat": "Daily", "freq": "A", "vn": "Tính tiền", "vn_ex": "Tính tiền giúp tôi.", "jp": "お<ruby>会計<rt>かいけい</rt></ruby>", "jp_ex": "お<ruby>会計<rt>かいけい</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", "en": "Check / Bill", "en_ex": "Check, please.", "tag": "Meal"}, {"no": 200, "cat": "Daily", "freq": "A", "vn": "Mời", "vn_ex": "Tôi mời anh ăn tối.", "jp": "おごる / <ruby>招待<rt>しょうたい</rt></ruby>する", "jp_ex": "<ruby>夕食<rt>ゆうしょく</rt></ruby>をおごります。", "en": "To treat / invite", "en_ex": "Let me treat you to dinner.", "tag": "Meal"}, {"no": 201, "cat": "Daily", "freq": "A", "vn": "No", "vn_ex": "Tôi no rồi.", "jp": "お<ruby>腹<rt>なか</rt></ruby>いっぱい", "jp_ex": "お<ruby>腹<rt>なか</rt></ruby>いっぱいです。", "en": "Full (stomach)", "en_ex": "I'm full.", "tag": "Meal"}, {"no": 202, "cat": "Daily", "freq": "A", "vn": "Đói", "vn_ex": "Tôi đói quá.", "jp": "お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>す</rt></ruby>いた", "jp_ex": "お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>す</rt></ruby>きました。", "en": "Hungry", "en_ex": "I'm hungry.", "tag": "Meal"}, {"no": 203, "cat": "Daily", "freq": "A", "vn": "Thịt", "vn_ex": "Thịt bò hay thịt gà?", "jp": "<ruby>肉<rt>にく</rt></ruby>", "jp_ex": "<ruby>牛肉<rt>ぎゅうにく</rt></ruby>か<ruby>鶏肉<rt>とりにく</rt></ruby>か。", "en": "Meat", "en_ex": "Beef or chicken?", "tag": "Food"}, {"no": 204, "cat": "Daily", "freq": "A", "vn": "Cá", "vn_ex": "Cá ở đây rất tươi.", "jp": "<ruby>魚<rt>さかな</rt></ruby>", "jp_ex": "ここの<ruby>魚<rt>さかな</rt></ruby>はとても<ruby>新鮮<rt>しんせん</rt></ruby>です。", "en": "Fish", "en_ex": "The fish here is very fresh.", "tag": "Food"}, {"no": 205, "cat": "Daily", "freq": "A", "vn": "Rau", "vn_ex": "Ăn nhiều rau nhé.", "jp": "<ruby>野菜<rt>やさい</rt></ruby>", "jp_ex": "<ruby>野菜<rt>やさい</rt></ruby>をたくさん<ruby>食<rt>た</rt></ruby>べましょう。", "en": "Vegetable", "en_ex": "Eat more vegetables.", "tag": "Food"}, {"no": 206, "cat": "Daily", "freq": "A", "vn": "Trái cây", "vn_ex": "Trái cây Việt Nam rất ngon.", "jp": "<ruby>果物<rt>くだもの</rt></ruby>", "jp_ex": "ベトナムの<ruby>果物<rt>くだもの</rt></ruby>はとても<ruby>美味<rt>おい</rt></ruby>しいです。", "en": "Fruit", "en_ex": "Vietnamese fruit is delicious.", "tag": "Food"}, {"no": 207, "cat": "Daily", "freq": "A", "vn": "Cay", "vn_ex": "Cái này cay không?", "jp": "<ruby>辛<rt>から</rt></ruby>い", "jp_ex": "これは<ruby>辛<rt>から</rt></ruby>いですか。", "en": "Spicy", "en_ex": "Is this spicy?", "tag": "Food"}, {"no": 208, "cat": "Daily", "freq": "A", "vn": "Ngọt", "vn_ex": "Ngọt quá, bớt đường đi.", "jp": "<ruby>甘<rt>あま</rt></ruby>い", "jp_ex": "<ruby>甘<rt>あま</rt></ruby>すぎます、<ruby>砂糖<rt>さとう</rt></ruby>を<ruby>減<rt>へ</rt></ruby>らしてください。", "en": "Sweet", "en_ex": "Too sweet, less sugar please.", "tag": "Food"}, {"no": 209, "cat": "Daily", "freq": "A", "vn": "Khách sạn", "vn_ex": "Khách sạn tôi ở gần đây.", "jp": "ホテル", "jp_ex": "<ruby>私<rt>わたし</rt></ruby>のホテルは<ruby>近<rt>ちか</rt></ruby>くです。", "en": "Hotel", "en_ex": "My hotel is nearby.", "tag": "Location"}, {"no": 210, "cat": "Daily", "freq": "A", "vn": "Phòng", "vn_ex": "Phòng số mấy?", "jp": "<ruby>部屋<rt>へや</rt></ruby>", "jp_ex": "<ruby>部屋<rt>へや</rt></ruby>は<ruby>何号<rt>なんごう</rt></ruby>ですか。", "en": "Room", "en_ex": "What room number?", "tag": "Location"}, {"no": 211, "cat": "Daily", "freq": "A", "vn": "Taxi", "vn_ex": "Gọi taxi giúp tôi.", "jp": "タクシー", "jp_ex": "タクシーを<ruby>呼<rt>よ</rt></ruby>んでください。", "en": "Taxi", "en_ex": "Please call a taxi.", "tag": "Transport"}, {"no": 212, "cat": "Daily", "freq": "A", "vn": "Sân bay", "vn_ex": "Sân bay Nội Bài ở đâu?", "jp": "<ruby>空港<rt>くうこう</rt></ruby>", "jp_ex": "ノイバイ<ruby>空港<rt>くうこう</rt></ruby>はどこですか。", "en": "Airport", "en_ex": "Where is Noi Bai Airport?", "tag": "Transport"}, {"no": 213, "cat": "Daily", "freq": "A", "vn": "Đường", "vn_ex": "Đường này đông quá.", "jp": "<ruby>道<rt>みち</rt></ruby>", "jp_ex": "この<ruby>道<rt>みち</rt></ruby>はとても<ruby>混<rt>こ</rt></ruby>んでいます。", "en": "Road / Street", "en_ex": "This street is very crowded.", "tag": "Transport"}, {"no": 214, "cat": "Daily", "freq": "A", "vn": "Xe", "vn_ex": "Xe anh đỗ ở đâu?", "jp": "<ruby>車<rt>くるま</rt></ruby>", "jp_ex": "<ruby>車<rt>くるま</rt></ruby>はどこに<ruby>停<rt>と</rt></ruby>めましたか。", "en": "Car / Vehicle", "en_ex": "Where is your car parked?", "tag": "Transport"}, {"no": 215, "cat": "Daily", "freq": "A", "vn": "Gần", "vn_ex": "Gần đây có nhà hàng không?", "jp": "<ruby>近<rt>ちか</rt></ruby>い", "jp_ex": "<ruby>近<rt>ちか</rt></ruby>くにレストランはありますか。", "en": "Near", "en_ex": "Is there a restaurant nearby?", "tag": "Location"}, {"no": 216, "cat": "Daily", "freq": "A", "vn": "Xa", "vn_ex": "Xa quá, đi taxi đi.", "jp": "<ruby>遠<rt>とお</rt></ruby>い", "jp_ex": "<ruby>遠<rt>とお</rt></ruby>すぎます、タクシーで<ruby>行<rt>い</rt></ruby>きましょう。", "en": "Far", "en_ex": "Too far, let's take a taxi.", "tag": "Location"}, {"no": 217, "cat": "Daily", "freq": "A", "vn": "Tiền", "vn_ex": "Tôi không có tiền lẻ.", "jp": "お<ruby>金<rt>かね</rt></ruby>", "jp_ex": "<ruby>小銭<rt>こぜに</rt></ruby>がありません。", "en": "Money", "en_ex": "I don't have small change.", "tag": "Shopping"}, {"no": 218, "cat": "Daily", "freq": "A", "vn": "Mưa", "vn_ex": "Trời đang mưa.", "jp": "<ruby>雨<rt>あめ</rt></ruby>", "jp_ex": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っています。", "en": "Rain", "en_ex": "It is raining.", "tag": "Weather"}, {"no": 219, "cat": "Daily", "freq": "A", "vn": "Nhà", "vn_ex": "Nhà anh ở đâu?", "jp": "<ruby>家<rt>いえ</rt></ruby>", "jp_ex": "お<ruby>住<rt>す</rt></ruby>まいはどちらですか。", "en": "House / Home", "en_ex": "Where do you live?", "tag": "Daily"}, {"no": 220, "cat": "Daily", "freq": "A", "vn": "Gia đình", "vn_ex": "Gia đình anh khỏe không?", "jp": "<ruby>家族<rt>かぞく</rt></ruby>", "jp_ex": "ご<ruby>家族<rt>かぞく</rt></ruby>はお<ruby>元気<rt>げんき</rt></ruby>ですか。", "en": "Family", "en_ex": "Is your family well?", "tag": "Family"}, {"no": 221, "cat": "Daily", "freq": "A", "vn": "Con", "vn_ex": "Anh có mấy con?", "jp": "<ruby>子供<rt>こども</rt></ruby>", "jp_ex": "お<ruby>子<rt>こ</rt></ruby>さんは<ruby>何人<rt>なんにん</rt></ruby>ですか。", "en": "Child", "en_ex": "How many children do you have?", "tag": "Family"}, {"no": 222, "cat": "Daily", "freq": "A", "vn": "Vợ", "vn_ex": "Vợ tôi là người Hàn Quốc.", "jp": "<ruby>妻<rt>つま</rt></ruby>", "jp_ex": "<ruby>妻<rt>つま</rt></ruby>は<ruby>韓国人<rt>かんこくじん</rt></ruby>です。", "en": "Wife", "en_ex": "My wife is Korean.", "tag": "Family"}, {"no": 223, "cat": "Daily", "freq": "A", "vn": "Chồng", "vn_ex": "Chồng chị làm nghề gì?", "jp": "<ruby>夫<rt>おっと</rt></ruby> / ご<ruby>主人<rt>しゅじん</rt></ruby>", "jp_ex": "ご<ruby>主人<rt>しゅじん</rt></ruby>のお<ruby>仕事<rt>しごと</rt></ruby>は。", "en": "Husband", "en_ex": "What does your husband do?", "tag": "Family"}, {"no": 224, "cat": "Daily", "freq": "A", "vn": "Bạn bè", "vn_ex": "Chúng ta là bạn bè.", "jp": "<ruby>友達<rt>ともだち</rt></ruby>", "jp_ex": "<ruby>私<rt>わたし</rt></ruby>たちは<ruby>友達<rt>ともだち</rt></ruby>です。", "en": "Friends", "en_ex": "We are friends.", "tag": "Relationship"}, {"no": 225, "cat": "Daily", "freq": "A", "vn": "Yêu", "vn_ex": "Tôi yêu Việt Nam.", "jp": "<ruby>愛<rt>あい</rt></ruby>する / <ruby>好<rt>す</rt></ruby>き", "jp_ex": "ベトナムが<ruby>大好<rt>だいす</rt></ruby>きです。", "en": "To love", "en_ex": "I love Vietnam.", "tag": "Emotion"}, {"no": 226, "cat": "Daily", "freq": "A", "vn": "Vui", "vn_ex": "Hôm nay rất vui.", "jp": "<ruby>楽<rt>たの</rt></ruby>しい / <ruby>嬉<rt>うれ</rt></ruby>しい", "jp_ex": "<ruby>今日<rt>きょう</rt></ruby>はとても<ruby>楽<rt>たの</rt></ruby>しかったです。", "en": "Happy / Fun", "en_ex": "Today was very fun.", "tag": "Emotion"}, {"no": 227, "cat": "Daily", "freq": "A", "vn": "Buồn", "vn_ex": "Tôi hơi buồn.", "jp": "<ruby>悲<rt>かな</rt></ruby>しい", "jp_ex": "ちょっと<ruby>悲<rt>かな</rt></ruby>しいです。", "en": "Sad", "en_ex": "I'm a little sad.", "tag": "Emotion"}, {"no": 228, "cat": "Daily", "freq": "A", "vn": "Mệt", "vn_ex": "Tôi mệt quá.", "jp": "<ruby>疲<rt>つか</rt></ruby>れた", "jp_ex": "とても<ruby>疲<rt>つか</rt></ruby>れました。", "en": "Tired", "en_ex": "I'm so tired.", "tag": "Condition"}, {"no": 229, "cat": "Daily", "freq": "A", "vn": "Chụp ảnh", "vn_ex": "Chụp ảnh cùng nhé!", "jp": "<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>る", "jp_ex": "<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>りましょう！", "en": "To take a photo", "en_ex": "Let's take a photo together!", "tag": "Activity"}, {"no": 230, "cat": "Daily", "freq": "A", "vn": "Wifi", "vn_ex": "Wifi mật khẩu là gì?", "jp": "WiFi", "jp_ex": "WiFiのパスワードは<ruby>何<rt>なん</rt></ruby>ですか。", "en": "Wifi", "en_ex": "What is the Wifi password?", "tag": "Tech"}, {"no": 231, "cat": "Daily", "freq": "A", "vn": "Điện thoại", "vn_ex": "Cho tôi số điện thoại.", "jp": "<ruby>携帯<rt>けいたい</rt></ruby><ruby>電話<rt>でんわ</rt></ruby>", "jp_ex": "<ruby>電話番号<rt>でんわばんごう</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えてください。", "en": "Phone", "en_ex": "Give me your phone number.", "tag": "Tech"}, {"no": 232, "cat": "Daily", "freq": "A", "vn": "Toilet", "vn_ex": "Toilet ở đâu?", "jp": "トイレ", "jp_ex": "トイレはどこですか。", "en": "Toilet", "en_ex": "Where is the toilet?", "tag": "Location"}, {"no": 233, "cat": "Daily", "freq": "A", "vn": "Bệnh viện", "vn_ex": "Bệnh viện gần nhất ở đâu?", "jp": "<ruby>病院<rt>びょういん</rt></ruby>", "jp_ex": "<ruby>一番<rt>いちばん</rt></ruby><ruby>近<rt>ちか</rt></ruby>い<ruby>病院<rt>びょういん</rt></ruby>はどこですか。", "en": "Hospital", "en_ex": "Where is the nearest hospital?", "tag": "Emergency"}, {"no": 234, "cat": "Daily", "freq": "A", "vn": "Thuốc", "vn_ex": "Tôi cần mua thuốc.", "jp": "<ruby>薬<rt>くすり</rt></ruby>", "jp_ex": "<ruby>薬<rt>くすり</rt></ruby>を<ruby>買<rt>か</rt></ruby>いたいです。", "en": "Medicine", "en_ex": "I need to buy medicine.", "tag": "Health"}, {"no": 235, "cat": "Daily", "freq": "A", "vn": "Đau", "vn_ex": "Tôi bị đau đầu.", "jp": "<ruby>痛<rt>いた</rt></ruby>い", "jp_ex": "<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。", "en": "Pain / Hurt", "en_ex": "I have a headache.", "tag": "Health"}, {"no": 236, "cat": "Daily", "freq": "A", "vn": "Thời tiết", "vn_ex": "Thời tiết hôm nay đẹp.", "jp": "<ruby>天気<rt>てんき</rt></ruby>", "jp_ex": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>天気<rt>てんき</rt></ruby>が<ruby>良<rt>よ</rt></ruby>いです。", "en": "Weather", "en_ex": "The weather is nice today.", "tag": "Weather"}, {"no": 237, "cat": "Daily", "freq": "A", "vn": "Chơi", "vn_ex": "Cuối tuần đi chơi nhé.", "jp": "<ruby>遊<rt>あそ</rt></ruby>ぶ", "jp_ex": "<ruby>週末<rt>しゅうまつ</rt></ruby><ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>きましょう。", "en": "To play / hang out", "en_ex": "Let's go out on the weekend.", "tag": "Activity"}, {"no": 238, "cat": "Daily", "freq": "A", "vn": "Thể thao", "vn_ex": "Anh thích thể thao gì?", "jp": "スポーツ", "jp_ex": "どんなスポーツが<ruby>好<rt>す</rt></ruby>きですか。", "en": "Sports", "en_ex": "What sports do you like?", "tag": "Activity"}, {"no": 239, "cat": "Daily", "freq": "A", "vn": "Hát", "vn_ex": "Đi hát karaoke nhé.", "jp": "<ruby>歌<rt>うた</rt></ruby>う / カラオケ", "jp_ex": "カラオケに<ruby>行<rt>い</rt></ruby>きましょう。", "en": "To sing / Karaoke", "en_ex": "Let's go to karaoke.", "tag": "Activity"}, {"no": 240, "cat": "Daily", "freq": "A", "vn": "Du lịch", "vn_ex": "Anh thích du lịch không?", "jp": "<ruby>旅行<rt>りょこう</rt></ruby>", "jp_ex": "<ruby>旅行<rt>りょこう</rt></ruby>は<ruby>好<rt>す</rt></ruby>きですか。", "en": "Travel / Tourism", "en_ex": "Do you like traveling?", "tag": "Activity"}, {"no": 241, "cat": "Daily", "freq": "A", "vn": "Biển", "vn_ex": "Cuối tuần đi biển nhé.", "jp": "<ruby>海<rt>うみ</rt></ruby>", "jp_ex": "<ruby>週末<rt>しゅうまつ</rt></ruby><ruby>海<rt>うみ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きましょう。", "en": "Beach / Sea", "en_ex": "Let's go to the beach this weekend.", "tag": "Activity"}, {"no": 242, "cat": "Daily", "freq": "A", "vn": "Núi", "vn_ex": "Núi ở Việt Nam rất đẹp.", "jp": "<ruby>山<rt>やま</rt></ruby>", "jp_ex": "ベトナムの<ruby>山<rt>やま</rt></ruby>はとても<ruby>綺麗<rt>きれい</rt></ruby>です。", "en": "Mountain", "en_ex": "Mountains in Vietnam are beautiful.", "tag": "Activity"}, {"no": 243, "cat": "Daily", "freq": "A", "vn": "Trời ơi", "vn_ex": "Trời ơi, đắt quá!", "jp": "えー！/ <ruby>大変<rt>たいへん</rt></ruby>！", "jp_ex": "えー！<ruby>高<rt>たか</rt></ruby>すぎる！", "en": "Oh my!", "en_ex": "Oh my, too expensive!", "tag": "Exclamation"}, {"no": 244, "cat": "Daily", "freq": "A", "vn": "Hay", "vn_ex": "Phim này hay lắm.", "jp": "<ruby>面白<rt>おもしろ</rt></ruby>い", "jp_ex": "この<ruby>映画<rt>えいが</rt></ruby>はとても<ruby>面白<rt>おもしろ</rt></ruby>いです。", "en": "Interesting / Good", "en_ex": "This movie is really good.", "tag": "Evaluation"}, {"no": 245, "cat": "Daily", "freq": "A", "vn": "Chán", "vn_ex": "Chán quá, không có gì làm.", "jp": "つまらない / <ruby>退屈<rt>たいくつ</rt></ruby>", "jp_ex": "つまらない、やることがない。", "en": "Boring", "en_ex": "So boring, nothing to do.", "tag": "Emotion"}, {"no": 246, "cat": "Daily", "freq": "A", "vn": "Sợ", "vn_ex": "Tôi sợ rắn.", "jp": "<ruby>怖<rt>こわ</rt></ruby>い", "jp_ex": "<ruby>蛇<rt>へび</rt></ruby>が<ruby>怖<rt>こわ</rt></ruby>いです。", "en": "Scared / Afraid", "en_ex": "I'm afraid of snakes.", "tag": "Emotion"}, {"no": 247, "cat": "Daily", "freq": "A", "vn": "Nhớ", "vn_ex": "Tôi nhớ Việt Nam quá.", "jp": "<ruby>懐<rt>なつ</rt></ruby>かしい / <ruby>恋<rt>こい</rt></ruby>しい", "jp_ex": "ベトナムがとても<ruby>恋<rt>こい</rt></ruby>しいです。", "en": "To miss", "en_ex": "I miss Vietnam so much.", "tag": "Emotion"}, {"no": 248, "cat": "Daily", "freq": "A", "vn": "Một chút", "vn_ex": "Đợi một chút.", "jp": "ちょっと / <ruby>少<rt>すこ</rt></ruby>し", "jp_ex": "ちょっと<ruby>待<rt>ま</rt></ruby>ってください。", "en": "A little", "en_ex": "Wait a moment.", "tag": "Expression"}, {"no": 249, "cat": "Business", "freq": "B", "vn": "Tiến độ", "vn_ex": "Tiến độ dự án thế nào?", "jp": "<ruby>進捗<rt>しんちょく</rt></ruby>", "jp_ex": "プロジェクトの<ruby>進捗<rt>しんちょく</rt></ruby>はどうですか。", "en": "Progress", "en_ex": "How is the project progress?", "tag": "Process"}, {"no": 250, "cat": "Business", "freq": "B", "vn": "Hợp lệ", "vn_ex": "Giấy tờ hợp lệ chưa?", "jp": "<ruby>有効<rt>ゆうこう</rt></ruby> / <ruby>適正<rt>てきせい</rt></ruby>", "jp_ex": "<ruby>書類<rt>しょるい</rt></ruby>は<ruby>有効<rt>ゆうこう</rt></ruby>ですか。", "en": "Valid", "en_ex": "Are the documents valid?", "tag": "Contract"}, {"no": 251, "cat": "Business", "freq": "B", "vn": "Hủy", "vn_ex": "Hủy đơn hàng giúp tôi.", "jp": "キャンセルする", "jp_ex": "<ruby>注文<rt>ちゅうもん</rt></ruby>をキャンセルしてください。", "en": "To cancel", "en_ex": "Please cancel the order.", "tag": "Order"}, {"no": 252, "cat": "Business", "freq": "B", "vn": "Thay đổi", "vn_ex": "Có thay đổi gì không?", "jp": "<ruby>変更<rt>へんこう</rt></ruby>する", "jp_ex": "<ruby>何<rt>なに</rt></ruby>か<ruby>変更<rt>へんこう</rt></ruby>がありますか。", "en": "To change", "en_ex": "Are there any changes?", "tag": "Process"}, {"no": 253, "cat": "Business", "freq": "B", "vn": "Sửa", "vn_ex": "Xin sửa lại hợp đồng.", "jp": "<ruby>修正<rt>しゅうせい</rt></ruby>する", "jp_ex": "<ruby>契約書<rt>けいやくしょ</rt></ruby>を<ruby>修正<rt>しゅうせい</rt></ruby>してください。", "en": "To fix / revise", "en_ex": "Please revise the contract.", "tag": "Contract"}, {"no": 254, "cat": "Business", "freq": "B", "vn": "Kiểm tra", "vn_ex": "Kiểm tra lại số liệu nhé.", "jp": "チェックする / <ruby>確認<rt>かくにん</rt></ruby>する", "jp_ex": "データを<ruby>再確認<rt>さいかくにん</rt></ruby>しましょう。", "en": "To check", "en_ex": "Let's recheck the data.", "tag": "Process"}, {"no": 255, "cat": "Business", "freq": "B", "vn": "Chuyển khoản", "vn_ex": "Chuyển khoản qua ngân hàng.", "jp": "<ruby>銀行振込<rt>ぎんこうふりこみ</rt></ruby>", "jp_ex": "<ruby>銀行振込<rt>ぎんこうふりこみ</rt></ruby>でお<ruby>願<rt>ねが</rt></ruby>いします。", "en": "Bank transfer", "en_ex": "Transfer via bank.", "tag": "Payment"}, {"no": 256, "cat": "Business", "freq": "B", "vn": "Hàng hóa", "vn_ex": "Hàng hóa đã đến chưa?", "jp": "<ruby>商品<rt>しょうひん</rt></ruby> / <ruby>貨物<rt>かもつ</rt></ruby>", "jp_ex": "<ruby>商品<rt>しょうひん</rt></ruby>はもう<ruby>届<rt>とど</rt></ruby>きましたか。", "en": "Goods", "en_ex": "Have the goods arrived?", "tag": "Logistics"}, {"no": 257, "cat": "Business", "freq": "B", "vn": "Kho", "vn_ex": "Hàng còn trong kho.", "jp": "<ruby>倉庫<rt>そうこ</rt></ruby>", "jp_ex": "<ruby>商品<rt>しょうひん</rt></ruby>は<ruby>倉庫<rt>そうこ</rt></ruby>にあります。", "en": "Warehouse", "en_ex": "The goods are in the warehouse.", "tag": "Logistics"}, {"no": 258, "cat": "Business", "freq": "B", "vn": "Vận chuyển", "vn_ex": "Vận chuyển mất bao lâu?", "jp": "<ruby>輸送<rt>ゆそう</rt></ruby> / <ruby>配送<rt>はいそう</rt></ruby>", "jp_ex": "<ruby>配送<rt>はいそう</rt></ruby>にどのくらいかかりますか。", "en": "Shipping", "en_ex": "How long does shipping take?", "tag": "Logistics"}, {"no": 259, "cat": "Business", "freq": "B", "vn": "Giới thiệu", "vn_ex": "Cho tôi giới thiệu công ty.", "jp": "<ruby>紹介<rt>しょうかい</rt></ruby>する", "jp_ex": "<ruby>会社<rt>かいしゃ</rt></ruby>を<ruby>紹介<rt>しょうかい</rt></ruby>させてください。", "en": "To introduce", "en_ex": "Let me introduce the company.", "tag": "Introduction"}, {"no": 260, "cat": "Business", "freq": "B", "vn": "Danh thiếp", "vn_ex": "Đây là danh thiếp của tôi.", "jp": "<ruby>名刺<rt>めいし</rt></ruby>", "jp_ex": "これは<ruby>私<rt>わたし</rt></ruby>の<ruby>名刺<rt>めいし</rt></ruby>です。", "en": "Business card", "en_ex": "Here is my business card.", "tag": "Introduction"}, {"no": 261, "cat": "Business", "freq": "B", "vn": "Phiên dịch", "vn_ex": "Cần phiên dịch không?", "jp": "<ruby>通訳<rt>つうやく</rt></ruby>", "jp_ex": "<ruby>通訳<rt>つうやく</rt></ruby>は<ruby>必要<rt>ひつよう</rt></ruby>ですか。", "en": "Interpreter", "en_ex": "Do we need an interpreter?", "tag": "Communication"}, {"no": 262, "cat": "Business", "freq": "B", "vn": "Hồ sơ", "vn_ex": "Gửi hồ sơ cho tôi nhé.", "jp": "<ruby>書類<rt>しょるい</rt></ruby> / ファイル", "jp_ex": "<ruby>書類<rt>しょるい</rt></ruby>を<ruby>送<rt>おく</rt></ruby>ってください。", "en": "Documents / File", "en_ex": "Please send me the documents.", "tag": "Work"}, {"no": 263, "cat": "Business", "freq": "B", "vn": "Đàm phán", "vn_ex": "Đàm phán thành công rồi.", "jp": "<ruby>交渉<rt>こうしょう</rt></ruby>", "jp_ex": "<ruby>交渉<rt>こうしょう</rt></ruby>は<ruby>成功<rt>せいこう</rt></ruby>しました。", "en": "Negotiation", "en_ex": "The negotiation was successful.", "tag": "Negotiation"}, {"no": 264, "cat": "Business", "freq": "B", "vn": "Tuyển dụng", "vn_ex": "Công ty đang tuyển dụng.", "jp": "<ruby>採用<rt>さいよう</rt></ruby> / <ruby>募集<rt>ぼしゅう</rt></ruby>", "jp_ex": "<ruby>会社<rt>かいしゃ</rt></ruby>は<ruby>採用<rt>さいよう</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>です。", "en": "Recruitment", "en_ex": "The company is recruiting.", "tag": "HR"}, {"no": 265, "cat": "Business", "freq": "B", "vn": "Đào tạo", "vn_ex": "Cần đào tạo nhân viên mới.", "jp": "<ruby>研修<rt>けんしゅう</rt></ruby> / トレーニング", "jp_ex": "<ruby>新入<rt>しんにゅう</rt></ruby><ruby>社員<rt>しゃいん</rt></ruby>の<ruby>研修<rt>けんしゅう</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>です。", "en": "Training", "en_ex": "We need to train new employees.", "tag": "HR"}, {"no": 266, "cat": "Business", "freq": "B", "vn": "Đánh giá", "vn_ex": "Đánh giá hiệu quả dự án.", "jp": "<ruby>評価<rt>ひょうか</rt></ruby>する", "jp_ex": "プロジェクトの<ruby>効果<rt>こうか</rt></ruby>を<ruby>評価<rt>ひょうか</rt></ruby>します。", "en": "To evaluate", "en_ex": "Evaluate the project effectiveness.", "tag": "Process"}, {"no": 267, "cat": "Business", "freq": "B", "vn": "Nghiên cứu", "vn_ex": "Cần nghiên cứu thị trường.", "jp": "<ruby>調査<rt>ちょうさ</rt></ruby> / <ruby>研究<rt>けんきゅう</rt></ruby>", "jp_ex": "<ruby>市場<rt>しじょう</rt></ruby><ruby>調査<rt>ちょうさ</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>です。", "en": "Research", "en_ex": "We need market research.", "tag": "Strategy"}, {"no": 268, "cat": "Business", "freq": "B", "vn": "Công nghệ", "vn_ex": "Công nghệ mới nhất.", "jp": "<ruby>技術<rt>ぎじゅつ</rt></ruby> / テクノロジー", "jp_ex": "<ruby>最新<rt>さいしん</rt></ruby>の<ruby>技術<rt>ぎじゅつ</rt></ruby>。", "en": "Technology", "en_ex": "The latest technology.", "tag": "Product"}, {"no": 269, "cat": "Business", "freq": "B", "vn": "Ưu tiên", "vn_ex": "Ưu tiên việc này trước.", "jp": "<ruby>優先<rt>ゆうせん</rt></ruby>する", "jp_ex": "これを<ruby>優先<rt>ゆうせん</rt></ruby>してください。", "en": "To prioritize", "en_ex": "Prioritize this first.", "tag": "Process"}, {"no": 270, "cat": "Business", "freq": "B", "vn": "Hoàn thành", "vn_ex": "Đã hoàn thành chưa?", "jp": "<ruby>完成<rt>かんせい</rt></ruby>する / <ruby>完了<rt>かんりょう</rt></ruby>する", "jp_ex": "もう<ruby>完了<rt>かんりょう</rt></ruby>しましたか。", "en": "To complete", "en_ex": "Is it completed?", "tag": "Process"}, {"no": 271, "cat": "Daily", "freq": "A", "vn": "Đẹp trai", "vn_ex": "Anh ấy đẹp trai quá.", "jp": "イケメン / かっこいい", "jp_ex": "あの<ruby>人<rt>ひと</rt></ruby>はとてもかっこいいです。", "en": "Handsome", "en_ex": "He is very handsome.", "tag": "Compliment"}, {"no": 272, "cat": "Daily", "freq": "A", "vn": "Xinh", "vn_ex": "Chị ấy xinh quá.", "jp": "<ruby>綺麗<rt>きれい</rt></ruby> / かわいい", "jp_ex": "あの<ruby>人<rt>ひと</rt></ruby>はとても<ruby>綺麗<rt>きれい</rt></ruby>です。", "en": "Pretty", "en_ex": "She is very pretty.", "tag": "Compliment"}, {"no": 273, "cat": "Daily", "freq": "A", "vn": "Già", "vn_ex": "Tôi già rồi.", "jp": "<ruby>年<rt>とし</rt></ruby>を<ruby>取<rt>と</rt></ruby>った", "jp_ex": "もう<ruby>年<rt>とし</rt></ruby>です。", "en": "Old (age)", "en_ex": "I'm getting old.", "tag": "Age"}, {"no": 274, "cat": "Daily", "freq": "A", "vn": "Trẻ", "vn_ex": "Anh trông trẻ lắm.", "jp": "<ruby>若<rt>わか</rt></ruby>い", "jp_ex": "とても<ruby>若<rt>わか</rt></ruby>く<ruby>見<rt>み</rt></ruby>えます。", "en": "Young", "en_ex": "You look very young.", "tag": "Compliment"}, {"no": 275, "cat": "Daily", "freq": "A", "vn": "Khóc", "vn_ex": "Em bé đang khóc.", "jp": "<ruby>泣<rt>な</rt></ruby>く", "jp_ex": "<ruby>赤<rt>あか</rt></ruby>ちゃんが<ruby>泣<rt>な</rt></ruby>いています。", "en": "To cry", "en_ex": "The baby is crying.", "tag": "Emotion"}, {"no": 276, "cat": "Daily", "freq": "A", "vn": "Cười", "vn_ex": "Mọi người cười vui vẻ.", "jp": "<ruby>笑<rt>わら</rt></ruby>う", "jp_ex": "みんな<ruby>楽<rt>たの</rt></ruby>しく<ruby>笑<rt>わら</rt></ruby>っています。", "en": "To laugh", "en_ex": "Everyone is laughing happily.", "tag": "Emotion"}, {"no": 277, "cat": "Daily", "freq": "A", "vn": "Ngủ", "vn_ex": "Tối qua ngủ ngon không?", "jp": "<ruby>寝<rt>ね</rt></ruby>る / <ruby>眠<rt>ねむ</rt></ruby>る", "jp_ex": "<ruby>昨夜<rt>さくや</rt></ruby>よく<ruby>眠<rt>ねむ</rt></ruby>れましたか。", "en": "To sleep", "en_ex": "Did you sleep well last night?", "tag": "Daily"}, {"no": 278, "cat": "Daily", "freq": "A", "vn": "Dậy", "vn_ex": "Sáng mai dậy sớm nhé.", "jp": "<ruby>起<rt>お</rt></ruby>きる", "jp_ex": "<ruby>明日<rt>あした</rt></ruby>の<ruby>朝<rt>あさ</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きましょう。", "en": "To wake up", "en_ex": "Let's wake up early tomorrow.", "tag": "Daily"}, {"no": 279, "cat": "Daily", "freq": "A", "vn": "Tắm", "vn_ex": "Tôi đi tắm đã.", "jp": "お<ruby>風呂<rt>ふろ</rt></ruby>に<ruby>入<rt>はい</rt></ruby>る / シャワー", "jp_ex": "シャワーを<ruby>浴<rt>あ</rt></ruby>びます。", "en": "To bathe / shower", "en_ex": "I'll take a shower.", "tag": "Daily"}, {"no": 280, "cat": "Daily", "freq": "A", "vn": "Mặc", "vn_ex": "Mặc áo ấm vào.", "jp": "<ruby>着<rt>き</rt></ruby>る", "jp_ex": "<ruby>暖<rt>あたた</rt></ruby>かい<ruby>服<rt>ふく</rt></ruby>を<ruby>着<rt>き</rt></ruby>てください。", "en": "To wear", "en_ex": "Put on warm clothes.", "tag": "Daily"}, {"no": 281, "cat": "Daily", "freq": "A", "vn": "Giày", "vn_ex": "Giày này đẹp quá.", "jp": "<ruby>靴<rt>くつ</rt></ruby>", "jp_ex": "この<ruby>靴<rt>くつ</rt></ruby>はとても<ruby>綺麗<rt>きれい</rt></ruby>です。", "en": "Shoes", "en_ex": "These shoes are beautiful.", "tag": "Shopping"}, {"no": 282, "cat": "Daily", "freq": "A", "vn": "Áo", "vn_ex": "Áo này bao nhiêu?", "jp": "<ruby>服<rt>ふく</rt></ruby> / シャツ", "jp_ex": "この<ruby>服<rt>ふく</rt></ruby>はいくらですか。", "en": "Shirt / Clothes", "en_ex": "How much is this shirt?", "tag": "Shopping"}, {"no": 283, "cat": "Daily", "freq": "A", "vn": "Quà", "vn_ex": "Tôi mua quà cho bạn.", "jp": "お<ruby>土産<rt>みやげ</rt></ruby> / プレゼント", "jp_ex": "プレゼントを<ruby>買<rt>か</rt></ruby>いました。", "en": "Gift / Souvenir", "en_ex": "I bought a gift for you.", "tag": "Shopping"}, {"no": 284, "cat": "Daily", "freq": "A", "vn": "Siêu thị", "vn_ex": "Đi siêu thị mua đồ.", "jp": "スーパー", "jp_ex": "スーパーに<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。", "en": "Supermarket", "en_ex": "Going to the supermarket.", "tag": "Shopping"}, {"no": 285, "cat": "Daily", "freq": "A", "vn": "Chợ", "vn_ex": "Chợ này rất lớn.", "jp": "<ruby>市場<rt>いちば</rt></ruby>", "jp_ex": "この<ruby>市場<rt>いちば</rt></ruby>はとても<ruby>大<rt>おお</rt></ruby>きいです。", "en": "Market (traditional)", "en_ex": "This market is very big.", "tag": "Shopping"}, {"no": 286, "cat": "Daily", "freq": "A", "vn": "Mắc cỡ", "vn_ex": "Tôi mắc cỡ quá.", "jp": "<ruby>恥<rt>は</rt></ruby>ずかしい", "jp_ex": "とても<ruby>恥<rt>は</rt></ruby>ずかしいです。", "en": "Embarrassed", "en_ex": "I'm so embarrassed.", "tag": "Emotion"}, {"no": 287, "cat": "Daily", "freq": "A", "vn": "Tuyệt vời", "vn_ex": "Tuyệt vời! Giỏi lắm!", "jp": "<ruby>素晴<rt>すば</rt></ruby>らしい", "jp_ex": "<ruby>素晴<rt>すば</rt></ruby>らしい！<ruby>上手<rt>じょうず</rt></ruby>ですね！", "en": "Wonderful / Great", "en_ex": "Wonderful! Well done!", "tag": "Compliment"}, {"no": 288, "cat": "Daily", "freq": "A", "vn": "Dễ thương", "vn_ex": "Con mèo dễ thương quá.", "jp": "かわいい", "jp_ex": "この<ruby>猫<rt>ねこ</rt></ruby>はとてもかわいいです。", "en": "Cute", "en_ex": "This cat is so cute.", "tag": "Compliment"}, {"no": 289, "cat": "Daily", "freq": "A", "vn": "Coi chừng", "vn_ex": "Coi chừng, đường trơn!", "jp": "<ruby>気<rt>き</rt></ruby>をつけて", "jp_ex": "<ruby>気<rt>き</rt></ruby>をつけて、<ruby>道<rt>みち</rt></ruby>が<ruby>滑<rt>すべ</rt></ruby>りやすい！", "en": "Watch out / Be careful", "en_ex": "Watch out, the road is slippery!", "tag": "Warning"}, {"no": 290, "cat": "Daily", "freq": "A", "vn": "Chúc sức khỏe", "vn_ex": "Chúc sức khỏe! (nâng cốc)", "jp": "<ruby>乾杯<rt>かんぱい</rt></ruby>", "jp_ex": "<ruby>乾杯<rt>かんぱい</rt></ruby>！", "en": "Cheers! (toast)", "en_ex": "Cheers!", "tag": "Toast"}, {"no": 291, "cat": "Daily", "freq": "A", "vn": "Nắng", "vn_ex": "Trời nắng quá.", "jp": "<ruby>晴<rt>は</rt></ruby>れ", "jp_ex": "とても<ruby>晴<rt>は</rt></ruby>れています。", "en": "Sunny", "en_ex": "It's very sunny.", "tag": "Weather"}, {"no": 292, "cat": "Daily", "freq": "A", "vn": "Gió", "vn_ex": "Gió mạnh quá.", "jp": "<ruby>風<rt>かぜ</rt></ruby>", "jp_ex": "<ruby>風<rt>かぜ</rt></ruby>が<ruby>強<rt>つよ</rt></ruby>いです。", "en": "Wind", "en_ex": "The wind is strong.", "tag": "Weather"}, {"no": 293, "cat": "Daily", "freq": "A", "vn": "Màu", "vn_ex": "Màu gì đẹp nhất?", "jp": "<ruby>色<rt>いろ</rt></ruby>", "jp_ex": "<ruby>何色<rt>なにいろ</rt></ruby>が<ruby>一番<rt>いちばん</rt></ruby><ruby>綺麗<rt>きれい</rt></ruby>ですか。", "en": "Color", "en_ex": "Which color is the prettiest?", "tag": "Shopping"}, {"no": 294, "cat": "Daily", "freq": "A", "vn": "Đỏ", "vn_ex": "Áo đỏ đẹp lắm.", "jp": "<ruby>赤<rt>あか</rt></ruby>い", "jp_ex": "<ruby>赤<rt>あか</rt></ruby>い<ruby>服<rt>ふく</rt></ruby>が<ruby>綺麗<rt>きれい</rt></ruby>です。", "en": "Red", "en_ex": "The red shirt is beautiful.", "tag": "Shopping"}, {"no": 295, "cat": "Daily", "freq": "A", "vn": "Hoa", "vn_ex": "Hoa này đẹp quá.", "jp": "<ruby>花<rt>はな</rt></ruby>", "jp_ex": "この<ruby>花<rt>はな</rt></ruby>はとても<ruby>綺麗<rt>きれい</rt></ruby>です。", "en": "Flower", "en_ex": "This flower is beautiful.", "tag": "Daily"}, {"no": 296, "cat": "Daily", "freq": "A", "vn": "Chó", "vn_ex": "Tôi thích chó.", "jp": "<ruby>犬<rt>いぬ</rt></ruby>", "jp_ex": "<ruby>犬<rt>いぬ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。", "en": "Dog", "en_ex": "I like dogs.", "tag": "Daily"}, {"no": 297, "cat": "Daily", "freq": "A", "vn": "Mèo", "vn_ex": "Con mèo rất dễ thương.", "jp": "<ruby>猫<rt>ねこ</rt></ruby>", "jp_ex": "<ruby>猫<rt>ねこ</rt></ruby>がとてもかわいいです。", "en": "Cat", "en_ex": "The cat is very cute.", "tag": "Daily"}, {"no": 298, "cat": "Daily", "freq": "A", "vn": "Bơi", "vn_ex": "Anh biết bơi không?", "jp": "<ruby>泳<rt>およ</rt></ruby>ぐ", "jp_ex": "<ruby>泳<rt>およ</rt></ruby>げますか。", "en": "To swim", "en_ex": "Can you swim?", "tag": "Activity"}, {"no": 299, "cat": "Daily", "freq": "A", "vn": "Chạy", "vn_ex": "Sáng nào tôi cũng chạy bộ.", "jp": "<ruby>走<rt>はし</rt></ruby>る", "jp_ex": "<ruby>毎朝<rt>まいあさ</rt></ruby>ジョギングしています。", "en": "To run", "en_ex": "I jog every morning.", "tag": "Activity"}, {"no": 300, "cat": "Daily", "freq": "A", "vn": "Đợi đã", "vn_ex": "Đợi đã, tôi kiểm tra lại.", "jp": "ちょっと<ruby>待<rt>ま</rt></ruby>って", "jp_ex": "ちょっと<ruby>待<rt>ま</rt></ruby>って、<ruby>確認<rt>かくにん</rt></ruby>します。", "en": "Hold on", "en_ex": "Hold on, let me check.", "tag": "Expression"}];
+const STATE_KEY = "vn3k_state";
+
+function loadState() {
+  try {
+    const s = JSON.parse(localStorage.getItem(STATE_KEY) || "{}");
+    return {
+      version: 1,
+      position: typeof s.position === "number" ? s.position : 1,
+      category: s.category || "all",
+      hideMastered: !!s.hideMastered,
+      onlyBookmarked: !!s.onlyBookmarked,
+      mastered: Array.isArray(s.mastered) ? s.mastered : [],
+      bookmarked: Array.isArray(s.bookmarked) ? s.bookmarked : [],
+      theme: s.theme || null,
+    };
+  } catch(e) {
+    return { version:1, position:1, category:"all", hideMastered:false, onlyBookmarked:false, mastered:[], bookmarked:[], theme:null };
+  }
+}
+
+function saveState() {
+  try {
+    localStorage.setItem(STATE_KEY, JSON.stringify({
+      version: S.version,
+      position: S.position,
+      category: S.category,
+      hideMastered: S.hideMastered,
+      onlyBookmarked: S.onlyBookmarked,
+      mastered: S.mastered,
+      bookmarked: S.bookmarked,
+      theme: S.theme,
+    }));
+  } catch(e) {}
+}
+
+const S = loadState();
+const masteredSet = new Set(S.mastered);
+const bookmarkedSet = new Set(S.bookmarked);
+
+let current = [];
+let idx = 0;
+
+function getFiltered() {
+  return D.filter(d => {
+    if (S.category !== "all" && d.cat !== S.category) return false;
+    if (S.onlyBookmarked && !bookmarkedSet.has(d.no)) return false;
+    if (S.hideMastered && masteredSet.has(d.no)) return false;
+    return true;
+  });
+}
+
+function syncIdx() {
+  const i = current.findIndex(d => d.no === S.position);
+  idx = i >= 0 ? i : 0;
+  if (current.length > 0) S.position = current[idx].no;
+}
+
+function render(resetFlip = true) {
+  current = getFiltered();
+  const scene = document.getElementById("scene");
+  const navBar = document.querySelector(".nav-bar");
+  const emptyMsg = document.getElementById("emptyMsg");
+  const flipHint = document.querySelector(".flip-hint");
+
+  if (current.length === 0) {
+    scene.style.display = "none";
+    navBar.style.display = "none";
+    flipHint.style.display = "none";
+    emptyMsg.style.display = "";
+    document.getElementById("progress").textContent = "0 / 0";
+    updateMasteredCount();
+    return;
+  }
+
+  scene.style.display = "";
+  navBar.style.display = "";
+  flipHint.style.display = "";
+  emptyMsg.style.display = "none";
+
+  syncIdx();
+  const d = current[idx];
+  const card = document.getElementById("card");
+  if (resetFlip) card.classList.remove("flipped");
+
+  document.getElementById("fCat").textContent = d.cat;
+  document.getElementById("fCat").className = "badge b-" + d.cat;
+  document.getElementById("fNum").textContent = "#" + String(d.no).padStart(3, "0");
+  document.getElementById("fVn").textContent = d.vn;
+  document.getElementById("fJp").innerHTML = d.jp;
+  document.getElementById("fEn").textContent = d.en;
+
+  document.getElementById("bCat").textContent = d.cat;
+  document.getElementById("bCat").className = "badge b-" + d.cat;
+  document.getElementById("bTag").textContent = "#" + d.tag;
+  document.getElementById("bNum").textContent = "#" + String(d.no).padStart(3, "0");
+  document.getElementById("bVnEx").textContent = d.vn_ex;
+  document.getElementById("bJpEx").innerHTML = d.jp_ex;
+  document.getElementById("bEnEx").textContent = d.en_ex;
+
+  const isBm = bookmarkedSet.has(d.no);
+  const isMs = masteredSet.has(d.no);
+  ["fBm", "bBm"].forEach(id => {
+    const el = document.getElementById(id);
+    el.classList.toggle("on", isBm);
+    el.textContent = isBm ? "★" : "☆";
+  });
+  ["fMs", "bMs"].forEach(id => {
+    document.getElementById(id).classList.toggle("on", isMs);
+  });
+
+  document.getElementById("progress").textContent = `${idx + 1} / ${current.length}`;
+  updateMasteredCount();
+
+  document.getElementById("prevBtn").disabled = idx === 0;
+  document.getElementById("nextBtn").disabled = idx === current.length - 1;
+}
+
+function updateMasteredCount() {
+  document.getElementById("masteredCount").textContent = `已掌握 ${masteredSet.size} / ${D.length}`;
+}
+
+function setCategory(c) {
+  S.category = c;
+  document.querySelectorAll("#filterBar [data-cat]").forEach(el => {
+    el.classList.toggle("on", el.dataset.cat === c);
+  });
+  S.position = current.length > 0 && current[0] ? current[0].no : 1;
+  // reset to first item of new filter
+  const newFiltered = D.filter(d => {
+    if (c !== "all" && d.cat !== c) return false;
+    if (S.onlyBookmarked && !bookmarkedSet.has(d.no)) return false;
+    if (S.hideMastered && masteredSet.has(d.no)) return false;
+    return true;
+  });
+  if (newFiltered.length > 0) S.position = newFiltered[0].no;
+  render(true);
+  saveState();
+}
+
+function toggleFlip() {
+  document.getElementById("card").classList.toggle("flipped");
+}
+
+function nav(delta) {
+  if (current.length === 0) return;
+  const ni = Math.max(0, Math.min(current.length - 1, idx + delta));
+  if (ni === idx) return;
+  idx = ni;
+  S.position = current[idx].no;
+  render(true);
+  saveState();
+}
+
+function randomJump() {
+  if (current.length <= 1) return;
+  let ni = idx;
+  for (let tries = 0; tries < 10 && ni === idx; tries++) {
+    ni = Math.floor(Math.random() * current.length);
+  }
+  idx = ni;
+  S.position = current[idx].no;
+  render(true);
+  saveState();
+}
+
+function toggleBookmark() {
+  if (current.length === 0) return;
+  const d = current[idx];
+  if (bookmarkedSet.has(d.no)) bookmarkedSet.delete(d.no);
+  else bookmarkedSet.add(d.no);
+  S.bookmarked = [...bookmarkedSet];
+  saveState();
+  render(false);
+}
+
+function toggleMastered() {
+  if (current.length === 0) return;
+  const d = current[idx];
+  if (masteredSet.has(d.no)) masteredSet.delete(d.no);
+  else masteredSet.add(d.no);
+  S.mastered = [...masteredSet];
+  saveState();
+  render(false);
+}
+
+function toggleOnlyBm() {
+  S.onlyBookmarked = !S.onlyBookmarked;
+  document.getElementById("onlyBm").classList.toggle("on", S.onlyBookmarked);
+  render(true);
+  saveState();
+}
+
+function toggleHideMs() {
+  S.hideMastered = !S.hideMastered;
+  document.getElementById("hideMs").classList.toggle("on", S.hideMastered);
+  render(true);
+  saveState();
+}
+
+function setTheme(t) {
+  document.documentElement.setAttribute("data-theme", t);
+  document.getElementById("themeBtn").textContent = t === "dark" ? "☀️ Light" : "🌙 Dark";
+  S.theme = t;
+  saveState();
+}
+
+function initTheme() {
+  let t = S.theme;
+  if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  setTheme(t);
+}
+
+document.getElementById("card").addEventListener("click", (e) => {
+  if (e.target.closest(".icon-btn")) return;
+  toggleFlip();
+});
+
+document.querySelectorAll("#filterBar [data-cat]").forEach(el => {
+  el.addEventListener("click", () => setCategory(el.dataset.cat));
+});
+
+document.getElementById("onlyBm").addEventListener("click", toggleOnlyBm);
+document.getElementById("hideMs").addEventListener("click", toggleHideMs);
+
+document.getElementById("prevBtn").addEventListener("click", () => nav(-1));
+document.getElementById("nextBtn").addEventListener("click", () => nav(1));
+document.getElementById("randomBtn").addEventListener("click", randomJump);
+
+["fBm", "bBm"].forEach(id => {
+  document.getElementById(id).addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleBookmark();
+  });
+});
+["fMs", "bMs"].forEach(id => {
+  document.getElementById(id).addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleMastered();
+  });
+});
+
+document.getElementById("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  setTheme(cur === "dark" ? "light" : "dark");
+});
+
+document.getElementById("clearBtn").addEventListener("click", () => {
+  if (!confirm("确定清除所有「收藏」和「已掌握」标记？此操作不可撤销。")) return;
+  bookmarkedSet.clear();
+  masteredSet.clear();
+  S.bookmarked = [];
+  S.mastered = [];
+  saveState();
+  render(false);
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+  if (e.key === " " || e.key === "ArrowUp" || e.key === "ArrowDown") {
+    e.preventDefault();
+    toggleFlip();
+  } else if (e.key === "ArrowLeft") {
+    e.preventDefault();
+    nav(-1);
+  } else if (e.key === "ArrowRight") {
+    e.preventDefault();
+    nav(1);
+  } else if (e.key === "r" || e.key === "R") {
+    e.preventDefault();
+    randomJump();
+  }
+});
+
+let touchStartX = 0, touchStartY = 0;
+document.addEventListener("touchstart", (e) => {
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+}, { passive: true });
+document.addEventListener("touchend", (e) => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  const dy = e.changedTouches[0].clientY - touchStartY;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+    if (dx > 0) nav(-1); else nav(1);
+  }
+}, { passive: true });
+
+document.querySelectorAll("#filterBar [data-cat]").forEach(el => {
+  el.classList.toggle("on", el.dataset.cat === S.category);
+});
+document.getElementById("onlyBm").classList.toggle("on", S.onlyBookmarked);
+document.getElementById("hideMs").classList.toggle("on", S.hideMastered);
+initTheme();
+render(true);
+</script>
+</body>
+</html>
