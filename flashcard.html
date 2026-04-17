@@ -26,11 +26,14 @@
   --sh:0 4px 16px rgba(0,0,0,.4);
 }
 *{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.5;
   -webkit-tap-highlight-color:transparent;overflow-x:hidden;
   transition:background .2s,color .2s;
+  display:flex;flex-direction:column;
+  min-height:100dvh;min-height:100vh;
 }
 ruby{ruby-align:center}
 rt{font-size:.5em;color:var(--muted);font-weight:normal}
@@ -64,13 +67,13 @@ h1{font-size:16px;color:var(--accent);font-weight:700}
   cursor:pointer;text-decoration:underline;padding:2px 6px;
 }
 main{
-  padding:16px 12px;max-width:640px;margin:0 auto;
-  min-height:calc(100vh - 160px);
-  display:flex;flex-direction:column;align-items:center;
+  padding:14px 12px;max-width:640px;width:100%;margin:0 auto;
+  flex:1;min-height:0;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
 }
 .scene{
   perspective:1400px;width:100%;max-width:560px;
-  aspect-ratio:3/4;margin-bottom:14px;
+  flex:1;min-height:220px;max-height:720px;
 }
 .card{
   position:relative;width:100%;height:100%;
@@ -104,33 +107,33 @@ main{
 }
 /* Front: words, hierarchy VN > JP > EN */
 .vn-word{
-  font-size:40px;font-weight:700;color:var(--vn);
+  font-size:48px;font-weight:700;color:var(--vn);
   line-height:1.15;word-wrap:break-word;
-  margin-bottom:16px;padding-bottom:14px;
+  margin-bottom:18px;padding-bottom:16px;
   border-bottom:1px dashed var(--border);width:100%;
 }
 .jp-word{
-  font-size:22px;font-weight:600;color:var(--jp);
-  line-height:1.4;margin-bottom:10px;width:100%;
+  font-size:26px;font-weight:600;color:var(--jp);
+  line-height:1.4;margin-bottom:12px;width:100%;
 }
 .en-word{
-  font-size:14px;font-weight:500;color:var(--en);
+  font-size:17px;font-weight:500;color:var(--en);
   line-height:1.4;width:100%;opacity:.9;
 }
 /* Back: example sentences, hierarchy VN > JP > EN */
 .vn-ex{
-  font-size:24px;font-weight:600;color:var(--vn);
+  font-size:28px;font-weight:600;color:var(--vn);
   line-height:1.45;word-wrap:break-word;
-  margin-bottom:14px;padding-bottom:12px;
+  margin-bottom:16px;padding-bottom:14px;
   border-bottom:1px dashed var(--border);width:100%;
 }
 .jp-ex{
-  font-size:17px;color:var(--jp);line-height:1.6;
-  margin-bottom:12px;padding-bottom:10px;
+  font-size:20px;color:var(--jp);line-height:1.6;
+  margin-bottom:14px;padding-bottom:12px;
   border-bottom:1px dashed var(--border);width:100%;
 }
 .en-ex{
-  font-size:12px;color:var(--en);font-style:italic;
+  font-size:14px;color:var(--en);font-style:italic;
   line-height:1.5;opacity:.85;width:100%;
 }
 .card-bottom{
@@ -147,10 +150,10 @@ main{
 .icon-btn.on[data-type="mastered"]{background:var(--success);color:#fff;border-color:var(--success)}
 .flip-hint{
   font-size:10px;color:var(--muted);text-align:center;
-  letter-spacing:.06em;margin:2px 0 10px;
+  letter-spacing:.06em;margin:0;
 }
 .nav-bar{
-  display:flex;gap:10px;width:100%;max-width:560px;
+  display:flex;gap:10px;width:100%;max-width:560px;flex:0 0 auto;
 }
 .nav-btn{
   flex:1;padding:14px;border:1px solid var(--border);
@@ -162,15 +165,40 @@ main{
 .nav-btn-mid{flex:0 0 56px;padding:14px 0;font-size:20px}
 .empty{text-align:center;padding:60px 20px;color:var(--muted);font-size:14px}
 @media (max-width:500px){
-  .vn-word{font-size:32px}
-  .jp-word{font-size:18px}
-  .en-word{font-size:12px}
-  .vn-ex{font-size:19px}
-  .jp-ex{font-size:14px}
-  .en-ex{font-size:11px}
-  .face{padding:16px 14px}
+  header{padding:8px 10px}
+  .htop{margin-bottom:6px}
+  .status{padding:5px 10px}
+  main{padding:10px 10px;gap:8px}
+  .vn-word{font-size:38px;margin-bottom:14px;padding-bottom:12px}
+  .jp-word{font-size:22px}
+  .en-word{font-size:15px}
+  .vn-ex{font-size:23px;margin-bottom:12px;padding-bottom:10px}
+  .jp-ex{font-size:17px;margin-bottom:10px;padding-bottom:8px}
+  .en-ex{font-size:13px}
+  .face{padding:14px 14px}
   h1{font-size:14px}
-  .scene{aspect-ratio:2/3}
+  .nav-btn{padding:12px;font-size:14px}
+  .nav-btn-mid{flex:0 0 48px;font-size:18px}
+  .theme-btn{padding:5px 8px;font-size:11px}
+  .ch{padding:4px 9px;font-size:10.5px}
+}
+@media (max-width:360px){
+  .filters{gap:3px}
+  .ch{padding:3px 8px;font-size:10px}
+  .vn-word{font-size:32px}
+  .jp-word{font-size:19px}
+  .en-word{font-size:14px}
+  .vn-ex{font-size:20px}
+  .jp-ex{font-size:15px}
+  .en-ex{font-size:12px}
+}
+@media (max-height:600px){
+  .scene{min-height:180px}
+  .vn-word{font-size:30px;margin-bottom:10px;padding-bottom:8px}
+  .jp-word{font-size:19px;margin-bottom:6px}
+  .vn-ex{font-size:20px;margin-bottom:8px;padding-bottom:6px}
+  .jp-ex{font-size:15px;margin-bottom:6px;padding-bottom:5px}
+  .face{padding:12px 14px}
 }
 </style>
 </head>
