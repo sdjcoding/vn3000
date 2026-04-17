@@ -57,6 +57,7 @@ h1{font-size:16px;color:var(--accent);font-weight:700}
 .ch.toggle{background:transparent}
 .ch.toggle.on{background:var(--gold);color:#fff;border-color:var(--gold)}
 .ch.toggle.mastered.on{background:var(--success);border-color:var(--success)}
+.ch.toggle.order.on{background:var(--accent);border-color:var(--accent)}
 .status{
   padding:6px 12px;font-size:11px;color:var(--muted);
   background:var(--card);border-bottom:1px solid var(--border);
@@ -215,6 +216,7 @@ main{
     <span class="ch" data-cat="Daily">Daily</span>
     <span class="ch toggle" id="onlyBm">☆ 只看收藏</span>
     <span class="ch toggle mastered" id="hideMs">✓ 隐藏已掌握</span>
+    <span class="ch toggle order" id="orderToggle">📋 顺序</span>
   </div>
 </header>
 <div class="status">
@@ -258,10 +260,9 @@ main{
       </div>
     </div>
   </div>
-  <div class="flip-hint">点击卡片翻面 · Space 翻面 · ←/→ 切换 · R 随机 · 手机滑动</div>
+  <div class="flip-hint">点击卡片翻面 · Space 翻面 · ←/→ 切换 · 手机滑动</div>
   <div class="nav-bar">
     <button class="nav-btn" id="prevBtn">← 上一张</button>
-    <button class="nav-btn nav-btn-mid" id="randomBtn" title="随机一张 (R)">🔀</button>
     <button class="nav-btn" id="nextBtn">下一张 →</button>
   </div>
   <div class="empty" id="emptyMsg" style="display:none">没有匹配的卡片。请调整筛选条件。</div>
@@ -279,12 +280,13 @@ function loadState() {
       category: s.category || "all",
       hideMastered: !!s.hideMastered,
       onlyBookmarked: !!s.onlyBookmarked,
+      order: s.order === "random" ? "random" : "sequential",
       mastered: Array.isArray(s.mastered) ? s.mastered : [],
       bookmarked: Array.isArray(s.bookmarked) ? s.bookmarked : [],
       theme: s.theme || null,
     };
   } catch(e) {
-    return { version:1, position:1, category:"all", hideMastered:false, onlyBookmarked:false, mastered:[], bookmarked:[], theme:null };
+    return { version:1, position:1, category:"all", hideMastered:false, onlyBookmarked:false, order:"sequential", mastered:[], bookmarked:[], theme:null };
   }
 }
 
@@ -296,6 +298,7 @@ function saveState() {
       category: S.category,
       hideMastered: S.hideMastered,
       onlyBookmarked: S.onlyBookmarked,
+      order: S.order,
       mastered: S.mastered,
       bookmarked: S.bookmarked,
       theme: S.theme,
@@ -310,13 +313,19 @@ const bookmarkedSet = new Set(S.bookmarked);
 let current = [];
 let idx = 0;
 
-function getFiltered() {
-  return D.filter(d => {
+function applyFilter() {
+  current = D.filter(d => {
     if (S.category !== "all" && d.cat !== S.category) return false;
     if (S.onlyBookmarked && !bookmarkedSet.has(d.no)) return false;
     if (S.hideMastered && masteredSet.has(d.no)) return false;
     return true;
   });
+  if (S.order === "random") {
+    for (let i = current.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [current[i], current[j]] = [current[j], current[i]];
+    }
+  }
 }
 
 function syncIdx() {
@@ -326,7 +335,6 @@ function syncIdx() {
 }
 
 function render(resetFlip = true) {
-  current = getFiltered();
   const scene = document.getElementById("scene");
   const navBar = document.querySelector(".nav-bar");
   const emptyMsg = document.getElementById("emptyMsg");
@@ -394,15 +402,8 @@ function setCategory(c) {
   document.querySelectorAll("#filterBar [data-cat]").forEach(el => {
     el.classList.toggle("on", el.dataset.cat === c);
   });
-  S.position = current.length > 0 && current[0] ? current[0].no : 1;
-  // reset to first item of new filter
-  const newFiltered = D.filter(d => {
-    if (c !== "all" && d.cat !== c) return false;
-    if (S.onlyBookmarked && !bookmarkedSet.has(d.no)) return false;
-    if (S.hideMastered && masteredSet.has(d.no)) return false;
-    return true;
-  });
-  if (newFiltered.length > 0) S.position = newFiltered[0].no;
+  applyFilter();
+  if (current.length > 0) S.position = current[0].no;
   render(true);
   saveState();
 }
@@ -421,16 +422,24 @@ function nav(delta) {
   saveState();
 }
 
-function randomJump() {
-  if (current.length <= 1) return;
-  let ni = idx;
-  for (let tries = 0; tries < 10 && ni === idx; tries++) {
-    ni = Math.floor(Math.random() * current.length);
-  }
-  idx = ni;
-  S.position = current[idx].no;
+function toggleOrder() {
+  S.order = S.order === "random" ? "sequential" : "random";
+  updateOrderButton();
+  applyFilter();
+  if (current.length > 0) S.position = current[0].no;
   render(true);
   saveState();
+}
+
+function updateOrderButton() {
+  const btn = document.getElementById("orderToggle");
+  if (S.order === "random") {
+    btn.textContent = "🔀 随机";
+    btn.classList.add("on");
+  } else {
+    btn.textContent = "📋 顺序";
+    btn.classList.remove("on");
+  }
 }
 
 function toggleBookmark() {
@@ -439,6 +448,7 @@ function toggleBookmark() {
   if (bookmarkedSet.has(d.no)) bookmarkedSet.delete(d.no);
   else bookmarkedSet.add(d.no);
   S.bookmarked = [...bookmarkedSet];
+  if (S.onlyBookmarked) applyFilter();
   saveState();
   render(false);
 }
@@ -449,6 +459,7 @@ function toggleMastered() {
   if (masteredSet.has(d.no)) masteredSet.delete(d.no);
   else masteredSet.add(d.no);
   S.mastered = [...masteredSet];
+  if (S.hideMastered) applyFilter();
   saveState();
   render(false);
 }
@@ -456,6 +467,7 @@ function toggleMastered() {
 function toggleOnlyBm() {
   S.onlyBookmarked = !S.onlyBookmarked;
   document.getElementById("onlyBm").classList.toggle("on", S.onlyBookmarked);
+  applyFilter();
   render(true);
   saveState();
 }
@@ -463,6 +475,7 @@ function toggleOnlyBm() {
 function toggleHideMs() {
   S.hideMastered = !S.hideMastered;
   document.getElementById("hideMs").classList.toggle("on", S.hideMastered);
+  applyFilter();
   render(true);
   saveState();
 }
@@ -494,7 +507,7 @@ document.getElementById("hideMs").addEventListener("click", toggleHideMs);
 
 document.getElementById("prevBtn").addEventListener("click", () => nav(-1));
 document.getElementById("nextBtn").addEventListener("click", () => nav(1));
-document.getElementById("randomBtn").addEventListener("click", randomJump);
+document.getElementById("orderToggle").addEventListener("click", toggleOrder);
 
 ["fBm", "bBm"].forEach(id => {
   document.getElementById(id).addEventListener("click", (e) => {
@@ -520,6 +533,7 @@ document.getElementById("clearBtn").addEventListener("click", () => {
   masteredSet.clear();
   S.bookmarked = [];
   S.mastered = [];
+  applyFilter();
   saveState();
   render(false);
 });
@@ -535,9 +549,6 @@ document.addEventListener("keydown", (e) => {
   } else if (e.key === "ArrowRight") {
     e.preventDefault();
     nav(1);
-  } else if (e.key === "r" || e.key === "R") {
-    e.preventDefault();
-    randomJump();
   }
 });
 
@@ -559,7 +570,9 @@ document.querySelectorAll("#filterBar [data-cat]").forEach(el => {
 });
 document.getElementById("onlyBm").classList.toggle("on", S.onlyBookmarked);
 document.getElementById("hideMs").classList.toggle("on", S.hideMastered);
+updateOrderButton();
 initTheme();
+applyFilter();
 render(true);
 </script>
 </body>
