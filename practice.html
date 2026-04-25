@@ -145,34 +145,33 @@ main{
   text-align:center;overflow-y:auto;padding:8px 0;
 }
 /* Front: words, hierarchy VN > JP > EN */
+/* VN largest, JP medium, EN small. Same on front (A) and back (B). */
 .vn-word{
-  font-size:48px;font-weight:700;color:var(--vn);
-  line-height:1.15;word-wrap:break-word;
-  margin-bottom:18px;padding-bottom:16px;
-  border-bottom:1px dashed var(--border);width:100%;
+  font-size:54px;font-weight:800;color:var(--vn);
+  line-height:1.1;word-wrap:break-word;
+  margin-bottom:10px;width:100%;
 }
-.jp-word{
-  font-size:26px;font-weight:600;color:var(--jp);
-  line-height:1.4;margin-bottom:12px;width:100%;
-}
-.en-word{
-  font-size:17px;font-weight:500;color:var(--en);
-  line-height:1.4;width:100%;opacity:.9;
-}
-/* Back: example sentences, hierarchy VN > JP > EN */
 .vn-ex{
-  font-size:28px;font-weight:600;color:var(--vn);
-  line-height:1.45;word-wrap:break-word;
+  font-size:26px;font-weight:600;color:var(--vn);
+  line-height:1.4;word-wrap:break-word;
   margin-bottom:16px;padding-bottom:14px;
   border-bottom:1px dashed var(--border);width:100%;
 }
+.jp-word{
+  font-size:22px;font-weight:700;color:var(--jp);
+  line-height:1.35;margin-bottom:4px;width:100%;
+}
 .jp-ex{
-  font-size:20px;color:var(--jp);line-height:1.6;
-  margin-bottom:14px;padding-bottom:12px;
+  font-size:17px;color:var(--jp);line-height:1.55;
+  margin-bottom:14px;padding-bottom:10px;
   border-bottom:1px dashed var(--border);width:100%;
 }
+.en-word{
+  font-size:14px;font-weight:600;color:var(--en);
+  line-height:1.35;margin-bottom:2px;width:100%;opacity:.95;
+}
 .en-ex{
-  font-size:14px;color:var(--en);font-style:italic;
+  font-size:12px;color:var(--en);font-style:italic;
   line-height:1.5;opacity:.85;width:100%;
 }
 .card-bottom{
@@ -228,12 +227,12 @@ main{
   .htop{margin-bottom:6px}
   .status{padding:5px 10px}
   main{padding:10px 10px;gap:8px}
-  .vn-word{font-size:38px;margin-bottom:14px;padding-bottom:12px}
-  .jp-word{font-size:22px}
-  .en-word{font-size:15px}
-  .vn-ex{font-size:23px;margin-bottom:12px;padding-bottom:10px}
-  .jp-ex{font-size:17px;margin-bottom:10px;padding-bottom:8px}
-  .en-ex{font-size:13px}
+  .vn-word{font-size:40px;margin-bottom:8px}
+  .vn-ex{font-size:21px;margin-bottom:12px;padding-bottom:10px}
+  .jp-word{font-size:18px;margin-bottom:3px}
+  .jp-ex{font-size:14px;margin-bottom:10px;padding-bottom:8px}
+  .en-word{font-size:13px}
+  .en-ex{font-size:11px}
   .face{padding:14px 14px}
   h1{font-size:14px}
   .nav-btn{padding:12px;font-size:14px}
@@ -244,19 +243,19 @@ main{
 @media (max-width:360px){
   .filters{gap:3px}
   .ch{padding:3px 8px;font-size:10px}
-  .vn-word{font-size:32px}
-  .jp-word{font-size:19px}
-  .en-word{font-size:14px}
-  .vn-ex{font-size:20px}
-  .jp-ex{font-size:15px}
-  .en-ex{font-size:12px}
+  .vn-word{font-size:34px}
+  .vn-ex{font-size:18px}
+  .jp-word{font-size:16px}
+  .jp-ex{font-size:13px}
+  .en-word{font-size:12px}
+  .en-ex{font-size:10px}
 }
 @media (max-height:600px){
   .scene{min-height:180px}
-  .vn-word{font-size:30px;margin-bottom:10px;padding-bottom:8px}
-  .jp-word{font-size:19px;margin-bottom:6px}
-  .vn-ex{font-size:20px;margin-bottom:8px;padding-bottom:6px}
-  .jp-ex{font-size:15px;margin-bottom:6px;padding-bottom:5px}
+  .vn-word{font-size:32px;margin-bottom:6px}
+  .vn-ex{font-size:18px;margin-bottom:8px;padding-bottom:6px}
+  .jp-word{font-size:16px;margin-bottom:2px}
+  .jp-ex{font-size:13px;margin-bottom:6px;padding-bottom:5px}
   .face{padding:12px 14px}
 }
 </style>
@@ -305,6 +304,10 @@ main{
         <div class="body">
           <div class="vn-word" id="fVn"></div>
           <div class="vn-ex" id="fVnEx"></div>
+          <div class="jp-word" id="fJp"></div>
+          <div class="jp-ex" id="fJpEx"></div>
+          <div class="en-word" id="fEn"></div>
+          <div class="en-ex" id="fEnEx"></div>
         </div>
         <div class="card-bottom">
           <button class="icon-btn" data-type="bookmark" id="fBm">☆</button>
@@ -324,6 +327,10 @@ main{
         <div class="body">
           <div class="vn-word" id="bVn"></div>
           <div class="vn-ex" id="bVnEx"></div>
+          <div class="jp-word" id="bJp"></div>
+          <div class="jp-ex" id="bJpEx"></div>
+          <div class="en-word" id="bEn"></div>
+          <div class="en-ex" id="bEnEx"></div>
         </div>
         <div class="card-bottom">
           <button class="icon-btn" data-type="bookmark" id="bBm">☆</button>
@@ -494,12 +501,20 @@ function render(resetFlip = true) {
   document.getElementById("fNum").textContent = "#" + String(d.no).padStart(4, "0");
   document.getElementById("fVn").textContent = d.vn;
   document.getElementById("fVnEx").textContent = d.vn_a || "";
+  document.getElementById("fJp").innerHTML = d.jp || "";
+  document.getElementById("fJpEx").innerHTML = d.jp_a || "";
+  document.getElementById("fEn").textContent = d.en || "";
+  document.getElementById("fEnEx").textContent = d.en_a || "";
 
   document.getElementById("bCat").textContent = d.cat;
   document.getElementById("bCat").title = d.cat;
   document.getElementById("bNum").textContent = "#" + String(d.no).padStart(4, "0");
   document.getElementById("bVn").textContent = d.vn;
   document.getElementById("bVnEx").textContent = d.vn_b || "";
+  document.getElementById("bJp").innerHTML = d.jp || "";
+  document.getElementById("bJpEx").innerHTML = d.jp_b || "";
+  document.getElementById("bEn").textContent = d.en || "";
+  document.getElementById("bEnEx").textContent = d.en_b || "";
 
   const isBm = bookmarkedSet.has(d.no);
   const rating = S.ratings[d.no] || 0;
