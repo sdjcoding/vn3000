@@ -37,7 +37,7 @@ if not API_KEY:
 
 # Voice config
 VN_VOICE = {"languageCode": "vi-VN", "name": "vi-VN-Chirp3-HD-Achernar"}  # female, HD
-JP_VOICE = {"languageCode": "ja-JP", "name": "ja-JP-Neural2-B"}  # female
+JP_VOICE = {"languageCode": "ja-JP", "name": "ja-JP-Chirp3-HD-Achird"}  # male, HD
 AUDIO_CONFIG = {"audioEncoding": "MP3", "speakingRate": 0.95, "sampleRateHertz": 24000}
 
 ENDPOINT = f"https://texttospeech.googleapis.com/v1/text:synthesize?key={API_KEY}"
