@@ -117,10 +117,13 @@ main{
   position:relative;
 }
 .filter-stack{
-  position:absolute;left:10px;bottom:14px;
-  display:flex;flex-direction:column;gap:6px;
+  position:absolute;left:12px;bottom:14px;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:8px 12px;
   z-index:20;
 }
+.fs-cell{display:flex;flex-direction:column;align-items:center;gap:3px}
+.fs-cap{font-size:10px;color:var(--muted);white-space:nowrap;text-align:center}
 .cat-pill{
   position:absolute;top:10px;left:50%;transform:translateX(-50%);
   z-index:25;
@@ -137,19 +140,18 @@ main{
 .cat-pill:active{transform:translateX(-50%) scale(.95)}
 .cat-pill .fs-icon{font-size:14px;flex-shrink:0}
 .fs-btn{
-  display:flex;align-items:center;justify-content:center;gap:4px;
+  display:flex;align-items:center;justify-content:center;
   background:var(--soft);border:1px solid var(--border);color:var(--text);
-  min-width:38px;height:38px;padding:0 8px;border-radius:19px;
-  font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;
+  font-family:inherit;font-weight:600;cursor:pointer;
   user-select:none;-webkit-tap-highlight-color:transparent;
-  transition:all .15s;backdrop-filter:blur(6px);
-  -webkit-backdrop-filter:blur(6px);
+  transition:all .15s;
   box-shadow:0 2px 6px rgba(0,0,0,.08);
 }
+.fs-btn.round{
+  width:46px;height:46px;border-radius:50%;
+  font-size:20px;padding:0;
+}
 .fs-btn:active{transform:scale(.9)}
-.fs-btn .fs-icon{font-size:15px}
-.fs-btn .fs-label{font-size:11px;color:var(--muted);max-width:90px;
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 /* on-states */
 .fs-btn.on{color:#fff;border-color:transparent}
 #onlyBm.fs-btn.on{background:var(--gold)}
@@ -161,15 +163,13 @@ main{
 #rateFilter.fs-btn.level-3{background:var(--fc);color:#fff;border-color:transparent}
 #rateFilter.fs-btn.unrated{background:var(--accent);color:#fff;border-color:transparent}
 @media (max-width:500px){
-  .filter-stack{left:6px;bottom:10px;gap:5px}
-  .fs-btn{min-width:34px;height:34px;padding:0 6px;font-size:12px}
-  .fs-btn .fs-icon{font-size:14px}
-  .fs-btn .fs-label{font-size:10px;max-width:60px}
+  .filter-stack{left:8px;bottom:10px;gap:6px 10px}
+  .fs-btn.round{width:42px;height:42px;font-size:18px}
+  .fs-cap{font-size:9px}
 }
 @media (max-width:360px){
-  .fs-btn{min-width:32px;height:32px;padding:0 5px}
-  .fs-btn .fs-icon{font-size:13px}
-  .fs-btn .fs-label{display:none}
+  .fs-btn.round{width:38px;height:38px;font-size:16px}
+  .fs-cap{font-size:8.5px}
 }
 .card{
   position:relative;width:100%;height:100%;
@@ -401,10 +401,22 @@ main{
     </div>
     <button class="cat-pill" id="catBtn" title="카테고리"><span class="fs-icon">📂</span><span id="catBtnLabel">전체 · 800</span></button>
     <div class="filter-stack" id="filterStack">
-      <button class="fs-btn" id="onlyBm" title="즐겨찾기만">☆</button>
-      <button class="fs-btn" id="rateFilter" title="등급 필터">📊</button>
-      <button class="fs-btn" id="orderToggle" title="순서/랜덤">📋</button>
-      <button class="fs-btn" id="audioToggle" title="음성">🔇</button>
+      <div class="fs-cell">
+        <button class="fs-btn round" id="onlyBm">☆</button>
+        <span class="fs-cap">즐겨찾기</span>
+      </div>
+      <div class="fs-cell">
+        <button class="fs-btn round" id="rateFilter">📊</button>
+        <span class="fs-cap" id="rateFilterCap">등급</span>
+      </div>
+      <div class="fs-cell">
+        <button class="fs-btn round" id="orderToggle">📋</button>
+        <span class="fs-cap" id="orderToggleCap">순서</span>
+      </div>
+      <div class="fs-cell">
+        <button class="fs-btn round" id="audioToggle">🔇</button>
+        <span class="fs-cap" id="audioToggleCap">음성</span>
+      </div>
     </div>
     <div class="scene-empty" id="sceneEmpty">没有匹配的卡片。请调整筛选条件。</div>
   </div>
@@ -760,9 +772,11 @@ function toggleAudio() {
 
 function updateAudioButton() {
   const btn = document.getElementById("audioToggle");
+  const cap = document.getElementById("audioToggleCap");
   btn.textContent = S.audioOn ? "🔊" : "🔇";
   btn.classList.toggle("on", S.audioOn);
   btn.title = S.audioOn ? "음성 켜짐" : "음성 꺼짐";
+  if (cap) cap.textContent = S.audioOn ? "음성" : "음성";
 }
 
 function toggleAuto() {
@@ -808,9 +822,11 @@ function toggleOrder() {
 
 function updateOrderButton() {
   const btn = document.getElementById("orderToggle");
+  const cap = document.getElementById("orderToggleCap");
   btn.textContent = S.order === "random" ? "🔀" : "📋";
   btn.classList.toggle("on", S.order === "random");
   btn.title = S.order === "random" ? "랜덤" : "순서대로";
+  if (cap) cap.textContent = S.order === "random" ? "랜덤" : "순서";
 }
 
 function toggleBookmark() {
@@ -874,11 +890,16 @@ function cycleRatingFilter() {
 
 function updateRatingFilterBtn() {
   const btn = document.getElementById("rateFilter");
+  const cap = document.getElementById("rateFilterCap");
   btn.textContent = RATING_LABELS[S.ratingFilter];
   btn.title = RATING_TITLES[S.ratingFilter];
   btn.classList.remove("level-1", "level-2", "level-3", "unrated");
   if (S.ratingFilter === "unrated") btn.classList.add("unrated");
   else if (S.ratingFilter !== "all") btn.classList.add("level-" + S.ratingFilter);
+  if (cap) {
+    const capLabels = {"all":"등급","1":"1만","2":"2만","3":"3만","unrated":"미평가"};
+    cap.textContent = capLabels[S.ratingFilter];
+  }
 }
 
 function setTheme(t) {
