@@ -121,6 +121,21 @@ main{
   display:flex;flex-direction:column;gap:6px;
   z-index:20;
 }
+.cat-pill{
+  position:absolute;top:10px;left:50%;transform:translateX(-50%);
+  z-index:25;
+  display:flex;align-items:center;gap:6px;
+  background:var(--soft);border:1px solid var(--border);color:var(--text);
+  height:34px;padding:0 14px;border-radius:17px;
+  font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;
+  user-select:none;-webkit-tap-highlight-color:transparent;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+  max-width:calc(100% - 32px);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.cat-pill:hover{border-color:var(--accent)}
+.cat-pill:active{transform:translateX(-50%) scale(.95)}
+.cat-pill .fs-icon{font-size:14px;flex-shrink:0}
 .fs-btn{
   display:flex;align-items:center;justify-content:center;gap:4px;
   background:var(--soft);border:1px solid var(--border);color:var(--text);
@@ -384,8 +399,8 @@ main{
         </div>
       </div>
     </div>
+    <button class="cat-pill" id="catBtn" title="카테고리"><span class="fs-icon">📂</span><span id="catBtnLabel">전체 · 800</span></button>
     <div class="filter-stack" id="filterStack">
-      <button class="fs-btn" id="catBtn" title="카테고리"><span class="fs-icon">📂</span><span class="fs-label" id="catBtnLabel">전체</span></button>
       <button class="fs-btn" id="onlyBm" title="즐겨찾기만">☆</button>
       <button class="fs-btn" id="rateFilter" title="등급 필터">📊</button>
       <button class="fs-btn" id="orderToggle" title="순서/랜덤">📋</button>
