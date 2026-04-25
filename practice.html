@@ -65,6 +65,7 @@ h1{font-size:16px;color:var(--accent);font-weight:700}
 .ch.toggle.order.on{background:var(--accent);border-color:var(--accent)}
 .ch.toggle.audio.on{background:#ec4899;border-color:#ec4899;color:#fff}
 .ch.toggle.audio.playing{animation:pulse 1.2s ease-in-out infinite}
+.ch.toggle.auto.on{background:#0ea5e9;border-color:#0ea5e9;color:#fff;animation:pulse 1.2s ease-in-out infinite}
 .cat-btn{background:var(--soft);border:1px solid var(--border);color:var(--text);cursor:pointer;
   font-family:inherit;font-weight:600;max-width:220px;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -274,7 +275,8 @@ main{
     <span class="ch toggle" id="onlyBm">☆ 只看收藏</span>
     <span class="ch toggle rating" id="rateFilter">📊 전체</span>
     <span class="ch toggle order" id="orderToggle">📋 顺序</span>
-    <span class="ch toggle audio" id="audioToggle">🔇 静音</span>
+    <span class="ch toggle audio" id="audioToggle">🔇 静음</span>
+    <span class="ch toggle auto" id="autoToggle">▶️ 자동</span>
   </div>
   <div class="cat-modal" id="catModal" hidden>
     <div class="cat-modal-inner">
@@ -412,17 +414,19 @@ async function playOne(no, field, text, lang) {
 }
 
 async function playSequence(no, items) {
-  // items: [{field, text, lang}, ...]
+  // items: [{field, text, lang, gap?}, ...]
+  // Returns the playToken used (truthy) on success, 0 if interrupted.
   const myToken = ++playToken;
   setPlaying(true);
   for (const it of items) {
-    if (myToken !== playToken) return; // cancelled
+    if (myToken !== playToken) return 0;
     await playOne(no, it.field, it.text, it.lang);
-    if (myToken !== playToken) return;
-    // Small gap between languages
-    await new Promise(r => setTimeout(r, 250));
+    if (myToken !== playToken) return 0;
+    await new Promise(r => setTimeout(r, it.gap ?? 250));
   }
-  if (myToken === playToken) setPlaying(false);
+  if (myToken !== playToken) return 0;
+  setPlaying(false);
+  return myToken;
 }
 
 function speak(text) {
@@ -430,15 +434,35 @@ function speak(text) {
   speakWebSpeech(text, "vi-VN");
 }
 
-function autoPlayCurrent() {
+async function autoPlayCurrent() {
   if (!S.audioOn || current.length === 0) return;
   const d = current[idx];
   const isBack = document.getElementById("card").classList.contains("flipped");
   const suffix = isBack ? "_b" : "_a";
-  playSequence(d.no, [
-    { field: "vn" + suffix, text: isBack ? d.vn_b : d.vn_a, lang: "vi-VN" },
-    { field: "jp" + suffix, text: isBack ? d.jp_b : d.jp_a, lang: "ja-JP" },
+  const vnText = isBack ? d.vn_b : d.vn_a;
+  const jpText = isBack ? d.jp_b : d.jp_a;
+  // VN ×2 then JP ×1
+  const ourToken = await playSequence(d.no, [
+    { field: "vn" + suffix, text: vnText, lang: "vi-VN", gap: 400 },
+    { field: "vn" + suffix, text: vnText, lang: "vi-VN", gap: 400 },
+    { field: "jp" + suffix, text: jpText, lang: "ja-JP", gap: 400 },
   ]);
+  if (!ourToken) return;                         // interrupted by user
+  if (!S.autoAdvance || !S.audioOn) return;
+  await new Promise(r => setTimeout(r, 500));
+  if (ourToken !== playToken) return;            // interrupted during pause
+  if (!S.autoAdvance || !S.audioOn) return;
+  const nowBack = document.getElementById("card").classList.contains("flipped");
+  if (!nowBack) {
+    toggleFlip();                                 // -> triggers autoPlayCurrent for B
+  } else if (idx < current.length - 1) {
+    nav(1);                                       // -> triggers autoPlayCurrent for next front
+  } else {
+    // End of deck
+    S.autoAdvance = false;
+    updateAutoButton();
+    saveState();
+  }
 }
 
 function stopSpeak() {
@@ -468,12 +492,13 @@ function loadState() {
       onlyBookmarked: !!s.onlyBookmarked,
       order: s.order === "random" ? "random" : "sequential",
       audioOn: !!s.audioOn,
+      autoAdvance: !!s.autoAdvance,
       ratings: ratings,
       bookmarked: Array.isArray(s.bookmarked) ? s.bookmarked : [],
       theme: s.theme || null,
     };
   } catch(e) {
-    return { version:2, position:1, category:"all", ratingFilter:"all", onlyBookmarked:false, order:"sequential", audioOn:false, ratings:{}, bookmarked:[], theme:null };
+    return { version:2, position:1, category:"all", ratingFilter:"all", onlyBookmarked:false, order:"sequential", audioOn:false, autoAdvance:false, ratings:{}, bookmarked:[], theme:null };
   }
 }
 
@@ -486,6 +511,7 @@ function saveState() {
       onlyBookmarked: S.onlyBookmarked,
       order: S.order,
       audioOn: S.audioOn,
+      autoAdvance: S.autoAdvance,
       ratingFilter: S.ratingFilter,
       ratings: S.ratings,
       bookmarked: S.bookmarked,
@@ -676,6 +702,25 @@ function updateAudioButton() {
   else { btn.textContent = "🔇 静音"; btn.classList.remove("on"); }
 }
 
+function toggleAuto() {
+  S.autoAdvance = !S.autoAdvance;
+  if (S.autoAdvance && !S.audioOn) {
+    // Auto-advance needs audio on; turn it on too
+    S.audioOn = true;
+    updateAudioButton();
+  }
+  updateAutoButton();
+  saveState();
+  if (S.autoAdvance) autoPlayCurrent();
+  else stopSpeak();
+}
+
+function updateAutoButton() {
+  const btn = document.getElementById("autoToggle");
+  if (S.autoAdvance) { btn.textContent = "⏸️ 자동"; btn.classList.add("on"); }
+  else { btn.textContent = "▶️ 자동"; btn.classList.remove("on"); }
+}
+
 function nav(delta) {
   if (current.length === 0) return;
   const ni = Math.max(0, Math.min(current.length - 1, idx + delta));
@@ -814,6 +859,7 @@ document.getElementById("orderToggle").addEventListener("click", toggleOrder);
   });
 });
 document.getElementById("audioToggle").addEventListener("click", toggleAudio);
+document.getElementById("autoToggle").addEventListener("click", toggleAuto);
 
 document.getElementById("themeBtn").addEventListener("click", () => {
   const cur = document.documentElement.getAttribute("data-theme");
@@ -870,6 +916,7 @@ document.getElementById("onlyBm").classList.toggle("on", S.onlyBookmarked);
 updateRatingFilterBtn();
 updateOrderButton();
 updateAudioButton();
+updateAutoButton();
 updateCatButton();
 initTheme();
 applyFilter();
