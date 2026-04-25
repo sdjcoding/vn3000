@@ -36,7 +36,7 @@ if not API_KEY:
              "  export GOOGLE_TTS_KEY='AIzaSy...'")
 
 # Voice config
-VN_VOICE = {"languageCode": "vi-VN", "name": "vi-VN-Neural2-A"}  # female
+VN_VOICE = {"languageCode": "vi-VN", "name": "vi-VN-Chirp3-HD-Achernar"}  # female, HD
 JP_VOICE = {"languageCode": "ja-JP", "name": "ja-JP-Neural2-B"}  # female
 AUDIO_CONFIG = {"audioEncoding": "MP3", "speakingRate": 0.95, "sampleRateHertz": 24000}
 
