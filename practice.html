@@ -108,6 +108,47 @@ main{
 .scene{
   perspective:1400px;width:100%;max-width:560px;
   flex:1;min-height:220px;max-height:720px;
+  position:relative;
+}
+.filter-stack{
+  position:absolute;left:10px;bottom:14px;
+  display:flex;flex-direction:column;gap:6px;
+  z-index:20;
+}
+.fs-btn{
+  display:flex;align-items:center;justify-content:center;gap:4px;
+  background:var(--soft);border:1px solid var(--border);color:var(--text);
+  min-width:38px;height:38px;padding:0 8px;border-radius:19px;
+  font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;
+  user-select:none;-webkit-tap-highlight-color:transparent;
+  transition:all .15s;backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.fs-btn:active{transform:scale(.9)}
+.fs-btn .fs-icon{font-size:15px}
+.fs-btn .fs-label{font-size:11px;color:var(--muted);max-width:90px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* on-states */
+.fs-btn.on{color:#fff;border-color:transparent}
+#onlyBm.fs-btn.on{background:var(--gold)}
+#orderToggle.fs-btn.on{background:var(--accent)}
+#audioToggle.fs-btn.on{background:#ec4899}
+#audioToggle.fs-btn.playing{animation:pulse 1.2s ease-in-out infinite}
+#rateFilter.fs-btn.level-1{background:var(--fa);color:#fff;border-color:transparent}
+#rateFilter.fs-btn.level-2{background:#f59e0b;color:#fff;border-color:transparent}
+#rateFilter.fs-btn.level-3{background:var(--fc);color:#fff;border-color:transparent}
+#rateFilter.fs-btn.unrated{background:var(--accent);color:#fff;border-color:transparent}
+@media (max-width:500px){
+  .filter-stack{left:6px;bottom:10px;gap:5px}
+  .fs-btn{min-width:34px;height:34px;padding:0 6px;font-size:12px}
+  .fs-btn .fs-icon{font-size:14px}
+  .fs-btn .fs-label{font-size:10px;max-width:60px}
+}
+@media (max-width:360px){
+  .fs-btn{min-width:32px;height:32px;padding:0 5px}
+  .fs-btn .fs-icon{font-size:13px}
+  .fs-btn .fs-label{display:none}
 }
 .card{
   position:relative;width:100%;height:100%;
@@ -221,7 +262,8 @@ main{
 }
 .nav-btn:active{background:var(--soft)}
 .nav-btn:disabled{opacity:.4;cursor:not-allowed}
-.nav-btn-mid{flex:0 0 56px;padding:14px 0;font-size:20px}
+.nav-btn-mid{flex:0 0 64px;padding:14px 0;font-size:22px}
+.nav-btn-mid.on{background:#0ea5e9;color:#fff;border-color:#0ea5e9;animation:pulse 1.2s ease-in-out infinite}
 .empty{text-align:center;padding:60px 20px;color:var(--muted);font-size:14px}
 @media (max-width:500px){
   header{padding:8px 10px}
@@ -269,14 +311,6 @@ main{
       <a href="./" class="theme-btn" style="text-decoration:none;color:var(--accent)">단어 →</a>
       <button class="theme-btn" id="themeBtn">🌙 Dark</button>
     </div>
-  </div>
-  <div class="filters" id="filterBar">
-    <button class="ch cat-btn" id="catBtn">📂 전체 · 800</button>
-    <span class="ch toggle" id="onlyBm">☆ 只看收藏</span>
-    <span class="ch toggle rating" id="rateFilter">📊 전체</span>
-    <span class="ch toggle order" id="orderToggle">📋 顺序</span>
-    <span class="ch toggle audio" id="audioToggle">🔇 静음</span>
-    <span class="ch toggle auto" id="autoToggle">▶️ 자동</span>
   </div>
   <div class="cat-modal" id="catModal" hidden>
     <div class="cat-modal-inner">
@@ -344,10 +378,18 @@ main{
         </div>
       </div>
     </div>
+    <div class="filter-stack" id="filterStack">
+      <button class="fs-btn" id="catBtn" title="카테고리"><span class="fs-icon">📂</span><span class="fs-label" id="catBtnLabel">전체</span></button>
+      <button class="fs-btn" id="onlyBm" title="즐겨찾기만">☆</button>
+      <button class="fs-btn" id="rateFilter" title="등급 필터">📊</button>
+      <button class="fs-btn" id="orderToggle" title="순서/랜덤">📋</button>
+      <button class="fs-btn" id="audioToggle" title="음성">🔇</button>
+    </div>
   </div>
   <div class="flip-hint">点击卡片翻面 · Space 翻面 · ←/→ 切换 · 手机滑动</div>
   <div class="nav-bar">
     <button class="nav-btn" id="prevBtn">← 上一张</button>
+    <button class="nav-btn nav-btn-mid" id="autoToggle" title="자동 재생">▶️</button>
     <button class="nav-btn" id="nextBtn">下一张 →</button>
   </div>
   <div class="empty" id="emptyMsg" style="display:none">没有匹配的卡片。请调整筛选条件。</div>
@@ -637,13 +679,13 @@ function setCategory(c) {
 }
 
 function updateCatButton() {
-  const btn = document.getElementById("catBtn");
   const total = S.category === "all"
     ? D.length
     : D.filter(d => d.cat === S.category).length;
   const label = S.category === "all" ? "전체" : S.category;
-  btn.textContent = `📂 ${label} · ${total}`;
-  btn.title = label;
+  const labelEl = document.getElementById("catBtnLabel");
+  if (labelEl) labelEl.textContent = `${label} · ${total}`;
+  document.getElementById("catBtn").title = `${label} (${total})`;
 }
 
 function buildCatList(filter = "") {
@@ -698,8 +740,9 @@ function toggleAudio() {
 
 function updateAudioButton() {
   const btn = document.getElementById("audioToggle");
-  if (S.audioOn) { btn.textContent = "🔊 朗读"; btn.classList.add("on"); }
-  else { btn.textContent = "🔇 静音"; btn.classList.remove("on"); }
+  btn.textContent = S.audioOn ? "🔊" : "🔇";
+  btn.classList.toggle("on", S.audioOn);
+  btn.title = S.audioOn ? "음성 켜짐" : "음성 꺼짐";
 }
 
 function toggleAuto() {
@@ -717,8 +760,9 @@ function toggleAuto() {
 
 function updateAutoButton() {
   const btn = document.getElementById("autoToggle");
-  if (S.autoAdvance) { btn.textContent = "⏸️ 자동"; btn.classList.add("on"); }
-  else { btn.textContent = "▶️ 자동"; btn.classList.remove("on"); }
+  btn.textContent = S.autoAdvance ? "⏸️" : "▶️";
+  btn.classList.toggle("on", S.autoAdvance);
+  btn.title = S.autoAdvance ? "자동 재생 중" : "자동 재생";
 }
 
 function nav(delta) {
@@ -744,13 +788,9 @@ function toggleOrder() {
 
 function updateOrderButton() {
   const btn = document.getElementById("orderToggle");
-  if (S.order === "random") {
-    btn.textContent = "🔀 随机";
-    btn.classList.add("on");
-  } else {
-    btn.textContent = "📋 顺序";
-    btn.classList.remove("on");
-  }
+  btn.textContent = S.order === "random" ? "🔀" : "📋";
+  btn.classList.toggle("on", S.order === "random");
+  btn.title = S.order === "random" ? "랜덤" : "순서대로";
 }
 
 function toggleBookmark() {
@@ -778,7 +818,10 @@ function setRating(rating) {
 
 function toggleOnlyBm() {
   S.onlyBookmarked = !S.onlyBookmarked;
-  document.getElementById("onlyBm").classList.toggle("on", S.onlyBookmarked);
+  const btn = document.getElementById("onlyBm");
+  btn.classList.toggle("on", S.onlyBookmarked);
+  btn.textContent = S.onlyBookmarked ? "★" : "☆";
+  btn.title = S.onlyBookmarked ? "즐겨찾기만" : "전체 보기";
   applyFilter();
   render(true);
   saveState();
@@ -786,11 +829,18 @@ function toggleOnlyBm() {
 
 const RATING_CYCLE = ["all", "1", "2", "3", "unrated"];
 const RATING_LABELS = {
-  "all": "📊 전체",
-  "1": "📊 1 · 모름",
-  "2": "📊 2 · 인상",
-  "3": "📊 3 · 장악",
-  "unrated": "📊 미평가",
+  "all": "📊",
+  "1": "1",
+  "2": "2",
+  "3": "3",
+  "unrated": "?",
+};
+const RATING_TITLES = {
+  "all": "등급 전체",
+  "1": "1 · 모름",
+  "2": "2 · 인상",
+  "3": "3 · 장악",
+  "unrated": "미평가",
 };
 function cycleRatingFilter() {
   const i = RATING_CYCLE.indexOf(S.ratingFilter);
@@ -805,6 +855,7 @@ function cycleRatingFilter() {
 function updateRatingFilterBtn() {
   const btn = document.getElementById("rateFilter");
   btn.textContent = RATING_LABELS[S.ratingFilter];
+  btn.title = RATING_TITLES[S.ratingFilter];
   btn.classList.remove("level-1", "level-2", "level-3", "unrated");
   if (S.ratingFilter === "unrated") btn.classList.add("unrated");
   else if (S.ratingFilter !== "all") btn.classList.add("level-" + S.ratingFilter);
@@ -912,7 +963,12 @@ document.addEventListener("touchend", (e) => {
 if (S.category !== "all" && !D.some(d => d.cat === S.category)) {
   S.category = "all";
 }
-document.getElementById("onlyBm").classList.toggle("on", S.onlyBookmarked);
+(() => {
+  const btn = document.getElementById("onlyBm");
+  btn.classList.toggle("on", S.onlyBookmarked);
+  btn.textContent = S.onlyBookmarked ? "★" : "☆";
+  btn.title = S.onlyBookmarked ? "즐겨찾기만" : "전체 보기";
+})();
 updateRatingFilterBtn();
 updateOrderButton();
 updateAudioButton();
