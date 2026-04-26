@@ -485,14 +485,40 @@ function speakWebSpeech(text, lang) {
   });
 }
 
+// Single reused Audio element — iOS Safari/Chrome blocks new Audio()
+// playback when not directly initiated by user gesture, but allows
+// reusing the same element after first unlock.
+let _audioEl = null;
+function getAudioEl() {
+  if (!_audioEl) {
+    _audioEl = new Audio();
+    _audioEl.preload = "auto";
+  }
+  return _audioEl;
+}
+function unlockAudio() {
+  // Call this from a user-gesture handler to "unlock" audio on iOS.
+  const a = getAudioEl();
+  a.src = "audio/0001_vn_a.mp3";
+  a.muted = true;
+  a.play().then(() => { a.pause(); a.muted = false; a.currentTime = 0; }).catch(() => { a.muted = false; });
+}
+
 function playMp3(no, field) {
   return new Promise((resolve, reject) => {
     const url = `audio/${String(no).padStart(4, "0")}_${field}.mp3`;
-    const audio = new Audio(url);
+    const audio = getAudioEl();
     currentAudio = audio;
-    audio.onended = () => resolve(true);
-    audio.onerror = () => reject(new Error("mp3 load failed"));
-    audio.play().catch(reject);
+    const cleanup = () => {
+      audio.removeEventListener("ended", onEnd);
+      audio.removeEventListener("error", onErr);
+    };
+    const onEnd = () => { cleanup(); resolve(true); };
+    const onErr = () => { cleanup(); reject(new Error("mp3 load failed")); };
+    audio.addEventListener("ended", onEnd);
+    audio.addEventListener("error", onErr);
+    audio.src = url;
+    audio.play().catch(err => { cleanup(); reject(err); });
   });
 }
 
@@ -559,8 +585,9 @@ function stopSpeak() {
   playToken++;  // invalidates any in-flight sequence
   if ("speechSynthesis" in window) speechSynthesis.cancel();
   if (currentAudio) {
-    try { currentAudio.pause(); currentAudio.src = ""; } catch(e) {}
-    currentAudio = null;
+    try { currentAudio.pause(); } catch(e) {}
+    // Don't clear src or null currentAudio — keep the singleton element
+    // unlocked for iOS; just stop playback.
   }
   setPlaying(false);
 }
@@ -831,8 +858,12 @@ function toggleAudio() {
   S.audioOn = !S.audioOn;
   updateAudioButton();
   saveState();
-  if (S.audioOn) autoPlayCurrent();
-  else stopSpeak();
+  if (S.audioOn) {
+    unlockAudio();           // iOS: prime the audio element on user gesture
+    autoPlayCurrent();
+  } else {
+    stopSpeak();
+  }
 }
 
 function updateAudioButton() {
@@ -853,8 +884,12 @@ function toggleAuto() {
   }
   updateAutoButton();
   saveState();
-  if (S.autoAdvance) autoPlayCurrent();
-  else stopSpeak();
+  if (S.autoAdvance) {
+    unlockAudio();           // iOS: prime audio on user gesture
+    autoPlayCurrent();
+  } else {
+    stopSpeak();
+  }
 }
 
 function updateAutoButton() {
