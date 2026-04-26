@@ -289,11 +289,12 @@ main{
 .nav-btn:active{background:var(--soft)}
 .nav-btn:disabled{opacity:.4;cursor:not-allowed}
 .nav-btn-mid{
-  flex:0 0 110px;padding:8px 0;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  flex:0 0 120px;
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  white-space:nowrap;
 }
-.auto-icon{font-size:22px;line-height:1}
-.auto-label{font-size:10px;color:var(--muted);letter-spacing:.04em;font-weight:600}
+.auto-icon{font-size:18px;line-height:1}
+.auto-label{font-size:13px;color:var(--text);letter-spacing:.02em;font-weight:600;white-space:nowrap}
 .nav-btn-mid.on{background:#0ea5e9;color:#fff;border-color:#0ea5e9;animation:pulse 1.2s ease-in-out infinite}
 .nav-btn-mid.on .auto-label{color:#fff}
 .empty{text-align:center;padding:60px 20px;color:var(--muted);font-size:14px}
