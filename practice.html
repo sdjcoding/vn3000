@@ -89,6 +89,9 @@ h1{font-size:16px;color:var(--accent);font-weight:700}
   color:var(--text);margin:2px 0}
 .cat-item:hover{background:var(--soft)}
 .cat-item.active{background:var(--accent);color:#fff;font-weight:600}
+.cat-item.replay{background:rgba(14,165,233,.15);color:#0ea5e9;font-weight:700;
+  border:1px dashed #0ea5e9;margin-bottom:8px}
+.cat-item.replay:hover{background:rgba(14,165,233,.25)}
 .cat-item-count{font-size:11px;color:var(--muted);font-weight:500}
 .cat-item.active .cat-item-count{color:rgba(255,255,255,.8)}
 .status{
@@ -285,8 +288,14 @@ main{
 }
 .nav-btn:active{background:var(--soft)}
 .nav-btn:disabled{opacity:.4;cursor:not-allowed}
-.nav-btn-mid{flex:0 0 64px;padding:14px 0;font-size:22px}
+.nav-btn-mid{
+  flex:0 0 70px;padding:8px 0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+}
+.auto-icon{font-size:22px;line-height:1}
+.auto-label{font-size:10px;color:var(--muted);letter-spacing:.04em;font-weight:600}
 .nav-btn-mid.on{background:#0ea5e9;color:#fff;border-color:#0ea5e9;animation:pulse 1.2s ease-in-out infinite}
+.nav-btn-mid.on .auto-label{color:#fff}
 .empty{text-align:center;padding:60px 20px;color:var(--muted);font-size:14px}
 @media (max-width:500px){
   header{padding:8px 10px}
@@ -338,7 +347,10 @@ main{
   <div class="cat-modal" id="catModal" hidden>
     <div class="cat-modal-inner">
       <div class="cat-modal-head">
-        <strong>카테고리 선택</strong>
+        <div>
+          <strong id="catModalTitle">카테고리 선택</strong>
+          <div id="catModalSubtitle" style="font-size:11px;color:var(--muted);margin-top:2px;display:none"></div>
+        </div>
         <button class="cat-modal-close" id="catModalClose" title="닫기">✕</button>
       </div>
       <input type="search" class="cat-search" id="catSearch" placeholder="검색..." autocomplete="off">
@@ -425,7 +437,10 @@ main{
   <div class="flip-hint">点击卡片翻面 · Space 翻面 · ←/→ 切换 · 手机滑动</div>
   <div class="nav-bar">
     <button class="nav-btn" id="prevBtn">← 上一张</button>
-    <button class="nav-btn nav-btn-mid" id="autoToggle" title="자동 재생">▶️</button>
+    <button class="nav-btn nav-btn-mid" id="autoToggle" title="자동 재생">
+      <span class="auto-icon" id="autoIcon">▶️</span>
+      <span class="auto-label" id="autoLabel">자동</span>
+    </button>
     <button class="nav-btn" id="nextBtn">下一张 →</button>
   </div>
 </main>
@@ -535,10 +550,8 @@ async function autoPlayCurrent() {
   } else if (idx < current.length - 1) {
     nav(1);                                       // -> triggers autoPlayCurrent for next front
   } else {
-    // End of deck
-    S.autoAdvance = false;
-    updateAutoButton();
-    saveState();
+    // End of deck — show category-completion modal
+    openCompletionModal();
   }
 }
 
@@ -741,21 +754,71 @@ function buildCatList(filter = "") {
   }).join("");
   list.querySelectorAll(".cat-item").forEach(el => {
     el.addEventListener("click", () => {
+      const wasCompletion = modalMode === "completion";
       setCategory(el.dataset.cat);
-      closeCatModal();
+      // Suppress closeCatModal's auto-advance kill (we want to continue)
+      modalMode = "normal";
+      document.getElementById("catModal").hidden = true;
+      if (wasCompletion && S.autoAdvance && current.length > 0) {
+        setTimeout(autoPlayCurrent, 250);
+      }
     });
   });
 }
 
+let modalMode = "normal"; // "normal" | "completion"
+
 function openCatModal() {
+  modalMode = "normal";
+  document.getElementById("catModalTitle").textContent = "카테고리 선택";
+  document.getElementById("catModalSubtitle").style.display = "none";
   buildCatList("");
   document.getElementById("catSearch").value = "";
   document.getElementById("catModal").hidden = false;
   setTimeout(() => document.getElementById("catSearch").focus(), 50);
 }
 
+function openCompletionModal() {
+  modalMode = "completion";
+  const prevCat = S.category === "all" ? "전체" : S.category;
+  const prevCount = current.length;
+  document.getElementById("catModalTitle").textContent = "학습 완료! ✅";
+  const sub = document.getElementById("catModalSubtitle");
+  sub.textContent = `「${prevCat}」 ${prevCount}개 완료`;
+  sub.style.display = "";
+  document.getElementById("catSearch").value = "";
+  buildCatList("");
+  // Prepend "replay current" item
+  const list = document.getElementById("catList");
+  const replayHtml = `<div class="cat-item replay" data-cat="__replay__">
+    <span>🔁 이 카테고리 다시 재생</span><span class="cat-item-count">↻</span>
+  </div>`;
+  list.insertAdjacentHTML("afterbegin", replayHtml);
+  list.querySelector(".cat-item.replay").addEventListener("click", () => {
+    closeCatModal();
+    // Restart from first card in current category
+    if (current.length > 0) {
+      idx = 0;
+      S.position = current[0].no;
+      stopSpeak();
+      render(true);
+      saveState();
+      if (S.autoAdvance) setTimeout(autoPlayCurrent, 200);
+    }
+  });
+  document.getElementById("catModal").hidden = false;
+}
+
 function closeCatModal() {
   document.getElementById("catModal").hidden = true;
+  // If user dismissed the completion modal without choosing, stop auto-advance
+  if (modalMode === "completion" && S.autoAdvance) {
+    S.autoAdvance = false;
+    updateAutoButton();
+    stopSpeak();
+    saveState();
+  }
+  modalMode = "normal";
 }
 
 function toggleFlip() {
@@ -796,9 +859,12 @@ function toggleAuto() {
 
 function updateAutoButton() {
   const btn = document.getElementById("autoToggle");
-  btn.textContent = S.autoAdvance ? "⏸️" : "▶️";
+  const icon = document.getElementById("autoIcon");
+  const label = document.getElementById("autoLabel");
   btn.classList.toggle("on", S.autoAdvance);
   btn.title = S.autoAdvance ? "자동 재생 중" : "자동 재생";
+  if (icon) icon.textContent = S.autoAdvance ? "⏸️" : "▶️";
+  if (label) label.textContent = S.autoAdvance ? "정지" : "자동";
 }
 
 function nav(delta) {
