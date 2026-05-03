@@ -2,7 +2,7 @@
   {
     "no": 801,
     "cat": "친구 대화",
-    "vn": "아침 인사",
+    "vn": "lời chào buổi sáng",
     "vn_a": "A: Chào em yêu, em ngủ ngon không?\nB: Em ngủ ngon lắm. Còn anh thì sao?",
     "vn_b": "A: Anh cũng vậy. Em đẹp như thiên thần buổi sáng.\nB: Anh nịnh em hoài à!",
     "jp": "",
@@ -16,7 +16,7 @@
   {
     "no": 802,
     "cat": "친구 대화",
-    "vn": "잘자 인사",
+    "vn": "chúc ngủ ngon",
     "vn_a": "B: Anh ơi, em buồn ngủ rồi.\nA: Vậy em đi ngủ đi, mơ đẹp nhé.",
     "vn_b": "B: Anh cũng ngủ sớm đi, đừng thức khuya.\nA: Ừ, anh yêu em. Chúc ngủ ngon.",
     "jp": "",
@@ -30,7 +30,7 @@
   {
     "no": 803,
     "cat": "친구 대화",
-    "vn": "아침 식사",
+    "vn": "bữa sáng",
     "vn_a": "B: Anh muốn ăn gì sáng nay?\nA: Cho anh phở đi, em nấu phở ngon nhất.",
     "vn_b": "B: Vậy đợi em một chút nhé.\nA: Để anh phụ em nha.",
     "jp": "",
@@ -44,7 +44,7 @@
   {
     "no": 804,
     "cat": "친구 대화",
-    "vn": "같이 요리하기",
+    "vn": "Cùng nhau nấu ăn",
     "vn_a": "A: Em thái rau, anh nấu thịt nhé.\nB: Anh nhớ đừng cho nhiều muối quá đấy.",
     "vn_b": "A: Yên tâm đi, anh là đầu bếp mà.\nB: Đầu bếp gì! Lần trước cháy hết rồi.",
     "jp": "",
@@ -58,7 +58,7 @@
   {
     "no": 805,
     "cat": "친구 대화",
-    "vn": "설거지 부탁",
+    "vn": "Vui lòng rửa bát",
     "vn_a": "B: Anh ơi, hôm nay anh rửa bát nhé.\nA: Anh vừa rửa hôm qua mà.",
     "vn_b": "B: Nhưng hôm nay em mệt lắm.\nA: Được rồi, em nghỉ đi, để anh làm.",
     "jp": "",
@@ -72,7 +72,7 @@
   {
     "no": 806,
     "cat": "친구 대화",
-    "vn": "빨래",
+    "vn": "rửa",
     "vn_a": "B: Quần áo nhiều quá, anh phụ em giặt nhé.\nA: Để anh cho vào máy, em phơi nhé.",
     "vn_b": "B: Nhớ phân loại quần áo trắng và màu nha.\nA: Anh biết rồi, không phải lần đầu đâu.",
     "jp": "",
@@ -86,7 +86,7 @@
   {
     "no": 807,
     "cat": "친구 대화",
-    "vn": "주말 청소",
+    "vn": "dọn dẹp cuối tuần",
     "vn_a": "A: Cuối tuần này mình dọn nhà nhé.\nB: Em quét nhà, anh lau sàn được không?",
     "vn_b": "A: Ok, sau đó mình ăn ngoài nha.\nB: Tuyệt! Em muốn ăn lẩu.",
     "jp": "",
@@ -100,7 +100,7 @@
   {
     "no": 808,
     "cat": "친구 대화",
-    "vn": "마트 쇼핑",
+    "vn": "siêu thị mua sắm",
     "vn_a": "B: Anh đẩy xe đi, em chọn đồ.\nA: Mình cần mua gì hôm nay?",
     "vn_b": "B: Sữa, trứng, rau và một ít trái cây.\nA: Đừng quên mua bia cho anh.",
     "jp": "",
@@ -114,7 +114,7 @@
   {
     "no": 809,
     "cat": "친구 대화",
-    "vn": "외출 준비",
+    "vn": "Chuẩn bị đi ra ngoài",
     "vn_a": "B: Anh ơi, em nên mặc cái nào?\nA: Cái váy đỏ đẹp hơn, hợp với em lắm.",
     "vn_b": "B: Thế anh đợi em trang điểm chút nhé.\nA: Em xinh sẵn rồi mà, nhanh lên kẻo trễ.",
     "jp": "",
@@ -128,7 +128,7 @@
   {
     "no": 810,
     "cat": "친구 대화",
-    "vn": "출근",
+    "vn": "đi làm",
     "vn_a": "A: Anh đi làm đây, em ở nhà nhé.\nB: Lái xe cẩn thận, đến nơi nhắn em.",
     "vn_b": "A: Trưa anh sẽ gọi em ăn cơm cùng.\nB: Vâng, em chờ anh.",
     "jp": "",
@@ -142,7 +142,7 @@
   {
     "no": 811,
     "cat": "친구 대화",
-    "vn": "퇴근 후 귀가",
+    "vn": "Trở về nhà sau giờ làm việc",
     "vn_a": "B: Anh về rồi à? Hôm nay mệt không?\nA: Mệt lắm em, sếp giao nhiều việc quá.",
     "vn_b": "B: Em nấu canh nóng cho anh nhé.\nA: Em là thiên thần của anh.",
     "jp": "",
@@ -156,7 +156,7 @@
   {
     "no": 812,
     "cat": "친구 대화",
-    "vn": "주말 계획 세우기",
+    "vn": "Lập kế hoạch cuối tuần của bạn",
     "vn_a": "A: Cuối tuần này em muốn đi đâu?\nB: Mình đi biển đi anh, lâu rồi không đi.",
     "vn_b": "A: Vũng Tàu hay Phú Quốc?\nB: Vũng Tàu thôi, gần và tiết kiệm.",
     "jp": "",
@@ -170,7 +170,7 @@
   {
     "no": 813,
     "cat": "친구 대화",
-    "vn": "기상 깨우기",
+    "vn": "thức dậy",
     "vn_a": "A: Em ơi, dậy đi em, trễ giờ rồi.\nB: Cho em ngủ thêm năm phút nữa.",
     "vn_b": "A: Năm phút thật nhé, không thì anh cù em đó.\nB: Hihi, em dậy rồi, dậy rồi.",
     "jp": "",
@@ -184,7 +184,7 @@
   {
     "no": 814,
     "cat": "친구 대화",
-    "vn": "커피 한 잔",
+    "vn": "tách cà phê",
     "vn_a": "B: Anh uống cà phê không, em pha cho?\nA: Cho anh cà phê sữa đá nhé.",
     "vn_b": "B: Lúc nào cũng cà phê sữa đá!\nA: Vì em pha ngon nhất Sài Gòn.",
     "jp": "",
@@ -198,7 +198,7 @@
   {
     "no": 815,
     "cat": "친구 대화",
-    "vn": "점심 챙기기",
+    "vn": "Đóng gói bữa trưa của bạn",
     "vn_a": "A: Trưa em ăn chưa?\nB: Chưa, em đợi anh gọi.",
     "vn_b": "A: Em ra ngoài ăn đi, đừng nhịn.\nB: Vâng, lát em đi với đồng nghiệp.",
     "jp": "",
@@ -212,7 +212,7 @@
   {
     "no": 816,
     "cat": "친구 대화",
-    "vn": "사랑한다 말하기",
+    "vn": "nói anh yêu em",
     "vn_a": "A: Em biết anh yêu em nhiều lắm không?\nB: Em biết, anh nói mỗi ngày mà.",
     "vn_b": "A: Vì anh sợ em quên thôi.\nB: Em không bao giờ quên đâu, em cũng yêu anh.",
     "jp": "",
@@ -226,7 +226,7 @@
   {
     "no": 817,
     "cat": "친구 대화",
-    "vn": "보고싶다",
+    "vn": "nhớ bạn",
     "vn_a": "B: Anh ơi, em nhớ anh quá.\nA: Anh cũng nhớ em, công việc làm anh bận quá.",
     "vn_b": "B: Tối nay anh về sớm nhé.\nA: Anh hứa, anh sẽ về nhanh nhất có thể.",
     "jp": "",
@@ -240,7 +240,7 @@
   {
     "no": 818,
     "cat": "친구 대화",
-    "vn": "안아주기",
+    "vn": "Ôm",
     "vn_a": "B: Anh ôm em một cái đi.\nA: Em sao thế, có chuyện gì à?",
     "vn_b": "B: Không có gì, chỉ muốn được anh ôm thôi.\nA: Lại đây, anh ôm em mãi cũng được.",
     "jp": "",
@@ -254,7 +254,7 @@
   {
     "no": 819,
     "cat": "친구 대화",
-    "vn": "외모 칭찬",
+    "vn": "khen ngợi vẻ ngoài của một người",
     "vn_a": "A: Hôm nay em đẹp lắm đấy.\nB: Thật không hay là anh nịnh em?",
     "vn_b": "A: Anh nói thật, em luôn đẹp trong mắt anh.\nB: Anh là người đàn ông biết nói nhất!",
     "jp": "",
@@ -268,7 +268,7 @@
   {
     "no": 820,
     "cat": "친구 대화",
-    "vn": "첫 만남 회상",
+    "vn": "hồi tưởng lần đầu gặp gỡ",
     "vn_a": "B: Anh còn nhớ lần đầu mình gặp nhau không?\nA: Nhớ chứ, em mặc áo trắng, đẹp lắm.",
     "vn_b": "B: Lúc đó em đã thích anh rồi.\nA: Anh cũng vậy, đó là duyên trời định.",
     "jp": "",
@@ -282,7 +282,7 @@
   {
     "no": 821,
     "cat": "친구 대화",
-    "vn": "고마움 표현",
+    "vn": "Bày tỏ lòng biết ơn",
     "vn_a": "B: Cảm ơn anh đã luôn ở bên em.\nA: Đó là chuyện đương nhiên mà em.",
     "vn_b": "B: Em may mắn lắm khi gặp anh.\nA: Anh mới là người may mắn nhất.",
     "jp": "",
@@ -296,7 +296,7 @@
   {
     "no": 822,
     "cat": "친구 대화",
-    "vn": "손잡기",
+    "vn": "nắm tay",
     "vn_a": "A: Đưa tay đây anh nắm.\nB: Tay anh ấm quá.",
     "vn_b": "A: Vì có em nên mới ấm.\nB: Anh dẻo miệng nhỉ!",
     "jp": "",
@@ -310,7 +310,7 @@
   {
     "no": 823,
     "cat": "친구 대화",
-    "vn": "키스 요청",
+    "vn": "yêu cầu hôn",
     "vn_a": "A: Cho anh hôn em một cái nhé.\nB: Anh hỏi gì kỳ vậy, hôn đi!",
     "vn_b": "A: Anh muốn hỏi cho lịch sự thôi.\nB: Lịch sự gì mà má đỏ thế kia.",
     "jp": "",
@@ -324,7 +324,7 @@
   {
     "no": 824,
     "cat": "친구 대화",
-    "vn": "애칭으로 부르기",
+    "vn": "gọi bằng biệt danh",
     "vn_a": "A: Em yêu, lại đây với anh.\nB: Sao anh gọi em ngọt thế?",
     "vn_b": "A: Vì em là em yêu của anh mà.\nB: Anh muốn gì, nói thẳng đi.",
     "jp": "",
@@ -338,7 +338,7 @@
   {
     "no": 825,
     "cat": "친구 대화",
-    "vn": "깜짝 선물",
+    "vn": "món quà bất ngờ",
     "vn_a": "A: Em nhắm mắt lại, anh có món quà cho em.\nB: Quà gì vậy anh?",
     "vn_b": "A: Mở mắt ra đi, một bó hoa hồng.\nB: Trời ơi, anh làm em cảm động quá.",
     "jp": "",
@@ -352,7 +352,7 @@
   {
     "no": 826,
     "cat": "친구 대화",
-    "vn": "감동 받았을 때",
+    "vn": "Khi tôi cảm động",
     "vn_a": "B: Anh thật sự là người tốt nhất em từng gặp.\nA: Anh chỉ làm những gì người yêu nên làm.",
     "vn_b": "B: Em sẽ trân trọng anh suốt đời.\nA: Anh cũng vậy, em là tất cả của anh.",
     "jp": "",
@@ -366,7 +366,7 @@
   {
     "no": 827,
     "cat": "친구 대화",
-    "vn": "행복하다 말하기",
+    "vn": "nói rằng bạn hạnh phúc",
     "vn_a": "B: Bên anh em hạnh phúc lắm.\nA: Anh muốn em mãi hạnh phúc như vậy.",
     "vn_b": "B: Có anh là đủ rồi.\nA: Anh sẽ cố gắng để em không bao giờ buồn.",
     "jp": "",
@@ -380,7 +380,7 @@
   {
     "no": 828,
     "cat": "친구 대화",
-    "vn": "고백하기",
+    "vn": "xưng",
     "vn_a": "A: Em à, anh muốn nói với em một điều.\nB: Chuyện gì vậy anh, sao nghiêm trọng thế?",
     "vn_b": "A: Anh thật sự rất yêu em.\nB: Anh làm em cười rồi, em cũng yêu anh.",
     "jp": "",
@@ -394,7 +394,7 @@
   {
     "no": 829,
     "cat": "친구 대화",
-    "vn": "메시지 주고받기",
+    "vn": "gửi và nhận tin nhắn",
     "vn_a": "B: Anh đang làm gì vậy?\nA: Anh đang nghĩ về em.",
     "vn_b": "B: Anh dỗi à? Sao tự nhiên ngọt thế?\nA: Yêu em không cần lý do.",
     "jp": "",
@@ -408,7 +408,7 @@
   {
     "no": 830,
     "cat": "친구 대화",
-    "vn": "아침 메시지",
+    "vn": "tin nhắn buổi sáng",
     "vn_a": "A: Chào buổi sáng em yêu.\nB: Anh dậy sớm thế?",
     "vn_b": "A: Anh muốn là người đầu tiên chúc em ngày tốt lành.\nB: Em yêu anh nhiều lắm.",
     "jp": "",
@@ -422,7 +422,7 @@
   {
     "no": 831,
     "cat": "친구 대화",
-    "vn": "영화관",
+    "vn": "rạp chiếu phim",
     "vn_a": "B: Mình xem phim gì hôm nay?\nA: Phim hành động hay phim tình cảm?",
     "vn_b": "B: Em muốn xem phim tình cảm.\nA: Vậy mình xem phim đó nhé, anh mua bắp rang.",
     "jp": "",
@@ -436,7 +436,7 @@
   {
     "no": 832,
     "cat": "친구 대화",
-    "vn": "카페",
+    "vn": "quán cà phê",
     "vn_a": "A: Em uống gì? Cà phê hay trà sữa?\nB: Cho em trà sữa trân châu.",
     "vn_b": "A: Ngồi trong hay ngoài?\nB: Mình ngồi gần cửa sổ đi.",
     "jp": "",
@@ -450,7 +450,7 @@
   {
     "no": 833,
     "cat": "친구 대화",
-    "vn": "레스토랑",
+    "vn": "nhà hàng",
     "vn_a": "A: Em chọn món đi, anh trả tiền.\nB: Anh khách sáo gì, mình ăn cùng nhau mà.",
     "vn_b": "A: Hôm nay anh muốn chiêu đãi em.\nB: Vậy em chọn món đắt nhất nha!",
     "jp": "",
@@ -464,7 +464,7 @@
   {
     "no": 834,
     "cat": "친구 대화",
-    "vn": "공원 산책",
+    "vn": "đi dạo trong công viên",
     "vn_a": "B: Trời đẹp quá, mình đi dạo công viên đi.\nA: Anh mang theo nước cho em.",
     "vn_b": "B: Anh chu đáo thật.\nA: Vì anh muốn chăm sóc em.",
     "jp": "",
@@ -478,7 +478,7 @@
   {
     "no": 835,
     "cat": "친구 대화",
-    "vn": "해변 데이트",
+    "vn": "ngày đi biển",
     "vn_a": "B: Biển đẹp quá anh ơi!\nA: Mình chụp ảnh nhé.",
     "vn_b": "B: Anh nhớ chụp đẹp cho em đấy.\nA: Với anh, em luôn đẹp nhất.",
     "jp": "",
@@ -492,7 +492,7 @@
   {
     "no": 836,
     "cat": "친구 대화",
-    "vn": "여행 계획",
+    "vn": "kế hoạch du lịch",
     "vn_a": "A: Tháng sau mình đi Đà Lạt nhé.\nB: Hay quá, em chưa đi bao giờ.",
     "vn_b": "A: Anh đặt khách sạn rồi đó.\nB: Trời, anh nhanh thật!",
     "jp": "",
@@ -506,7 +506,7 @@
   {
     "no": 837,
     "cat": "친구 대화",
-    "vn": "호텔 체크인",
+    "vn": "Nhận phòng khách sạn",
     "vn_a": "A: Phòng này em thấy được không?\nB: Đẹp lắm, view biển luôn nè.",
     "vn_b": "A: Anh đặt riêng cho em đó.\nB: Cảm ơn anh, em yêu anh.",
     "jp": "",
@@ -520,7 +520,7 @@
   {
     "no": 838,
     "cat": "친구 대화",
-    "vn": "사진 찍기",
+    "vn": "chụp ảnh",
     "vn_a": "B: Anh ơi, chụp ảnh cho em đi.\nA: Em đứng nghiêng người chút, đẹp hơn.",
     "vn_b": "B: Đẹp không anh?\nA: Đẹp lắm, để anh đăng Facebook khoe.",
     "jp": "",
@@ -534,7 +534,7 @@
   {
     "no": 839,
     "cat": "친구 대화",
-    "vn": "노래방",
+    "vn": "karaoke",
     "vn_a": "A: Em hát bài gì cho anh nghe đi.\nB: Em hát \"Người Yêu Cũ\" của Phan Mạnh Quỳnh nhé.",
     "vn_b": "A: Bài đó buồn lắm, hát bài vui đi.\nB: Vậy mình song ca nhé.",
     "jp": "",
@@ -548,7 +548,7 @@
   {
     "no": 840,
     "cat": "친구 대화",
-    "vn": "쇼핑",
+    "vn": "mua sắm",
     "vn_a": "B: Anh thấy cái áo này có hợp em không?\nA: Hợp lắm, em mặc cái nào cũng đẹp.",
     "vn_b": "B: Anh chỉ biết khen thôi.\nA: Vì sự thật là vậy mà.",
     "jp": "",
@@ -562,7 +562,7 @@
   {
     "no": 841,
     "cat": "친구 대화",
-    "vn": "야시장",
+    "vn": "chợ đêm",
     "vn_a": "A: Đói chưa, mình ăn gì đi.\nB: Em muốn ăn bánh tráng nướng.",
     "vn_b": "A: Để anh mua, em đứng đây nhé.\nB: Mua thêm chè cho em nha.",
     "jp": "",
@@ -576,7 +576,7 @@
   {
     "no": 842,
     "cat": "친구 대화",
-    "vn": "박물관",
+    "vn": "bảo tàng",
     "vn_a": "B: Anh có thích lịch sử không?\nA: Có chứ, đặc biệt là cổ vật.",
     "vn_b": "B: Em thích nghệ thuật hơn.\nA: Vậy mình bổ sung cho nhau.",
     "jp": "",
@@ -590,7 +590,7 @@
   {
     "no": 843,
     "cat": "친구 대화",
-    "vn": "놀이공원",
+    "vn": "công viên giải trí",
     "vn_a": "B: Em sợ tàu lượn lắm!\nA: Có anh đây, không sợ.",
     "vn_b": "B: Hứa nắm tay em chặt nhé.\nA: Anh không bao giờ buông tay em đâu.",
     "jp": "",
@@ -604,7 +604,7 @@
   {
     "no": 844,
     "cat": "친구 대화",
-    "vn": "야경 보기",
+    "vn": "Xem cảnh đêm",
     "vn_a": "A: Sài Gòn về đêm đẹp quá.\nB: Em thích ngắm đèn thành phố.",
     "vn_b": "A: Đẹp nhưng không bằng em.\nB: Lại nịnh nữa rồi.",
     "jp": "",
@@ -618,7 +618,7 @@
   {
     "no": 845,
     "cat": "친구 대화",
-    "vn": "데이트 마무리",
+    "vn": "Ngày kết thúc",
     "vn_a": "A: Trễ rồi, anh đưa em về nhé.\nB: Hôm nay vui quá.",
     "vn_b": "A: Mai mình lại đi chơi nữa nhé.\nB: Hứa rồi đó, không được nuốt lời.",
     "jp": "",
@@ -632,7 +632,7 @@
   {
     "no": 846,
     "cat": "친구 대화",
-    "vn": "약속에 늦었을 때",
+    "vn": "Khi bạn trễ hẹn",
     "vn_a": "B: Sao anh đến muộn vậy? Em đợi cả tiếng rồi.\nA: Xin lỗi em, kẹt xe quá.",
     "vn_b": "B: Lần nào cũng kẹt xe!\nA: Anh xin lỗi mà, đừng giận nha.",
     "jp": "",
@@ -646,7 +646,7 @@
   {
     "no": 847,
     "cat": "친구 대화",
-    "vn": "휴대폰만 볼 때",
+    "vn": "Khi tôi chỉ nhìn vào điện thoại của mình",
     "vn_a": "B: Sao anh cứ chăm chăm nhìn điện thoại vậy?\nA: Anh đang xem tin tức thôi mà.",
     "vn_b": "B: Mình đi ăn cùng nhau, anh phải để ý em chứ.\nA: Xin lỗi em, anh cất điện thoại đây.",
     "jp": "",
@@ -660,7 +660,7 @@
   {
     "no": 848,
     "cat": "친구 대화",
-    "vn": "질투",
+    "vn": "lòng ghen tị",
     "vn_a": "B: Cô đó là ai mà nhắn tin cho anh hoài vậy?\nA: Đồng nghiệp thôi, công việc thôi mà.",
     "vn_b": "B: Đồng nghiệp gì mà tin nhắn dài thế?\nA: Em xem này, toàn chuyện công việc.",
     "jp": "",
@@ -674,7 +674,7 @@
   {
     "no": 849,
     "cat": "친구 대화",
-    "vn": "오해",
+    "vn": "sự hiểu lầm",
     "vn_a": "A: Em hiểu lầm anh rồi.\nB: Em không hiểu lầm, em thấy rõ ràng.",
     "vn_b": "A: Để anh giải thích cho em nghe.\nB: Được, anh nói đi.",
     "jp": "",
@@ -688,7 +688,7 @@
   {
     "no": 850,
     "cat": "친구 대화",
-    "vn": "사과하기",
+    "vn": "xin lỗi",
     "vn_a": "A: Anh sai rồi, em tha lỗi cho anh nhé.\nB: Anh hứa không tái phạm chứ?",
     "vn_b": "A: Anh hứa, anh sẽ không bao giờ làm em buồn nữa.\nB: Vậy em tin anh lần này.",
     "jp": "",
@@ -702,7 +702,7 @@
   {
     "no": 851,
     "cat": "친구 대화",
-    "vn": "침묵 시위",
+    "vn": "sự phản đối im lặng",
     "vn_a": "A: Em đừng im lặng nữa, nói gì đi.\nB: Em không có gì để nói.",
     "vn_b": "A: Em giận anh điều gì, nói anh biết.\nB: Anh tự suy nghĩ đi.",
     "jp": "",
@@ -716,7 +716,7 @@
   {
     "no": 852,
     "cat": "친구 대화",
-    "vn": "심하게 화났을 때",
+    "vn": "Khi bạn đang rất tức giận",
     "vn_a": "B: Em đang rất giận đấy!\nA: Anh biết rồi, anh xin lỗi.",
     "vn_b": "B: Xin lỗi không thôi không đủ!\nA: Vậy anh phải làm gì để em hết giận?",
     "jp": "",
@@ -730,7 +730,7 @@
   {
     "no": 853,
     "cat": "친구 대화",
-    "vn": "헤어지자는 위협",
+    "vn": "dọa chia tay",
     "vn_a": "B: Hay là mình tạm xa nhau một thời gian đi.\nA: Đừng nói vậy, anh không thể mất em.",
     "vn_b": "B: Em mệt mỏi lắm rồi.\nA: Mình cùng giải quyết, đừng bỏ cuộc nhé.",
     "jp": "",
@@ -744,7 +744,7 @@
   {
     "no": 854,
     "cat": "친구 대화",
-    "vn": "화해",
+    "vn": "hòa giải",
     "vn_a": "A: Mình làm hòa nhé.\nB: Anh phải hứa thay đổi đó.",
     "vn_b": "A: Anh hứa, từ nay anh sẽ tốt hơn với em.\nB: Lại đây, em ôm anh một cái.",
     "jp": "",
@@ -758,7 +758,7 @@
   {
     "no": 855,
     "cat": "친구 대화",
-    "vn": "신뢰 회복",
+    "vn": "khôi phục niềm tin",
     "vn_a": "B: Em muốn tin anh, nhưng em sợ.\nA: Hãy cho anh cơ hội chứng minh.",
     "vn_b": "B: Một lần nữa thôi đó.\nA: Cảm ơn em đã không bỏ anh.",
     "jp": "",
@@ -772,7 +772,7 @@
   {
     "no": 856,
     "cat": "친구 대화",
-    "vn": "결혼 이야기",
+    "vn": "câu chuyện hôn nhân",
     "vn_a": "A: Em có nghĩ tới chuyện kết hôn chưa?\nB: Em mới 25 thôi mà anh.",
     "vn_b": "A: Anh muốn cưới em trong vòng 2 năm tới.\nB: Vậy anh phải tiết kiệm tiền nha.",
     "jp": "",
@@ -786,7 +786,7 @@
   {
     "no": 857,
     "cat": "친구 대화",
-    "vn": "부모님 만나기",
+    "vn": "gặp bố mẹ tôi",
     "vn_a": "A: Tết này em về quê anh chơi nhé.\nB: Em sợ ba mẹ anh không thích em.",
     "vn_b": "A: Yên tâm, ba mẹ anh dễ tính lắm.\nB: Em mua quà gì cho ba mẹ anh?",
     "jp": "",
@@ -800,7 +800,7 @@
   {
     "no": 858,
     "cat": "친구 대화",
-    "vn": "동거 시작",
+    "vn": "Bắt đầu sống chung",
     "vn_a": "A: Mình dọn về sống chung nhé.\nB: Anh nói thật à?",
     "vn_b": "A: Anh muốn mỗi sáng được nhìn thấy em.\nB: Vậy mình tìm nhà nhé.",
     "jp": "",
@@ -814,7 +814,7 @@
   {
     "no": 859,
     "cat": "친구 대화",
-    "vn": "아이 계획",
+    "vn": "kế hoạch sinh con",
     "vn_a": "B: Anh muốn có mấy đứa con?\nA: Anh muốn hai đứa, một trai một gái.",
     "vn_b": "B: Em cũng vậy, mong sao như ý.\nA: Đặt tên đẹp đẹp cho con nhé.",
     "jp": "",
@@ -828,7 +828,7 @@
   {
     "no": 860,
     "cat": "친구 대화",
-    "vn": "직업/창업",
+    "vn": "Nghề nghiệp/Khởi nghiệp",
     "vn_a": "B: Anh muốn làm sếp mình không?\nA: Có chứ, anh muốn mở công ty riêng.",
     "vn_b": "B: Em sẽ ủng hộ anh hết mình.\nA: Có em là anh có động lực rồi.",
     "jp": "",
@@ -842,7 +842,7 @@
   {
     "no": 861,
     "cat": "친구 대화",
-    "vn": "저축 계획",
+    "vn": "kế hoạch tiết kiệm",
     "vn_a": "A: Mình lập kế hoạch tiết kiệm nhé.\nB: Mỗi tháng để dành bao nhiêu?",
     "vn_b": "A: Khoảng 30% lương đi.\nB: Vậy mình sẽ sớm có nhà.",
     "jp": "",
@@ -856,7 +856,7 @@
   {
     "no": 862,
     "cat": "친구 대화",
-    "vn": "집 사기",
+    "vn": "mua nhà",
     "vn_a": "B: Mình mua nhà ở đâu nhỉ?\nA: Quận 7 đi, gần công ty cả hai mình.",
     "vn_b": "B: Khu đó đắt lắm.\nA: Anh sẽ cố gắng kiếm tiền.",
     "jp": "",
@@ -870,7 +870,7 @@
   {
     "no": 863,
     "cat": "친구 대화",
-    "vn": "꿈의 여행",
+    "vn": "chuyến đi mơ ước",
     "vn_a": "B: Em mơ được đi châu Âu một lần.\nA: Mình sẽ đi tuần trăng mật ở Paris.",
     "vn_b": "B: Anh hứa rồi đấy nhé.\nA: Anh không bao giờ thất hứa với em.",
     "jp": "",
@@ -884,7 +884,7 @@
   {
     "no": 864,
     "cat": "친구 대화",
-    "vn": "노후 계획",
+    "vn": "kế hoạch nghỉ hưu",
     "vn_a": "A: Già rồi mình về quê sống nhé.\nB: Có vườn rau, nuôi chó, chơi với cháu.",
     "vn_b": "A: Đó là cuộc sống anh muốn.\nB: Em cũng vậy, có anh là đủ.",
     "jp": "",
@@ -898,7 +898,7 @@
   {
     "no": 865,
     "cat": "친구 대화",
-    "vn": "함께 늙기",
+    "vn": "cùng nhau già đi",
     "vn_a": "B: Anh có sợ già không?\nA: Không, miễn là già cùng em.",
     "vn_b": "B: Anh ngọt ghê.\nA: Anh nói thật, đó là ước nguyện của anh.",
     "jp": "",
@@ -912,7 +912,7 @@
   {
     "no": 866,
     "cat": "친구 대화",
-    "vn": "우울할 때",
+    "vn": "Khi bạn chán nản",
     "vn_a": "B: Anh ơi, em buồn quá.\nA: Có chuyện gì kể anh nghe đi.",
     "vn_b": "B: Công việc áp lực quá, em không chịu nổi.\nA: Tới đây, anh ôm em một cái.",
     "jp": "",
@@ -926,7 +926,7 @@
   {
     "no": 867,
     "cat": "친구 대화",
-    "vn": "스트레스",
+    "vn": "nhấn mạnh",
     "vn_a": "A: Hôm nay anh stress kinh khủng.\nB: Sếp lại la anh à?",
     "vn_b": "A: Ừ, anh muốn nghỉ việc luôn.\nB: Bình tĩnh, mai tính, nay anh nghỉ ngơi đi.",
     "jp": "",
@@ -940,7 +940,7 @@
   {
     "no": 868,
     "cat": "친구 대화",
-    "vn": "위로하기",
+    "vn": "an ủi",
     "vn_a": "B: Em không biết phải làm sao.\nA: Có anh đây, đừng lo.",
     "vn_b": "B: Cảm ơn anh, anh là điểm tựa của em.\nA: Bất cứ lúc nào em cần, anh sẽ ở đây.",
     "jp": "",
@@ -954,7 +954,7 @@
   {
     "no": 869,
     "cat": "친구 대화",
-    "vn": "기쁜 일 공유",
+    "vn": "chia sẻ những khoảnh khắc hạnh phúc",
     "vn_a": "B: Anh ơi, em được tăng lương rồi!\nA: Thật à? Chúc mừng em.",
     "vn_b": "B: Tối nay em mời anh ăn nhà hàng.\nA: Vậy em đặt nhà hàng đi, anh ăn nhiều đó!",
     "jp": "",
@@ -968,7 +968,7 @@
   {
     "no": 870,
     "cat": "친구 대화",
-    "vn": "슬픈 일 공유",
+    "vn": "sẻ chia những ngày buồn",
     "vn_a": "A: Hôm nay ông nội anh mất rồi.\nB: Trời ơi, anh có sao không?",
     "vn_b": "A: Anh buồn lắm, nhưng anh phải mạnh mẽ.\nB: Em sẽ đi đám tang cùng anh.",
     "jp": "",
@@ -982,7 +982,7 @@
   {
     "no": 871,
     "cat": "친구 대화",
-    "vn": "분노 진정",
+    "vn": "nguôi giận",
     "vn_a": "B: Anh đừng giận sếp nữa.\nA: Anh không kiềm chế được.",
     "vn_b": "B: Hít thở sâu nào, có em đây.\nA: Có em anh thấy bình tĩnh hơn.",
     "jp": "",
@@ -996,7 +996,7 @@
   {
     "no": 872,
     "cat": "친구 대화",
-    "vn": "격려하기",
+    "vn": "khuyến khích",
     "vn_a": "B: Anh có thể làm được, em tin anh.\nA: Anh sợ mình không làm nổi.",
     "vn_b": "B: Anh giỏi lắm, đừng nghi ngờ bản thân.\nA: Có em ủng hộ anh có thể làm mọi thứ.",
     "jp": "",
@@ -1010,7 +1010,7 @@
   {
     "no": 873,
     "cat": "친구 대화",
-    "vn": "면접 응원",
+    "vn": "hỗ trợ phỏng vấn",
     "vn_a": "A: Mai em phỏng vấn rồi, hồi hộp quá.\nB: Anh cứ tự nhiên, anh đủ giỏi rồi.",
     "vn_b": "A: Lỡ rớt thì sao?\nB: Có em đây, không lo.",
     "jp": "",
@@ -1024,7 +1024,7 @@
   {
     "no": 874,
     "cat": "친구 대화",
-    "vn": "자신감 부족",
+    "vn": "thiếu tự tin",
     "vn_a": "B: Em thấy mình không đủ tốt.\nA: Em là người tuyệt vời nhất anh biết.",
     "vn_b": "B: Anh nói vì anh yêu em thôi.\nA: Anh nói vì đó là sự thật.",
     "jp": "",
@@ -1038,7 +1038,7 @@
   {
     "no": 875,
     "cat": "친구 대화",
-    "vn": "외로움",
+    "vn": "sự cô đơn",
     "vn_a": "B: Em cô đơn quá, anh ơi.\nA: Em đừng nghĩ vậy, anh luôn ở bên em mà.",
     "vn_b": "B: Có lúc em vẫn thấy trống trải.\nA: Anh hiểu, mình đi đâu đó cho khuây khoả nhé.",
     "jp": "",
@@ -1052,7 +1052,7 @@
   {
     "no": 876,
     "cat": "친구 대화",
-    "vn": "아플 때",
+    "vn": "Khi bạn ốm",
     "vn_a": "B: Anh ơi, em sốt rồi.\nA: Để anh mua thuốc cho.",
     "vn_b": "B: Anh đo nhiệt độ cho em.\nA: 38 độ, em phải uống nhiều nước.",
     "jp": "",
@@ -1066,7 +1066,7 @@
   {
     "no": 877,
     "cat": "친구 대화",
-    "vn": "병원 가기",
+    "vn": "đến bệnh viện",
     "vn_a": "A: Đi bệnh viện đi em, đừng chịu nữa.\nB: Em sợ tiêm lắm.",
     "vn_b": "A: Anh đi cùng em, đừng sợ.\nB: Cảm ơn anh đã luôn lo cho em.",
     "jp": "",
@@ -1080,7 +1080,7 @@
   {
     "no": 878,
     "cat": "친구 대화",
-    "vn": "운동",
+    "vn": "tập thể dục",
     "vn_a": "A: Mai mình đi tập gym nhé.\nB: Em không thích tập nặng.",
     "vn_b": "A: Vậy mình chạy bộ buổi sáng đi.\nB: Ok, dậy sớm gọi em nha.",
     "jp": "",
@@ -1094,7 +1094,7 @@
   {
     "no": 879,
     "cat": "친구 대화",
-    "vn": "다이어트",
+    "vn": "ăn kiêng",
     "vn_a": "B: Em phải giảm cân.\nA: Em đẹp rồi mà, không cần.",
     "vn_b": "B: Em mặc đồ không vừa.\nA: Vậy anh cùng giảm với em.",
     "jp": "",
@@ -1108,7 +1108,7 @@
   {
     "no": 880,
     "cat": "친구 대화",
-    "vn": "수면",
+    "vn": "ngủ",
     "vn_a": "A: Em phải ngủ đủ giấc đó.\nB: Em làm việc khuya quá.",
     "vn_b": "A: Sức khỏe quan trọng hơn công việc.\nB: Em biết rồi, em sẽ ngủ sớm.",
     "jp": "",
@@ -1122,7 +1122,7 @@
   {
     "no": 881,
     "cat": "친구 대화",
-    "vn": "식사 챙기기",
+    "vn": "Chăm sóc bữa ăn của bạn",
     "vn_a": "B: Anh ăn cơm chưa?\nA: Chưa, anh bận quá.",
     "vn_b": "B: Anh phải ăn đúng giờ chứ!\nA: Em đặt đồ ăn cho anh nhé.",
     "jp": "",
@@ -1136,7 +1136,7 @@
   {
     "no": 882,
     "cat": "친구 대화",
-    "vn": "마사지",
+    "vn": "mát xa",
     "vn_a": "B: Anh mỏi vai à, em mát-xa cho.\nA: Tay em ấm quá, dễ chịu thật.",
     "vn_b": "B: Anh làm việc nhiều quá rồi.\nA: Có em massage anh khoẻ liền.",
     "jp": "",
@@ -1150,7 +1150,7 @@
   {
     "no": 883,
     "cat": "친구 대화",
-    "vn": "시댁/처가 방문",
+    "vn": "Thăm nhà vợ/chồng",
     "vn_a": "A: Cuối tuần mình về nhà ba mẹ anh nhé.\nB: Mẹ anh thích ăn gì, em mua biếu.",
     "vn_b": "A: Mẹ thích trái cây, đặc biệt là sầu riêng.\nB: Vậy em mua sầu riêng.",
     "jp": "",
@@ -1164,7 +1164,7 @@
   {
     "no": 884,
     "cat": "친구 대화",
-    "vn": "친구 모임 동행",
+    "vn": "bạn bè gặp nhau",
     "vn_a": "A: Tối nay bạn anh tụ họp, em đi cùng nhé.\nB: Em ngại lắm, em không quen ai.",
     "vn_b": "A: Anh giới thiệu, mọi người dễ thương lắm.\nB: Vậy anh không được bỏ em một mình đó.",
     "jp": "",
@@ -1178,7 +1178,7 @@
   {
     "no": 885,
     "cat": "친구 대화",
-    "vn": "회식",
+    "vn": "ăn tối cùng nhau",
     "vn_a": "B: Anh nhậu say về sớm nha.\nA: Anh sẽ uống ít thôi.",
     "vn_b": "B: Đừng đi với mấy đứa rủ rê.\nA: Yên tâm, anh chỉ có em thôi.",
     "jp": "",
@@ -1192,7 +1192,7 @@
   {
     "no": 886,
     "cat": "친구 대화",
-    "vn": "결혼식 참석",
+    "vn": "tham dự một đám cưới",
     "vn_a": "A: Cuối tuần này dự đám cưới bạn anh nhé.\nB: Em mặc gì hợp?",
     "vn_b": "A: Áo dài đi, em mặc đẹp lắm.\nB: Em đi may một bộ mới.",
     "jp": "",
@@ -1206,7 +1206,7 @@
   {
     "no": 887,
     "cat": "친구 대화",
-    "vn": "명절 (Tết)",
+    "vn": "Ngày Lễ (Tết)",
     "vn_a": "B: Tết này em không về quê em được.\nA: Sao vậy em, có chuyện gì?",
     "vn_b": "B: Mẹ em bệnh, em phải về sớm.\nA: Anh đi cùng em nhé.",
     "jp": "",
@@ -1220,7 +1220,7 @@
   {
     "no": 888,
     "cat": "친구 대화",
-    "vn": "부모님께 전화",
+    "vn": "gọi cho bố mẹ bạn",
     "vn_a": "A: Em gọi cho mẹ chưa?\nB: Chưa, em sẽ gọi tối nay.",
     "vn_b": "A: Mẹ em sẽ vui lắm khi nghe giọng em.\nB: Em biết, em nhớ mẹ em quá.",
     "jp": "",
@@ -1234,7 +1234,7 @@
   {
     "no": 889,
     "cat": "친구 대화",
-    "vn": "친구에게 소개",
+    "vn": "giới thiệu với bạn bè",
     "vn_a": "B: Đây là người yêu em, anh Nam.\nA: Chào các bạn, rất vui được gặp.",
     "vn_b": "B: Anh ấy rất tốt với em.\nA: Em mới là người tuyệt vời.",
     "jp": "",
@@ -1248,7 +1248,7 @@
   {
     "no": 890,
     "cat": "친구 대화",
-    "vn": "SNS 게시",
+    "vn": "đăng bài trên SNS",
     "vn_a": "B: Anh đăng ảnh hai mình lên Facebook đi.\nA: Để anh chỉnh ảnh đẹp đã.",
     "vn_b": "B: Caption thật ngọt ngào nha.\nA: \"Người yêu của tôi đẹp nhất thế gian\" được không?",
     "jp": "",
@@ -1262,7 +1262,7 @@
   {
     "no": 891,
     "cat": "친구 대화",
-    "vn": "프로포즈",
+    "vn": "đề nghị",
     "vn_a": "A: Em yêu, anh có một câu hỏi quan trọng.\nB: Anh quỳ xuống làm gì vậy?",
     "vn_b": "A: Em có đồng ý làm vợ anh không?\nB: Vâng, em đồng ý!",
     "jp": "",
@@ -1276,7 +1276,7 @@
   {
     "no": 892,
     "cat": "친구 대화",
-    "vn": "약혼",
+    "vn": "hôn ước",
     "vn_a": "B: Em không thể tin được, mình đính hôn rồi!\nA: Anh là người đàn ông hạnh phúc nhất.",
     "vn_b": "B: Mình sẽ làm đám cưới khi nào?\nA: Mùa thu năm sau nhé.",
     "jp": "",
@@ -1290,7 +1290,7 @@
   {
     "no": 893,
     "cat": "친구 대화",
-    "vn": "기념일",
+    "vn": "dịp kỉ niệm",
     "vn_a": "A: Hôm nay là kỷ niệm một năm của mình.\nB: Anh nhớ à? Em tưởng anh quên.",
     "vn_b": "A: Sao quên được, anh đặt nhà hàng rồi.\nB: Anh thật sự là người yêu hoàn hảo.",
     "jp": "",
@@ -1304,7 +1304,7 @@
   {
     "no": 894,
     "cat": "친구 대화",
-    "vn": "발렌타인데이",
+    "vn": "ngày lễ tình nhân",
     "vn_a": "A: Chúc em ngày Valentine vui vẻ.\nB: Hoa và socola đẹp quá.",
     "vn_b": "A: Đây chỉ là phần nhỏ thôi, quà chính ở nhà.\nB: Anh tốn kém quá rồi.",
     "jp": "",
@@ -1318,7 +1318,7 @@
   {
     "no": 895,
     "cat": "친구 대화",
-    "vn": "크리스마스",
+    "vn": "Giáng sinh",
     "vn_a": "B: Giáng sinh này mình làm gì?\nA: Ăn tối lãng mạn, sau đó đi xem đèn.",
     "vn_b": "B: Có quà không anh?\nA: Quà của em sẽ là một điều bất ngờ.",
     "jp": "",
@@ -1332,7 +1332,7 @@
   {
     "no": 896,
     "cat": "친구 대화",
-    "vn": "새해 카운트다운",
+    "vn": "đếm ngược năm mới",
     "vn_a": "A: Đếm ngược nào, 5, 4, 3, 2, 1!\nB: Chúc mừng năm mới anh yêu!",
     "vn_b": "A: Năm nay là năm chúng mình.\nB: Ước gì năm nào cũng có anh.",
     "jp": "",
@@ -1346,7 +1346,7 @@
   {
     "no": 897,
     "cat": "친구 대화",
-    "vn": "생일 축하",
+    "vn": "chúc mừng sinh nhật",
     "vn_a": "B: Sinh nhật anh, em làm bánh cho.\nA: Em làm bánh à? Đẹp lắm!",
     "vn_b": "B: Anh thổi nến, ước gì đi.\nA: Anh ước được ở bên em mãi mãi.",
     "jp": "",
@@ -1360,7 +1360,7 @@
   {
     "no": 898,
     "cat": "친구 대화",
-    "vn": "첫 데이트 회상",
+    "vn": "kỉ niệm buổi hẹn hò đầu tiên",
     "vn_a": "A: Em nhớ buổi hẹn đầu tiên không?\nB: Nhớ, em mặc nhầm giày khác chân.",
     "vn_b": "A: Anh đã cười em suốt buổi.\nB: Vậy mà em vẫn đồng ý làm bạn gái anh.",
     "jp": "",
@@ -1374,7 +1374,7 @@
   {
     "no": 899,
     "cat": "친구 대화",
-    "vn": "장거리 연애",
+    "vn": "mối quan hệ đường dài",
     "vn_a": "B: Em nhớ anh quá, mình xa nhau lâu rồi.\nA: Còn 3 tháng nữa anh về thôi.",
     "vn_b": "B: Lâu quá! Mỗi ngày như cả năm.\nA: Anh hứa sẽ bù đắp cho em gấp đôi.",
     "jp": "",
@@ -1388,7 +1388,7 @@
   {
     "no": 900,
     "cat": "친구 대화",
-    "vn": "영원한 사랑",
+    "vn": "tình yêu vĩnh cửu",
     "vn_a": "B: Anh có yêu em mãi không?\nA: Đến cuối đời anh cũng yêu em.",
     "vn_b": "B: Em cũng vậy, kiếp này và mai sau.\nA: Em là duy nhất của anh.",
     "jp": "",
@@ -1402,7 +1402,7 @@
   {
     "no": 901,
     "cat": "친구 대화",
-    "vn": "비 오는 날",
+    "vn": "ngày mưa",
     "vn_a": "B: Trời mưa to quá, anh ơi.\nA: Em mang ô chưa?",
     "vn_b": "B: Em quên rồi, làm sao về đây.\nA: Đợi anh đến đón em.",
     "jp": "",
@@ -1416,7 +1416,7 @@
   {
     "no": 902,
     "cat": "친구 대화",
-    "vn": "더운 날 에어컨",
+    "vn": "điều hòa ngày nắng nóng",
     "vn_a": "B: Nóng quá, bật điều hòa lên đi anh.\nA: Để anh lấy quạt cho em luôn.",
     "vn_b": "B: Anh thật là chu đáo.\nA: Vì em là báu vật của anh.",
     "jp": "",
@@ -1430,7 +1430,7 @@
   {
     "no": 903,
     "cat": "친구 대화",
-    "vn": "추운 날",
+    "vn": "ngày lạnh",
     "vn_a": "A: Lạnh quá, em mặc thêm áo khoác đi.\nB: Em không có áo dày.",
     "vn_b": "A: Lấy áo của anh mà mặc.\nB: Cảm ơn anh, áo anh ấm thật.",
     "jp": "",
@@ -1444,7 +1444,7 @@
   {
     "no": 904,
     "cat": "친구 대화",
-    "vn": "길 잃었을 때",
+    "vn": "Khi bạn bị lạc",
     "vn_a": "B: Anh ơi, em lạc đường rồi.\nA: Em đang ở đâu, gửi định vị cho anh.",
     "vn_b": "B: Em đang ở gần một quán cà phê tên là Cộng.\nA: Đứng yên đó, anh tới ngay.",
     "jp": "",
@@ -1458,7 +1458,7 @@
   {
     "no": 905,
     "cat": "친구 대화",
-    "vn": "인터넷 끊김",
+    "vn": "Mất Internet",
     "vn_a": "B: Mạng nhà mình bị đứt rồi.\nA: Em thử khởi động lại modem chưa?",
     "vn_b": "B: Rồi mà vẫn không được.\nA: Để anh gọi nhà mạng.",
     "jp": "",
@@ -1472,7 +1472,7 @@
   {
     "no": 906,
     "cat": "친구 대화",
-    "vn": "지각 위기",
+    "vn": "khủng hoảng đi trễ",
     "vn_a": "B: Chết rồi, em sắp trễ giờ làm!\nA: Để anh chở em đi cho nhanh.",
     "vn_b": "B: Cảm ơn anh, anh là cứu tinh.\nA: Lần sau dậy sớm hơn nhé.",
     "jp": "",
@@ -1486,7 +1486,7 @@
   {
     "no": 907,
     "cat": "친구 대화",
-    "vn": "차 키 분실",
+    "vn": "mất chìa khóa xe",
     "vn_a": "A: Em có thấy chìa khóa xe đâu không?\nB: Anh để trên bàn ăn hôm qua mà.",
     "vn_b": "A: Anh tìm hết rồi, không thấy.\nB: Để em phụ tìm cùng anh.",
     "jp": "",
@@ -1500,7 +1500,7 @@
   {
     "no": 908,
     "cat": "친구 대화",
-    "vn": "배달 주문",
+    "vn": "lệnh giao hàng",
     "vn_a": "B: Tối nay mình đặt đồ ăn nhé, em lười nấu.\nA: Đặt gì em?",
     "vn_b": "B: Bún bò Huế đi, lâu rồi không ăn.\nA: Ok, để anh đặt qua app.",
     "jp": "",
@@ -1514,7 +1514,7 @@
   {
     "no": 909,
     "cat": "친구 대화",
-    "vn": "이웃 인사",
+    "vn": "chào hàng xóm",
     "vn_a": "A: Cô bên cạnh chào em này.\nB: Cháu chào cô, cô khỏe không ạ?",
     "vn_b": "A: Cô ấy hay hỏi thăm tụi mình.\nB: Mai mình mua trái cây biếu cô.",
     "jp": "",
@@ -1528,7 +1528,7 @@
   {
     "no": 910,
     "cat": "친구 대화",
-    "vn": "택배 받기",
+    "vn": "Nhận hàng",
     "vn_a": "B: Có shipper bấm chuông kìa anh.\nA: Em ra nhận giúp anh nhé.",
     "vn_b": "B: Hộp này nặng quá!\nA: Của em mua đó, đoán là giày.",
     "jp": "",
@@ -1542,7 +1542,7 @@
   {
     "no": 911,
     "cat": "친구 대화",
-    "vn": "강아지 산책",
+    "vn": "dắt chó đi dạo",
     "vn_a": "B: Mình dắt Mít đi dạo nhé.\nA: Em cầm dây, anh cầm túi nha.",
     "vn_b": "B: Mít vui quá kìa, vẫy đuôi liên tục.\nA: Nó cũng yêu mình lắm.",
     "jp": "",
@@ -1556,7 +1556,7 @@
   {
     "no": 912,
     "cat": "친구 대화",
-    "vn": "고양이 돌보기",
+    "vn": "chăm sóc mèo",
     "vn_a": "A: Mèo Mun đói rồi đó em.\nB: Em vừa cho ăn lúc nãy mà.",
     "vn_b": "A: Vậy chắc nó nũng nịu thôi.\nB: Y như anh vậy.",
     "jp": "",
@@ -1570,7 +1570,7 @@
   {
     "no": 913,
     "cat": "친구 대화",
-    "vn": "냉장고 비었을 때",
+    "vn": "Khi tủ lạnh trống rỗng",
     "vn_a": "B: Tủ lạnh trống không, không có gì ăn.\nA: Mình ra siêu thị mua liền nhé.",
     "vn_b": "B: Em làm danh sách trước đã.\nA: Em chuyên nghiệp ghê.",
     "jp": "",
@@ -1584,7 +1584,7 @@
   {
     "no": 914,
     "cat": "친구 대화",
-    "vn": "휴대폰 배터리",
+    "vn": "pin điện thoại di động",
     "vn_a": "B: Điện thoại em sắp hết pin rồi.\nA: Lấy cục sạc của anh dùng tạm đi.",
     "vn_b": "B: Anh luôn chuẩn bị sẵn cho em.\nA: Vì anh biết em hay quên.",
     "jp": "",
@@ -1598,7 +1598,7 @@
   {
     "no": 915,
     "cat": "친구 대화",
-    "vn": "길거리 음식",
+    "vn": "thức ăn đường phố",
     "vn_a": "A: Mình mua bánh mì ăn đi.\nB: Em muốn thêm pate và đồ chua.",
     "vn_b": "A: Cô ơi, cho hai ổ đầy đủ.\nB: Ngon quá, đáng tiền lắm.",
     "jp": "",
@@ -1612,7 +1612,7 @@
   {
     "no": 916,
     "cat": "친구 대화",
-    "vn": "신발 사기",
+    "vn": "mua giày",
     "vn_a": "B: Đôi giày này anh thấy sao?\nA: Em mang thử đi, anh nhìn hợp không.",
     "vn_b": "B: Hơi chật, nhưng đẹp.\nA: Lấy size lớn hơn đi, đừng ép chân.",
     "jp": "",
@@ -1626,7 +1626,7 @@
   {
     "no": 917,
     "cat": "친구 대화",
-    "vn": "주유",
+    "vn": "bôi dầu",
     "vn_a": "B: Xăng sắp hết rồi anh.\nA: Để anh ghé cây xăng đầu phố.",
     "vn_b": "B: Đổ đầy bình luôn nhé.\nA: Ok, hôm nay anh mời.",
     "jp": "",
@@ -1640,7 +1640,7 @@
   {
     "no": 918,
     "cat": "친구 대화",
-    "vn": "사진 보내기",
+    "vn": "gửi ảnh",
     "vn_a": "B: Em vừa gửi ảnh selfie cho anh kìa.\nA: Đẹp ghê, để anh làm hình nền luôn.",
     "vn_b": "B: Anh cũng gửi cho em một tấm đi.\nA: Anh chụp xấu lắm, sợ em chê.",
     "jp": "",
@@ -1654,7 +1654,7 @@
   {
     "no": 919,
     "cat": "친구 대화",
-    "vn": "영상 통화",
+    "vn": "cuộc gọi video",
     "vn_a": "B: Anh gọi video cho em đi, em nhớ mặt anh.\nA: Đợi anh chút, anh đang ngoài quán.",
     "vn_b": "B: Vậy về phòng rồi gọi nhé.\nA: Ok, năm phút nữa anh gọi.",
     "jp": "",
@@ -1668,7 +1668,7 @@
   {
     "no": 920,
     "cat": "친구 대화",
-    "vn": "자기 전 통화",
+    "vn": "gọi điện trước khi đi ngủ",
     "vn_a": "B: Em buồn ngủ rồi, anh kể chuyện đi.\nA: Ngày xửa ngày xưa, có một cô gái xinh đẹp.",
     "vn_b": "B: Là em đúng không?\nA: Ai nữa ngoài em.",
     "jp": "",
@@ -1682,7 +1682,7 @@
   {
     "no": 921,
     "cat": "친구 대화",
-    "vn": "달콤한 메시지",
+    "vn": "tin nhắn ngọt ngào",
     "vn_a": "B: Anh đang nghĩ gì vậy?\nA: Anh đang nghĩ tại sao mình may mắn vậy.",
     "vn_b": "B: Tại sao vậy?\nA: Vì có em yêu anh.",
     "jp": "",
@@ -1696,7 +1696,7 @@
   {
     "no": 922,
     "cat": "친구 대화",
-    "vn": "손편지",
+    "vn": "lá thư viết tay",
     "vn_a": "B: Anh viết thư tay cho em à?\nA: Ừ, anh muốn em đọc lại lúc buồn.",
     "vn_b": "B: Em sẽ giữ mãi.\nA: Chữ anh xấu, cười nha.",
     "jp": "",
@@ -1710,7 +1710,7 @@
   {
     "no": 923,
     "cat": "친구 대화",
-    "vn": "비밀 공유",
+    "vn": "chia sẻ bí mật",
     "vn_a": "B: Em kể anh một bí mật được không?\nA: Tất nhiên rồi, em nói đi.",
     "vn_b": "B: Em đã thích anh từ trước khi anh tỏ tình.\nA: Vậy à, anh cũng thế.",
     "jp": "",
@@ -1724,7 +1724,7 @@
   {
     "no": 924,
     "cat": "친구 대화",
-    "vn": "어깨에 기대기",
+    "vn": "dựa vào vai",
     "vn_a": "B: Cho em tựa vào vai anh chút.\nA: Vai anh là của em mà.",
     "vn_b": "B: Em mệt lắm, có anh dễ chịu thật.\nA: Em cứ ngủ đi, anh thức cho.",
     "jp": "",
@@ -1738,7 +1738,7 @@
   {
     "no": 925,
     "cat": "친구 대화",
-    "vn": "머리 쓰다듬기",
+    "vn": "vuốt ve đầu",
     "vn_a": "A: Lại đây anh xoa đầu cho.\nB: Anh xoa nhẹ thôi nha, đau đầu lắm.",
     "vn_b": "A: Tại sao đau đầu vậy em?\nB: Hôm nay em làm việc nhiều quá.",
     "jp": "",
@@ -1752,7 +1752,7 @@
   {
     "no": 926,
     "cat": "친구 대화",
-    "vn": "깜짝 방문",
+    "vn": "chuyến thăm bất ngờ",
     "vn_a": "B: Trời ơi, sao anh lại ở đây?\nA: Anh nhớ em quá nên chạy qua.",
     "vn_b": "B: Anh điên rồi, mưa to thế kia.\nA: Vì em xứng đáng được như vậy.",
     "jp": "",
@@ -1766,7 +1766,7 @@
   {
     "no": 927,
     "cat": "친구 대화",
-    "vn": "100번 사랑해",
+    "vn": "Anh yêu em 100 lần",
     "vn_a": "A: Anh yêu em.\nB: Em biết rồi, anh nói cả trăm lần.",
     "vn_b": "A: Một trăm lẻ một lần thì sao?\nB: Em cũng yêu anh, cả triệu lần.",
     "jp": "",
@@ -1780,7 +1780,7 @@
   {
     "no": 928,
     "cat": "친구 대화",
-    "vn": "껴안기",
+    "vn": "ôm",
     "vn_a": "B: Hôm nay em không muốn rời anh.\nA: Vậy mình ôm nhau cả ngày luôn.",
     "vn_b": "B: Vậy anh không đi đâu hết nha.\nA: Anh chỉ ở đây thôi, với em.",
     "jp": "",
@@ -1794,7 +1794,7 @@
   {
     "no": 929,
     "cat": "친구 대화",
-    "vn": "운명 같은 느낌",
+    "vn": "cảm giác như số phận",
     "vn_a": "B: Em cảm giác mình sinh ra để dành cho nhau.\nA: Anh cũng nghĩ vậy ngay từ đầu.",
     "vn_b": "B: May mà anh nói chuyện với em hôm đó.\nA: Đó là quyết định đúng nhất đời anh.",
     "jp": "",
@@ -1808,7 +1808,7 @@
   {
     "no": 930,
     "cat": "친구 대화",
-    "vn": "커플링 사기",
+    "vn": "gian lận khớp nối",
     "vn_a": "B: Mình mua nhẫn đôi đi anh.\nA: Em chọn kiểu nào hợp với mình?",
     "vn_b": "B: Cái đơn giản này được không?\nA: Đẹp mà không lòe loẹt, anh thích.",
     "jp": "",
@@ -1822,7 +1822,7 @@
   {
     "no": 931,
     "cat": "친구 대화",
-    "vn": "동물원",
+    "vn": "sở thú",
     "vn_a": "B: Anh nhìn con khỉ kia kìa, dễ thương ghê.\nA: Nó nhìn em rồi này, chắc nó thích em.",
     "vn_b": "B: Đừng giỡn nha, em sợ.\nA: Có anh đây, đừng sợ.",
     "jp": "",
@@ -1836,7 +1836,7 @@
   {
     "no": 932,
     "cat": "친구 대화",
-    "vn": "수족관",
+    "vn": "bể cá",
     "vn_a": "A: Cá heo đẹp quá em ơi.\nB: Em mơ được bơi cùng cá heo một lần.",
     "vn_b": "A: Vậy mình đi Nha Trang nhé.\nB: Anh hứa rồi đó!",
     "jp": "",
@@ -1850,7 +1850,7 @@
   {
     "no": 933,
     "cat": "친구 대화",
-    "vn": "미술관 데이트",
+    "vn": "Bảo tàng nghệ thuật Ngày",
     "vn_a": "B: Bức tranh này đẹp quá.\nA: Em hiểu nghệ thuật hơn anh.",
     "vn_b": "B: Anh chỉ cần ngắm em là được.\nA: Em mới là tác phẩm đẹp nhất.",
     "jp": "",
@@ -1864,7 +1864,7 @@
   {
     "no": 934,
     "cat": "친구 대화",
-    "vn": "콘서트",
+    "vn": "buổi hòa nhạc",
     "vn_a": "B: Concert bắt đầu rồi, hồi hộp quá.\nA: Em là fan cứng của ca sĩ này mà.",
     "vn_b": "B: Cảm ơn anh đã mua vé tặng em.\nA: Em vui là anh đủ rồi.",
     "jp": "",
@@ -1878,7 +1878,7 @@
   {
     "no": 935,
     "cat": "친구 대화",
-    "vn": "캠핑",
+    "vn": "cắm trại",
     "vn_a": "A: Mình cắm trại bên hồ nhé.\nB: Em chưa cắm trại bao giờ.",
     "vn_b": "A: Anh dạy em dựng lều.\nB: Anh thật là người đàn ông đa năng.",
     "jp": "",
@@ -1892,7 +1892,7 @@
   {
     "no": 936,
     "cat": "친구 대화",
-    "vn": "자전거 데이트",
+    "vn": "ngày đi xe đạp",
     "vn_a": "B: Đạp xe quanh hồ đi anh.\nA: Em đạp được không, có mệt không?",
     "vn_b": "B: Em đạp giỏi mà, anh đừng coi thường.\nA: Vậy mình đua nhé, ai thắng được hôn.",
     "jp": "",
@@ -1906,7 +1906,7 @@
   {
     "no": 937,
     "cat": "친구 대화",
-    "vn": "보트 타기",
+    "vn": "đi thuyền",
     "vn_a": "B: Đi thuyền lãng mạn ghê.\nA: Anh chỉ biết chèo thôi, không lái được.",
     "vn_b": "B: Vậy anh chèo, em ngắm cảnh.\nA: Em là nữ hoàng, anh là thuyền trưởng.",
     "jp": "",
@@ -1920,7 +1920,7 @@
   {
     "no": 938,
     "cat": "친구 대화",
-    "vn": "별 보기",
+    "vn": "ngắm sao",
     "vn_a": "B: Sao trên trời đẹp quá.\nA: Em là ngôi sao sáng nhất của anh.",
     "vn_b": "B: Lần nào anh cũng có câu nói ngọt.\nA: Vì em xứng đáng nghe điều đó.",
     "jp": "",
@@ -1934,7 +1934,7 @@
   {
     "no": 939,
     "cat": "친구 대화",
-    "vn": "일출 보기",
+    "vn": "cảnh mặt trời mọc",
     "vn_a": "B: Mình thức dậy ngắm bình minh nhé.\nA: Phải dậy sớm 4 giờ đấy.",
     "vn_b": "B: Có anh em không sợ thức khuya dậy sớm.\nA: Vậy anh ôm em ngủ trước.",
     "jp": "",
@@ -1948,7 +1948,7 @@
   {
     "no": 940,
     "cat": "친구 대화",
-    "vn": "카트 레이싱",
+    "vn": "đua xe kart",
     "vn_a": "B: Em chưa lái go-kart bao giờ, hồi hộp.\nA: Đừng lo, anh chạy trước em theo sau.",
     "vn_b": "B: Em mà thắng anh thì sao?\nA: Anh sẽ mua kem cho em.",
     "jp": "",
@@ -1962,7 +1962,7 @@
   {
     "no": 941,
     "cat": "친구 대화",
-    "vn": "볼링",
+    "vn": "bowling",
     "vn_a": "B: Em không biết chơi bowling đâu.\nA: Để anh chỉ em cách cầm bóng.",
     "vn_b": "B: Strike rồi! Anh thấy chưa!\nA: Em là tài năng ẩn giấu mà anh chưa biết.",
     "jp": "",
@@ -1976,7 +1976,7 @@
   {
     "no": 942,
     "cat": "친구 대화",
-    "vn": "친구가 우선",
+    "vn": "bạn bè đến trước",
     "vn_a": "B: Lúc nào anh cũng ưu tiên bạn bè.\nA: Anh chỉ đi nhậu thỉnh thoảng thôi.",
     "vn_b": "B: Thỉnh thoảng gì, tuần nào cũng có.\nA: Anh xin lỗi, từ giờ ưu tiên em hơn.",
     "jp": "",
@@ -1990,7 +1990,7 @@
   {
     "no": 943,
     "cat": "친구 대화",
-    "vn": "비교당함",
+    "vn": "được so sánh",
     "vn_a": "B: Sao anh hay so sánh em với người yêu cũ?\nA: Anh không có ý đó đâu.",
     "vn_b": "B: Lời anh nói làm em tổn thương.\nA: Anh xin lỗi thật lòng.",
     "jp": "",
@@ -2004,7 +2004,7 @@
   {
     "no": 944,
     "cat": "친구 대화",
-    "vn": "거짓말 들킴",
+    "vn": "Bắt nói dối",
     "vn_a": "B: Anh đã nói dối em à?\nA: Anh không muốn em lo, nên nói vậy.",
     "vn_b": "B: Dù lý do gì, nói dối là không được.\nA: Anh hứa, từ nay luôn nói thật.",
     "jp": "",
@@ -2018,7 +2018,7 @@
   {
     "no": 945,
     "cat": "친구 대화",
-    "vn": "약속 어김",
+    "vn": "thất hứa",
     "vn_a": "B: Anh hứa nay không nhậu mà.\nA: Sếp ép anh, anh không từ chối được.",
     "vn_b": "B: Lần nào cũng có lý do!\nA: Anh sai, lần này anh thật sự sai.",
     "jp": "",
@@ -2032,7 +2032,7 @@
   {
     "no": 946,
     "cat": "친구 대화",
-    "vn": "게임 중독",
+    "vn": "nghiện game",
     "vn_a": "B: Suốt ngày anh chỉ chơi game!\nA: Anh thư giãn chút thôi mà.",
     "vn_b": "B: Chút mà 5 tiếng?\nA: Anh giảm lại, anh dành thời gian cho em.",
     "jp": "",
@@ -2046,7 +2046,7 @@
   {
     "no": 947,
     "cat": "친구 대화",
-    "vn": "옷 평가",
+    "vn": "đánh giá quần áo",
     "vn_a": "B: Bộ này xấu lắm hả?\nA: Không xấu, nhưng cái khác đẹp hơn.",
     "vn_b": "B: Nói thẳng đi, không cần khéo.\nA: Anh thích em mặc đầm hơn.",
     "jp": "",
@@ -2060,7 +2060,7 @@
   {
     "no": 948,
     "cat": "친구 대화",
-    "vn": "운전 다툼",
+    "vn": "lập luận lái xe",
     "vn_a": "B: Anh đi chậm thôi, nguy hiểm lắm.\nA: Anh lái cẩn thận mà em.",
     "vn_b": "B: Anh vừa lấn tuyến đó!\nA: Ok ok, anh chậm lại đây.",
     "jp": "",
@@ -2074,7 +2074,7 @@
   {
     "no": 949,
     "cat": "친구 대화",
-    "vn": "돈 문제",
+    "vn": "vấn đề tiền bạc",
     "vn_a": "B: Anh tiêu hoang quá đó.\nA: Anh chỉ mua cái cần thiết thôi.",
     "vn_b": "B: Mình phải tiết kiệm cho tương lai.\nA: Em nói đúng, anh sẽ ghi sổ chi tiêu.",
     "jp": "",
@@ -2088,7 +2088,7 @@
   {
     "no": 950,
     "cat": "친구 대화",
-    "vn": "음식 취향",
+    "vn": "hương vị thức ăn",
     "vn_a": "B: Sao anh không thích đồ chay?\nA: Anh quen ăn thịt từ nhỏ rồi.",
     "vn_b": "B: Mình tuần ăn chay 1 ngày được không?\nA: Vì em, anh thử.",
     "jp": "",
@@ -2102,7 +2102,7 @@
   {
     "no": 951,
     "cat": "친구 대화",
-    "vn": "휴대폰 비밀번호",
+    "vn": "mật khẩu điện thoại di động",
     "vn_a": "B: Sao anh đặt mật khẩu điện thoại?\nA: Vì anh sợ rớt mất.",
     "vn_b": "B: Cho em biết mật khẩu đi.\nA: 1234, đơn giản thôi mà.",
     "jp": "",
@@ -2116,7 +2116,7 @@
   {
     "no": 952,
     "cat": "친구 대화",
-    "vn": "헤어스타일 비판",
+    "vn": "Phê Bình Kiểu Tóc",
     "vn_a": "B: Tóc em mới cắt, anh không khen à?\nA: Anh chưa kịp để ý.",
     "vn_b": "B: Anh vô tâm thật.\nA: Em đẹp dù tóc thế nào.",
     "jp": "",
@@ -2130,7 +2130,7 @@
   {
     "no": 953,
     "cat": "친구 대화",
-    "vn": "처가/시댁 우선",
+    "vn": "Con rể/con rể được ưu tiên",
     "vn_a": "B: Anh ưu tiên ba mẹ anh quá.\nA: Vì ba mẹ anh ở xa, ít gặp.",
     "vn_b": "B: Em hiểu, nhưng cũng phải để ý ba mẹ em.\nA: Em đúng, anh sẽ cân bằng hơn.",
     "jp": "",
@@ -2144,7 +2144,7 @@
   {
     "no": 954,
     "cat": "친구 대화",
-    "vn": "학업 계획",
+    "vn": "kế hoạch học tập",
     "vn_a": "B: Em muốn học thạc sĩ.\nA: Anh ủng hộ em hết mình.",
     "vn_b": "B: Phải vắng nhà nhiều, anh chịu được không?\nA: Tương lai em quan trọng hơn.",
     "jp": "",
@@ -2158,7 +2158,7 @@
   {
     "no": 955,
     "cat": "친구 대화",
-    "vn": "이민/유학",
+    "vn": "Nhập cư/Du học",
     "vn_a": "A: Mình đi định cư nước ngoài nhé.\nB: Em sợ xa gia đình lắm.",
     "vn_b": "A: Mình sẽ thường xuyên về thăm.\nB: Để em suy nghĩ thêm nhé.",
     "jp": "",
@@ -2172,7 +2172,7 @@
   {
     "no": 956,
     "cat": "친구 대화",
-    "vn": "반려동물 키우기",
+    "vn": "Nuôi thú cưng",
     "vn_a": "B: Mình nuôi mèo nhé anh.\nA: Anh thích chó hơn.",
     "vn_b": "B: Vậy mình nuôi cả hai.\nA: Em sẵn sàng dọn vệ sinh chưa?",
     "jp": "",
@@ -2186,7 +2186,7 @@
   {
     "no": 957,
     "cat": "친구 대화",
-    "vn": "자동차 사기",
+    "vn": "gian lận xe hơi",
     "vn_a": "A: Mình mua xe hơi đi em.\nB: Mình đủ tiền chưa?",
     "vn_b": "A: Mua trả góp được mà.\nB: Vậy chọn xe tiết kiệm xăng nhé.",
     "jp": "",
@@ -2200,7 +2200,7 @@
   {
     "no": 958,
     "cat": "친구 대화",
-    "vn": "보험 가입",
+    "vn": "Bảo hiểm",
     "vn_a": "A: Mình mua bảo hiểm sức khỏe nhé.\nB: Loại nào tốt anh tìm chưa?",
     "vn_b": "A: Anh đã so sánh vài hãng rồi.\nB: Anh chu đáo thật.",
     "jp": "",
@@ -2214,7 +2214,7 @@
   {
     "no": 959,
     "cat": "친구 대화",
-    "vn": "부모님 모시기",
+    "vn": "Chăm sóc bố mẹ tôi",
     "vn_a": "B: Sau này mình đón ba mẹ về ở chung nhé.\nA: Anh cũng nghĩ vậy, nhất là khi ba mẹ già.",
     "vn_b": "B: Vậy nhà phải có nhiều phòng.\nA: Mình lập kế hoạch dài hạn.",
     "jp": "",
@@ -2228,7 +2228,7 @@
   {
     "no": 960,
     "cat": "친구 대화",
-    "vn": "결혼식 장소",
+    "vn": "địa điểm tổ chức đám cưới",
     "vn_a": "B: Mình làm đám cưới ở đâu?\nA: Em thích biển hay khách sạn?",
     "vn_b": "B: Em thích biển, lãng mạn.\nA: Vậy đặt resort ở Phú Quốc đi.",
     "jp": "",
@@ -2242,7 +2242,7 @@
   {
     "no": 961,
     "cat": "친구 대화",
-    "vn": "신혼집 가구",
+    "vn": "Nội thất nhà mới cưới",
     "vn_a": "B: Mình mua sofa màu gì?\nA: Anh thích màu xám, dễ vệ sinh.",
     "vn_b": "B: Em muốn màu be cho ấm.\nA: Vậy mình chọn cùng tại cửa hàng.",
     "jp": "",
@@ -2256,7 +2256,7 @@
   {
     "no": 962,
     "cat": "친구 대화",
-    "vn": "취미 공유",
+    "vn": "chia sẻ sở thích",
     "vn_a": "B: Mình học chung môn gì đi.\nA: Học khiêu vũ nhé, lãng mạn.",
     "vn_b": "B: Em vụng về lắm, anh chịu được không?\nA: Anh sẽ kiên nhẫn dạy em.",
     "jp": "",
@@ -2270,7 +2270,7 @@
   {
     "no": 963,
     "cat": "친구 대화",
-    "vn": "종교 차이",
+    "vn": "sự khác biệt tôn giáo",
     "vn_a": "B: Em theo Phật giáo, anh thì sao?\nA: Anh không theo tôn giáo nào.",
     "vn_b": "B: Sau này con mình theo gì?\nA: Mình tôn trọng nhau, để con tự chọn.",
     "jp": "",
@@ -2284,7 +2284,7 @@
   {
     "no": 964,
     "cat": "친구 대화",
-    "vn": "시험 떨어졌을 때",
+    "vn": "Khi bạn trượt một bài kiểm tra",
     "vn_a": "B: Em thi rớt rồi anh.\nA: Không sao em, lần sau cố gắng.",
     "vn_b": "B: Em làm anh thất vọng.\nA: Em đã cố hết sức, anh tự hào về em.",
     "jp": "",
@@ -2298,7 +2298,7 @@
   {
     "no": 965,
     "cat": "친구 대화",
-    "vn": "친구와 다툼",
+    "vn": "cãi nhau với một người bạn",
     "vn_a": "B: Em cãi nhau với bạn thân rồi.\nA: Vì chuyện gì vậy?",
     "vn_b": "B: Cô ấy hiểu lầm em.\nA: Để em bình tĩnh rồi nói chuyện sau.",
     "jp": "",
@@ -2312,7 +2312,7 @@
   {
     "no": 966,
     "cat": "친구 대화",
-    "vn": "부모님 잔소리",
+    "vn": "cha mẹ cằn nhằn",
     "vn_a": "B: Mẹ em la em hoài, mệt quá.\nA: Mẹ lo cho em mà.",
     "vn_b": "B: Em biết, nhưng nghe nhiều cũng nản.\nA: Cuối tuần anh đưa em đi chơi cho khuây.",
     "jp": "",
@@ -2326,7 +2326,7 @@
   {
     "no": 967,
     "cat": "친구 대화",
-    "vn": "동료 갈등",
+    "vn": "xung đột đồng nghiệp",
     "vn_a": "A: Đồng nghiệp anh khó chịu quá.\nB: Anh chịu đựng vì công việc nhé.",
     "vn_b": "A: Anh muốn cãi lại lắm.\nB: Im lặng cũng là sức mạnh.",
     "jp": "",
@@ -2340,7 +2340,7 @@
   {
     "no": 968,
     "cat": "친구 대화",
-    "vn": "자존감 떨어짐",
+    "vn": "Giảm lòng tự trọng",
     "vn_a": "B: Em thấy mình vô dụng quá.\nA: Đừng nói vậy, em đặc biệt với anh.",
     "vn_b": "B: Em không tin chính mình nữa.\nA: Anh tin em, đó là đủ.",
     "jp": "",
@@ -2354,7 +2354,7 @@
   {
     "no": 969,
     "cat": "친구 대화",
-    "vn": "미래 불안",
+    "vn": "lo lắng tương lai",
     "vn_a": "B: Em lo cho tương lai quá.\nA: Mình lập kế hoạch từng bước.",
     "vn_b": "B: Em sợ không kịp.\nA: Có anh đồng hành, đừng sợ.",
     "jp": "",
@@ -2368,7 +2368,7 @@
   {
     "no": 970,
     "cat": "친구 대화",
-    "vn": "향수병",
+    "vn": "nhớ nhà",
     "vn_a": "A: Anh nhớ quê quá em.\nB: Cuối tuần mình về quê nhé.",
     "vn_b": "A: Bận quá, không về được.\nB: Vậy gọi video cho ba mẹ đi.",
     "jp": "",
@@ -2382,7 +2382,7 @@
   {
     "no": 971,
     "cat": "친구 대화",
-    "vn": "가족 그리움",
+    "vn": "khao khát gia đình",
     "vn_a": "B: Em nhớ ba em quá.\nA: Tuần này về thăm ba đi.",
     "vn_b": "B: Em sợ ba mệt vì em vắng nhà.\nA: Mình về cùng, anh chở em.",
     "jp": "",
@@ -2396,7 +2396,7 @@
   {
     "no": 972,
     "cat": "친구 대화",
-    "vn": "비교당함",
+    "vn": "được so sánh",
     "vn_a": "B: Mẹ so sánh em với chị họ.\nA: Em là duy nhất, không ai sánh được.",
     "vn_b": "B: Anh nói vậy em đỡ buồn.\nA: Vì đó là sự thật.",
     "jp": "",
@@ -2410,7 +2410,7 @@
   {
     "no": 973,
     "cat": "친구 대화",
-    "vn": "성공 자축",
+    "vn": "ăn mừng thành công",
     "vn_a": "A: Anh được thăng chức rồi em!\nB: Trời ơi, mừng quá!",
     "vn_b": "A: Tối nay mình ăn mừng nhé.\nB: Em đặt nhà hàng ngon nha.",
     "jp": "",
@@ -2424,7 +2424,7 @@
   {
     "no": 974,
     "cat": "친구 대화",
-    "vn": "첫 월급",
+    "vn": "mức lương đầu tiên",
     "vn_a": "B: Em mới nhận lương đầu tiên!\nA: Chúc mừng em! Cảm giác sao?",
     "vn_b": "B: Em sẽ mua quà cho ba mẹ và anh.\nA: Em chu đáo quá, ba mẹ sẽ tự hào.",
     "jp": "",
@@ -2438,7 +2438,7 @@
   {
     "no": 975,
     "cat": "친구 대화",
-    "vn": "작은 성취",
+    "vn": "thành tựu nhỏ",
     "vn_a": "B: Em chạy được 5km hôm nay!\nA: Quá giỏi! Em kiên trì thật.",
     "vn_b": "B: Mục tiêu là 10km tháng sau.\nA: Anh sẽ chạy cùng em.",
     "jp": "",
@@ -2452,7 +2452,7 @@
   {
     "no": 976,
     "cat": "친구 대화",
-    "vn": "생리통",
+    "vn": "chuột rút kinh nguyệt",
     "vn_a": "B: Em đau bụng kinh quá.\nA: Để anh pha nước ấm cho em.",
     "vn_b": "B: Anh mua giúp em băng vệ sinh nhé.\nA: Ok, em cần gì cứ nói.",
     "jp": "",
@@ -2466,7 +2466,7 @@
   {
     "no": 977,
     "cat": "친구 대화",
-    "vn": "감기",
+    "vn": "lạnh lẽo",
     "vn_a": "A: Em ho dữ quá, đi khám đi.\nB: Em sợ bệnh viện đông.",
     "vn_b": "A: Anh đặt lịch online, không phải xếp hàng.\nB: Cảm ơn anh, anh chu đáo lắm.",
     "jp": "",
@@ -2480,7 +2480,7 @@
   {
     "no": 978,
     "cat": "친구 대화",
-    "vn": "두통",
+    "vn": "đau đầu",
     "vn_a": "B: Đầu em đau như búa bổ.\nA: Để anh xoa thái dương cho em.",
     "vn_b": "B: Anh có dầu gió không?\nA: Có, để anh lấy.",
     "jp": "",
@@ -2494,7 +2494,7 @@
   {
     "no": 979,
     "cat": "친구 대화",
-    "vn": "치과 가기",
+    "vn": "đi đến nha sĩ",
     "vn_a": "B: Em bị sâu răng rồi.\nA: Đi nha sĩ liền đi em.",
     "vn_b": "B: Em sợ tiếng máy khoan lắm.\nA: Anh nắm tay em suốt buổi.",
     "jp": "",
@@ -2508,7 +2508,7 @@
   {
     "no": 980,
     "cat": "친구 대화",
-    "vn": "안과 검사",
+    "vn": "khám mắt",
     "vn_a": "A: Em nhức mắt à?\nB: Em nhìn máy tính nhiều quá.",
     "vn_b": "A: Đi khám mắt thử coi.\nB: Có anh đi cùng không?",
     "jp": "",
@@ -2522,7 +2522,7 @@
   {
     "no": 981,
     "cat": "친구 대화",
-    "vn": "등산 후 근육통",
+    "vn": "đau cơ sau khi đi bộ đường dài",
     "vn_a": "B: Cả người em đau, hôm qua leo núi.\nA: Để anh xoa bóp cho em.",
     "vn_b": "B: Đi tắm nước nóng được không anh?\nA: Hay lắm, để anh chuẩn bị.",
     "jp": "",
@@ -2536,7 +2536,7 @@
   {
     "no": 982,
     "cat": "친구 대화",
-    "vn": "숙취",
+    "vn": "nôn nao",
     "vn_a": "A: Anh nhức đầu kinh khủng.\nB: Hôm qua nhậu say mà.",
     "vn_b": "A: Có gì giải rượu không em?\nB: Em nấu cháo gà cho.",
     "jp": "",
@@ -2550,7 +2550,7 @@
   {
     "no": 983,
     "cat": "친구 대화",
-    "vn": "임신 의심",
+    "vn": "nghi ngờ có thai",
     "vn_a": "B: Em trễ kinh hơn tuần rồi.\nA: Mình thử que xem sao.",
     "vn_b": "B: Em hồi hộp quá.\nA: Dù kết quả gì, anh ở bên em.",
     "jp": "",
@@ -2564,7 +2564,7 @@
   {
     "no": 984,
     "cat": "친구 대화",
-    "vn": "가족 여행",
+    "vn": "chuyến đi gia đình",
     "vn_a": "A: Hè này cả nhà mình đi du lịch nhé.\nB: Đi đâu cho ba mẹ thoải mái?",
     "vn_b": "A: Resort biển Đà Nẵng đi.\nB: Em book phòng cho cả nhà.",
     "jp": "",
@@ -2578,7 +2578,7 @@
   {
     "no": 985,
     "cat": "친구 대화",
-    "vn": "동생 결혼",
+    "vn": "em trai lấy vợ",
     "vn_a": "B: Em gái em sắp cưới rồi.\nA: Mình mua quà cưới gì?",
     "vn_b": "B: Phong bì lì xì là được.\nA: Anh bỏ thêm chút thể hiện tình cảm.",
     "jp": "",
@@ -2592,7 +2592,7 @@
   {
     "no": 986,
     "cat": "친구 대화",
-    "vn": "조카 만나기",
+    "vn": "gặp cháu trai của tôi",
     "vn_a": "B: Cháu mới sinh dễ thương quá.\nA: Để anh bế thử nha.",
     "vn_b": "B: Bế nhẹ thôi, sợ rớt.\nA: Anh sẽ là người bố tốt sau này.",
     "jp": "",
@@ -2606,7 +2606,7 @@
   {
     "no": 987,
     "cat": "친구 대화",
-    "vn": "가족 식사",
+    "vn": "bữa ăn gia đình",
     "vn_a": "A: Tối nay cả nhà ăn cơm chung.\nB: Em nấu món gì cho ba mẹ?",
     "vn_b": "A: Mẹ thích cá kho tộ.\nB: Vậy em đi chợ mua nguyên liệu.",
     "jp": "",
@@ -2620,7 +2620,7 @@
   {
     "no": 988,
     "cat": "친구 대화",
-    "vn": "장인 처음 만남",
+    "vn": "Cuộc gặp gỡ đầu tiên của người thợ thủ công",
     "vn_a": "A: Lần đầu gặp ba em, anh hồi hộp quá.\nB: Anh cứ tự nhiên, ba dễ tính.",
     "vn_b": "A: Quà nên mua gì?\nB: Trà ngon là được.",
     "jp": "",
@@ -2634,7 +2634,7 @@
   {
     "no": 989,
     "cat": "친구 대화",
-    "vn": "시누이 (남편 동생)",
+    "vn": "Chị dâu (em trai chồng)",
     "vn_a": "B: Em chồng em hay xét nét.\nA: Vậy à, để anh nói chuyện với nó.",
     "vn_b": "B: Đừng làm to chuyện, em chịu được.\nA: Em hiền quá, anh thương em.",
     "jp": "",
@@ -2648,7 +2648,7 @@
   {
     "no": 990,
     "cat": "친구 대화",
-    "vn": "친구 집들이",
+    "vn": "tân gia bạn bè",
     "vn_a": "B: Bạn em mới mua nhà, mời tân gia.\nA: Mình mua gì làm quà?",
     "vn_b": "B: Cây cảnh nhỏ và bánh ngọt được không?\nA: Ý hay, vừa đẹp vừa thực tế.",
     "jp": "",
@@ -2662,7 +2662,7 @@
   {
     "no": 991,
     "cat": "친구 대화",
-    "vn": "동창회",
+    "vn": "đoàn tụ",
     "vn_a": "A: Tối nay anh đi họp lớp.\nB: Có người yêu cũ anh không?",
     "vn_b": "A: Có thể có, nhưng anh chỉ có em thôi.\nB: Vậy em yên tâm, vui vẻ nhé.",
     "jp": "",
@@ -2676,7 +2676,7 @@
   {
     "no": 992,
     "cat": "친구 대화",
-    "vn": "가족 단톡방",
+    "vn": "Phòng trò chuyện nhóm gia đình",
     "vn_a": "B: Mẹ anh nhắn trong nhóm gia đình kìa.\nA: Mẹ hỏi gì em?",
     "vn_b": "B: Mẹ hỏi cuối tuần mình có về không.\nA: Nhắn lại là mình về tối thứ 7 nhé.",
     "jp": "",
@@ -2690,7 +2690,7 @@
   {
     "no": 993,
     "cat": "친구 대화",
-    "vn": "더블 데이트",
+    "vn": "ngày đôi",
     "vn_a": "A: Cuối tuần đi đôi với vợ chồng anh Tuấn nhé.\nB: Em chưa quen chị Tuấn.",
     "vn_b": "A: Chị ấy hiền lắm, em sẽ thích.\nB: Vậy mình đi nhà hàng nhé.",
     "jp": "",
@@ -2704,7 +2704,7 @@
   {
     "no": 994,
     "cat": "친구 대화",
-    "vn": "친구 고민 상담",
+    "vn": "Tư vấn về mối quan tâm của bạn bè",
     "vn_a": "B: Bạn em đang thất tình, em qua an ủi.\nA: Em đi đi, anh ăn tối một mình được.",
     "vn_b": "B: Em xin lỗi, để dịp khác bù.\nA: Bạn em quan trọng mà, không sao.",
     "jp": "",
@@ -2718,7 +2718,7 @@
   {
     "no": 995,
     "cat": "친구 대화",
-    "vn": "조카 돌잔치",
+    "vn": "Tiệc sinh nhật đầu tiên của cháu trai",
     "vn_a": "A: Mai dự thôi nôi cháu anh.\nB: Mình tặng vàng được không?",
     "vn_b": "A: Một chỉ vàng là phong tục rồi.\nB: Em đi tiệm vàng đặt liền.",
     "jp": "",
@@ -2732,7 +2732,7 @@
   {
     "no": 996,
     "cat": "친구 대화",
-    "vn": "첫 키스",
+    "vn": "nụ hôn đầu tiên",
     "vn_a": "B: Lần đầu mình hôn nhau anh nhớ không?\nA: Nhớ chứ, dưới mưa đó.",
     "vn_b": "B: Tim em đập loạn xạ.\nA: Anh cũng vậy, đó là khoảnh khắc đẹp nhất.",
     "jp": "",
@@ -2746,7 +2746,7 @@
   {
     "no": 997,
     "cat": "친구 대화",
-    "vn": "첫 사랑 고백",
+    "vn": "lời tỏ tình đầu tiên",
     "vn_a": "A: Em nhớ ngày anh tỏ tình không?\nB: Anh run đến nỗi không nói được.",
     "vn_b": "A: Anh sợ em từ chối.\nB: May mà em đồng ý.",
     "jp": "",
@@ -2760,7 +2760,7 @@
   {
     "no": 998,
     "cat": "친구 대화",
-    "vn": "첫 다툼 후 화해",
+    "vn": "Hòa giải sau lần cãi vã đầu tiên",
     "vn_a": "B: Lần cãi nhau đầu tiên, em đã khóc nhiều.\nA: Anh hối hận lắm, đến tận nhà em.",
     "vn_b": "B: Anh đứng ngoài cửa hai tiếng đồng hồ.\nA: Vì anh không thể mất em.",
     "jp": "",
@@ -2774,7 +2774,7 @@
   {
     "no": 999,
     "cat": "친구 대화",
-    "vn": "깜짝 파티",
+    "vn": "bữa tiệc bất ngờ",
     "vn_a": "B: Trời ơi, sao mọi người đều ở đây?\nA: Sinh nhật em mà, anh chuẩn bị bí mật.",
     "vn_b": "B: Em cảm động đến rơi nước mắt.\nA: Anh muốn em là người hạnh phúc nhất hôm nay.",
     "jp": "",
@@ -2788,7 +2788,7 @@
   {
     "no": 1000,
     "cat": "친구 대화",
-    "vn": "출산",
+    "vn": "sinh con",
     "vn_a": "B: Em đau quá anh ơi!\nA: Cố lên em, anh ở bên em.",
     "vn_b": "B: Con mình ra rồi anh!\nA: Cảm ơn em đã sinh con cho anh.",
     "jp": "",
@@ -2802,7 +2802,7 @@
   {
     "no": 1001,
     "cat": "친구 대화",
-    "vn": "화분 키우기",
+    "vn": "Trồng cây trồng trong chậu",
     "vn_a": "B: Cây xanh nhà mình héo rồi anh.\nA: Em quên tưới nước hả?",
     "vn_b": "B: Em bận quá, anh giúp em chăm sóc.\nA: Để anh tưới mỗi sáng cho.",
     "jp": "",
@@ -2816,7 +2816,7 @@
   {
     "no": 1002,
     "cat": "친구 대화",
-    "vn": "잡지 읽기",
+    "vn": "đọc tạp chí",
     "vn_a": "A: Em đang đọc gì vậy?\nB: Tạp chí thời trang, bài về xu hướng năm nay.",
     "vn_b": "A: Em mê thời trang dữ vậy.\nB: Phụ nữ mà, anh hiểu đi.",
     "jp": "",
@@ -2830,7 +2830,7 @@
   {
     "no": 1003,
     "cat": "친구 대화",
-    "vn": "침대 정리",
+    "vn": "dọn giường",
     "vn_a": "B: Anh ơi, dọn giường giúp em.\nA: Anh dọn rồi, em xem có ngay ngắn không.",
     "vn_b": "B: Gối lệch rồi, sửa lại đi.\nA: Em khó tính ghê.",
     "jp": "",
@@ -2844,7 +2844,7 @@
   {
     "no": 1004,
     "cat": "친구 대화",
-    "vn": "화장실 차례",
+    "vn": "quay nhà vệ sinh",
     "vn_a": "B: Anh tắm lâu quá, em chờ hoài.\nA: Anh ra liền đây.",
     "vn_b": "B: Sao đàn ông tắm còn lâu hơn phụ nữ?\nA: Vì anh muốn thơm cho em.",
     "jp": "",
@@ -2858,7 +2858,7 @@
   {
     "no": 1005,
     "cat": "친구 대화",
-    "vn": "저녁 메뉴 고민",
+    "vn": "Mối quan tâm về thực đơn bữa tối",
     "vn_a": "A: Tối nay ăn gì hả em?\nB: Em hết ý tưởng rồi, anh quyết đi.",
     "vn_b": "A: Mì gói được không?\nB: Lại mì gói nữa hả!",
     "jp": "",
@@ -2872,7 +2872,7 @@
   {
     "no": 1006,
     "cat": "친구 대화",
-    "vn": "안경 분실",
+    "vn": "kính bị mất",
     "vn_a": "B: Em không tìm thấy kính của em đâu cả.\nA: Em đang đeo trên đầu kìa.",
     "vn_b": "B: Trời, em đãng trí quá.\nA: Em yêu anh quá nên mất tập trung.",
     "jp": "",
@@ -2886,7 +2886,7 @@
   {
     "no": 1007,
     "cat": "친구 대화",
-    "vn": "옷장 정리",
+    "vn": "Sắp xếp tủ quần áo của bạn",
     "vn_a": "B: Tủ quần áo lộn xộn quá, mình dọn đi.\nA: Em ơi, sao nhiều áo thế?",
     "vn_b": "B: Áo nào em cũng cần mà.\nA: Vậy thì sắp xếp theo màu nhé.",
     "jp": "",
@@ -2900,7 +2900,7 @@
   {
     "no": 1008,
     "cat": "친구 대화",
-    "vn": "사진 정리",
+    "vn": "sắp xếp ảnh",
     "vn_a": "A: Mình lưu hình lại trên Cloud nhé.\nB: Nhiều ảnh đôi mình quá!",
     "vn_b": "A: Hơn 5 năm rồi mà.\nB: In ra làm album đi anh.",
     "jp": "",
@@ -2914,7 +2914,7 @@
   {
     "no": 1009,
     "cat": "친구 대화",
-    "vn": "가전제품 고장",
+    "vn": "Sự cố thiết bị gia dụng",
     "vn_a": "B: Tủ lạnh hư rồi anh, không lạnh nữa.\nA: Để anh gọi thợ sửa.",
     "vn_b": "B: Đồ ăn hỏng hết mất.\nA: Mình ra ăn ngoài rồi mua tủ mới đi.",
     "jp": "",
@@ -2928,7 +2928,7 @@
   {
     "no": 1010,
     "cat": "친구 대화",
-    "vn": "약국 가기",
+    "vn": "Đi đến hiệu thuốc",
     "vn_a": "A: Em đi cùng anh ra hiệu thuốc.\nB: Anh không khỏe à?",
     "vn_b": "A: Anh muốn mua thuốc cảm.\nB: Em đi cùng để chọn thuốc tốt.",
     "jp": "",
@@ -2942,7 +2942,7 @@
   {
     "no": 1011,
     "cat": "친구 대화",
-    "vn": "우산 같이 쓰기",
+    "vn": "chia sẻ một chiếc ô",
     "vn_a": "B: Anh che ô cho em đi.\nA: Em bị ướt vai rồi.",
     "vn_b": "B: Anh nghiêng về phía em.\nA: Anh ướt cũng được, miễn em không ướt.",
     "jp": "",
@@ -2956,7 +2956,7 @@
   {
     "no": 1012,
     "cat": "친구 대화",
-    "vn": "음악 듣기",
+    "vn": "nghe nhạc",
     "vn_a": "B: Anh nghe nhạc gì vậy?\nA: Bài cũ thời mình mới quen.",
     "vn_b": "B: Nhớ ghê, hồi đó anh hay hát cho em nghe.\nA: Bây giờ anh vẫn hát được mà.",
     "jp": "",
@@ -2970,7 +2970,7 @@
   {
     "no": 1013,
     "cat": "친구 대화",
-    "vn": "머리 자르기",
+    "vn": "cắt tóc",
     "vn_a": "B: Anh đi cắt tóc nhé, dài quá rồi.\nA: Em đi cùng và chọn kiểu cho anh nha.",
     "vn_b": "B: Anh để tóc kiểu Hàn Quốc đi.\nA: Em muốn anh giống idol à?",
     "jp": "",
@@ -2984,7 +2984,7 @@
   {
     "no": 1014,
     "cat": "친구 대화",
-    "vn": "메모 쪽지",
+    "vn": "ghi chú",
     "vn_a": "A: Em để giấy gì trên bàn anh vậy?\nB: Lời nhắn yêu thương cho anh.",
     "vn_b": "A: \"Anh là cả thế giới của em\" - ngọt thật.\nB: Em nhớ anh khi anh đi làm.",
     "jp": "",
@@ -2998,7 +2998,7 @@
   {
     "no": 1015,
     "cat": "친구 대화",
-    "vn": "잠든 모습 보기",
+    "vn": "Nhìn bạn ngủ",
     "vn_a": "B: Hồi nãy anh ngắm em ngủ à?\nA: Em ngủ dễ thương lắm.",
     "vn_b": "B: Em mở miệng à?\nA: Có tí, mà em vẫn xinh.",
     "jp": "",
@@ -3012,7 +3012,7 @@
   {
     "no": 1016,
     "cat": "친구 대화",
-    "vn": "향수 선물",
+    "vn": "quà tặng nước hoa",
     "vn_a": "A: Anh tặng em chai nước hoa này.\nB: Mùi hương anh thích à?",
     "vn_b": "A: Đúng rồi, hoa lài, dịu dàng giống em.\nB: Em sẽ xịt mỗi ngày.",
     "jp": "",
@@ -3026,7 +3026,7 @@
   {
     "no": 1017,
     "cat": "친구 대화",
-    "vn": "노래 헌정",
+    "vn": "cống hiến bài hát",
     "vn_a": "B: Anh ơi, hát bài \"Em là của anh\" cho em đi.\nA: Anh hát dở lắm.",
     "vn_b": "B: Em không quan tâm, em chỉ muốn nghe anh thôi.\nA: Vậy được, em đừng cười anh nha.",
     "jp": "",
@@ -3040,7 +3040,7 @@
   {
     "no": 1018,
     "cat": "친구 대화",
-    "vn": "별명 만들기",
+    "vn": "Tạo biệt hiệu",
     "vn_a": "A: Anh đặt biệt danh cho em là \"Cún con\" nhé.\nB: Sao là cún con?",
     "vn_b": "A: Vì em hay nũng nịu, đáng yêu.\nB: Vậy anh là \"Mèo Mun\" của em.",
     "jp": "",
@@ -3054,7 +3054,7 @@
   {
     "no": 1019,
     "cat": "친구 대화",
-    "vn": "추억의 장소 방문",
+    "vn": "Thăm một nơi đáng nhớ",
     "vn_a": "B: Mình đến lại quán cà phê đầu tiên đi.\nA: Quán còn không em?",
     "vn_b": "B: Còn đó, em đi qua tuần trước.\nA: Vậy chiều mai mình đi.",
     "jp": "",
@@ -3068,7 +3068,7 @@
   {
     "no": 1020,
     "cat": "친구 대화",
-    "vn": "손가락 깍지",
+    "vn": "đan xen các ngón tay",
     "vn_a": "A: Đan tay anh đi em.\nB: Tay anh to, ngón em nhỏ.",
     "vn_b": "A: Vừa khít với em mà.\nB: Đúng là dành cho nhau.",
     "jp": "",
@@ -3082,7 +3082,7 @@
   {
     "no": 1021,
     "cat": "친구 대화",
-    "vn": "같이 자는 자세",
+    "vn": "tư thế ngủ chung",
     "vn_a": "B: Em thích ngủ áp vào ngực anh.\nA: Tim anh đập to lắm, em không khó ngủ à?",
     "vn_b": "B: Tiếng tim anh là bài hát ru em.\nA: Em ngọt ghê.",
     "jp": "",
@@ -3096,7 +3096,7 @@
   {
     "no": 1022,
     "cat": "친구 대화",
-    "vn": "눈 맞춤",
+    "vn": "giao tiếp bằng mắt",
     "vn_a": "A: Em nhìn anh đi, đừng quay đi.\nB: Em thấy ngại lắm.",
     "vn_b": "A: Mắt em đẹp như sao trời.\nB: Anh nịnh hoài, em quen rồi.",
     "jp": "",
@@ -3110,7 +3110,7 @@
   {
     "no": 1023,
     "cat": "친구 대화",
-    "vn": "온기 나누기",
+    "vn": "chia sẻ sự ấm áp",
     "vn_a": "B: Tay em lạnh quá, anh hơ tay cho em đi.\nA: Tay em lạnh nhưng tim em ấm là được.",
     "vn_b": "B: Anh là máy sưởi của em.\nA: Mãi mãi là máy sưởi của em.",
     "jp": "",
@@ -3124,7 +3124,7 @@
   {
     "no": 1024,
     "cat": "친구 대화",
-    "vn": "도자기 체험",
+    "vn": "trải nghiệm làm gốm",
     "vn_a": "B: Lớp học làm gốm này thú vị quá.\nA: Em làm chiếc cốc này à?",
     "vn_b": "B: Vâng, em làm cho anh đó.\nA: Anh sẽ uống cà phê bằng cốc này mỗi ngày.",
     "jp": "",
@@ -3138,7 +3138,7 @@
   {
     "no": 1025,
     "cat": "친구 대화",
-    "vn": "요리 클래스",
+    "vn": "lớp học nấu ăn",
     "vn_a": "A: Mình học làm sushi cùng nhau nhé.\nB: Em vụng dao kéo lắm.",
     "vn_b": "A: Anh sẽ cầm tay chỉ em.\nB: Vậy thì em đi học liền.",
     "jp": "",
@@ -3152,7 +3152,7 @@
   {
     "no": 1026,
     "cat": "친구 대화",
-    "vn": "와인 시음",
+    "vn": "nếm rượu vang",
     "vn_a": "B: Em chưa uống vang bao giờ.\nA: Bắt đầu với loại nhẹ nhé, vang trắng.",
     "vn_b": "B: Thơm thật, anh chọn giỏi quá.\nA: Mỗi ngày uống chút sẽ tốt cho tim.",
     "jp": "",
@@ -3166,7 +3166,7 @@
   {
     "no": 1027,
     "cat": "친구 대화",
-    "vn": "풋스파",
+    "vn": "spa ngâm chân",
     "vn_a": "B: Mỏi chân quá, mình đi ngâm chân thư giãn nhé.\nA: Để anh đặt suất cho hai người.",
     "vn_b": "B: Anh tốt thật, biết em mệt.\nA: Mỗi tuần đưa em đi một lần nha.",
     "jp": "",
@@ -3180,7 +3180,7 @@
   {
     "no": 1028,
     "cat": "친구 대화",
-    "vn": "산악 트레킹",
+    "vn": "leo núi",
     "vn_a": "A: Mình leo Bà Đen nhé, view tuyệt đẹp.\nB: Em sợ cao lắm.",
     "vn_b": "A: Có anh, đừng sợ.\nB: Vậy mình lên cáp treo nha.",
     "jp": "",
@@ -3194,7 +3194,7 @@
   {
     "no": 1029,
     "cat": "친구 대화",
-    "vn": "카약",
+    "vn": "thuyền kayak",
     "vn_a": "B: Em chèo thuyền kayak được không nhỉ?\nA: Em chèo bên trái, anh bên phải.",
     "vn_b": "B: Mình lệch hướng rồi anh!\nA: Hợp tác đi em, đừng vẫy lung tung.",
     "jp": "",
@@ -3208,7 +3208,7 @@
   {
     "no": 1030,
     "cat": "친구 대화",
-    "vn": "사찰 방문",
+    "vn": "thăm chùa",
     "vn_a": "A: Mình đi chùa cầu duyên nhé.\nB: Mình đã có duyên rồi mà.",
     "vn_b": "A: Cầu cho duyên mãi bền chặt.\nB: Anh ngọt thật, em theo anh.",
     "jp": "",
@@ -3222,7 +3222,7 @@
   {
     "no": 1031,
     "cat": "친구 대화",
-    "vn": "야간 산책",
+    "vn": "đi dạo đêm",
     "vn_a": "B: Đi bộ tối lãng mạn ghê.\nA: Khuya rồi, em không sợ à?",
     "vn_b": "B: Có anh, em không sợ gì hết.\nA: Anh ôm em chặt nha.",
     "jp": "",
@@ -3236,7 +3236,7 @@
   {
     "no": 1032,
     "cat": "친구 대화",
-    "vn": "거리 공연 구경",
+    "vn": "Xem biểu diễn đường phố",
     "vn_a": "A: Anh nghệ sĩ đường phố hát hay quá.\nB: Mình bỏ tiền vào hộp đàn nhé.",
     "vn_b": "A: Em hào phóng quá.\nB: Tài năng phải được ủng hộ chứ.",
     "jp": "",
@@ -3250,7 +3250,7 @@
   {
     "no": 1033,
     "cat": "친구 대화",
-    "vn": "플리마켓",
+    "vn": "chợ trời",
     "vn_a": "B: Anh xem chiếc nón cũ này dễ thương ghê.\nA: Em mua đi, hợp với em đó.",
     "vn_b": "B: Có 50 nghìn thôi, rẻ quá.\nA: Em mặc cả thử xem.",
     "jp": "",
@@ -3264,7 +3264,7 @@
   {
     "no": 1034,
     "cat": "친구 대화",
-    "vn": "영화제",
+    "vn": "liên hoan phim",
     "vn_a": "A: Liên hoan phim sắp khai mạc rồi.\nB: Anh đặt vé chưa?",
     "vn_b": "A: Đặt rồi, ghế hàng B.\nB: Mình đi sớm để chụp ảnh thảm đỏ nhé.",
     "jp": "",
@@ -3278,7 +3278,7 @@
   {
     "no": 1035,
     "cat": "친구 대화",
-    "vn": "드라이브",
+    "vn": "lái xe",
     "vn_a": "B: Mình lái xe ra ngoại ô đi.\nA: Em chọn nhạc trong xe nhé.",
     "vn_b": "B: Em mở list bài tủ của anh.\nA: Em hiểu anh ghê.",
     "jp": "",
@@ -3292,7 +3292,7 @@
   {
     "no": 1036,
     "cat": "친구 대화",
-    "vn": "SNS 좋아요",
+    "vn": "Thích SNS",
     "vn_a": "B: Anh thả tim ảnh cô đó à?\nA: Bạn cũ thôi, vô tình bấm.",
     "vn_b": "B: Em không thích đâu.\nA: Anh hủy liền đây.",
     "jp": "",
@@ -3306,7 +3306,7 @@
   {
     "no": 1037,
     "cat": "친구 대화",
-    "vn": "시간 안 지킴",
+    "vn": "Tôi không giữ thời gian",
     "vn_a": "B: Hẹn 7 giờ mà giờ 8 giờ rồi!\nA: Anh xin lỗi, có việc gấp công ty.",
     "vn_b": "B: Lúc nào cũng có việc!\nA: Anh sẽ điều chỉnh thời gian biểu.",
     "jp": "",
@@ -3320,7 +3320,7 @@
   {
     "no": 1038,
     "cat": "친구 대화",
-    "vn": "음식 남김",
+    "vn": "thức ăn thừa",
     "vn_a": "A: Em sao bỏ thừa nhiều thế?\nB: Em no rồi, ăn không nổi.",
     "vn_b": "A: Lãng phí lắm.\nB: Lần sau em gọi ít hơn.",
     "jp": "",
@@ -3334,7 +3334,7 @@
   {
     "no": 1039,
     "cat": "친구 대화",
-    "vn": "청소 안 함",
+    "vn": "không dọn dẹp",
     "vn_a": "B: Phòng anh bừa bộn quá!\nA: Anh bận lắm, không có thời gian.",
     "vn_b": "B: Anh thuê người dọn đi.\nA: Em nói đúng, anh sẽ tự dọn cuối tuần.",
     "jp": "",
@@ -3348,7 +3348,7 @@
   {
     "no": 1040,
     "cat": "친구 대화",
-    "vn": "늦잠",
+    "vn": "ngủ quên",
     "vn_a": "B: Anh dậy đi, 11 giờ rồi!\nA: Cuối tuần mà, cho anh ngủ thêm.",
     "vn_b": "B: Mình hẹn ăn trưa với gia đình em mà!\nA: Trời ơi, anh quên!",
     "jp": "",
@@ -3362,7 +3362,7 @@
   {
     "no": 1041,
     "cat": "친구 대화",
-    "vn": "일 우선",
+    "vn": "làm việc trước",
     "vn_a": "B: Anh ăn tối với em đi, đừng làm việc nữa.\nA: Anh phải gửi báo cáo trước 10 giờ.",
     "vn_b": "B: Sức khỏe quan trọng hơn.\nA: Em đúng, anh tạm dừng đây.",
     "jp": "",
@@ -3376,7 +3376,7 @@
   {
     "no": 1042,
     "cat": "친구 대화",
-    "vn": "전화 안 받음",
+    "vn": "Không trả lời điện thoại",
     "vn_a": "B: Sao anh không nghe điện thoại em?\nA: Anh đang họp nên để chế độ im lặng.",
     "vn_b": "B: Em lo cho anh muốn chết.\nA: Lần sau anh nhắn tin trước.",
     "jp": "",
@@ -3390,7 +3390,7 @@
   {
     "no": 1043,
     "cat": "친구 대화",
-    "vn": "운전 졸음",
+    "vn": "lái xe buồn ngủ",
     "vn_a": "B: Anh có buồn ngủ không, để em lái thay.\nA: Anh tỉnh mà.",
     "vn_b": "B: Mắt anh sụp xuống rồi kìa.\nA: Vậy thôi, mình dừng nghỉ chút.",
     "jp": "",
@@ -3404,7 +3404,7 @@
   {
     "no": 1044,
     "cat": "친구 대화",
-    "vn": "기념일 잊음",
+    "vn": "Quên ngày kỷ niệm",
     "vn_a": "B: Anh quên hôm nay là ngày kỷ niệm rồi à?\nA: Anh xin lỗi, công việc làm anh quá tải.",
     "vn_b": "B: Năm nào cũng vậy!\nA: Anh hứa năm sau anh nhớ chắc chắn.",
     "jp": "",
@@ -3418,7 +3418,7 @@
   {
     "no": 1045,
     "cat": "친구 대화",
-    "vn": "타인과 비교 (어머니)",
+    "vn": "So sánh với người khác (mẹ)",
     "vn_a": "B: Mẹ anh hay khen cô Linh quá.\nA: Mẹ chỉ nói chơi thôi.",
     "vn_b": "B: Em buồn lắm, em cũng cố gắng mà.\nA: Để anh nói với mẹ.",
     "jp": "",
@@ -3432,7 +3432,7 @@
   {
     "no": 1046,
     "cat": "친구 대화",
-    "vn": "워라밸",
+    "vn": "Cân bằng giữa công việc và cuộc sống",
     "vn_a": "A: Mình phải cân bằng cuộc sống với công việc.\nB: Anh chăm việc quá, ít gặp em.",
     "vn_b": "A: Tuần này anh xin nghỉ một ngày.\nB: Vậy mình đi đâu xa nhé.",
     "jp": "",
@@ -3446,7 +3446,7 @@
   {
     "no": 1047,
     "cat": "친구 대화",
-    "vn": "가전제품 사기",
+    "vn": "Lừa đảo thiết bị gia dụng",
     "vn_a": "B: Mình mua máy giặt mới đi.\nA: Loại nào tốt em tìm chưa?",
     "vn_b": "B: Hãng LG đang khuyến mãi.\nA: Vậy mình đặt trên Tiki cho tiện.",
     "jp": "",
@@ -3460,7 +3460,7 @@
   {
     "no": 1048,
     "cat": "친구 대화",
-    "vn": "책장 만들기",
+    "vn": "làm kệ sách",
     "vn_a": "A: Phòng mới mình kê tủ sách lớn nhé.\nB: Em có nhiều tiểu thuyết Hàn Quốc.",
     "vn_b": "A: Anh thì sách kinh tế.\nB: Mình chia mỗi người một ngăn.",
     "jp": "",
@@ -3474,7 +3474,7 @@
   {
     "no": 1049,
     "cat": "친구 대화",
-    "vn": "자녀 교육비",
+    "vn": "chi phí giáo dục trẻ em",
     "vn_a": "B: Học phí tư thục đắt quá anh.\nA: Mình tích lũy quỹ giáo dục từ giờ.",
     "vn_b": "B: Mỗi tháng để 5 triệu được không?\nA: Hợp lý, mở tài khoản riêng.",
     "jp": "",
@@ -3488,7 +3488,7 @@
   {
     "no": 1050,
     "cat": "친구 대화",
-    "vn": "부동산 투자",
+    "vn": "đầu tư bất động sản",
     "vn_a": "A: Em có nghĩ tới mua đất đầu tư không?\nB: Em sợ rủi ro lắm.",
     "vn_b": "A: Mình mua chỗ đang lên giá.\nB: Vậy nghiên cứu kỹ trước nhé.",
     "jp": "",
@@ -3502,7 +3502,7 @@
   {
     "no": 1051,
     "cat": "친구 대화",
-    "vn": "주식 투자",
+    "vn": "đầu tư chứng khoán",
     "vn_a": "B: Cổ phiếu công ty anh đang lên kìa.\nA: Anh mua từ năm ngoái rồi.",
     "vn_b": "B: Lời nhiều không?\nA: Cũng tạm, đủ cho mình đi du lịch.",
     "jp": "",
@@ -3516,7 +3516,7 @@
   {
     "no": 1052,
     "cat": "친구 대화",
-    "vn": "비상금",
+    "vn": "quỹ khẩn cấp",
     "vn_a": "A: Mình lập quỹ khẩn cấp đi em.\nB: Bao nhiêu là đủ?",
     "vn_b": "A: Sáu tháng chi phí sinh hoạt.\nB: Vậy mình đặt lịch tự động chuyển khoản.",
     "jp": "",
@@ -3530,7 +3530,7 @@
   {
     "no": 1053,
     "cat": "친구 대화",
-    "vn": "휴가 적금",
+    "vn": "tiết kiệm kỳ nghỉ",
     "vn_a": "B: Mình mở sổ tiết kiệm cho du lịch nhé.\nA: Mục tiêu đi đâu?",
     "vn_b": "B: Nhật Bản mùa hoa anh đào.\nA: Vậy hai năm nữa mình đi.",
     "jp": "",
@@ -3544,7 +3544,7 @@
   {
     "no": 1054,
     "cat": "친구 대화",
-    "vn": "은퇴 후 카페",
+    "vn": "quán cà phê sau khi nghỉ hưu",
     "vn_a": "A: Già rồi mình mở quán cà phê nhỏ nhé.\nB: Em pha cà phê, anh tiếp khách.",
     "vn_b": "A: Có chú chó nằm ở góc nữa.\nB: Đẹp quá, em mơ rồi đó.",
     "jp": "",
@@ -3558,7 +3558,7 @@
   {
     "no": 1055,
     "cat": "친구 대화",
-    "vn": "부모님 의료보험",
+    "vn": "Bảo hiểm y tế của cha mẹ",
     "vn_a": "B: Em lo bệnh ba mẹ già.\nA: Mình mua bảo hiểm sức khỏe cho ba mẹ đi.",
     "vn_b": "B: Anh chu đáo thật.\nA: Vì gia đình em cũng là của anh.",
     "jp": "",
@@ -3572,7 +3572,7 @@
   {
     "no": 1056,
     "cat": "친구 대화",
-    "vn": "친구 결혼 시샘",
+    "vn": "ghen tị với cuộc hôn nhân của bạn bè",
     "vn_a": "B: Bạn em cưới rồi, em cũng muốn.\nA: Mình từ từ mà em.",
     "vn_b": "B: Nhỡ em lỡ thì thì sao.\nA: Em không bao giờ là gánh nặng đâu.",
     "jp": "",
@@ -3586,7 +3586,7 @@
   {
     "no": 1057,
     "cat": "친구 대화",
-    "vn": "인스타 비교",
+    "vn": "So sánh Instagram",
     "vn_a": "B: Bạn em sống sang ghê.\nA: Đó là họ chỉ chia sẻ phần đẹp.",
     "vn_b": "B: Em ghen tị quá.\nA: Mỗi người có hạnh phúc khác nhau.",
     "jp": "",
@@ -3600,7 +3600,7 @@
   {
     "no": 1058,
     "cat": "친구 대화",
-    "vn": "명절 스트레스",
+    "vn": "kỳ nghỉ căng thẳng",
     "vn_a": "B: Tết này em mệt mỏi quá.\nA: Vì sao em?",
     "vn_b": "B: Quá nhiều nghi lễ với họ hàng.\nA: Mình rút gọn lại đi.",
     "jp": "",
@@ -3614,7 +3614,7 @@
   {
     "no": 1059,
     "cat": "친구 대화",
-    "vn": "부모님 건강 걱정",
+    "vn": "Mối quan tâm về sức khỏe của cha mẹ",
     "vn_a": "A: Ba anh dạo này hay đau lưng.\nB: Mình đưa ba đi khám tổng quát đi.",
     "vn_b": "A: Anh sợ ba phát hiện bệnh nặng.\nB: Phát hiện sớm để chữa, đừng sợ.",
     "jp": "",
@@ -3628,7 +3628,7 @@
   {
     "no": 1060,
     "cat": "친구 대화",
-    "vn": "형제자매 갈등",
+    "vn": "mâu thuẫn anh chị em",
     "vn_a": "B: Em với em trai em cãi nhau.\nA: Vì việc gì?",
     "vn_b": "B: Tiền bạc thôi.\nA: Anh em ruột thì nên nhường nhịn nhau.",
     "jp": "",
@@ -3642,7 +3642,7 @@
   {
     "no": 1061,
     "cat": "친구 대화",
-    "vn": "새 도전 두려움",
+    "vn": "sợ những thử thách mới",
     "vn_a": "A: Em sợ chuyển công ty không?\nB: Sợ chứ, lương cao mà áp lực.",
     "vn_b": "A: Em giỏi mà, anh tin em.\nB: Có anh em yên tâm hơn.",
     "jp": "",
@@ -3656,7 +3656,7 @@
   {
     "no": 1062,
     "cat": "친구 대화",
-    "vn": "늙어가기",
+    "vn": "già đi",
     "vn_a": "B: Em phát hiện tóc bạc rồi.\nA: Một sợi thôi mà, dễ thương ghê.",
     "vn_b": "B: Em sợ già.\nA: Già cùng em là điều anh mong nhất.",
     "jp": "",
@@ -3670,7 +3670,7 @@
   {
     "no": 1063,
     "cat": "친구 대화",
-    "vn": "외모 콤플렉스",
+    "vn": "vẻ ngoài phức tạp",
     "vn_a": "B: Em xấu quá, mặt đầy mụn.\nA: Anh thấy em vẫn đáng yêu.",
     "vn_b": "B: Anh nói cho em vui thôi.\nA: Anh nói thật, em đẹp tự nhiên.",
     "jp": "",
@@ -3684,7 +3684,7 @@
   {
     "no": 1064,
     "cat": "친구 대화",
-    "vn": "친구 잃은 슬픔",
+    "vn": "nỗi buồn mất đi một người bạn",
     "vn_a": "B: Bạn em mất rồi anh.\nA: Trời ơi, sao xảy ra vậy?",
     "vn_b": "B: Tai nạn xe.\nA: Em khóc đi, anh ở đây.",
     "jp": "",
@@ -3698,7 +3698,7 @@
   {
     "no": 1065,
     "cat": "친구 대화",
-    "vn": "발표 응원",
+    "vn": "thuyết trình cổ vũ",
     "vn_a": "B: Mai em phải thuyết trình trước hội đồng.\nA: Em luyện tập với anh đi.",
     "vn_b": "B: Anh nghe và góp ý nha.\nA: Anh là khán giả khắt khe nhất đó.",
     "jp": "",
@@ -3712,7 +3712,7 @@
   {
     "no": 1066,
     "cat": "친구 대화",
-    "vn": "거절 어려움",
+    "vn": "Độ khó từ chối",
     "vn_a": "B: Em không biết từ chối lời mời của bạn.\nA: Em phải biết bảo vệ thời gian mình.",
     "vn_b": "B: Em sợ mất bạn.\nA: Bạn thật sự sẽ hiểu em.",
     "jp": "",
@@ -3726,7 +3726,7 @@
   {
     "no": 1067,
     "cat": "친구 대화",
-    "vn": "일찍 일어나기 싫음",
+    "vn": "Tôi không muốn thức dậy sớm",
     "vn_a": "A: Em ơi, dậy đi, hôm nay đi sớm.\nB: Em không muốn dậy, cho em ngủ.",
     "vn_b": "A: Vậy anh bế em ra.\nB: Đừng đừng, em dậy.",
     "jp": "",
@@ -3740,7 +3740,7 @@
   {
     "no": 1068,
     "cat": "친구 대화",
-    "vn": "수면 부족",
+    "vn": "thiếu ngủ",
     "vn_a": "B: Em ngủ không đủ giấc, đầu óc nặng nề.\nA: Em đi ngủ trưa chút đi.",
     "vn_b": "B: Còn nhiều việc lắm.\nA: Sức khỏe trên hết, làm việc sau.",
     "jp": "",
@@ -3754,7 +3754,7 @@
   {
     "no": 1069,
     "cat": "친구 대화",
-    "vn": "허리 아픔",
+    "vn": "đau lưng",
     "vn_a": "A: Anh đau lưng quá em.\nB: Anh ngồi máy tính nhiều quá.",
     "vn_b": "A: Em xoa lưng cho anh đi.\nB: Mai anh đi vật lý trị liệu nhé.",
     "jp": "",
@@ -3768,7 +3768,7 @@
   {
     "no": 1070,
     "cat": "친구 대화",
-    "vn": "발 아픔",
+    "vn": "đau chân",
     "vn_a": "B: Đôi giày này đau chân quá.\nA: Em tháo ra, đi dép tổ ong đi.",
     "vn_b": "B: Em ngại mặc đầm với dép.\nA: Anh bế em luôn cho.",
     "jp": "",
@@ -3782,7 +3782,7 @@
   {
     "no": 1071,
     "cat": "친구 대화",
-    "vn": "알레르기",
+    "vn": "dị ứng",
     "vn_a": "B: Em ăn tôm bị dị ứng rồi.\nA: Mặt em sưng đỏ kìa, đi viện ngay.",
     "vn_b": "B: Em sợ tiêm dữ lắm.\nA: Có anh, đừng sợ.",
     "jp": "",
@@ -3796,7 +3796,7 @@
   {
     "no": 1072,
     "cat": "친구 대화",
-    "vn": "식중독",
+    "vn": "ngộ độc thực phẩm",
     "vn_a": "A: Bụng anh đau quặn từ tối qua.\nB: Anh ăn gì hư rồi à?",
     "vn_b": "A: Hải sản ngoài quán hôm qua.\nB: Mình đi cấp cứu liền.",
     "jp": "",
@@ -3810,7 +3810,7 @@
   {
     "no": 1073,
     "cat": "친구 대화",
-    "vn": "비염",
+    "vn": "viêm mũi",
     "vn_a": "B: Em hắt xì hoài, mũi nghẹt.\nA: Em bị viêm mũi dị ứng à?",
     "vn_b": "B: Mỗi mùa giao thoa.\nA: Để anh mua máy lọc không khí.",
     "jp": "",
@@ -3824,7 +3824,7 @@
   {
     "no": 1074,
     "cat": "친구 대화",
-    "vn": "우울 증상",
+    "vn": "triệu chứng trầm cảm",
     "vn_a": "B: Em không có động lực gì hết.\nA: Em có muốn gặp chuyên gia tâm lý không?",
     "vn_b": "B: Em sợ người ta nghĩ em yếu đuối.\nA: Tâm lý cũng là sức khỏe, đừng giấu.",
     "jp": "",
@@ -3838,7 +3838,7 @@
   {
     "no": 1075,
     "cat": "친구 대화",
-    "vn": "스트레칭",
+    "vn": "kéo dài",
     "vn_a": "A: Mình cùng giãn cơ buổi sáng nhé.\nB: Em cứng người lắm.",
     "vn_b": "A: Tập từ từ, lâu dài sẽ dẻo.\nB: Có anh em cố gắng.",
     "jp": "",
@@ -3852,7 +3852,7 @@
   {
     "no": 1076,
     "cat": "친구 대화",
-    "vn": "과식",
+    "vn": "sự dư thừa",
     "vn_a": "B: Em ăn nhiều quá, tức bụng.\nA: Mình ra ngoài đi bộ tiêu hóa nhé.",
     "vn_b": "B: Em đi không nổi, phình bụng rồi.\nA: Anh dìu em đi từ từ.",
     "jp": "",
@@ -3866,7 +3866,7 @@
   {
     "no": 1077,
     "cat": "친구 대화",
-    "vn": "피부 관리",
+    "vn": "chăm sóc da",
     "vn_a": "B: Da em xấu quá dạo này.\nA: Em uống nhiều nước và ngủ đủ chưa?",
     "vn_b": "B: Em hay thức khuya.\nA: Anh nhắc em ngủ sớm nha.",
     "jp": "",
@@ -3880,7 +3880,7 @@
   {
     "no": 1078,
     "cat": "친구 대화",
-    "vn": "시어머니 잔소리",
+    "vn": "mẹ chồng cằn nhằn",
     "vn_a": "B: Mẹ anh hôm nay nhắc nhở em nhiều.\nA: Mẹ thương em nên mới góp ý.",
     "vn_b": "B: Em hơi tủi thân.\nA: Để anh nói riêng với mẹ.",
     "jp": "",
@@ -3894,7 +3894,7 @@
   {
     "no": 1079,
     "cat": "친구 대화",
-    "vn": "처남 돈 빌림",
+    "vn": "vay tiền anh rể",
     "vn_a": "A: Em trai em mượn tiền anh.\nB: Lại à, cứ vay không trả.",
     "vn_b": "A: Anh phải làm sao đây?\nB: Anh từ chối khéo nhé.",
     "jp": "",
@@ -3908,7 +3908,7 @@
   {
     "no": 1080,
     "cat": "친구 대화",
-    "vn": "사촌 결혼식",
+    "vn": "đám cưới anh họ",
     "vn_a": "A: Cuối tuần đi đám cưới chị họ em.\nB: Vâng, em mặc gì hợp?",
     "vn_b": "A: Áo dài đỏ đi, em đẹp lắm.\nB: Vậy em đặt may liền.",
     "jp": "",
@@ -3922,7 +3922,7 @@
   {
     "no": 1081,
     "cat": "친구 대화",
-    "vn": "친정 방문",
+    "vn": "về thăm nhà bố mẹ",
     "vn_a": "B: Cuối tuần em về nhà mẹ đẻ.\nA: Anh đi cùng em nhé.",
     "vn_b": "B: Mẹ em làm món em thích.\nA: Anh háo hức ăn.",
     "jp": "",
@@ -3936,7 +3936,7 @@
   {
     "no": 1082,
     "cat": "친구 대화",
-    "vn": "친구 출산",
+    "vn": "người bạn sinh con",
     "vn_a": "B: Bạn em sinh em bé rồi.\nA: Mình thăm bệnh viện hôm nào?",
     "vn_b": "B: Mai chiều, mình mua quà đi.\nA: Quần áo trẻ em được không?",
     "jp": "",
@@ -3950,7 +3950,7 @@
   {
     "no": 1083,
     "cat": "친구 대화",
-    "vn": "회사 워크샵",
+    "vn": "xưởng công ty",
     "vn_a": "A: Anh đi team building 3 ngày.\nB: Em ở nhà một mình buồn ghê.",
     "vn_b": "A: Anh gọi cho em mỗi tối.\nB: Vâng, anh đi vui vẻ nhé.",
     "jp": "",
@@ -3964,7 +3964,7 @@
   {
     "no": 1084,
     "cat": "친구 대화",
-    "vn": "친구 이사 도움",
+    "vn": "Giúp một người bạn di chuyển",
     "vn_a": "B: Bạn em cần giúp dọn nhà cuối tuần.\nA: Anh đi với em luôn.",
     "vn_b": "B: Anh đỡ tay nâng đồ nặng cho em.\nA: Có anh, em không phải lo.",
     "jp": "",
@@ -3978,7 +3978,7 @@
   {
     "no": 1085,
     "cat": "친구 대화",
-    "vn": "부모님 생신",
+    "vn": "sinh nhật bố mẹ",
     "vn_a": "A: Tuần sau sinh nhật mẹ anh.\nB: Mình tổ chức tiệc nhỏ nhé.",
     "vn_b": "A: Quà gì hợp với mẹ?\nB: Khăn lụa và một chiếc lắc tay.",
     "jp": "",
@@ -3992,7 +3992,7 @@
   {
     "no": 1086,
     "cat": "친구 대화",
-    "vn": "이웃 다툼",
+    "vn": "hàng xóm cãi nhau",
     "vn_a": "B: Hàng xóm khó chịu quá, gây ồn cả đêm.\nA: Để anh sang nói chuyện.",
     "vn_b": "B: Đừng cãi nhau nha anh.\nA: Anh nói nhẹ nhàng thôi.",
     "jp": "",
@@ -4006,7 +4006,7 @@
   {
     "no": 1087,
     "cat": "친구 대화",
-    "vn": "회사 동료 결혼",
+    "vn": "hôn nhân đồng nghiệp",
     "vn_a": "A: Anh phải đi đám cưới đồng nghiệp.\nB: Em đi cùng được không?",
     "vn_b": "A: Tất nhiên rồi, em là vợ tương lai.\nB: Vậy em chọn váy đi.",
     "jp": "",
@@ -4020,7 +4020,7 @@
   {
     "no": 1088,
     "cat": "친구 대화",
-    "vn": "명절 음식 만들기",
+    "vn": "Nấu ăn ngày lễ",
     "vn_a": "B: Tết mình gói bánh chưng nhé.\nA: Em biết gói à?",
     "vn_b": "B: Mẹ em chỉ em rồi.\nA: Vậy năm nay nhà mình có bánh tự làm.",
     "jp": "",
@@ -4034,7 +4034,7 @@
   {
     "no": 1089,
     "cat": "친구 대화",
-    "vn": "어머니 음식 배우기",
+    "vn": "mẹ học nấu ăn",
     "vn_a": "A: Mẹ anh nấu bún riêu ngon nhất.\nB: Mai em xin mẹ học công thức.",
     "vn_b": "A: Mẹ vui lắm khi em học.\nB: Em muốn nấu cho anh ăn mỗi tuần.",
     "jp": "",
@@ -4048,7 +4048,7 @@
   {
     "no": 1090,
     "cat": "친구 대화",
-    "vn": "친구 추천 맛집",
+    "vn": "Quán được bạn bè giới thiệu",
     "vn_a": "B: Bạn em giới thiệu quán phở mới ngon.\nA: Mình đi thử nhé.",
     "vn_b": "B: Quán xếp hàng dài lắm.\nA: Đáng để chờ thì mình chờ.",
     "jp": "",
@@ -4062,7 +4062,7 @@
   {
     "no": 1091,
     "cat": "친구 대화",
-    "vn": "첫 여행",
+    "vn": "chuyến đi đầu tiên",
     "vn_a": "B: Em nhớ chuyến đi Đà Lạt đầu tiên không?\nA: Đêm đó lạnh, anh nhường áo cho em.",
     "vn_b": "B: Em rung động từ giây phút đó.\nA: Anh thì rung động từ trước rồi.",
     "jp": "",
@@ -4076,7 +4076,7 @@
   {
     "no": 1092,
     "cat": "친구 대화",
-    "vn": "첫 명절 함께",
+    "vn": "kỳ nghỉ đầu tiên cùng nhau",
     "vn_a": "A: Tết đầu tiên có em ở quê anh.\nB: Em hồi hộp lắm khi gặp ba mẹ.",
     "vn_b": "A: Mọi người yêu em ngay từ đầu.\nB: Em cảm động đến phát khóc.",
     "jp": "",
@@ -4090,7 +4090,7 @@
   {
     "no": 1093,
     "cat": "친구 대화",
-    "vn": "청혼 후 알림",
+    "vn": "Thông báo sau đề xuất",
     "vn_a": "B: Em vừa kể với mẹ chuyện anh cầu hôn.\nA: Mẹ phản ứng sao?",
     "vn_b": "B: Mẹ khóc vì hạnh phúc.\nA: Mai anh sẽ nói với mẹ anh.",
     "jp": "",
@@ -4104,7 +4104,7 @@
   {
     "no": 1094,
     "cat": "친구 대화",
-    "vn": "결혼 사진 촬영",
+    "vn": "chụp ảnh cưới",
     "vn_a": "A: Mai mình chụp ảnh cưới.\nB: Em đi spa từ sáng sớm.",
     "vn_b": "A: Anh hồi hộp ghê.\nB: Mình sẽ là cặp đôi đẹp nhất.",
     "jp": "",
@@ -4118,7 +4118,7 @@
   {
     "no": 1095,
     "cat": "친구 대화",
-    "vn": "신혼여행",
+    "vn": "tuần trăng mật",
     "vn_a": "B: Tuần trăng mật mình đi Maldives nhé.\nA: Anh đặt resort nổi rồi.",
     "vn_b": "B: Trời ơi, anh tốn nhiều quá.\nA: Một lần trong đời thôi mà.",
     "jp": "",
@@ -4132,7 +4132,7 @@
   {
     "no": 1096,
     "cat": "친구 대화",
-    "vn": "첫 집 키 받기",
+    "vn": "Nhận chìa khóa ngôi nhà đầu tiên của bạn",
     "vn_a": "A: Đây là chìa khóa nhà mình em.\nB: Em không tin được.",
     "vn_b": "A: Mình đã làm được rồi em.\nB: Em hạnh phúc đến phát khóc.",
     "jp": "",
@@ -4146,7 +4146,7 @@
   {
     "no": 1097,
     "cat": "친구 대화",
-    "vn": "첫 차 함께",
+    "vn": "chiếc xe đầu tiên cùng nhau",
     "vn_a": "B: Xe của mình lung linh quá!\nA: Em ngồi ghế phụ cạnh anh nhé.",
     "vn_b": "B: Đi đâu trước đầu tiên?\nA: Đến quán cà phê hồi mình mới yêu nhau.",
     "jp": "",
@@ -4160,7 +4160,7 @@
   {
     "no": 1098,
     "cat": "친구 대화",
-    "vn": "부모님 인사 드린 날",
+    "vn": "Ngày tôi chào bố mẹ",
     "vn_a": "A: Em nhớ ngày anh đến nhà em chính thức không?\nB: Anh run đến tay run cầm cập.",
     "vn_b": "A: Ba em hỏi nhiều câu khó.\nB: Mà anh trả lời được hết.",
     "jp": "",
@@ -4174,7 +4174,7 @@
   {
     "no": 1099,
     "cat": "친구 대화",
-    "vn": "100일 기념",
+    "vn": "kỷ niệm 100 ngày",
     "vn_a": "B: Hôm nay là 100 ngày yêu của mình!\nA: Anh có quà cho em đây.",
     "vn_b": "B: Vòng tay đôi ghê!\nA: Mình sẽ đeo cùng nhau.",
     "jp": "",
@@ -4188,7 +4188,7 @@
   {
     "no": 1100,
     "cat": "친구 대화",
-    "vn": "결혼 후 첫 아침",
+    "vn": "buổi sáng đầu tiên sau khi kết hôn",
     "vn_a": "A: Chào buổi sáng vợ yêu.\nB: Tự nhiên nghe lạ ghê.",
     "vn_b": "A: Quen dần thôi mà.\nB: Anh là chồng em từ giờ rồi.",
     "jp": "",
