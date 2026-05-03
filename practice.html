@@ -215,9 +215,14 @@ main{
 /* Front: words, hierarchy VN > JP > EN */
 /* VN largest, JP medium, EN small. Same on front (A) and back (B). */
 .vn-word{
-  font-size:36px;font-weight:700;color:var(--vn);
-  line-height:1.1;word-wrap:break-word;
-  margin-bottom:12px;width:100%;
+  font-size:36px;font-weight:700;color:var(--text);
+  line-height:1.15;word-wrap:break-word;
+  margin-bottom:30px;width:100%;
+}
+.vn-en{
+  display:inline-block;margin-left:8px;
+  font-size:16px;font-weight:500;color:var(--muted);
+  font-style:italic;letter-spacing:.01em;
 }
 .vn-ex{
   font-size:42px;font-weight:700;color:var(--vn);
@@ -311,7 +316,8 @@ main{
   .htop{margin-bottom:6px}
   .status{padding:5px 10px}
   main{padding:10px 10px;gap:8px}
-  .vn-word{font-size:28px;margin-bottom:10px}
+  .vn-word{font-size:26px;margin-bottom:22px}
+  .vn-en{font-size:13px;margin-left:6px}
   .vn-ex{font-size:34px;margin-bottom:16px;padding-bottom:14px}
   .vn-ex.dialog{font-size:26px}
   .jp-word{font-size:22px;margin-bottom:4px}
@@ -328,7 +334,8 @@ main{
 @media (max-width:360px){
   .filters{gap:3px}
   .ch{padding:3px 8px;font-size:10px}
-  .vn-word{font-size:24px}
+  .vn-word{font-size:22px;margin-bottom:18px}
+  .vn-en{font-size:11px}
   .vn-ex{font-size:28px}
   .vn-ex.dialog{font-size:22px}
   .jp-word{font-size:19px}
@@ -384,7 +391,7 @@ main{
           <span class="num" id="fNum">#001</span>
         </div>
         <div class="body">
-          <div class="vn-word" id="fVn"></div>
+          <div class="vn-word"><span id="fVn"></span><span class="vn-en" id="fVnEn"></span></div>
           <div class="vn-ex" id="fVnEx"></div>
           <div class="jp-word" id="fJp"></div>
           <div class="jp-ex" id="fJpEx"></div>
@@ -407,7 +414,7 @@ main{
           <span class="num" id="bNum">#001</span>
         </div>
         <div class="body">
-          <div class="vn-word" id="bVn"></div>
+          <div class="vn-word"><span id="bVn"></span><span class="vn-en" id="bVnEn"></span></div>
           <div class="vn-ex" id="bVnEx"></div>
           <div class="jp-word" id="bJp"></div>
           <div class="jp-ex" id="bJpEx"></div>
@@ -730,6 +737,7 @@ function render(resetFlip = true) {
   document.getElementById("fCat").title = d.cat;
   document.getElementById("fNum").textContent = "#" + String(d.no).padStart(4, "0");
   document.getElementById("fVn").textContent = d.vn;
+  document.getElementById("fVnEn").textContent = d.en ? `(${d.en})` : "";
   document.getElementById("fVnEx").textContent = d.vn_a || "";
   document.getElementById("fVnEx").classList.toggle("dialog", isDialog);
   document.getElementById("fJp").innerHTML = d.jp || "";
@@ -746,6 +754,7 @@ function render(resetFlip = true) {
   document.getElementById("bCat").title = d.cat;
   document.getElementById("bNum").textContent = "#" + String(d.no).padStart(4, "0");
   document.getElementById("bVn").textContent = d.vn;
+  document.getElementById("bVnEn").textContent = d.en ? `(${d.en})` : "";
   document.getElementById("bVnEx").textContent = d.vn_b || "";
   document.getElementById("bVnEx").classList.toggle("dialog", isDialog);
   document.getElementById("bJp").innerHTML = d.jp || "";
