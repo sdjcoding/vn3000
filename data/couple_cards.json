@@ -8,9 +8,9 @@
     "jp": "",
     "jp_a": "A: こんにちは、ハニー、よく眠れましたか？\nB: とてもよく眠れました。あなたはどうですか？",
     "jp_b": "A: あなたも。朝のあなたは天使のように美しいです。\nB: あなたはいつも私にお世辞を言っていますか？",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "good morning",
+    "en_a": "A: Hello honey, did you sleep well?\nB: I slept very well. What about you?",
+    "en_b": "A: You too. You are as beautiful as an angel in the morning.\nB: Are you always flattering me?",
     "tag": "일상생활"
   },
   {
@@ -22,9 +22,9 @@
     "jp": "",
     "jp_a": "B: ハニー、眠いよ。\nA: だから寝てください、良い夢を見ましょう。",
     "jp_b": "B: 夜更かししないで、早めに寝ましょう。\nA: はい、愛しています。おやすみ。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Good night",
+    "en_a": "B: Honey, I'm sleepy.\nA: So go to sleep, sweet dreams.",
+    "en_b": "B: Go to bed early too, don't stay up late.\nA: Yes, I love you. Good night.",
     "tag": "일상생활"
   },
   {
@@ -36,9 +36,9 @@
     "jp": "",
     "jp_a": "B: 今朝は何を食べたいですか？\nA: フォーをください、私が最高のフォーを作ります。",
     "jp_b": "B: それで、少し待ってください。\nA: お手伝いさせてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "breakfast",
+    "en_a": "B: What do you want to eat this morning?\nA: Give me pho, I cook the best pho.",
+    "en_b": "B: So wait for me a bit.\nA: Let me help you.",
     "tag": "일상생활"
   },
   {
@@ -50,9 +50,9 @@
     "jp": "",
     "jp_a": "A: あなたが野菜を切って、私が肉を調理します。\nB: 塩を入れすぎないように注意してください。",
     "jp_b": "A: 心配しないでください、私はシェフです。\nB: なんとシェフだ！前回は燃え尽きました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Cook together",
+    "en_a": "A: You chop the vegetables, I'll cook the meat.\nB: Remember not to add too much salt.",
+    "en_b": "A: Don't worry, I'm a chef.\nB: What chef! Last time it burned out.",
     "tag": "일상생활"
   },
   {
@@ -64,9 +64,9 @@
     "jp": "",
     "jp_a": "B: ハニー、今日はお皿を洗ってください。\nA: 昨日洗ったばかりです。",
     "jp_b": "B: でも今日はとても疲れています。\nA: さて、休憩して、やらせてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Please wash the dishes",
+    "en_a": "B: Honey, please wash the dishes today.\nA: I just washed it yesterday.",
+    "en_b": "B: But today I'm very tired.\nA: Okay, take a break and let me do it.",
     "tag": "일상생활"
   },
   {
@@ -78,9 +78,9 @@
     "jp": "",
     "jp_a": "B: 洋服が多すぎるので、洗うのを手伝ってください。\nA: 機械に入れて乾燥させます。",
     "jp_b": "B: 白と色物の服を分別することを忘れないでください。\nA: わかっています、これが初めてではありません。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "wash",
+    "en_a": "B: There are too many clothes, please help me wash them.\nA: Let me put it in the machine so you can dry it.",
+    "en_b": "B: Remember to sort white and colored clothes.\nA: I know, it's not the first time.",
     "tag": "일상생활"
   },
   {
@@ -92,9 +92,9 @@
     "jp": "",
     "jp_a": "A: 今週末に家の掃除をします。\nB: 床を掃除するのですが、床を掃除してもらえますか？",
     "jp_b": "A: よし、じゃあ外食しよう。\nB: 素晴らしい！鍋が食べたいです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "weekend cleaning",
+    "en_a": "A: I'll clean the house this weekend.\nB: I sweep the floor, can you clean the floor?",
+    "en_b": "A: Ok, then let's eat out.\nB: Great! I want to eat hot pot.",
     "tag": "일상생활"
   },
   {
@@ -106,9 +106,9 @@
     "jp": "",
     "jp_a": "B: 私はカートを押します、あなたは物を選びます。\nA: 今日は何を買う必要がありますか?",
     "jp_b": "B: 牛乳、卵、野菜、果物。\nA: ビールを買ってくるのを忘れないでね。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "shopping supermarket",
+    "en_a": "B: I push the cart, you choose the things.\nA: What do I need to buy today?",
+    "en_b": "B: Milk, eggs, vegetables and some fruit.\nA: Don't forget to buy me beer.",
     "tag": "일상생활"
   },
   {
@@ -120,9 +120,9 @@
     "jp": "",
     "jp_a": "B: ハニー、どれを着ればいいの？\nA: 赤いドレスの方が美しくて、とてもよく似合っています。",
     "jp_b": "B: それでは、お化粧してお待ちしております。\nA: あなたはすでにきれいです、早くしないと遅れてしまいます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Prepare to go out",
+    "en_a": "B: Honey, which one should I wear?\nA: The red dress is more beautiful, it suits you very well.",
+    "en_b": "B: So I'll wait for you to put on some makeup.\nA: You're already pretty, hurry up or you'll be late.",
     "tag": "일상생활"
   },
   {
@@ -134,9 +134,9 @@
     "jp": "",
     "jp_a": "A: 私は仕事に行くので、あなたは家にいてください。\nB: 慎重に運転して、到着したらメールしてください。",
     "jp_b": "A: 昼になったら、一緒に食事するために電話します。\nB: はい、お待ちしています。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "go to work",
+    "en_a": "A: I'm going to work, you stay home.\nB: Drive carefully, text me when you get there.",
+    "en_b": "A: At noon, I will call you to eat with me.\nB: Yes, I'm waiting for you.",
     "tag": "일상생활"
   },
   {
@@ -148,9 +148,9 @@
     "jp": "",
     "jp_a": "B: 戻ってきましたか？今日は疲れていますか？\nA: 上司が私に仕事を割り当てすぎて、とても疲れています。",
     "jp_b": "B: 温かいスープを作りますよ。\nA: あなたは私の天使です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Return home after work",
+    "en_a": "B: Are you back? Are you tired today?\nA: I'm so tired, my boss assigned me too much work.",
+    "en_b": "B: I'll cook hot soup for you.\nA: You are my angel.",
     "tag": "일상생활"
   },
   {
@@ -162,9 +162,9 @@
     "jp": "",
     "jp_a": "A: 今週末どこに行きたいですか？\nB: ビーチに行きましょう、長いこと行っていないので。",
     "jp_b": "A: ブンタウかフーコックか？\nB: ちょうどブンタウ、近くて経済的です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Plan your weekend",
+    "en_a": "A: Where do you want to go this weekend?\nB: Let's go to the beach, I haven't been for a long time.",
+    "en_b": "A: Vung Tau or Phu Quoc?\nB: Just Vung Tau, close and economical.",
     "tag": "일상생활"
   },
   {
@@ -176,9 +176,9 @@
     "jp": "",
     "jp_a": "A: ハニー、起きて、もう遅いよ。\nB: あと5分寝させてください。",
     "jp_b": "A: 本当に 5 分、そうでないとくすぐられます。\nB: ハイハイ、起きてる、起きてる。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "wake up",
+    "en_a": "A: Honey, wake up, it's late.\nB: Let me sleep for five more minutes.",
+    "en_b": "A: Five minutes really, otherwise I'll tickle you.\nB: Hihi, I'm awake, I'm awake.",
     "tag": "일상생활"
   },
   {
@@ -190,9 +190,9 @@
     "jp": "",
     "jp_a": "B: コーヒーは飲みますか？作ってもらえますか？\nA: アイスミルクコーヒーをください。",
     "jp_b": "B: いつもアイスミルクコーヒー！\nA: なぜなら私はサイゴンで最高のビールを醸造しているからです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "cup of coffee",
+    "en_a": "B: Do you want some coffee? Can I make it for you?\nA: Please give me iced milk coffee.",
+    "en_b": "B: Always iced milk coffee!\nA: Because I brew the best in Saigon.",
     "tag": "일상생활"
   },
   {
@@ -204,9 +204,9 @@
     "jp": "",
     "jp_a": "A: もう昼食は食べましたか？\nB: いいえ、あなたからの電話を待っています。",
     "jp_b": "A: 我慢しないで外食しましょう。\nB: はい、後で同僚と行きます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Pack your lunch",
+    "en_a": "A: Have you eaten lunch yet?\nB: No, I'm waiting for you to call.",
+    "en_b": "A: Go out to eat, don't hold back.\nB: Yes, I'll go with my colleagues later.",
     "tag": "일상생활"
   },
   {
@@ -218,9 +218,9 @@
     "jp": "",
     "jp_a": "A: 私がどれだけあなたを愛しているか知っていますか？\nB: ご存知のように、私は毎日それを言います。",
     "jp_b": "A: 忘れてしまうのが怖いから。\nB: 私は決して忘れません、私もあなたを愛しています。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "say I love you",
+    "en_a": "A: Do you know how much I love you?\nB: You know, I say it every day.",
+    "en_b": "A: Because I'm afraid you'll forget.\nB: I will never forget, I love you too.",
     "tag": "애정 표현"
   },
   {
@@ -232,9 +232,9 @@
     "jp": "",
     "jp_a": "B: ハニー、あなたがいなくてとても寂しいです。\nA: 私もあなたがいなくて寂しいです、仕事がとても忙しいので。",
     "jp_b": "B: 今夜は早く帰ってきてください。\nA: できるだけ早く戻ってくることを約束します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "miss you",
+    "en_a": "B: Honey, I miss you so much.\nA: I miss you too, work keeps me so busy.",
+    "en_b": "B: Please come home early tonight.\nA: I promise, I will return as quickly as possible.",
     "tag": "애정 표현"
   },
   {
@@ -246,9 +246,9 @@
     "jp": "",
     "jp_a": "B: 抱きしめてください。\nA: どうしたのですか、何か問題がありますか？",
     "jp_b": "B: 何もない、ただあなたに抱きしめられたいだけ。\nA: ここに来て、私はあなたを永遠に抱きしめることができます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Hug",
+    "en_a": "B: Give me a hug.\nA: What's wrong, is something wrong?",
+    "en_b": "B: Nothing, just want to be hugged by you.\nA: Come here, I can hug you forever.",
     "tag": "애정 표현"
   },
   {
@@ -260,9 +260,9 @@
     "jp": "",
     "jp_a": "A: 今日のあなたはとても美しいですね。\nB: お世辞って本当ですか？",
     "jp_b": "A: 実を言うと、私の目にはあなたはいつも美しいです。\nB: あなたは一番おしゃべりな人です！",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Compliment a person's appearance",
+    "en_a": "A: You are very beautiful today.\nB: Is it true that you flatter me?",
+    "en_b": "A: I tell the truth, you are always beautiful in my eyes.\nB: You are the most talkative man!",
     "tag": "애정 표현"
   },
   {
@@ -274,9 +274,9 @@
     "jp": "",
     "jp_a": "B: 私たちが初めて会ったときのことを覚えていますか？\nA: 覚えておいてください、あなたは白いシャツを着ていました、とても美しいです。",
     "jp_b": "B: その時、私はもうあなたのことが好きでした。\nA: あなたも、それは運命です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Reminisce about the first time we met",
+    "en_a": "B: Do you remember the first time we met?\nA: Remember, you wore a white shirt, very beautiful.",
+    "en_b": "B: At that time, I already liked you.\nA: You too, it's destiny.",
     "tag": "애정 표현"
   },
   {
@@ -288,9 +288,9 @@
     "jp": "",
     "jp_a": "B: いつもそばにいてくれてありがとう。\nA: それは自然なことです。",
     "jp_b": "B: あなたに出会えてとても幸運です。\nA: あなたは最も幸運な人です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Express gratitude",
+    "en_a": "B: Thank you for always being by my side.\nA: That's a natural thing.",
+    "en_b": "B: I'm very lucky to have met you.\nA: You are the luckiest person.",
     "tag": "애정 표현"
   },
   {
@@ -302,9 +302,9 @@
     "jp": "",
     "jp_a": "A: 手を貸してください、そうすれば握ります。\nB: あなたの手はとても暖かいです。",
     "jp_b": "A: あなたがいるから、私は暖かい。\nB: とても優しい話し方ですね！",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "hold hand",
+    "en_a": "A: Give me your hand and I'll hold it.\nB: Your hand is so warm.",
+    "en_b": "A: Because I have you, I am warm.\nB: You're so soft-spoken!",
     "tag": "애정 표현"
   },
   {
@@ -316,9 +316,9 @@
     "jp": "",
     "jp_a": "A: キスしてください。\nB: なぜそんなに変なことを聞​​くのですか？キスして！",
     "jp_b": "A: ただ丁寧に聞きたいだけです。\nB: 頬が赤くなるほどの礼儀とは何ですか？",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "ask for a kiss",
+    "en_a": "A: Please give me a kiss.\nB: Why are you asking so strangely? Kiss me!",
+    "en_b": "A: I just want to ask politely.\nB: What kind of politeness makes your cheeks so red?",
     "tag": "애정 표현"
   },
   {
@@ -330,9 +330,9 @@
     "jp": "",
     "jp_a": "A: ベイビー、ここに来て。\nB: なぜ私をそんなに甘いと呼ぶのですか？",
     "jp_b": "A: だってあなたは私の最愛の人だから。\nB: なんでしょう？はっきり言ってください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "called by nickname",
+    "en_a": "A: Baby, come here to me.\nB: Why do you call me so sweet?",
+    "en_b": "A: Because you are my darling.\nB: What do you want? Say it straight.",
     "tag": "애정 표현"
   },
   {
@@ -344,9 +344,9 @@
     "jp": "",
     "jp_a": "A: 目を閉じて、あなたにプレゼントがあります。\nB: あなたの贈り物は何ですか？",
     "jp_b": "A: 目を開けると、バラの花束。\nB: ああ、なんてことだ、あなたは私をとても感動させます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "surprise gift",
+    "en_a": "A: Close your eyes, I have a gift for you.\nB: What's your gift?",
+    "en_b": "A: Open your eyes, a bouquet of roses.\nB: Oh my god, you make me so emotional.",
     "tag": "애정 표현"
   },
   {
@@ -358,9 +358,9 @@
     "jp": "",
     "jp_a": "B: あなたは本当に私が今まで会った中で最高の人です。\nA: 彼は恋人としてすべきことをしただけです。",
     "jp_b": "B: 私はあなたを永遠に大切にします。\nA: 私も、あなたは私のすべてです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "When I'm emotional",
+    "en_a": "B: You are truly the best person I have ever met.\nA: He just did what a lover should do.",
+    "en_b": "B: I will cherish you forever.\nA: Me too, you are my everything.",
     "tag": "애정 표현"
   },
   {
@@ -372,9 +372,9 @@
     "jp": "",
     "jp_a": "B: 私は皆さんにとても満足しています。\nA: いつまでも幸せでいてほしいです。",
     "jp_b": "B: あなたがいれば十分です。\nA: 決して悲しまないように頑張ります。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "say you are happy",
+    "en_a": "B: I'm very happy with you guys.\nA: I want you to be happy forever.",
+    "en_b": "B: Having you is enough.\nA: I will try so that you are never sad.",
     "tag": "애정 표현"
   },
   {
@@ -386,9 +386,9 @@
     "jp": "",
     "jp_a": "A: ハニー、言いたいことがあります。\nB: 何が起こっているのですか、なぜそんなに深刻ですか？",
     "jp_b": "A: 本当に愛しています。\nB: あなたは私を笑わせてくれます、私もあなたを愛しています。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "confess",
+    "en_a": "A: Honey, I want to tell you something.\nB: What's going on, why is it so serious?",
+    "en_b": "A: I really love you.\nB: You make me laugh, I love you too.",
     "tag": "애정 표현"
   },
   {
@@ -400,9 +400,9 @@
     "jp": "",
     "jp_a": "B: 何してるの？\nA: あなたのことを考えています。",
     "jp_b": "B: 拗ねてるの？なぜこんなに自然な甘さなのでしょうか？\nA: 理由もなくあなたを愛しています。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "send and receive messages",
+    "en_a": "B: What are you doing?\nA: I'm thinking about you.",
+    "en_b": "B: Are you sulking? Why is it so naturally sweet?\nA: Love you without any reason.",
     "tag": "애정 표현"
   },
   {
@@ -414,9 +414,9 @@
     "jp": "",
     "jp_a": "A: おはようございます、恋人。\nB: そんなに早く起きますか？",
     "jp_b": "A: 良い一日をお祈りしたいと思います。\nB: あなたをとても愛しています。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "morning message",
+    "en_a": "A: Good morning, sweetheart.\nB: You get up so early?",
+    "en_b": "A: I want to be the first to wish you a good day.\nB: I love you so much.",
     "tag": "애정 표현"
   },
   {
@@ -428,9 +428,9 @@
     "jp": "",
     "jp_a": "B: 今日は何の映画を見るべきですか?\nA: アクション映画ですか、それとも恋愛映画ですか？",
     "jp_b": "B: ロマンチックな映画を見たいです。\nA: それで、その映画を見ましょう、ポップコーンを買います。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "cinema",
+    "en_a": "B: What movie should I watch today?\nA: Action movie or romantic movie?",
+    "en_b": "B: I want to watch a romantic movie.\nA: So let's watch that movie, I'll buy popcorn.",
     "tag": "데이트"
   },
   {
@@ -442,9 +442,9 @@
     "jp": "",
     "jp_a": "A: 何を飲みますか？コーヒーとかミルクティーとか？\nB: パールミルクティーをください。",
     "jp_b": "A: 内側に座りますか、それとも外側に座りますか？\nB: 窓の近くに座りましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "cafe",
+    "en_a": "A: What do you drink? Coffee or milk tea?\nB: Give me pearl milk tea.",
+    "en_b": "A: Sit inside or outside?\nB: Let's sit near the window.",
     "tag": "데이트"
   },
   {
@@ -456,9 +456,9 @@
     "jp": "",
     "jp_a": "A: あなたが食べ物を選び、私が支払います。\nB: 礼儀正しくして、一緒に食べましょう。",
     "jp_b": "A: 今日はあなたを治療したいと思います。\nB: なので一番高いものを選びます！",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "restaurant",
+    "en_a": "A: You choose the food, I pay.\nB: Why don't you be polite, let's eat together.",
+    "en_b": "A: Today I want to treat you.\nB: So I choose the most expensive one!",
     "tag": "데이트"
   },
   {
@@ -470,9 +470,9 @@
     "jp": "",
     "jp_a": "B: 天気がとてもいいので、公園に散歩に行きましょう。\nA: 水を持ってきてくれました。",
     "jp_b": "B: 本当に思慮深いですね。\nA: 大事にしたいから。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "take a walk in the park",
+    "en_a": "B: The weather is so beautiful, let's go for a walk in the park.\nA: I brought you water.",
+    "en_b": "B: You're really thoughtful.\nA: Because I want to take care of you.",
     "tag": "데이트"
   },
   {
@@ -484,9 +484,9 @@
     "jp": "",
     "jp_a": "B: 海はとても美しいです！\nA: 写真を撮りましょう。",
     "jp_b": "B: 忘れずに私のために美しい写真を撮ってください。\nA: 私にとって、あなたはいつも一番美しいです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "beach day",
+    "en_a": "B: The sea is so beautiful!\nA: Let's take pictures.",
+    "en_b": "B: Remember to take beautiful photos for me.\nA: To me, you are always the most beautiful.",
     "tag": "데이트"
   },
   {
@@ -498,9 +498,9 @@
     "jp": "",
     "jp_a": "A: 来月はダラットに行きます。\nB: すごい、まだ行ったことがないんです。",
     "jp_b": "A: もうホテルを予約しました。\nB: 神様、本当に早いですね！",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "travel plan",
+    "en_a": "A: Next month I will go to Da Lat.\nB: Great, I've never been there before.",
+    "en_b": "A: I booked the hotel already.\nB: God, you're so fast!",
     "tag": "데이트"
   },
   {
@@ -512,9 +512,9 @@
     "jp": "",
     "jp_a": "A: この部屋を見てもいいですか？\nB: 海が見えてとても綺麗です。",
     "jp_b": "A: あなたのためだけに注文しました。\nB: ありがとう、愛しています。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Check in to the hotel",
+    "en_a": "A: Can I see this room?\nB: It's very beautiful, with a sea view.",
+    "en_b": "A: I ordered it just for you.\nB: Thank you, I love you.",
     "tag": "데이트"
   },
   {
@@ -526,9 +526,9 @@
     "jp": "",
     "jp_a": "B: ハニー、写真を撮って。\nA: 少し横に立った方が綺麗です。",
     "jp_b": "B: 綺麗じゃないですか？\nA: とても美しいので、フェイスブックに投稿して自慢させてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "take a photo",
+    "en_a": "B: Honey, take a photo for me.\nA: I stand a little sideways, it's more beautiful.",
+    "en_b": "B: Isn't it beautiful?\nA: It's so beautiful, let me post it on Facebook to show off.",
     "tag": "데이트"
   },
   {
@@ -540,9 +540,9 @@
     "jp": "",
     "jp_a": "A: あなたのためにどんな歌を歌えばいいですか？\nB: ファン・マン・クインの「Ex-Lover」を歌ってみましょう。",
     "jp_b": "A: その歌はとても悲しいので、楽しい歌を歌いましょう。\nB: それではデュエットを歌いましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "karaoke",
+    "en_a": "A: What song should I sing for you?\nB: Let's sing \"Ex-Lover\" by Phan Manh Quynh.",
+    "en_b": "A: That song is so sad, let's sing a happy song.\nB: So let's sing a duet.",
     "tag": "데이트"
   },
   {
@@ -554,9 +554,9 @@
     "jp": "",
     "jp_a": "B: このシャツは私に似合っていると思いますか?\nA: とてもよく似合っていて、何を着ても美しく見えます。",
     "jp_b": "B: 褒めることしかできません。\nA: それが真実だからです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "shopping",
+    "en_a": "B: Do you think this shirt suits me?\nA: It suits me very well, I look beautiful in whatever I wear.",
+    "en_b": "B: I can only praise.\nA: Because that's the truth.",
     "tag": "데이트"
   },
   {
@@ -568,9 +568,9 @@
     "jp": "",
     "jp_a": "A: お腹がすきましたか？何か食べましょう。\nB: ライスペーパーを焼いて食べたい。",
     "jp_b": "A: 買わせてください、あなたはここに立ってください。\nB: もっとお茶を買ってきてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "night market",
+    "en_a": "A: Are you hungry? Let's eat something.\nB: I want to eat grilled rice paper.",
+    "en_b": "A: Let me buy it, you stand here.\nB: Buy me more tea.",
     "tag": "데이트"
   },
   {
@@ -582,9 +582,9 @@
     "jp": "",
     "jp_a": "B: 歴史は好きですか？\nA: はい、特に骨董品です。",
     "jp_b": "B: アートがもっと好きになりました。\nA: だから私たちはお互いを補い合うのです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "museum",
+    "en_a": "B: Do you like history?\nA: Yes, especially antiques.",
+    "en_b": "B: I like art more.\nA: So we complement each other.",
     "tag": "데이트"
   },
   {
@@ -596,9 +596,9 @@
     "jp": "",
     "jp_a": "B: ジェットコースターはとても怖いです！\nA: 私はここにいるよ、怖がらないで。",
     "jp_b": "B: 私の手をしっかり握ると約束してください。\nA: 私はあなたの手を決して離しません。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "amusement park",
+    "en_a": "B: I'm so afraid of roller coasters!\nA: I'm here, don't be afraid.",
+    "en_b": "B: Promise to hold my hand tightly.\nA: I will never let go of your hand.",
     "tag": "데이트"
   },
   {
@@ -610,9 +610,9 @@
     "jp": "",
     "jp_a": "A: サイゴンの夜はとても美しいです。\nB: 私は街の明かりを見るのが好きです。",
     "jp_b": "A: 美しいですが、あなたほどではありません。\nB: またまたお世辞。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "See the night scene",
+    "en_a": "A: Saigon at night is so beautiful.\nB: I like watching city lights.",
+    "en_b": "A: Beautiful but not as good as you.\nB: Flattery again.",
     "tag": "데이트"
   },
   {
@@ -624,9 +624,9 @@
     "jp": "",
     "jp_a": "A: もう遅いので家まで送ってください。\nB: 今日はとても楽しいです。",
     "jp_b": "A: 明日また出かけましょう。\nB: 約束したのに、約束を反故にしないでください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "End date",
+    "en_a": "A: It's late, please take me home.\nB: Today is so fun.",
+    "en_b": "A: Let's go out again tomorrow.\nB: You promised, don't go back on your word.",
     "tag": "데이트"
   },
   {
@@ -638,9 +638,9 @@
     "jp": "",
     "jp_a": "B: なぜそんなに遅いのですか？ 1時間も待ってるんです。\nA: ごめんなさい、渋滞です。",
     "jp_b": "B: 毎回渋滞！\nA: ごめんなさい、怒らないでください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "When you're late for an appointment",
+    "en_a": "B: Why are you so late? I've been waiting for an hour.\nA: Sorry, traffic jam.",
+    "en_b": "B: Traffic jam every time!\nA: I'm sorry, don't be angry.",
     "tag": "갈등/화해"
   },
   {
@@ -652,9 +652,9 @@
     "jp": "",
     "jp_a": "B: なぜ携帯を見続けるのですか？\nA: ただニュースを見ているところです。",
     "jp_b": "B: 私たちは一緒に食事に行きます、あなたは私に注意しなければなりません。\nA: ごめんなさい、携帯電話をしまいました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "When I just look at my phone",
+    "en_a": "B: Why do you keep looking at your phone?\nA: I'm just watching the news.",
+    "en_b": "B: We go out to eat together, you have to pay attention to me.\nA: Sorry, I put my phone away.",
     "tag": "갈등/화해"
   },
   {
@@ -666,9 +666,9 @@
     "jp": "",
     "jp_a": "B: あなたにメールをし続けるあの女の子は誰ですか?\nA: ただの同僚、ただ仕事をするだけ。",
     "jp_b": "B: あんなに長いメッセージを送ってくる同僚は一体どんな人なのでしょうか？\nA: ほら、全部仕事の話だよ。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "jealousy",
+    "en_a": "B: Who is that girl that keeps texting you?\nA: Just colleagues, just work.",
+    "en_b": "B: What kind of colleague has such long messages?\nA: Look, it's all about work.",
     "tag": "갈등/화해"
   },
   {
@@ -680,9 +680,9 @@
     "jp": "",
     "jp_a": "A: 私はあなたのことを誤解していました。\nB: 誤解していません、はっきりとわかります。",
     "jp_b": "A: 説明させてください。\nB: わかりました、あなたはそれを言います。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "misunderstanding",
+    "en_a": "A: I misunderstood you.\nB: I don't misunderstand, I see clearly.",
+    "en_b": "A: Let me explain it to you.\nB: Okay, you say it.",
     "tag": "갈등/화해"
   },
   {
@@ -694,9 +694,9 @@
     "jp": "",
     "jp_a": "A: 私は間違っていました、許してください。\nB: 二度としないと約束しますか？",
     "jp_b": "A: 約束します、もう二度とあなたを悲しませることはありません。\nB: だから今回はあなたを信頼します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Sorry",
+    "en_a": "A: I was wrong, please forgive me.\nB: Do you promise not to do it again?",
+    "en_b": "A: I promise, I will never make you sad again.\nB: So I trust you this time.",
     "tag": "갈등/화해"
   },
   {
@@ -708,9 +708,9 @@
     "jp": "",
     "jp_a": "A: もう黙ってないで、何か言ってください。\nB: 何も言うことはありません。",
     "jp_b": "A: 私に怒っているなら、言ってください。\nB: 自分で考えてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "silent protest",
+    "en_a": "A: Don't stay silent anymore, say something.\nB: I have nothing to say.",
+    "en_b": "A: If you're angry at me, tell me.\nB: Think for yourself.",
     "tag": "갈등/화해"
   },
   {
@@ -722,9 +722,9 @@
     "jp": "",
     "jp_a": "B: とても怒っています！\nA: わかっています、申し訳ありません。",
     "jp_b": "B: 申し訳ありませんが十分ではありません!\nA: では、怒るのをやめさせるにはどうすればいいでしょうか？",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "When you are very angry",
+    "en_a": "B: I'm so angry!\nA: I know, I'm sorry.",
+    "en_b": "B: Sorry is not enough!\nA: So what should I do to make you stop being angry?",
     "tag": "갈등/화해"
   },
   {
@@ -736,9 +736,9 @@
     "jp": "",
     "jp_a": "B: あるいは、しばらく離れたほうがいいかもしれません。\nA: そんなこと言わないで、私はあなたを失うわけにはいきません。",
     "jp_b": "B: 私はとても疲れている。\nA: 諦めずに一緒に解決しましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "threaten to break up",
+    "en_a": "B: Or maybe we should just go away for a while.\nA: Don't say that, I can't lose you.",
+    "en_b": "B: I'm so tired.\nA: Let's solve it together, don't give up.",
     "tag": "갈등/화해"
   },
   {
@@ -750,9 +750,9 @@
     "jp": "",
     "jp_a": "A: 平和を作りましょう。\nB: それを変えると約束しなければなりません。",
     "jp_b": "A: 約束します、これからはもっとあなたに優しくしていきます。\nB: こっちにおいで、抱きしめてあげるよ。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "reconcile",
+    "en_a": "A: Let's make peace.\nB: You must promise to change that.",
+    "en_b": "A: I promise, from now on I will be better to you.\nB: Come here, I'll give you a hug.",
     "tag": "갈등/화해"
   },
   {
@@ -764,9 +764,9 @@
     "jp": "",
     "jp_a": "B: 信じたいけど怖い。\nA: それを証明するチャンスをください。",
     "jp_b": "B: もう一度だけ。\nA: 私から離れないでくれてありがとう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "restore confidence",
+    "en_a": "B: I want to believe you, but I'm scared.\nA: Give me a chance to prove it.",
+    "en_b": "B: Just one more time.\nA: Thank you for not leaving me.",
     "tag": "갈등/화해"
   },
   {
@@ -778,9 +778,9 @@
     "jp": "",
     "jp_a": "A: 結婚について考えたことはありますか？\nB: 私はまだ25歳です、兄弟。",
     "jp_b": "A: 2年以内には結婚したいと思っています。\nB: だからお金を節約しなければなりません。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "marriage story",
+    "en_a": "A: Have you thought about getting married?\nB: I'm only 25, bro.",
+    "en_b": "A: I want to marry you within the next 2 years.\nB: So you have to save money.",
     "tag": "미래 계획"
   },
   {
@@ -792,9 +792,9 @@
     "jp": "",
     "jp_a": "A: 今年のテト、あなたの故郷に遊びに帰ります。\nB: あなたの両親は私のことを嫌っているのではないかと思います。",
     "jp_b": "A: 心配しないでください、私の両親はとても穏やかです。\nB: あなたの両親にどんなプレゼントを買えばいいでしょうか？",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "meet my parents",
+    "en_a": "A: This Tet, I'll come back to your hometown to play.\nB: I'm afraid your parents don't like me.",
+    "en_b": "A: Don't worry, my parents are very easy-going.\nB: What gift should I buy for your parents?",
     "tag": "미래 계획"
   },
   {
@@ -806,9 +806,9 @@
     "jp": "",
     "jp_a": "A: 引っ越して一緒に住もうよ。\nB: 本当のことを言っていますか？",
     "jp_b": "A: 毎朝あなたに会いたいです。\nB: それでは、家を探しましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Start living together",
+    "en_a": "A: Let's move in and live together.\nB: Are you telling the truth?",
+    "en_b": "A: I want to see you every morning.\nB: So let's find a house.",
     "tag": "미래 계획"
   },
   {
@@ -820,9 +820,9 @@
     "jp": "",
     "jp_a": "B: 子供は何人欲しいですか?\nA: 私は男の子と女の子の2人の子供が欲しいです。",
     "jp_b": "B: 私も、うまくいくことを願っています。\nA: お子様に素敵な名前を付けてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "birth plan",
+    "en_a": "B: How many children do you want?\nA: I want two children, one boy and one girl.",
+    "en_b": "B: Me too, I hope it goes well.\nA: Give your child a beautiful name.",
     "tag": "미래 계획"
   },
   {
@@ -834,9 +834,9 @@
     "jp": "",
     "jp_a": "B: 私の上司になりたいですか？\nA: はい、自分の会社を開きたいです。",
     "jp_b": "B: 心から応援させていただきます。\nA: あなたがいると私のモチベーションが上がります。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Career/Startup",
+    "en_a": "B: Do you want to be my boss?\nA: Yes, I want to open my own company.",
+    "en_b": "B: I will support you wholeheartedly.\nA: Having you makes me motivated.",
     "tag": "미래 계획"
   },
   {
@@ -848,9 +848,9 @@
     "jp": "",
     "jp_a": "A: 貯蓄計画を立ててみましょう。\nB: 毎月いくら貯金すればいいの？",
     "jp_b": "A: 給料の30％くらい。\nB: だからもうすぐ家が建つよ。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "savings plan",
+    "en_a": "A: Let's make a savings plan.\nB: How much to save each month?",
+    "en_b": "A: About 30% of salary.\nB: So I will have a house soon.",
     "tag": "미래 계획"
   },
   {
@@ -862,9 +862,9 @@
     "jp": "",
     "jp_a": "B: 家はどこで買えばいいの？\nA: 第 7 地区、両社の近く。",
     "jp_b": "B: その地域はとても物価が高いです。\nA: お金を稼いでみます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "buy a house",
+    "en_a": "B: Where do I buy a house?\nA: District 7, close to both of our companies.",
+    "en_b": "B: That area is very expensive.\nA: I will try to make money.",
     "tag": "미래 계획"
   },
   {
@@ -876,9 +876,9 @@
     "jp": "",
     "jp_a": "B: 私は一度ヨーロッパに行くことを夢見ています。\nA: 新婚旅行でパリへ行く予定です。",
     "jp_b": "B: 約束します。\nA: 私はあなたとの約束を決して破りません。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "dream trip",
+    "en_a": "B: I dream of going to Europe once.\nA: I'm going on my honeymoon to Paris.",
+    "en_b": "B: I promise.\nA: I never break my promise to you.",
     "tag": "미래 계획"
   },
   {
@@ -890,9 +890,9 @@
     "jp": "",
     "jp_a": "A: 年を取ったら、故郷に戻って暮らすつもりです。\nB: 家庭菜園をしたり、犬を育てたり、孫と遊んだり。",
     "jp_b": "A: それが彼が望む人生だ。\nB: 私も、あなたがいれば十分です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "retirement plan",
+    "en_a": "A: When I'm old, I'll go back to my hometown to live.\nB: Have a vegetable garden, raise a dog, and play with grandchildren.",
+    "en_b": "A: That's the life he wants.\nB: Me too, having you is enough.",
     "tag": "미래 계획"
   },
   {
@@ -904,9 +904,9 @@
     "jp": "",
     "jp_a": "B: 年をとるのが怖いですか？\nA: いいえ、私があなたと一緒に年を重ねる限り。",
     "jp_b": "B: あなたはとても優しいです。\nA: 彼は真実を語った、それが彼の願いだった。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "grow old together",
+    "en_a": "B: Are you afraid of getting old?\nA: No, as long as I grow old with you.",
+    "en_b": "B: You're so sweet.\nA: He told the truth, that was his wish.",
     "tag": "미래 계획"
   },
   {
@@ -918,9 +918,9 @@
     "jp": "",
     "jp_a": "B: ハニー、とても悲しいです。\nA: 何か言いたいことはありますか？",
     "jp_b": "B: 仕事はストレスがたまりすぎて、耐えられません。\nA: こっちに来て、抱きしめて。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "When you're depressed",
+    "en_a": "B: Honey, I'm so sad.\nA: Is there something to tell you?",
+    "en_b": "B: Work is so stressful, I can't stand it.\nA: Come here, give me a hug.",
     "tag": "감정/위로"
   },
   {
@@ -932,9 +932,9 @@
     "jp": "",
     "jp_a": "A: 今日、私は非常にストレスを感じています。\nB: あなたの上司はまたあなたに怒鳴っていますか？",
     "jp_b": "A: はい、仕事を辞めたいです。\nB: 落ち着いて、明日のことを考えて、今は休んでもいいです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "emphasize",
+    "en_a": "A: Today I'm extremely stressed.\nB: Is your boss yelling at you again?",
+    "en_b": "A: Yes, I want to quit my job.\nB: Calm down, think tomorrow, now you can rest.",
     "tag": "감정/위로"
   },
   {
@@ -946,9 +946,9 @@
     "jp": "",
     "jp_a": "B: どうすればいいのかわかりません。\nA: 私はここにいます、心配しないでください。",
     "jp_b": "B: ありがとう、あなたは私のサポートです。\nA: あなたが私を必要とするときはいつでも、私はここにいます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "appease",
+    "en_a": "B: I don't know what to do.\nA: I'm here, don't worry.",
+    "en_b": "B: Thank you, you are my support.\nA: Anytime you need me, I'll be here.",
     "tag": "감정/위로"
   },
   {
@@ -960,9 +960,9 @@
     "jp": "",
     "jp_a": "B: おい、昇給したよ！\nA: 本当に？おめでとう。",
     "jp_b": "B: 今夜、レストランでのディナーにご招待します。\nA: それならレストランを予約して、たくさん食べます！",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "share happy moments",
+    "en_a": "B: Hey man, I got a raise!\nA: Really? Congratulations.",
+    "en_b": "B: Tonight I invite you to dinner at a restaurant.\nA: Then book a restaurant, I'll eat a lot!",
     "tag": "감정/위로"
   },
   {
@@ -974,9 +974,9 @@
     "jp": "",
     "jp_a": "A: 今日、私の祖父が亡くなりました。\nB: ああ、大丈夫ですか？",
     "jp_b": "A: とても悲しいですが、強くならなければなりません。\nB: 私はあなたと一緒にお葬式に行きます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Share sad days",
+    "en_a": "A: Today my grandfather passed away.\nB: Oh my god, are you okay?",
+    "en_b": "A: I'm very sad, but I have to be strong.\nB: I will go to the funeral with you.",
     "tag": "감정/위로"
   },
   {
@@ -988,9 +988,9 @@
     "jp": "",
     "jp_a": "B: もう上司に怒らないでください。\nA: 彼は自分自身をコントロールできなかった。",
     "jp_b": "B: 深呼吸してください、私はここにいます。\nA: あなたと一緒にいると、気持ちが落ち着くのです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "mitigate",
+    "en_a": "B: Don't be angry with your boss anymore.\nA: He couldn't control himself.",
+    "en_b": "B: Take a deep breath, I'm here.\nA: With you I feel calmer.",
     "tag": "감정/위로"
   },
   {
@@ -1002,9 +1002,9 @@
     "jp": "",
     "jp_a": "B: あなたならできる、私はあなたを信じています。\nA: 残念ながらそれはできません。",
     "jp_b": "B: あなたは素晴らしいです、自分を疑わないでください。\nA: あなたのサポートがあれば、私は何でもできます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "encourage",
+    "en_a": "B: You can do it, I believe in you.\nA: I'm afraid I can't do it.",
+    "en_b": "B: You're great, don't doubt yourself.\nA: With your support I can do anything.",
     "tag": "감정/위로"
   },
   {
@@ -1016,9 +1016,9 @@
     "jp": "",
     "jp_a": "A: 明日面接なのですが、とても緊張しています。\nB: さあ、もう十分です。",
     "jp_b": "A: 落ちたらどうしますか？\nB: 私はここにいます、心配しないでください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "interview support",
+    "en_a": "A: I have an interview tomorrow, I'm so nervous.\nB: Go ahead, you're good enough.",
+    "en_b": "A: What if you fall?\nB: I'm here, don't worry.",
     "tag": "감정/위로"
   },
   {
@@ -1030,9 +1030,9 @@
     "jp": "",
     "jp_a": "B: 私は十分ではないように感じます。\nA: あなたは私が知っている中で最も素晴らしい人です。",
     "jp_b": "B: 愛しているから言ったのです。\nA: 彼はそれが真実だったからそう言った。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "diffidence",
+    "en_a": "B: I feel like I'm not good enough.\nA: You are the most wonderful person I know.",
+    "en_b": "B: I said it because I love you.\nA: He said it because it was the truth.",
     "tag": "감정/위로"
   },
   {
@@ -1044,9 +1044,9 @@
     "jp": "",
     "jp_a": "B: とても寂しいよ、ハニー。\nA: そんなこと思わないで、私はいつも一緒だよ。",
     "jp_b": "B: 今でも時々空っぽに感じることがあります。\nA: 分かりました、どこかリラックスする場所に行きましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "loneliness",
+    "en_a": "B: I'm so lonely, honey.\nA: Don't think like that, I'm always with you.",
+    "en_b": "B: Sometimes I still feel empty.\nA: I understand, let's go somewhere to relax.",
     "tag": "감정/위로"
   },
   {
@@ -1058,9 +1058,9 @@
     "jp": "",
     "jp_a": "B: ハニー、熱があります。\nA: 薬を買ってあげましょう。",
     "jp_b": "B: 体温を測りました。\nA: 38度になると、水をたくさん飲まなければなりません。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "When you're sick",
+    "en_a": "B: Honey, I have a fever.\nA: Let me buy medicine for you.",
+    "en_b": "B: I took your temperature.\nA: 38 degrees, you have to drink a lot of water.",
     "tag": "건강/돌봄"
   },
   {
@@ -1072,9 +1072,9 @@
     "jp": "",
     "jp_a": "A: 病院に行きなさい、もう我慢しないでください。\nB: 私は注射がとても怖いです。",
     "jp_b": "A: 私はあなたと一緒です、恐れることはありません。\nB: いつもお世話になりありがとうございます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "to the hospital",
+    "en_a": "A: Go to the hospital, don't take it anymore.\nB: I'm very afraid of injections.",
+    "en_b": "A: I'm with you, don't be afraid.\nB: Thank you for always taking care of me.",
     "tag": "건강/돌봄"
   },
   {
@@ -1086,9 +1086,9 @@
     "jp": "",
     "jp_a": "A: 明日ジムに行きましょう。\nB: 私は激しいトレーニングは好きではありません。",
     "jp_b": "A: ということで、朝ジョギングに行きます。\nB: 分かった、早く起きて電話して。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "do exercise",
+    "en_a": "A: Let's go to the gym tomorrow.\nB: I don't like heavy training.",
+    "en_b": "A: So I go jogging in the morning.\nB: Ok, wake up early and call me.",
     "tag": "건강/돌봄"
   },
   {
@@ -1100,9 +1100,9 @@
     "jp": "",
     "jp_a": "B: 体重を減らさなければなりません。\nA: あなたはすでに美しいので、その必要はありません。",
     "jp_b": "B: 私の服は似合わない。\nA: だから私と一緒にそれを減らすことができます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "diet",
+    "en_a": "B: I have to lose weight.\nA: You're already beautiful, no need.",
+    "en_b": "B: My clothes don't fit.\nA: So you can reduce it with me.",
     "tag": "건강/돌봄"
   },
   {
@@ -1114,9 +1114,9 @@
     "jp": "",
     "jp_a": "A: 十分な睡眠を取らなければなりません。\nB: 仕事が遅すぎます。",
     "jp_b": "A: 健康は仕事よりも大切です。\nB: 分かった、早く寝ます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Sleep",
+    "en_a": "A: You must get enough sleep.\nB: I work too late.",
+    "en_b": "A: Health is more important than work.\nB: I know, I'll sleep early.",
     "tag": "건강/돌봄"
   },
   {
@@ -1128,9 +1128,9 @@
     "jp": "",
     "jp_a": "B: 食べましたか？\nA: いいえ、忙しすぎます。",
     "jp_b": "B: 時間通りに食べなければなりません！\nA: 食べ物を注文します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Take care of your meals",
+    "en_a": "B: Have you eaten?\nA: No, I'm too busy.",
+    "en_b": "B: You must eat on time!\nA: I'll order you food.",
     "tag": "건강/돌봄"
   },
   {
@@ -1142,9 +1142,9 @@
     "jp": "",
     "jp_a": "B: 肩が疲れているのでマッサージしましょう。\nA: あなたの手がとても暖かくて、とても快適です。",
     "jp_b": "B: あなたは働きすぎました。\nA: マッサージしてもらえると元気になりますよ。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "massage",
+    "en_a": "B: Your shoulder is tired, let me massage it for you.\nA: Your hands are so warm, so comfortable.",
+    "en_b": "B: You've been working too much.\nA: If you massage me, I'll be fine.",
     "tag": "건강/돌봄"
   },
   {
@@ -1156,9 +1156,9 @@
     "jp": "",
     "jp_a": "A: 今週末、あなたの実家に行きましょう。\nB: お母さんが食べたいものは何でも買ってあげるよ。",
     "jp_b": "A: お母さんは果物が好きで、特にドリアンが好きです。\nB: ということでドリアンを買いました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Visit your spouse's house",
+    "en_a": "A: Let's go to your parents' house this weekend.\nB: Whatever your mother likes to eat, I'll buy it for you.",
+    "en_b": "A: Mom likes fruit, especially durian.\nB: So I bought durian.",
     "tag": "가족/사회"
   },
   {
@@ -1170,9 +1170,9 @@
     "jp": "",
     "jp_a": "A: 今夜友達が集まるので、一緒に行きます。\nB: とても恥ずかしくて、誰も知りません。",
     "jp_b": "A: と紹介されましたが、みんな可愛いですね。\nB: だから、私を放っておけないんです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "friends meet",
+    "en_a": "A: Tonight my friends are gathering, I'll go with you.\nB: I'm so shy, I don't know anyone.",
+    "en_b": "A: He introduced, everyone is so cute.\nB: So you can't leave me alone.",
     "tag": "가족/사회"
   },
   {
@@ -1184,9 +1184,9 @@
     "jp": "",
     "jp_a": "B: 酔っ払って早く帰ってくるんですね。\nA: 少し飲みます。",
     "jp_b": "B: 誘ってくる男性とは行かないでください。\nA: 心配しないでください、私にはあなたしかいません。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "have dinner together",
+    "en_a": "B: You're drunk and come home early.\nA: I'll drink a little.",
+    "en_b": "B: Don't go with guys who invite you.\nA: Don't worry, I only have you.",
     "tag": "가족/사회"
   },
   {
@@ -1198,9 +1198,9 @@
     "jp": "",
     "jp_a": "A: 今週末友人の結婚式に出席します。\nB: 何を着ればいいですか？",
     "jp_b": "A: アオザイを着ると、あなたは美しく見えます。\nB: 新しいセットを縫います。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "attend a wedding",
+    "en_a": "A: Going to my friend's wedding this weekend.\nB: What should I wear?",
+    "en_b": "A: Wear ao dai, you look beautiful in it.\nB: I'm going to sew a new set.",
     "tag": "가족/사회"
   },
   {
@@ -1212,9 +1212,9 @@
     "jp": "",
     "jp_a": "B: 今年のテトには故郷に帰れない。\nA: どうしたの、どうしたの？",
     "jp_b": "B: 母が病気なので、早く帰らなければなりません。\nA: 一緒に来てください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Holidays (Tet)",
+    "en_a": "B: I can't go back to my hometown this Tet.\nA: What's wrong, what's wrong?",
+    "en_b": "B: My mother is sick, I have to go home early.\nA: Please come with me.",
     "tag": "가족/사회"
   },
   {
@@ -1226,9 +1226,9 @@
     "jp": "",
     "jp_a": "A: もうお母さんに電話しましたか？\nB: いいえ、今夜電話します。",
     "jp_b": "A: お母さんもあなたの声を聞いてとても喜ぶでしょう。\nB: わかっています、母がとても恋しいです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "call your parents",
+    "en_a": "A: Have you called mom yet?\nB: No, I'll call tonight.",
+    "en_b": "A: Your mother will be very happy to hear your voice.\nB: I know, I miss my mother so much.",
     "tag": "가족/사회"
   },
   {
@@ -1240,9 +1240,9 @@
     "jp": "",
     "jp_a": "B: 私を愛している人、ナムさんです。\nA: みなさんこんにちは、初めまして。",
     "jp_b": "B: 彼は私にとても良くしてくれます。\nA: あなたは素晴らしい人です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Introduce to friends",
+    "en_a": "B: This is the person who loves me, Mr. Nam.\nA: Hello everyone, nice to meet you.",
+    "en_b": "B: He is very good to me.\nA: You are a wonderful person.",
     "tag": "가족/사회"
   },
   {
@@ -1254,9 +1254,9 @@
     "jp": "",
     "jp_a": "B: 二人の写真をFacebookに投稿してください。\nA: 写真を綺麗に加工させて頂きます。",
     "jp_b": "B: キャプションがとても優しいですね。\nA: 「私の恋人は世界で一番美しい」いいですか？",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "post on SNS",
+    "en_a": "B: Please post a photo of the two of us on Facebook.\nA: Let me edit the photo beautifully.",
+    "en_b": "B: The caption is so sweet.\nA: \"My lover is the most beautiful in the world\" okay?",
     "tag": "가족/사회"
   },
   {
@@ -1268,9 +1268,9 @@
     "jp": "",
     "jp_a": "A: ハニー、重要な質問があります。\nB: 何のためにひざまずいているのですか？",
     "jp_b": "A: 私の妻になることに同意しますか？\nB: はい、同意します！",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "suggestion",
+    "en_a": "A: Honey, I have an important question.\nB: What are you kneeling down for?",
+    "en_b": "A: Do you agree to be my wife?\nB: Yes, I agree!",
     "tag": "특별한 순간"
   },
   {
@@ -1282,9 +1282,9 @@
     "jp": "",
     "jp_a": "B: 信じられない、婚約したんだ！\nA: 彼は最も幸せな人です。",
     "jp_b": "B: いつ結婚しますか？\nA: 来年秋。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "engagement",
+    "en_a": "B: I can't believe it, I'm engaged!\nA: He is the happiest man.",
+    "en_b": "B: When will I get married?\nA: Fall next year.",
     "tag": "특별한 순간"
   },
   {
@@ -1296,9 +1296,9 @@
     "jp": "",
     "jp_a": "A: 今日は私の一周年記念日です。\nB: 覚えていますか？忘れたのかと思った。",
     "jp_b": "A: 忘れるはずがないのに、すでにレストランを予約してしまったのだ。\nB: 彼は本当に完璧な恋人です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "anniversary occasion",
+    "en_a": "A: Today is my one year anniversary.\nB: Do you remember? I thought you forgot.",
+    "en_b": "A: How could I forget, I already booked the restaurant.\nB: He is truly the perfect lover.",
     "tag": "특별한 순간"
   },
   {
@@ -1310,9 +1310,9 @@
     "jp": "",
     "jp_a": "A: 幸せなバレンタインデーをお過ごしください。\nB: お花もチョコレートもとても綺麗です。",
     "jp_b": "A: これはほんの一部で、主な贈り物は自宅にあります。\nB: お金を使いすぎました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Valentine's Day",
+    "en_a": "A: Wishing you a happy Valentine's Day.\nB: The flowers and chocolate are so beautiful.",
+    "en_b": "A: This is just a small part, the main gift is at home.\nB: You've spent too much money.",
     "tag": "특별한 순간"
   },
   {
@@ -1324,9 +1324,9 @@
     "jp": "",
     "jp_a": "B: 今年のクリスマスは何をしたらいいでしょうか？\nA: ロマンチックなディナーを楽しんだ後は、ライトアップを見に行きましょう。",
     "jp_b": "B: 贈り物はありますか？\nA: あなたの贈り物はサプライズになるでしょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Christmas",
+    "en_a": "B: What should I do this Christmas?\nA: Have a romantic dinner, then go see the lights.",
+    "en_b": "B: Do you have a gift?\nA: Your gift will be a surprise.",
     "tag": "특별한 순간"
   },
   {
@@ -1338,9 +1338,9 @@
     "jp": "",
     "jp_a": "A: カウントダウン、5、4、3、2、1!\nB: 明けましておめでとうございます、ダーリン！",
     "jp_b": "A: 今年は私たちの年です。\nB: 毎年あなたがいればよかったのに。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "New year countdown",
+    "en_a": "A: Countdown, 5, 4, 3, 2, 1!\nB: Happy New Year darling!",
+    "en_b": "A: This year is our year.\nB: I wish I had you every year.",
     "tag": "특별한 순간"
   },
   {
@@ -1352,9 +1352,9 @@
     "jp": "",
     "jp_a": "B: あなたの誕生日にケーキを作ります。\nA: ケーキを作りますか？とても美しい！",
     "jp_b": "B: ろうそくの火を吹き消して願い事をします。\nA: 私はあなたと永遠に一緒にいたいと思っています。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "happy birthday",
+    "en_a": "B: For your birthday, I'll make you a cake.\nA: Do you make cakes? So beautiful!",
+    "en_b": "B: You blow out the candles and make a wish.\nA: I wish to be with you forever.",
     "tag": "특별한 순간"
   },
   {
@@ -1366,9 +1366,9 @@
     "jp": "",
     "jp_a": "A: 初めてのデートを覚えていますか？\nB: 思い出してください、私は間違った足に靴を履いていました。",
     "jp_b": "A: 私はずっとあなたのことを笑っていた。\nB: それでもあなたは私のガールフレンドになることに同意してくれました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "first date anniversary",
+    "en_a": "A: Do you remember your first date?\nB: Remember, I was wearing shoes on the wrong foot.",
+    "en_b": "A: I laughed at you the whole time.\nB: Yet you still agreed to be my girlfriend.",
     "tag": "특별한 순간"
   },
   {
@@ -1380,9 +1380,9 @@
     "jp": "",
     "jp_a": "B: とても寂しいです、私たちは長い間離れていました。\nA: 彼が戻ってくるまであと3か月しかない。",
     "jp_b": "B: さよなら！毎日が一年のように感じられます。\nA: 倍額の賠償をお約束します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "long distance relationship",
+    "en_a": "B: I miss you so much, we've been apart for a long time.\nA: Only 3 more months until he returns.",
+    "en_b": "B: So long! Every day feels like a year.\nA: I promise to compensate you double.",
     "tag": "특별한 순간"
   },
   {
@@ -1394,9 +1394,9 @@
     "jp": "",
     "jp_a": "B: 永遠に私を愛していますか？\nA: 人生の終わりまで、私はあなたを愛します。",
     "jp_b": "B: 私も、この世でも来世でも。\nA: あなたは私の唯一の人です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "eternal love",
+    "en_a": "B: Do you love me forever?\nA: Until the end of my life I will love you.",
+    "en_b": "B: Me too, in this life and the next.\nA: You are my only one.",
     "tag": "특별한 순간"
   },
   {
@@ -1408,9 +1408,9 @@
     "jp": "",
     "jp_a": "B: すごく雨が降っているよ、兄弟。\nA: 傘を持ってきましたか？",
     "jp_b": "B: 忘れてしまいました、どうやってここに行けますか？\nA: 私が迎えに来るのを待っていてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "rainy day",
+    "en_a": "B: It's raining so hard, bro.\nA: Have you brought an umbrella?",
+    "en_b": "B: I forgot, how can I get here?\nA: Wait for me to come pick you up.",
     "tag": "일상생활"
   },
   {
@@ -1422,9 +1422,9 @@
     "jp": "",
     "jp_a": "B: 暑すぎるのでエアコンをつけてください。\nA: あなたにもファンを作ってあげましょう。",
     "jp_b": "B: あなたはとても思慮深いですね。\nA: だってあなたは私の宝物だから。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Air conditioning on hot days",
+    "en_a": "B: It's too hot, turn on the air conditioner.\nA: Let me get you a fan too.",
+    "en_b": "B: You are so thoughtful.\nA: Because you are my treasure.",
     "tag": "일상생활"
   },
   {
@@ -1436,9 +1436,9 @@
     "jp": "",
     "jp_a": "A: 寒いのでコートを着てください。\nB: 私は厚いシャツを持っていません。",
     "jp_b": "A: 私のシャツを持って行って着てください。\nB: ありがとう、あなたのシャツは本当に暖かいです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "cold day",
+    "en_a": "A: It's cold, please wear a coat.\nB: I don't have a thick shirt.",
+    "en_b": "A: Take my shirt and wear it.\nB: Thank you, your shirt is really warm.",
     "tag": "일상생활"
   },
   {
@@ -1450,9 +1450,9 @@
     "jp": "",
     "jp_a": "B: ハニー、迷ってしまった。\nA: どこにいるの？あなたの位置情報を送ってください。",
     "jp_b": "B: 私はCongというコーヒーショップの近くにいます。\nA: じっとしてて、すぐそこにいるよ。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "When you get lost",
+    "en_a": "B: Honey, I'm lost.\nA: Where are you? Send me your location.",
+    "en_b": "B: I'm near a coffee shop called Cong.\nA: Stay still, I'll be right there.",
     "tag": "일상생활"
   },
   {
@@ -1464,9 +1464,9 @@
     "jp": "",
     "jp_a": "B: ホームネットワークが壊れてしまいました。\nA: モデムを再起動してみましたか?",
     "jp_b": "B: その後、まだ機能しません。\nA: 運送業者に電話してみます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Lost Internet",
+    "en_a": "B: My home network is broken.\nA: Have you tried restarting the modem?",
+    "en_b": "B: Then it still doesn't work.\nA: Let me call the carrier.",
     "tag": "일상생활"
   },
   {
@@ -1478,9 +1478,9 @@
     "jp": "",
     "jp_a": "B: くそー、仕事に遅れそう！\nA: 早速連れて行きましょう。",
     "jp_b": "B: ありがとう、あなたは救世主です。\nA: 次回はもっと早く起きてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Lateness crisis",
+    "en_a": "B: Damn, I'm going to be late for work!\nA: Let me take you quickly.",
+    "en_b": "B: Thank you, you are a savior.\nA: Next time, wake up earlier.",
     "tag": "일상생활"
   },
   {
@@ -1492,9 +1492,9 @@
     "jp": "",
     "jp_a": "A: どこかに車のキーが見えますか？\nB: 昨日ダイニングテーブルの上に放置してしまいました。",
     "jp_b": "A: あちこち探しましたが、見つかりません。\nB: それを見つけるのを手伝ってあげましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "lost car keys",
+    "en_a": "A: Do you see the car keys anywhere?\nB: I left it on the dining table yesterday.",
+    "en_b": "A: I've looked all over, can't find it.\nB: Let me help you find it.",
     "tag": "일상생활"
   },
   {
@@ -1506,9 +1506,9 @@
     "jp": "",
     "jp_a": "B: 今夜は食べ物を注文しましょう、料理するのが面倒なので。\nA: 何を注文すればいいですか？",
     "jp_b": "B: フエの牛肉麺のスープ、久しぶりに食べました。\nA: わかりました、アプリから注文しましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "delivery order",
+    "en_a": "B: Let's order food tonight, I'm lazy to cook.\nA: What should I order?",
+    "en_b": "B: Hue beef noodle soup, haven't eaten in a long time.\nA: Ok, let me order through the app.",
     "tag": "일상생활"
   },
   {
@@ -1520,9 +1520,9 @@
     "jp": "",
     "jp_a": "A: 私の隣の女の子が挨拶します。\nB: こんにちは お元気ですか？",
     "jp_b": "A: 彼女はよく私たちのことを尋ねます。\nB: 明日私は彼女に果物を買います。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "hello neighbor",
+    "en_a": "A: The girl next to me says hello.\nB: Hello, how are you?",
+    "en_b": "A: She often asks about us.\nB: Tomorrow I will buy fruit for her.",
     "tag": "일상생활"
   },
   {
@@ -1534,9 +1534,9 @@
     "jp": "",
     "jp_a": "B: 荷主がベルを鳴らしています。\nA: 取りに来てお手伝いします。",
     "jp_b": "B: この箱はとても重いです！\nA: それは私が買ったものです、おそらく靴です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Receive",
+    "en_a": "B: There's a shipper ringing the bell.\nA: I'll come get it and help you.",
+    "en_b": "B: This box is so heavy!\nA: That's what I bought, I guess it's shoes.",
     "tag": "일상생활"
   },
   {
@@ -1548,9 +1548,9 @@
     "jp": "",
     "jp_a": "B: ミットを散歩に連れて行きましょう。\nA: あなたはロープを持ち、私はバッグを持ちます。",
     "jp_b": "B: ジャックフルーツはとても幸せで、しっぽをずっと振っています。\nA: 彼も私をとても愛しています。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "walk the dog",
+    "en_a": "B: Let's take Mit for a walk.\nA: You hold the rope, I hold the bag.",
+    "en_b": "B: Jackfruit is so happy, his tail is constantly wagging.\nA: He also loves me very much.",
     "tag": "일상생활"
   },
   {
@@ -1562,9 +1562,9 @@
     "jp": "",
     "jp_a": "A: ムン猫はお腹が空いています。\nB: 先ほど餌をあげたばかりです。",
     "jp_b": "A: だからそれはおそらくただ甘やかしているだけです。\nB: あなたと同じように。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "take care of cats",
+    "en_a": "A: The Mun cat is hungry.\nB: I just fed it a while ago.",
+    "en_b": "A: So it's probably just coddling.\nB: Just like you.",
     "tag": "일상생활"
   },
   {
@@ -1576,9 +1576,9 @@
     "jp": "",
     "jp_a": "B: 冷蔵庫は空で、食べるものは何もありません。\nA: すぐにスーパーに行って買ってきます。",
     "jp_b": "B: まずはリストを作りました。\nA: 私はとてもプロフェッショナルです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "When the refrigerator is empty",
+    "en_a": "B: The refrigerator is empty, there's nothing to eat.\nA: I'll go to the supermarket and buy it right away.",
+    "en_b": "B: I made a list first.\nA: I'm very professional.",
     "tag": "일상생활"
   },
   {
@@ -1590,9 +1590,9 @@
     "jp": "",
     "jp_a": "B: 携帯電話のバッテリーが切れそうになっています。\nA: 充電器を取り出して一時的に使用してください。",
     "jp_b": "B: 私はいつでもあなたのために準備をしています。\nA: あなたがよく忘れることを知っているからです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "mobile phone battery",
+    "en_a": "B: My phone is about to run out of battery.\nA: Take your charger and use it temporarily.",
+    "en_b": "B: I'm always prepared for you.\nA: Because I know you often forget.",
     "tag": "일상생활"
   },
   {
@@ -1604,9 +1604,9 @@
     "jp": "",
     "jp_a": "A: パンを買って食べましょう。\nB: パテとピクルスをもっと食べたいです。",
     "jp_b": "A: お嬢さん、いっぱいのパンを 2 つください。\nB: とても美味しいので、お金を払う価値があります。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "street food",
+    "en_a": "A: Let's buy bread to eat.\nB: I want more pate and pickles.",
+    "en_b": "A: Miss, give me two full loaves.\nB: So delicious, worth the money.",
     "tag": "일상생활"
   },
   {
@@ -1618,9 +1618,9 @@
     "jp": "",
     "jp_a": "B: この靴についてどう思いますか?\nA: 試着して、自分に合うかどうかを確認してください。",
     "jp_b": "B: 少しタイトですが、美しいです。\nA: 大きめのサイズを購入し、足を締め付けないでください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "buy shoes",
+    "en_a": "B: What do you think of these shoes?\nA: Try it on, see if it suits you.",
+    "en_b": "B: A bit tight, but beautiful.\nA: Get a larger size, don't squeeze your feet.",
     "tag": "일상생활"
   },
   {
@@ -1632,9 +1632,9 @@
     "jp": "",
     "jp_a": "B: もうすぐガス欠になります。\nA: 通りの向かいにあるガソリンスタンドに立ち寄らせてください。",
     "jp_b": "B: 必ずタンクを満タンにしてください。\nA: さて、今日はあなたを招待します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "oil",
+    "en_a": "B: You're about to run out of gas.\nA: Let me stop by the gas station across the street.",
+    "en_b": "B: Always fill the tank.\nA: Ok, today I invite you.",
     "tag": "일상생활"
   },
   {
@@ -1646,9 +1646,9 @@
     "jp": "",
     "jp_a": "B: たった今セルフィーを送りました。\nA: とても美しいので壁紙にさせてください。",
     "jp_b": "B: 私にも送ってください。\nA: 私の写真はとても下手なので、批判されるのではないかと思います。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "send photos",
+    "en_a": "B: I just sent you a selfie.\nA: So beautiful, let me make it your wallpaper.",
+    "en_b": "B: Please send me one too.\nA: My photos are so bad, I'm afraid you'll criticize me.",
     "tag": "애정 표현"
   },
   {
@@ -1660,9 +1660,9 @@
     "jp": "",
     "jp_a": "B: ビデオ電話してください、あなたの顔が恋しいです。\nA: ちょっと待ってください、私は店の外にいます。",
     "jp_b": "B: それで部屋に戻って電話してください。\nA: わかりました、5分以内に電話します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "video call",
+    "en_a": "B: Please video call me, I miss your face.\nA: Wait a minute, I'm outside the shop.",
+    "en_b": "B: So go back to your room and call.\nA: Ok, I'll call in five minutes.",
     "tag": "애정 표현"
   },
   {
@@ -1674,9 +1674,9 @@
     "jp": "",
     "jp_a": "B: 眠いので話を聞かせてください。\nA: 昔々、美しい女の子がいました。",
     "jp_b": "B: あなたですか？\nA: 私以外に誰がいますか？",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Call before going to bed",
+    "en_a": "B: I'm sleepy, tell me the story.\nA: Once upon a time, there was a beautiful girl.",
+    "en_b": "B: Is it you?\nA: Who else but me?",
     "tag": "애정 표현"
   },
   {
@@ -1688,9 +1688,9 @@
     "jp": "",
     "jp_a": "B: 何を考えているのですか？\nA: なぜ私はこんなに幸運なのか考えています。",
     "jp_b": "B: なぜそうなるのでしょうか？\nA: なぜなら私はあなたを愛しているから。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "sweet message",
+    "en_a": "B: What are you thinking?\nA: I'm thinking why I'm so lucky.",
+    "en_b": "B: Why so?\nA: Because I love you.",
     "tag": "애정 표현"
   },
   {
@@ -1702,9 +1702,9 @@
     "jp": "",
     "jp_a": "B: あなたは私に手書きの手紙を書きましたか？\nA: そう、悲しいときにもう一度読んでほしい。",
     "jp_b": "B: 永久に保管します。\nA: 字が汚いです、笑。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "handwritten letter",
+    "en_a": "B: Did you write me a handwritten letter?\nA: Yes, I want you to read it again when you're sad.",
+    "en_b": "B: I will keep it forever.\nA: Your handwriting is bad, laugh.",
     "tag": "애정 표현"
   },
   {
@@ -1716,9 +1716,9 @@
     "jp": "",
     "jp_a": "B: 秘密を教えてもらえますか？\nA: もちろん、あなたはそれを言います。",
     "jp_b": "B: 告白される前からずっと好きでした。\nA: それで、あなたもです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "share secrets",
+    "en_a": "B: Can I tell you a secret?\nA: Of course, you say it.",
+    "en_b": "B: I've liked you since before you confessed.\nA: So, you too.",
     "tag": "애정 표현"
   },
   {
@@ -1730,9 +1730,9 @@
     "jp": "",
     "jp_a": "B: ちょっと肩にもたれさせてください。\nA: あなたの役割は私のものです。",
     "jp_b": "B: とても疲れているのに、あなたがいるととても安心します。\nA: あなたはただ寝てください、私は起きていてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "lean on your shoulder",
+    "en_a": "B: Let me lean on your shoulder for a bit.\nA: Your role is mine.",
+    "en_b": "B: I'm so tired, having you is so comforting.\nA: You just go to sleep, I'll stay awake.",
     "tag": "애정 표현"
   },
   {
@@ -1744,9 +1744,9 @@
     "jp": "",
     "jp_a": "A: こっちに来て、頭を撫でてあげましょう。\nB: 軽くこするだけで、頭が痛くなります。",
     "jp_b": "A: 頭が痛いのはなぜですか?\nB: 今日は働きすぎました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "caress the head",
+    "en_a": "A: Come here, let me pat your head.\nB: Just rub it gently, it's a headache.",
+    "en_b": "A: Why do I have a headache?\nB: I worked too much today.",
     "tag": "애정 표현"
   },
   {
@@ -1758,9 +1758,9 @@
     "jp": "",
     "jp_a": "B: ああ、神様、なぜここにいるのですか？\nA: とても寂しかったので駆け寄ってしまいました。",
     "jp_b": "B: おかしいよ、雨がすごく降っているんだ。\nA: あなたはそれに値するからです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "surprise visit",
+    "en_a": "B: Oh god, why are you here?\nA: I missed you so much that I ran over.",
+    "en_b": "B: You're crazy, it's raining so hard.\nA: Because you deserve it.",
     "tag": "애정 표현"
   },
   {
@@ -1772,9 +1772,9 @@
     "jp": "",
     "jp_a": "A: 愛してます。\nB: わかっています、あなたは何百回も言いました。",
     "jp_b": "A: 111回はどうでしょうか？\nB: 私もあなたを何百万回も愛しています。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "I love you 100 times",
+    "en_a": "A: I love you.\nB: I know, you said it a hundred times.",
+    "en_b": "A: How about one hundred and one times?\nB: I love you too, a million times over.",
     "tag": "애정 표현"
   },
   {
@@ -1786,9 +1786,9 @@
     "jp": "",
     "jp_a": "B: 今日は君と離れたくない。\nA: それで私たちは一日中抱き合っていました。",
     "jp_b": "B: だからあなたはどこにも行かないのです。\nA: 私はただここにいます、あなたと一緒に。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "hug",
+    "en_a": "B: I don't want to leave you today.\nA: So we hug each other all day.",
+    "en_b": "B: So you're not going anywhere.\nA: I'm just here, with you.",
     "tag": "애정 표현"
   },
   {
@@ -1800,9 +1800,9 @@
     "jp": "",
     "jp_a": "B: 私たちはお互いのために生まれてきたような気がします。\nA: 私も最初からそう思っていました。",
     "jp_b": "B: 幸運なことに、その日あなたは私に話しかけてくれました。\nA: それは彼の人生で最良の決断でした。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "feels like fate",
+    "en_a": "B: I feel like we were born for each other.\nA: I also thought so from the beginning.",
+    "en_b": "B: Luckily you talked to me that day.\nA: It was the best decision of his life.",
     "tag": "애정 표현"
   },
   {
@@ -1814,9 +1814,9 @@
     "jp": "",
     "jp_a": "B: カップルリングを買いましょう。\nA: 自分に合ったスタイルはどれを選べばいいのでしょうか？",
     "jp_b": "B: これは簡単ですか？\nA: 綺麗だけど派手じゃなくて気に入ってます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "coupling fraud",
+    "en_a": "B: Let's buy a couple ring.\nA: Which style should I choose that suits me?",
+    "en_b": "B: Is this simple?\nA: Beautiful but not flashy, I like it.",
     "tag": "데이트"
   },
   {
@@ -1828,9 +1828,9 @@
     "jp": "",
     "jp_a": "B: あの猿を見てください、とてもかわいいです。\nA: 彼はあなたを見て、おそらくあなたのことが好きです。",
     "jp_b": "B: 冗談は言わないでください、怖いんです。\nA: 私はここにいるよ、怖がらないで。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "zoo",
+    "en_a": "B: Look at that monkey, it's so cute.\nA: He looked at you, he probably likes you.",
+    "en_b": "B: Don't joke, I'm scared.\nA: I'm here, don't be afraid.",
     "tag": "데이트"
   },
   {
@@ -1842,9 +1842,9 @@
     "jp": "",
     "jp_a": "A: イルカはとても美しいです、愛する人。\nB: 一度はイルカと一緒に泳いでみたいと夢見ています。",
     "jp_b": "A: ということで、ニャチャンへ行きましょう。\nB: 約束したよ！",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "fish tank",
+    "en_a": "A: Dolphins are so beautiful, my dear.\nB: I dream of swimming with dolphins once.",
+    "en_b": "A: So let's go to Nha Trang.\nB: I promised!",
     "tag": "데이트"
   },
   {
@@ -1856,9 +1856,9 @@
     "jp": "",
     "jp_a": "B: この写真はとても美しいです。\nA: 私はあなたより芸術をよく理解しています。",
     "jp_b": "B: ただ私を見ていればいいのです。\nA: あなたは最も美しい作品です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Day Art Museum",
+    "en_a": "B: This picture is so beautiful.\nA: I understand art better than you.",
+    "en_b": "B: You just need to look at me.\nA: You are the most beautiful work.",
     "tag": "데이트"
   },
   {
@@ -1870,9 +1870,9 @@
     "jp": "",
     "jp_a": "B: コンサートが始まりました、とても楽しみです。\nA: 私はこの歌手の熱心なファンです。",
     "jp_b": "B: チケットを買ってくれてありがとう。\nA: 十分だと思います。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "concert",
+    "en_a": "B: The concert has started, I'm so excited.\nA: I am a die-hard fan of this singer.",
+    "en_b": "B: Thank you for buying me a ticket.\nA: I'm glad you're enough.",
     "tag": "데이트"
   },
   {
@@ -1884,9 +1884,9 @@
     "jp": "",
     "jp_a": "A: 湖のほとりでキャンプしましょう。\nB: 私はこれまでキャンプをしたことがありません。",
     "jp_b": "A: テントの張り方を教えてもらいました。\nB: 彼は本当に多才な人だ。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "camp",
+    "en_a": "A: Let's camp by the lake.\nB: I have never camped before.",
+    "en_b": "A: He taught me how to set up a tent.\nB: He is truly a versatile man.",
     "tag": "데이트"
   },
   {
@@ -1898,9 +1898,9 @@
     "jp": "",
     "jp_a": "B: 湖の周りを自転車で一周しましょう。\nA: ペダルをこぐことができますか？疲れましたか？",
     "jp_b": "B: 私は乗り心地が良いので、過小評価しないでください。\nA: さあ、レースをしましょう。勝った人にはキスが与えられます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "cycling day",
+    "en_a": "B: Let's cycle around the lake.\nA: Can you pedal? Are you tired?",
+    "en_b": "B: I ride well, don't underestimate me.\nA: So let's race, whoever wins gets a kiss.",
     "tag": "데이트"
   },
   {
@@ -1912,9 +1912,9 @@
     "jp": "",
     "jp_a": "B: ボートに乗るのはとてもロマンチックです。\nA: 漕ぐことしかできず、操縦はできません。",
     "jp_b": "B: それで漕いで、景色を眺めます。\nA: あなたは女王、私はキャプテンです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "take a boat",
+    "en_a": "B: The boat ride is so romantic.\nA: I can only row, I can't steer.",
+    "en_b": "B: So you row, I admire the scenery.\nA: You're the queen, I'm the captain.",
     "tag": "데이트"
   },
   {
@@ -1926,9 +1926,9 @@
     "jp": "",
     "jp_a": "B: 空の星はとても美しいです。\nA: あなたは私の最も輝く星です。",
     "jp_b": "B: 彼はいつも何か甘いことを言います。\nA: あなたにはそれを聞く資格があるからです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Stargazing",
+    "en_a": "B: The stars in the sky are so beautiful.\nA: You are my brightest star.",
+    "en_b": "B: Every time he has something sweet to say.\nA: Because you deserve to hear that.",
     "tag": "데이트"
   },
   {
@@ -1940,9 +1940,9 @@
     "jp": "",
     "jp_a": "B: 日の出を見るために起きましょう。\nA: 4時に早く起きなければなりません。",
     "jp_b": "B: 夜更かしや早起きを恐れない兄弟もいます。\nA: だから私はあなたを最初に抱きしめて寝ます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "sunrise scene",
+    "en_a": "B: Let's wake up to watch the sunrise.\nA: Have to get up 4 o'clock early.",
+    "en_b": "B: Some brothers are not afraid of staying up late and waking up early.\nA: So I hug you to sleep first.",
     "tag": "데이트"
   },
   {
@@ -1954,9 +1954,9 @@
     "jp": "",
     "jp_a": "B: ゴーカートを運転したことがないので緊張しています。\nA: 心配しないでください、私が先に走ります、そしてあなたはその後に続きます。",
     "jp_b": "B: もし私があなたに勝ったらどうなりますか？\nA: アイスクリームを買ってあげます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "kart racing",
+    "en_a": "B: I've never driven a go-kart before, so I'm nervous.\nA: Don't worry, I'll run first and you'll follow.",
+    "en_b": "B: What if I win against you?\nA: I will buy you ice cream.",
     "tag": "데이트"
   },
   {
@@ -1968,9 +1968,9 @@
     "jp": "",
     "jp_a": "B: 私はボウリングの遊び方がわかりません。\nA: ボールの持ち方を教えてください。",
     "jp_b": "B: ストライク！見たことがありますか？\nA: あなたは私がまだ知らない隠れた才能です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "bowling",
+    "en_a": "B: I don't know how to play bowling.\nA: Let me show you how to hold the ball.",
+    "en_b": "B: Strike! Have you seen it?\nA: You are the hidden talent that I don't know yet.",
     "tag": "데이트"
   },
   {
@@ -1982,9 +1982,9 @@
     "jp": "",
     "jp_a": "B: 彼はいつも友達を優先します。\nA: たまにしか飲みに行きません。",
     "jp_b": "B: 時々、毎週。\nA: 申し訳ありませんが、これからはあなたを優先させていただきます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Friends come first",
+    "en_a": "B: He always prioritizes his friends.\nA: I only go out drinking occasionally.",
+    "en_b": "B: Every once in a while, every week.\nA: I'm sorry, from now on I give you priority.",
     "tag": "갈등/화해"
   },
   {
@@ -1996,9 +1996,9 @@
     "jp": "",
     "jp_a": "B: なぜあなたは私をあなたの元とよく比較するのですか？\nA: そういう意味ではありません。",
     "jp_b": "B: あなたが言ったことは私を傷つけました。\nA: 心よりお詫び申し上げます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "is compared",
+    "en_a": "B: Why do you often compare me to your ex?\nA: I don't mean that.",
+    "en_b": "B: What you said hurt me.\nA: I sincerely apologize.",
     "tag": "갈등/화해"
   },
   {
@@ -2010,9 +2010,9 @@
     "jp": "",
     "jp_a": "B: 私に嘘をつきましたか？\nA: 心配させたくないからそう言いました。",
     "jp_b": "B: 理由が何であれ、嘘はよくありません。\nA: これからは常に真実を話すことを約束します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Caught lying",
+    "en_a": "B: Did you lie to me?\nA: I don't want you to worry, so I said so.",
+    "en_b": "B: Whatever the reason, lying is not okay.\nA: I promise, from now on I will always tell the truth.",
     "tag": "갈등/화해"
   },
   {
@@ -2024,9 +2024,9 @@
     "jp": "",
     "jp_a": "B: 今日はお酒を飲まないと約束します。\nA: 上司が彼に強要した​​ので、彼は断ることができなかった。",
     "jp_b": "B: 毎回必ず理由があります！\nA: あなたは間違っています、今回は本当に間違っています。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "broken promise",
+    "en_a": "B: I promise not to drink today.\nA: The boss forced him, he couldn't refuse.",
+    "en_b": "B: Every time there is a reason!\nA: You're wrong, this time you're really wrong.",
     "tag": "갈등/화해"
   },
   {
@@ -2038,9 +2038,9 @@
     "jp": "",
     "jp_a": "B: 彼は一日中ゲームばかりしています！\nA: 少しだけリラックスしてください。",
     "jp_b": "B: ほんの少しですが5時間くらいでしょうか？\nA: ゆっくりと、あなたと一緒に時間を過ごします。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "addicted to games",
+    "en_a": "B: All day he just plays games!\nA: Just relax a little.",
+    "en_b": "B: Little but 5 hours?\nA: I slow down, I spend time with you.",
     "tag": "갈등/화해"
   },
   {
@@ -2052,9 +2052,9 @@
     "jp": "",
     "jp_a": "B: このセットそんなにダメですか？\nA: 悪くはないが、もっと美しいものがある。",
     "jp_b": "B: 率直に言ってみましょう。賢くなる必要はありません。\nA: ドレスを着ている方が好きです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Clothing reviews",
+    "en_a": "B: Is this set so bad?\nA: Not bad, but something else is more beautiful.",
+    "en_b": "B: Say it straight, no need to be clever.\nA: I prefer you wearing a dress.",
     "tag": "갈등/화해"
   },
   {
@@ -2066,9 +2066,9 @@
     "jp": "",
     "jp_a": "B: ゆっくり行ってください、危険です。\nA: 慎重に運転してください、愛する人。",
     "jp_b": "B: あなたはその一線を越えてしまったのです！\nA: わかりました、ここでゆっくりしてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "driving argument",
+    "en_a": "B: Go slowly, it's dangerous.\nA: Drive carefully, my dear.",
+    "en_b": "B: You just crossed that line!\nA: Ok ok, slow down here.",
     "tag": "갈등/화해"
   },
   {
@@ -2080,9 +2080,9 @@
     "jp": "",
     "jp_a": "B: お金を使いすぎます。\nA: 必要なものだけを買います。",
     "jp_b": "B: 将来のために貯蓄しなければなりません。\nA: そうですね、経費を書き留めておきます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "money problem",
+    "en_a": "B: You spend too much money.\nA: I only buy what is necessary.",
+    "en_b": "B: I have to save for the future.\nA: You're right, I will write down the expenses.",
     "tag": "갈등/화해"
   },
   {
@@ -2094,9 +2094,9 @@
     "jp": "",
     "jp_a": "B: なぜベジタリアン料理が好きではないのですか？\nA: 私は小さい頃から肉を食べることに慣れていました。",
     "jp_b": "B: 週に1日断食してもいいですか？\nA: あなたのために、私は努力します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "food taste",
+    "en_a": "B: Why don't you like vegetarian food?\nA: I've been used to eating meat since I was little.",
+    "en_b": "B: Can I fast one day a week?\nA: For you, I try.",
     "tag": "갈등/화해"
   },
   {
@@ -2108,9 +2108,9 @@
     "jp": "",
     "jp_a": "B: なぜ電話パスワードを設定したのですか?\nA: 落ちるのが怖かったからです。",
     "jp_b": "B: パスワードを教えてください。\nA: 1234、それは簡単です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "mobile phone password",
+    "en_a": "B: Why did you set a phone password?\nA: Because he was afraid of falling.",
+    "en_b": "B: Tell me the password.\nA: 1234, it's simple.",
     "tag": "갈등/화해"
   },
   {
@@ -2122,9 +2122,9 @@
     "jp": "",
     "jp_a": "B: 髪を切ったばかりですが、褒めてくれませんか？\nA: 彼はまだ気づいていませんでした。",
     "jp_b": "B: 本当に心無い人だね。\nA: あなたはどんな髪であっても美しいです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Hairstyle Critique",
+    "en_a": "B: I just cut my hair, don't you compliment me?\nA: He hadn't noticed yet.",
+    "en_b": "B: You're really heartless.\nA: You are beautiful no matter what your hair is.",
     "tag": "갈등/화해"
   },
   {
@@ -2136,9 +2136,9 @@
     "jp": "",
     "jp_a": "B: 親を優先しすぎます。\nA: 彼の両親は遠くに住んでいるので、めったに会うことができません。",
     "jp_b": "B: 分かりますが、親にも気を配らなければなりません。\nA: そうです、私はもっとバランスが取れるようになります。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Priority is given to sons-in-law/son-in-law",
+    "en_a": "B: I prioritize my parents too much.\nA: Because his parents live far away, they rarely see each other.",
+    "en_b": "B: I understand, but I also have to pay attention to my parents.\nA: You're right, I'll be more balanced.",
     "tag": "갈등/화해"
   },
   {
@@ -2150,9 +2150,9 @@
     "jp": "",
     "jp_a": "B: 修士号取得のために勉強したいです。\nA: 心から応援しています。",
     "jp_b": "B: 家を空けることが多いのですが、耐えられますか？\nA: 私の将来の方が大切です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "study plan",
+    "en_a": "B: I want to study for a master's degree.\nA: I support you wholeheartedly.",
+    "en_b": "B: Having to be away from home a lot, can you handle it?\nA: My future is more important.",
     "tag": "미래 계획"
   },
   {
@@ -2164,9 +2164,9 @@
     "jp": "",
     "jp_a": "A: 海外に定住するつもりです。\nB: 家族と離れるのが怖いです。",
     "jp_b": "A: また頻繁に遊びに来ます。\nB: もっと考えさせてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Immigration/Study Abroad",
+    "en_a": "A: I'm going to settle abroad.\nB: I'm afraid of being away from my family.",
+    "en_b": "A: I will come back to visit often.\nB: Let me think more.",
     "tag": "미래 계획"
   },
   {
@@ -2178,9 +2178,9 @@
     "jp": "",
     "jp_a": "B: 猫を育てます。\nA: 犬がもっと好きになりました。",
     "jp_b": "B: ということで両方育ててみました。\nA: 掃除の準備はできていますか？",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Raise pets",
+    "en_a": "B: I'll raise a cat.\nA: I like dogs more.",
+    "en_b": "B: So I raised both.\nA: Are you ready to clean up?",
     "tag": "미래 계획"
   },
   {
@@ -2192,9 +2192,9 @@
     "jp": "",
     "jp_a": "A: 車を買いましょう。\nB: お金は足りていますか？",
     "jp_b": "A: 分割払いでご購入いただけます。\nB: ですので、燃費の良い車を選びましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "car fraud",
+    "en_a": "A: Let's buy a car.\nB: Do I have enough money?",
+    "en_b": "A: You can buy in installments.\nB: So choose a gas-efficient car.",
     "tag": "미래 계획"
   },
   {
@@ -2206,9 +2206,9 @@
     "jp": "",
     "jp_a": "A: 私は健康保険を購入します。\nB: もういいものは見つかりましたか？",
     "jp_b": "A: いくつかのブランドを比較してみました。\nB: 本当に思慮深いですね。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Insurance",
+    "en_a": "A: I buy health insurance.\nB: Have you found a good one yet?",
+    "en_b": "A: I have compared several brands.\nB: You're really thoughtful.",
     "tag": "미래 계획"
   },
   {
@@ -2220,9 +2220,9 @@
     "jp": "",
     "jp_a": "B: その後、両親を家に連れて帰って一緒に暮らすつもりです。\nA: 私も特に両親が年老いたときはそう思います。",
     "jp_b": "B: したがって、家にはたくさんの部屋があるはずです。\nA: 私は長期的な計画を立てます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Take care of my parents",
+    "en_a": "B: Later, I'll take my parents home to live with me.\nA: I also think so, especially when my parents are old.",
+    "en_b": "B: So the house must have many rooms.\nA: I make a long-term plan.",
     "tag": "미래 계획"
   },
   {
@@ -2234,9 +2234,9 @@
     "jp": "",
     "jp_a": "B: どこで結婚すればいいの？\nA: ビーチとホテルどちらが好きですか？",
     "jp_b": "B: 私は海が好きで、ロマンチックです。\nA: そこでフーコックのリゾートを予約しましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "wedding venue",
+    "en_a": "B: Where do I get married?\nA: Do you like the beach or the hotel?",
+    "en_b": "B: I like the sea, romantic.\nA: So book a resort in Phu Quoc.",
     "tag": "미래 계획"
   },
   {
@@ -2248,9 +2248,9 @@
     "jp": "",
     "jp_a": "B: 何色のソファを買えばいいですか？\nA: グレー色が掃除しやすくて気に入ってます。",
     "jp_b": "B: 温かみのあるベージュが欲しいです。\nA: なのでお店でも同じものを選びます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Newlywed home interior",
+    "en_a": "B: What color sofa should I buy?\nA: I like the gray color, easy to clean.",
+    "en_b": "B: I want beige for warmth.\nA: So I choose the same at the store.",
     "tag": "미래 계획"
   },
   {
@@ -2262,9 +2262,9 @@
     "jp": "",
     "jp_a": "B: どの科目を一緒に勉強すべきですか?\nA: ロマンチックなダンスを学びましょう。",
     "jp_b": "B: 私はとても不器用なのですが、我慢できますか？\nA: 根気よく教えます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Share interests",
+    "en_a": "B: What subjects should we study together?\nA: Learn to dance, romantic.",
+    "en_b": "B: I'm so clumsy, can you stand it?\nA: I will patiently teach you.",
     "tag": "미래 계획"
   },
   {
@@ -2276,9 +2276,9 @@
     "jp": "",
     "jp_a": "B: 私は仏教を信仰していますが、あなたはどうですか？\nA: 彼はいかなる宗教も信じていません。",
     "jp_b": "B: うちの子は将来どうなるんだろう？\nA: 私たちはお互いを尊重し、子供たちに自分で選ばせます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "religious differences",
+    "en_a": "B: I follow Buddhism, what about you?\nA: He does not follow any religion.",
+    "en_b": "B: What will my child follow in the future?\nA: We respect each other, let the children choose for themselves.",
     "tag": "미래 계획"
   },
   {
@@ -2290,9 +2290,9 @@
     "jp": "",
     "jp_a": "B: 私は試験に落ちました。\nA: 大丈夫、次回試してください。",
     "jp_b": "B: あなたは私を失望させます。\nA: あなたはベストを尽くしました、私はあなたを誇りに思います。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "When you fail a test",
+    "en_a": "B: I failed the exam.\nA: It's okay, try next time.",
+    "en_b": "B: You disappoint me.\nA: You tried your best, I'm proud of you.",
     "tag": "감정/위로"
   },
   {
@@ -2304,9 +2304,9 @@
     "jp": "",
     "jp_a": "B: 親友と口論になりました。\nA: どうしたの？",
     "jp_b": "B: 彼女は私を誤解しました。\nA: 落ち着いてから話しましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "quarreled with a friend",
+    "en_a": "B: I had an argument with my best friend.\nA: What's the matter?",
+    "en_b": "B: She misunderstood me.\nA: Let me calm down and talk later.",
     "tag": "감정/위로"
   },
   {
@@ -2318,9 +2318,9 @@
     "jp": "",
     "jp_a": "B: 母はいつも私に怒鳴るので、とても疲れます。\nA: お母さんがあなたの世話をします。",
     "jp_b": "B: わかってるけど、そんなに聞くとイライラする。\nA: 週末、私はあなたを遊びに連れて行きました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "parents grumble",
+    "en_a": "B: My mother yells at me all the time, it's so tiring.\nA: Mom takes care of you.",
+    "en_b": "B: I know, but hearing it so much is frustrating.\nA: On the weekend, I took you out to have fun.",
     "tag": "감정/위로"
   },
   {
@@ -2332,9 +2332,9 @@
     "jp": "",
     "jp_a": "A: あなたの同僚はとても動揺しています。\nB: 仕事のため我慢してください。",
     "jp_b": "A: 本当は議論したいんです。\nB: 沈黙は強さでもある。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "colleague conflict",
+    "en_a": "A: Your colleagues are so upset.\nB: Please bear with it for work.",
+    "en_b": "A: I really want to argue.\nB: Silence is also strength.",
     "tag": "감정/위로"
   },
   {
@@ -2346,9 +2346,9 @@
     "jp": "",
     "jp_a": "B: とても無駄だと感じます。\nA: そんなこと言わないで、あなたは私にとって特別なのよ。",
     "jp_b": "B: もう自分を信じられません。\nA: 信じます、それで十分です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Reduced self-esteem",
+    "en_a": "B: I feel so useless.\nA: Don't say that, you're special to me.",
+    "en_b": "B: I don't believe in myself anymore.\nA: I believe you, that's enough.",
     "tag": "감정/위로"
   },
   {
@@ -2360,9 +2360,9 @@
     "jp": "",
     "jp_a": "B: 将来がとても心配です。\nA: 段階的に計画していきます。",
     "jp_b": "B: 間に合わないのではないかと思います。\nA: あなたがそばにいるから、恐れないでください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "worry about the future",
+    "en_a": "B: I'm so worried about the future.\nA: I plan step by step.",
+    "en_b": "B: I'm afraid I won't make it in time.\nA: With you by my side, don't be afraid.",
     "tag": "감정/위로"
   },
   {
@@ -2374,9 +2374,9 @@
     "jp": "",
     "jp_a": "A: 故郷がとても恋しいです。\nB: 今週末家に帰ります。",
     "jp_b": "A: 忙しすぎて帰れません。\nB: そこで、両親にビデオ電話をかけます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "homesick",
+    "en_a": "A: I miss my hometown so much.\nB: I'll go home this weekend.",
+    "en_b": "A: Too busy, can't come back.\nB: So make a video call to your parents.",
     "tag": "감정/위로"
   },
   {
@@ -2388,9 +2388,9 @@
     "jp": "",
     "jp_a": "B: お父さんがいなくてとても寂しいです。\nA: 今週私は父を訪ねるつもりです。",
     "jp_b": "B: 私が家にいないのでお父さんは疲れていると思います。\nA: 一緒に家に帰りましょう、私が車で送ります。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "longing for family",
+    "en_a": "B: I miss my dad so much.\nA: This week I'm going to visit my dad.",
+    "en_b": "B: I'm afraid my dad is tired because I'm not home.\nA: Let's go home together, I'll drive you.",
     "tag": "감정/위로"
   },
   {
@@ -2402,9 +2402,9 @@
     "jp": "",
     "jp_a": "B: 母は私をいとこと比較します。\nA: あなたはユニークで、誰も比較できません。",
     "jp_b": "B: そうすれば悲しくなくなると言いました。\nA: それは本当だから。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "is compared",
+    "en_a": "B: Mom compares me to my cousin.\nA: You are unique, no one can compare.",
+    "en_b": "B: I said that makes you less sad.\nA: Because it's true.",
     "tag": "감정/위로"
   },
   {
@@ -2416,9 +2416,9 @@
     "jp": "",
     "jp_a": "A: 昇進したよ！\nB: いやー、本当に嬉しいです！",
     "jp_b": "A: 今夜祝いましょう。\nB: 良いレストランを予約します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Celebrate success",
+    "en_a": "A: I got promoted!\nB: Oh my god, I'm so happy!",
+    "en_b": "A: Let's celebrate tonight.\nB: I'll book a good restaurant.",
     "tag": "감정/위로"
   },
   {
@@ -2430,9 +2430,9 @@
     "jp": "",
     "jp_a": "B: 初めての給料を受け取りました！\nA: おめでとう！それはどんな感じですか？",
     "jp_b": "B: 両親とあなたにプレゼントを買います。\nA: あなたはとても思慮深いので、ご両親は誇りに思うでしょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "first salary",
+    "en_a": "B: I just received my first salary!\nA: Congratulations! How does it feel?",
+    "en_b": "B: I will buy gifts for my parents and you.\nA: You are so thoughtful, your parents will be proud.",
     "tag": "감정/위로"
   },
   {
@@ -2444,9 +2444,9 @@
     "jp": "",
     "jp_a": "B: 今日は5km走りました！\nA: とても良い！本当にしつこいんです。",
     "jp_b": "B: 目標は来月の10kmです。\nA: 私はあなたと一緒に走ります。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "small achievements",
+    "en_a": "B: I ran 5km today!\nA: So good! I'm really persistent.",
+    "en_b": "B: The goal is 10km next month.\nA: I will run with you.",
     "tag": "감정/위로"
   },
   {
@@ -2458,9 +2458,9 @@
     "jp": "",
     "jp_a": "B: 生理痛がとてもひどいです。\nA: 温かいお湯を作りましょう。",
     "jp_b": "B: 生理用ナプキンの購入にご協力ください。\nA: OK、必要なことは何でも言ってください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "menstrual cramps",
+    "en_a": "B: I have so much menstrual cramps.\nA: Let me make you some warm water.",
+    "en_b": "B: Please help me buy sanitary napkins.\nA: Ok, just say whatever you need.",
     "tag": "건강/돌봄"
   },
   {
@@ -2472,9 +2472,9 @@
     "jp": "",
     "jp_a": "A: 咳がひどいので医者に行ってください。\nB: 病院は混んでいると思います。",
     "jp_b": "A: ネットで予約ができるので、行列に並ぶ必要がありません。\nB: ありがとう、あなたはとても思慮深いですね。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "cold",
+    "en_a": "A: I'm coughing so bad, go see a doctor.\nB: I'm afraid the hospital is crowded.",
+    "en_b": "A: You can book an appointment online, you don't have to wait in line.\nB: Thank you, you are very thoughtful.",
     "tag": "건강/돌봄"
   },
   {
@@ -2486,9 +2486,9 @@
     "jp": "",
     "jp_a": "B: 頭がめちゃくちゃ痛いです。\nA: あなたのこめかみをさすってあげましょう。",
     "jp_b": "B: 風力油はありますか？\nA: はい、受け取らせてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "headache",
+    "en_a": "B: My head hurts like hell.\nA: Let me rub your temples for you.",
+    "en_b": "B: Do you have wind oil?\nA: Yes, let me take it.",
     "tag": "건강/돌봄"
   },
   {
@@ -2500,9 +2500,9 @@
     "jp": "",
     "jp_a": "B: 虫歯があります。\nA: すぐに歯医者に行ってください。",
     "jp_b": "B: ドリルの音が怖いです。\nA: 私はずっとあなたの手を握っていました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "go to the dentist",
+    "en_a": "B: I have tooth decay.\nA: Go to the dentist right away.",
+    "en_b": "B: I'm afraid of the sound of the drill.\nA: I held your hand the whole time.",
     "tag": "건강/돌봄"
   },
   {
@@ -2514,9 +2514,9 @@
     "jp": "",
     "jp_a": "A: 目が痛いですか？\nB: パソコンを見すぎてしまいます。",
     "jp_b": "A: 目の検査を受けに行きましょう。\nB: 一緒に来ますか？",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "eye examination",
+    "en_a": "A: Are your eyes sore?\nB: I look at the computer too much.",
+    "en_b": "A: Go get your eyes checked.\nB: Are you coming with me?",
     "tag": "건강/돌봄"
   },
   {
@@ -2528,9 +2528,9 @@
     "jp": "",
     "jp_a": "B: 全身が痛いので、昨日山に登りました。\nA: マッサージさせてください。",
     "jp_b": "B: 熱いお風呂に入ってもいいですか？\nA: わかりました、準備をさせてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "muscle pain after hiking",
+    "en_a": "B: My whole body hurts, I climbed a mountain yesterday.\nA: Let me massage you.",
+    "en_b": "B: Can I take a hot bath?\nA: Great, let me prepare.",
     "tag": "건강/돌봄"
   },
   {
@@ -2542,9 +2542,9 @@
     "jp": "",
     "jp_a": "A: 彼はひどい頭痛に悩まされていた。\nB: 昨日は酔ってしまいました。",
     "jp_b": "A: 二日酔いを治すものはありますか？\nB: 私はあなたのために鶏のお粥を作ります。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "hangover",
+    "en_a": "A: He had a terrible headache.\nB: Yesterday I got drunk.",
+    "en_b": "A: Is there anything to cure the hangover?\nB: I'll cook chicken porridge for you.",
     "tag": "건강/돌봄"
   },
   {
@@ -2556,9 +2556,9 @@
     "jp": "",
     "jp_a": "B: 生理が1週間以上遅れています。\nA: 試してみてどうなるか見てみます。",
     "jp_b": "B: とても緊張しています。\nA: 結果が何であれ、私はあなたと一緒です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "suspected pregnancy",
+    "en_a": "B: My period is more than a week late.\nA: I'll try it and see how it goes.",
+    "en_b": "B: I'm so nervous.\nA: Whatever the outcome, I'm with you.",
     "tag": "건강/돌봄"
   },
   {
@@ -2570,9 +2570,9 @@
     "jp": "",
     "jp_a": "A: この夏、家族全員で旅行に行きます。\nB: どこに行けば両親が安心できるでしょうか？",
     "jp_b": "A: ダナンのビーチリゾート。\nB: 家族全員で部屋を予約しました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "family trip",
+    "en_a": "A: This summer, my whole family will go on a trip.\nB: Where to go to make your parents feel comfortable?",
+    "en_b": "A: Da Nang beach resort.\nB: I booked a room for the whole family.",
     "tag": "가족/사회"
   },
   {
@@ -2584,9 +2584,9 @@
     "jp": "",
     "jp_a": "B: 私の妹はもうすぐ結婚します。\nA: 結婚祝いは何を買うべきですか?",
     "jp_b": "B: 幸運の封筒は大丈夫です。\nA: 彼は愛情を示すために少し追加しました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "younger brother gets married",
+    "en_a": "B: My sister is about to get married.\nA: What wedding gift should I buy?",
+    "en_b": "B: Lucky envelopes are fine.\nA: He added a little extra to show his affection.",
     "tag": "가족/사회"
   },
   {
@@ -2598,9 +2598,9 @@
     "jp": "",
     "jp_a": "B: 生まれたばかりの赤ちゃんはとてもかわいいです。\nA: 試しに握ってみます。",
     "jp_b": "B: 落ちると思うので軽く持ってください。\nA: 彼は将来良い父親になるだろう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "meet my nephew",
+    "en_a": "B: The newborn baby is so cute.\nA: Let me try holding it.",
+    "en_b": "B: Just hold it lightly, I'm afraid it will fall.\nA: He will be a good father in the future.",
     "tag": "가족/사회"
   },
   {
@@ -2612,9 +2612,9 @@
     "jp": "",
     "jp_a": "A: 今夜は家族全員が一緒に食事をします。\nB: 両親に何を料理しますか？",
     "jp_b": "A: 母は煮魚が好きです。\nB: そこで食材を買いに市場へ行きます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "family meal",
+    "en_a": "A: Tonight the whole family eats together.\nB: What do you cook for your parents?",
+    "en_b": "A: Mom likes braised fish.\nB: So I go to the market to buy ingredients.",
     "tag": "가족/사회"
   },
   {
@@ -2626,9 +2626,9 @@
     "jp": "",
     "jp_a": "A: 初めてあなたのお父さんに会ったとき、とても緊張しました。\nB: やってもいいよ、お父さんは気楽な人だから。",
     "jp_b": "A: どのような贈り物を買えばいいでしょうか？\nB: 美味しいお茶はいいですね。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "The first meeting of the craftsman",
+    "en_a": "A: The first time I met your father, I was so nervous.\nB: You can go ahead, dad is easy-going.",
+    "en_b": "A: What gift should I buy?\nB: Good tea is fine.",
     "tag": "가족/사회"
   },
   {
@@ -2640,9 +2640,9 @@
     "jp": "",
     "jp_a": "B: 私の夫はよく批判的です。\nA: それで、彼に話しましょう。",
     "jp_b": "B: 大したことは考えないでください、私は大丈夫です。\nA: あなたはとても優しいです、私はあなたを愛しています。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Sister-in-law (husband's younger brother)",
+    "en_a": "B: My husband is often judgmental.\nA: So, let me talk to him.",
+    "en_b": "B: Don't make a big deal out of it, I can handle it.\nA: You are so gentle, I love you.",
     "tag": "가족/사회"
   },
   {
@@ -2654,9 +2654,9 @@
     "jp": "",
     "jp_a": "B: 私の友人は家を購入したので、新築祝いのパーティーを招待しました。\nA: 贈り物として何を買えばいいですか？",
     "jp_b": "B: 小さな植物やケーキは大丈夫ですか？\nA: 美しく実用的な、良いアイデアです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "housewarming friends",
+    "en_a": "B: My friend just bought a house and invited a housewarming party.\nA: What should I buy as a gift?",
+    "en_b": "B: Are small plants and cakes okay?\nA: Good idea, both beautiful and practical.",
     "tag": "가족/사회"
   },
   {
@@ -2668,9 +2668,9 @@
     "jp": "",
     "jp_a": "A: 今夜は同窓会に行きます。\nB: 元恋人はいますか？",
     "jp_b": "A: そうかもしれませんが、私にはあなたしかいません。\nB: だから安心して楽しんでください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "reunion",
+    "en_a": "A: Tonight I'm going to a class reunion.\nB: Do you have an ex-lover?",
+    "en_b": "A: Maybe yes, but I only have you.\nB: So rest assured and have fun.",
     "tag": "가족/사회"
   },
   {
@@ -2682,9 +2682,9 @@
     "jp": "",
     "jp_a": "B: あなたのお母さんが家族グループにテキストメッセージを送りました。\nA: お母さんは何を尋ねましたか？",
     "jp_b": "B: 母は私に今週末帰ってくるか尋ねました。\nA: メールで返信してください。土曜日の夜に戻ります。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Family group chat room",
+    "en_a": "B: Your mother texted in the family group.\nA: What did mom ask?",
+    "en_b": "B: Mom asked if I would come home this weekend.\nA: Text me back and I'll be back Saturday night.",
     "tag": "가족/사회"
   },
   {
@@ -2696,9 +2696,9 @@
     "jp": "",
     "jp_a": "A: 今週末、トゥアンさんと奥さんと一緒に行きましょう。\nB: 私はトゥアンさんのことをまだ知りません。",
     "jp_b": "A: 彼女はとても優しいので、気に入ると思います。\nB: それでレストランに行きましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "double day",
+    "en_a": "A: Let's go with Mr. Tuan and his wife this weekend.\nB: I don't know Ms. Tuan yet.",
+    "en_b": "A: She is very gentle, I will like it.\nB: So let's go to the restaurant.",
     "tag": "가족/사회"
   },
   {
@@ -2710,9 +2710,9 @@
     "jp": "",
     "jp_a": "B: 私の友人が傷心しているので、私は彼女を慰めに来ました。\nA: 行ってください、私は一人で夕食を食べることができます。",
     "jp_b": "B: ごめんなさい、また今度話しましょう。\nA: 友達は大事だよ、大丈夫だよ。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Advice on your friends' concerns",
+    "en_a": "B: My friend is heartbroken, I came to comfort her.\nA: You go, I can have dinner alone.",
+    "en_b": "B: I'm sorry, let's make up for it another time.\nA: Your friend is important, it's okay.",
     "tag": "가족/사회"
   },
   {
@@ -2724,9 +2724,9 @@
     "jp": "",
     "jp_a": "A: 明日、孫を出産する予定です。\nB: ゴールドをあげてもいいですか？",
     "jp_b": "A: ゴールドのテールが 1 つあるのが習慣です。\nB: 早速金買取店に行って注文しました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Grandson's first birthday party",
+    "en_a": "A: Tomorrow, I'm planning on giving birth to my grandchild.\nB: Can I give you gold?",
+    "en_b": "A: One tael of gold is the custom.\nB: I went to the gold store to order immediately.",
     "tag": "가족/사회"
   },
   {
@@ -2738,9 +2738,9 @@
     "jp": "",
     "jp_a": "B: 私たちが初めてキスしたときのことを覚えていますか?\nA: 雨の中でも覚えておいてください。",
     "jp_b": "B: 心臓が高鳴ります。\nA: 私も、それが最も美しい瞬間でした。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "first kiss",
+    "en_a": "B: Do you remember the first time we kissed?\nA: Remember, in the rain.",
+    "en_b": "B: My heart beats wildly.\nA: Me too, that was the most beautiful moment.",
     "tag": "특별한 순간"
   },
   {
@@ -2752,9 +2752,9 @@
     "jp": "",
     "jp_a": "A: 私が愛を告白した日のことを覚えていますか?\nB: 彼は話すことができないほど震えていた。",
     "jp_b": "A: 断られるのではないかと思います。\nB: 幸いにも私は同意します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "first love confession",
+    "en_a": "A: Do you remember the day I confessed my love?\nB: He was shaking so much that he couldn't speak.",
+    "en_b": "A: I'm afraid you'll refuse.\nB: Luckily I agree.",
     "tag": "특별한 순간"
   },
   {
@@ -2766,9 +2766,9 @@
     "jp": "",
     "jp_a": "B: 初めて口論したとき、私は大泣きしました。\nA: とても後悔しているので、あなたの家に来ました。",
     "jp_b": "B: 彼はドアの外に2時間立っていた。\nA: あなたを失うわけにはいかないから。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Reconciliation after the first argument",
+    "en_a": "B: The first time we argued, I cried a lot.\nA: I regret it so much, I came to your house.",
+    "en_b": "B: He stood outside the door for two hours.\nA: Because I can't lose you.",
     "tag": "특별한 순간"
   },
   {
@@ -2780,9 +2780,9 @@
     "jp": "",
     "jp_a": "B: ああ、なんてことだ、どうしてみんなここにいるの？\nA: あなたの誕生日なので、こっそり用意しました。",
     "jp_b": "B: 私は感動して涙が出ました。\nA: 今日はあなたが一番幸せな人になってほしいです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "surprise party",
+    "en_a": "B: Oh my god, why is everyone here?\nA: It's your birthday, I prepared it secretly.",
+    "en_b": "B: I was moved to tears.\nA: I want you to be the happiest person today.",
     "tag": "특별한 순간"
   },
   {
@@ -2794,9 +2794,9 @@
     "jp": "",
     "jp_a": "B: すごく痛いんです、おい！\nA: さあ、ベイビー、私はあなたと一緒です。",
     "jp_b": "B: 私の赤ちゃんが出てきました！\nA: 私の子を産んでくれてありがとう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "give birth",
+    "en_a": "B: I'm in so much pain, man!\nA: Come on baby, I'm with you.",
+    "en_b": "B: My baby is out!\nA: Thank you for giving birth to my child.",
     "tag": "특별한 순간"
   },
   {
@@ -2808,9 +2808,9 @@
     "jp": "",
     "jp_a": "B: 我が家の緑の植物が枯れてしまいました。\nA: 水やりを忘れましたか？",
     "jp_b": "B: あなたはとても忙しいので、私が手伝ってあげるよ。\nA: 毎朝水やりをさせてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Grow potted plants",
+    "en_a": "B: My house's green plants have withered.\nA: Did you forget to water?",
+    "en_b": "B: You're so busy, I'll help you take care of it.\nA: Let me water it every morning.",
     "tag": "일상생활"
   },
   {
@@ -2822,9 +2822,9 @@
     "jp": "",
     "jp_a": "A: 何を読んでいますか？\nB: ファッション雑誌、今年のトレンドに関する記事。",
     "jp_b": "A: ファッションがとても大好きです。\nB: 女性の皆さん、わかりますね。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "read magazines",
+    "en_a": "A: What are you reading?\nB: Fashion magazine, article about this year's trends.",
+    "en_b": "A: I love fashion so much.\nB: Women, you understand.",
     "tag": "일상생활"
   },
   {
@@ -2836,9 +2836,9 @@
     "jp": "",
     "jp_a": "B: ハニー、ベッドメイキングを手伝ってください。\nA: 掃除はしたので、きれいかどうか見てみましょう。",
     "jp_b": "B: 枕がずれているので直してください。\nA: とても難しいです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "make the bed",
+    "en_a": "B: Honey, help me make my bed.\nA: I've cleaned it up, let's see if it's neat.",
+    "en_b": "B: The pillow is misaligned, please fix it.\nA: I'm so difficult.",
     "tag": "일상생활"
   },
   {
@@ -2850,9 +2850,9 @@
     "jp": "",
     "jp_a": "B: シャワーを浴びるのに時間がかかりすぎたので、私は永遠に待ちました。\nA: すぐに行きます。",
     "jp_b": "B: なぜ男性は女性よりもシャワーに時間がかかるのでしょうか?\nA: いい匂いを嗅ぎたいから。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "spin the toilet",
+    "en_a": "B: You took too long to shower, I waited forever.\nA: I'll be right out here.",
+    "en_b": "B: Why do men take longer to shower than women?\nA: Because I want to smell good for you.",
     "tag": "일상생활"
   },
   {
@@ -2864,9 +2864,9 @@
     "jp": "",
     "jp_a": "A: 今夜は何を食べましょうか？\nB: アイデアが尽きました、あなたが決めてください。",
     "jp_b": "A: インスタントラーメンは入手できますか？\nB: またしてもインスタントラーメン！",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Concerns about the dinner menu",
+    "en_a": "A: What to eat tonight?\nB: I'm out of ideas, you decide.",
+    "en_b": "A: Can instant noodles be available?\nB: Instant noodles again!",
     "tag": "일상생활"
   },
   {
@@ -2878,9 +2878,9 @@
     "jp": "",
     "jp_a": "B: メガネがどこにも見つかりません。\nA: 頭にかぶってます。",
     "jp_b": "B: 神様、私はとてもぼんやりしています。\nA: 好きすぎて集中力が途切れてしまいます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "lost glasses",
+    "en_a": "B: I can't find my glasses anywhere.\nA: I'm wearing it on my head.",
+    "en_b": "B: God, I'm so absent-minded.\nA: I love you so much that I lose focus.",
     "tag": "일상생활"
   },
   {
@@ -2892,9 +2892,9 @@
     "jp": "",
     "jp_a": "B: 洋服ダンスがとても散らかっているので、掃除します。\nA: ハニー、なぜそんなにシャツが多いのですか？",
     "jp_b": "B: どんなシャツでも必要です。\nA: 次に色ごとに分類します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Organize your wardrobe",
+    "en_a": "B: The wardrobe is so messy, I'll clean it out.\nA: Honey, why so many shirts?",
+    "en_b": "B: I need any shirt.\nA: Then sort by color.",
     "tag": "일상생활"
   },
   {
@@ -2906,9 +2906,9 @@
     "jp": "",
     "jp_a": "A: 画像をクラウド上に保存させていただきます。\nB: 一緒に写った写真がたくさん！",
     "jp_b": "A: 5年以上経ちました。\nB: プリントアウトしてアルバムを作りましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "arrange photos",
+    "en_a": "A: I will save the image on the Cloud.\nB: So many pictures of us together!",
+    "en_b": "A: It's been more than 5 years.\nB: Print it out and make an album.",
     "tag": "일상생활"
   },
   {
@@ -2920,9 +2920,9 @@
     "jp": "",
     "jp_a": "B: 冷蔵庫が壊れたので、もう冷たくない。\nA: 修理業者を呼びましょう。",
     "jp_b": "B: 食べ物はすべて腐ってしまいました。\nA: 食事に行って、それから新しいワードローブを買いましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Home appliance problems",
+    "en_a": "B: The refrigerator is broken, it's not cold anymore.\nA: Let me call a repairman.",
+    "en_b": "B: The food is all spoiled.\nA: Let's go out to eat and then buy a new wardrobe.",
     "tag": "일상생활"
   },
   {
@@ -2934,9 +2934,9 @@
     "jp": "",
     "jp_a": "A: 薬局まで一緒に行きます。\nB: 体調が悪いですか？",
     "jp_b": "A: 風邪薬を買いたいです。\nB: 良い薬を選ぶために私も一緒に行きます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Go to the pharmacy",
+    "en_a": "A: I'll go with you to the pharmacy.\nB: Are you unwell?",
+    "en_b": "A: I want to buy cold medicine.\nB: I'll go with you to choose good medicine.",
     "tag": "일상생활"
   },
   {
@@ -2948,9 +2948,9 @@
     "jp": "",
     "jp_a": "B: 傘をかぶせてください。\nA: 肩が濡れています。",
     "jp_b": "B: 私はあなたに寄りかかります。\nA: 私が濡れても大丈夫です、あなたが濡れていない限り。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "share an umbrella",
+    "en_a": "B: Please cover the umbrella for me.\nA: My shoulder is wet.",
+    "en_b": "B: I lean towards you.\nA: It's okay if I'm wet, as long as you're not wet.",
     "tag": "일상생활"
   },
   {
@@ -2962,9 +2962,9 @@
     "jp": "",
     "jp_a": "B: どんな音楽を聴きますか?\nA: 古い曲ですが、慣れてきました。",
     "jp_b": "B: よく覚えています、あの頃、あなたはよく私に歌ってくれました。\nA: 今でも彼は歌うことができます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "listening to music",
+    "en_a": "B: What music do you listen to?\nA: Old song, I just got used to it.",
+    "en_b": "B: I remember so much, back then you used to sing to me.\nA: Now he can still sing.",
     "tag": "일상생활"
   },
   {
@@ -2976,9 +2976,9 @@
     "jp": "",
     "jp_a": "B: 髪を切りに行きなさい、長すぎるよ。\nA: 私はあなたと一緒に来て、あなたに合ったスタイルを選びます。",
     "jp_b": "B: 髪型は韓国風にすべきです。\nA: アイドルみたいになってほしいですか？",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "hair cutting",
+    "en_a": "B: Go get your hair cut, it's too long.\nA: I'll come with you and choose a style for you.",
+    "en_b": "B: You should wear your hair Korean style.\nA: Do you want me to be like an idol?",
     "tag": "일상생활"
   },
   {
@@ -2990,9 +2990,9 @@
     "jp": "",
     "jp_a": "A: 私の机の上に置いた紙は何ですか?\nB: あなたへの愛のメッセージ。",
     "jp_b": "A: 「あなたは私の世界のすべてです」 - とても素敵です。\nB: 仕事に行くと寂しいです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "note",
+    "en_a": "A: What paper did you leave on my desk?\nB: Love message for you.",
+    "en_b": "A: \"You are my whole world\" - so sweet.\nB: I miss you when you go to work.",
     "tag": "애정 표현"
   },
   {
@@ -3004,9 +3004,9 @@
     "jp": "",
     "jp_a": "B: 今私が寝ているのを見ていましたか？\nA: とてもかわいく寝ていますね。",
     "jp_b": "B: 口を開けますか？\nA: ほんの少しですが、それでもあなたは美しいです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Watching you sleep",
+    "en_a": "B: Did you watch me sleep just now?\nA: You sleep so cutely.",
+    "en_b": "B: Do you open your mouth?\nA: A little, but you're still beautiful.",
     "tag": "애정 표현"
   },
   {
@@ -3018,9 +3018,9 @@
     "jp": "",
     "jp_a": "A: 私はあなたにこの香水のボトルをあげました。\nB: 好きな香りは？",
     "jp_b": "A: そうだよ、ジャスミン、君みたいに優しいよ。\nB: 毎日スプレーしてみます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "perfume gifts",
+    "en_a": "A: I gave you this bottle of perfume.\nB: The scent you like?",
+    "en_b": "A: That's right, jasmine, gentle like you.\nB: I will spray every day.",
     "tag": "애정 표현"
   },
   {
@@ -3032,9 +3032,9 @@
     "jp": "",
     "jp_a": "B: ハニー、私のために「I'm yours」の歌を歌ってください。\nA: 彼は歌うのがとても下手です。",
     "jp_b": "B: 気にしない、ただ話を聞きたいだけだ。\nA: さて、それでは笑わないでください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "dedicate song",
+    "en_a": "B: Honey, sing the song \"I'm yours\" for me.\nA: He sings very badly.",
+    "en_b": "B: I don't care, I just want to hear you.\nA: Okay then, don't laugh at me.",
     "tag": "애정 표현"
   },
   {
@@ -3046,9 +3046,9 @@
     "jp": "",
     "jp_a": "A: 「子犬」というあだ名をつけさせていただきます。\nB: なぜ子犬なのか？",
     "jp_b": "A: だってあなたはとても内気で愛らしいから。\nB: だから私はあなたの「黒檀の猫」です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Create a nickname",
+    "en_a": "A: I'll nickname you \"Puppy\".\nB: Why puppy?",
+    "en_b": "A: Because you are so coy and adorable.\nB: So I'm your \"Ebony Cat\".",
     "tag": "애정 표현"
   },
   {
@@ -3060,9 +3060,9 @@
     "jp": "",
     "jp_a": "B: 最初の喫茶店に戻りましょう。\nA: お店はまだありますか？",
     "jp_b": "B: そして先週通りかかったところです。\nA: ということで、明日の午後に行きます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Visit a memorable place",
+    "en_a": "B: Let's go back to the first coffee shop.\nA: Is the shop still available?",
+    "en_b": "B: And there, I passed by last week.\nA: So I'll go tomorrow afternoon.",
     "tag": "애정 표현"
   },
   {
@@ -3074,9 +3074,9 @@
     "jp": "",
     "jp_a": "A: 私の手を握ってください、ハニー。\nB: あなたの手は大きいですが、私の指は小さいです。",
     "jp_b": "A: 私にぴったりです。\nB: 本当にお互いのために作られました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Interlace your fingers",
+    "en_a": "A: Hold my hand, honey.\nB: Your hands are big, my fingers are small.",
+    "en_b": "A: Fits me perfectly.\nB: Truly made for each other.",
     "tag": "애정 표현"
   },
   {
@@ -3088,9 +3088,9 @@
     "jp": "",
     "jp_a": "B: 私はあなたの胸に寄りかかって寝るのが好きです。\nA: 心臓の鼓動がすごくうるさくて、眠れなくないですか？",
     "jp_b": "B: 私の心の音はあなたの子守唄です。\nA: あなたはとても優しいです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "common sleeping position",
+    "en_a": "B: I like sleeping against your chest.\nA: My heart is beating so loudly, don't you have trouble sleeping?",
+    "en_b": "B: The sound of my heart is your lullaby.\nA: You're so sweet.",
     "tag": "애정 표현"
   },
   {
@@ -3102,9 +3102,9 @@
     "jp": "",
     "jp_a": "A: 私を見て、目を逸らさないでください。\nB: とても恥ずかしがります。",
     "jp_b": "A: あなたの目は星のように美しいです。\nB: あなたはいつも私にお世辞を言います、私はそれに慣れています。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "eye contact",
+    "en_a": "A: Look at me, don't look away.\nB: I feel very shy.",
+    "en_b": "A: Your eyes are as beautiful as the stars.\nB: You flatter me all the time, I'm used to it.",
     "tag": "애정 표현"
   },
   {
@@ -3116,9 +3116,9 @@
     "jp": "",
     "jp_a": "B: 私の手はとても冷たいので、温めてください。\nA: 手は冷たいけど心は温かい。",
     "jp_b": "B: あなたは私のヒーターです。\nA: 永遠に私のヒーター。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Share the warmth",
+    "en_a": "B: My hands are so cold, please warm them for me.\nA: My hands are cold but my heart is warm.",
+    "en_b": "B: You are my heater.\nA: Forever my heater.",
     "tag": "애정 표현"
   },
   {
@@ -3130,9 +3130,9 @@
     "jp": "",
     "jp_a": "B: この陶芸教室はとても面白いです。\nA: このカップはあなたが作りましたか？",
     "jp_b": "B: はい、やってみます。\nA: 私は毎日このカップでコーヒーを飲みます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "pottery making experience",
+    "en_a": "B: This pottery class is so interesting.\nA: Did you make this cup?",
+    "en_b": "B: Yes, I'll do it for you.\nA: I will drink coffee from this cup every day.",
     "tag": "데이트"
   },
   {
@@ -3144,9 +3144,9 @@
     "jp": "",
     "jp_a": "A: 一緒にお寿司の作り方を学びましょう。\nB: 私は刃物を扱うのがとても不器用です。",
     "jp_b": "A: 手を握って見せてあげるよ。\nB: それからすぐに学校に行きます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "cooking class",
+    "en_a": "A: Let's learn to make sushi together.\nB: I'm very clumsy with cutlery.",
+    "en_b": "A: I will hold your hand and show you.\nB: Then I go to school right away.",
     "tag": "데이트"
   },
   {
@@ -3158,9 +3158,9 @@
     "jp": "",
     "jp_a": "B: 私はワインを飲んだことがありません。\nA: まずは軽い白ワインから始めましょう。",
     "jp_b": "B: とても美味しいです、よく選びましたね。\nA: 毎日少しずつ飲むと心臓に良いそうです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "wine tasting",
+    "en_a": "B: I have never drank wine.\nA: Let's start with something light, white wine.",
+    "en_b": "B: It's so delicious, you chose so well.\nA: Drinking a little every day is good for the heart.",
     "tag": "데이트"
   },
   {
@@ -3172,9 +3172,9 @@
     "jp": "",
     "jp_a": "B: 足がとても疲れたので、足湯に入ってリラックスしましょう。\nA: 2人で予約させてください。",
     "jp_b": "B: あなたはとても優しいので、私が疲れていることを知っています。\nA: 週に一度は外に連れて行ってください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "foot spa",
+    "en_a": "B: My feet are so tired, let's go take a foot bath to relax.\nA: Let me book a reservation for two people.",
+    "en_b": "B: You're so kind, you know I'm tired.\nA: Take me out once a week.",
     "tag": "데이트"
   },
   {
@@ -3186,9 +3186,9 @@
     "jp": "",
     "jp_a": "A: Ba Denに登ってみましょう。景色は美しいです。\nB: 背が高いのが怖い。",
     "jp_b": "A: 私にはあなたがいます、恐れることはありません。\nB: それでは、ケーブルカーに乗りましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "climbing",
+    "en_a": "A: Let's climb Ba Den, the view is beautiful.\nB: I'm afraid of being tall.",
+    "en_b": "A: I have you, don't be afraid.\nB: So let's get on the cable car.",
     "tag": "데이트"
   },
   {
@@ -3200,9 +3200,9 @@
     "jp": "",
     "jp_a": "B: カヤックはできますか？\nA: あなたは左で漕ぎ、私は右で漕ぎます。",
     "jp_b": "B: 脱線してしまいました！\nA: 協力してください、振り回さないでください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "kayak",
+    "en_a": "B: Can I kayak?\nA: You row on the left, I row on the right.",
+    "en_b": "B: I'm off track!\nA: Cooperate, don't wave around.",
     "tag": "데이트"
   },
   {
@@ -3214,9 +3214,9 @@
     "jp": "",
     "jp_a": "A: 神社に行って愛を祈りましょう。\nB: 私にはすでに運命があります。",
     "jp_b": "A: 愛が永遠に続くように祈ってください。\nB: あなたはとても優しいので、フォローします。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "visit the temple",
+    "en_a": "A: Let's go to the temple to pray for love.\nB: I already have fate.",
+    "en_b": "A: Pray for love to last forever.\nB: You're so sweet, I'll follow you.",
     "tag": "데이트"
   },
   {
@@ -3228,9 +3228,9 @@
     "jp": "",
     "jp_a": "B: 夜の散歩はとてもロマンチックです。\nA: もう遅いよ、怖くない？",
     "jp_b": "B: あなたがいれば、何も怖くない。\nA: ぎゅっと抱きしめてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "night walk",
+    "en_a": "B: Walking at night is so romantic.\nA: It's late, aren't you scared?",
+    "en_b": "B: With you, I'm not afraid of anything.\nA: Please hug me tightly.",
     "tag": "데이트"
   },
   {
@@ -3242,9 +3242,9 @@
     "jp": "",
     "jp_a": "A: そのストリートアーティストはとても上手に歌います。\nB: ピアノの箱にお金を入れておきます。",
     "jp_b": "A: あなたはとても寛大です。\nB: 才能はサポートされなければなりません。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Watch street performances",
+    "en_a": "A: The street artist sings so well.\nB: I'll put the money in the piano box.",
+    "en_b": "A: You're so generous.\nB: Talent must be supported.",
     "tag": "데이트"
   },
   {
@@ -3256,9 +3256,9 @@
     "jp": "",
     "jp_a": "B: この古い帽子を見てください、とてもかわいいです。\nA: 買ってください、それはあなたに合います。",
     "jp_b": "B: たったの5万ですから安いですね。\nA: 試してみます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "flea market",
+    "en_a": "B: Look at this old hat, it's so cute.\nA: Buy it, it suits you.",
+    "en_b": "B: It's only 50 thousand, so cheap.\nA: I'll give it a try and see.",
     "tag": "데이트"
   },
   {
@@ -3270,9 +3270,9 @@
     "jp": "",
     "jp_a": "A: 映画祭がもうすぐ開幕します。\nB: チケットはもう予約しましたか？",
     "jp_b": "A: 予約済み、席はB列です。\nB: レッドカーペットの写真を撮りに早めに行きましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "film festival",
+    "en_a": "A: The film festival is about to open.\nB: Have you booked your tickets yet?",
+    "en_b": "A: Booked, seat row B.\nB: Let's go early to take red carpet photos.",
     "tag": "데이트"
   },
   {
@@ -3284,9 +3284,9 @@
     "jp": "",
     "jp_a": "B: 郊外まで車で行きましょう。\nA: 車内の音楽をお選びください。",
     "jp_b": "B: プレイリストを開いてみました。\nA: あなたの気持ちはよくわかります。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "drive",
+    "en_a": "B: Let's drive to the suburbs.\nA: Please choose the music in the car.",
+    "en_b": "B: I opened your playlist.\nA: I understand you very well.",
     "tag": "데이트"
   },
   {
@@ -3298,9 +3298,9 @@
     "jp": "",
     "jp_a": "B: 彼女の写真に興味を持ちましたか?\nA: 古い友人が偶然クリックしてしまいました。",
     "jp_b": "B: 私はそれが気に入りません。\nA: 今すぐキャンセルします。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Like SNS",
+    "en_a": "B: Did you heart that photo of her?\nA: Just an old friend, accidentally clicked.",
+    "en_b": "B: I don't like it.\nA: I'll cancel right now.",
     "tag": "갈등/화해"
   },
   {
@@ -3312,9 +3312,9 @@
     "jp": "",
     "jp_a": "B: 約束は7時だったのに、もう8時になってしまいました！\nA: 申し訳ありませんが、会社に急な用事がありまして。",
     "jp_b": "B: 常に仕事があるのです！\nA: スケジュールを調整させていただきます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "I don't keep time",
+    "en_a": "B: Appointment was 7 o'clock but now it's 8 o'clock!\nA: I'm sorry, I have urgent company business.",
+    "en_b": "B: There's always work!\nA: I will adjust the schedule.",
     "tag": "갈등/화해"
   },
   {
@@ -3326,9 +3326,9 @@
     "jp": "",
     "jp_a": "A: どうしてそんなに食べ残しを残すのですか？\nB: お腹がいっぱいで食べられない。",
     "jp_b": "A: なんとももったいない。\nB: 次回からは電話の回数を減らします。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "leftover food",
+    "en_a": "A: Why do you leave so much leftover?\nB: I'm full, I can't eat.",
+    "en_b": "A: What a waste.\nB: Next time I'll call less.",
     "tag": "갈등/화해"
   },
   {
@@ -3340,9 +3340,9 @@
     "jp": "",
     "jp_a": "B: あなたの部屋はとても汚いです！\nA: とても忙しいので時間がありません。",
     "jp_b": "B: 彼は引っ越しのために人を雇った。\nA: そうです、今週末自分で掃除します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "no cleaning",
+    "en_a": "B: Your room is so messy!\nA: I'm so busy, I don't have time.",
+    "en_b": "B: He hired someone to move out.\nA: You're right, I'll clean it up myself this weekend.",
     "tag": "갈등/화해"
   },
   {
@@ -3354,9 +3354,9 @@
     "jp": "",
     "jp_a": "B: 起きて、もう11時だよ！\nA: 週末だ、もっと寝させてください。",
     "jp_b": "B: ご家族でランチデートしてきました！\nA: ああ、なんてことだ、忘れてた！",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "overslept",
+    "en_a": "B: Wake up, it's 11 o'clock!\nA: It's the weekend, let me sleep more.",
+    "en_b": "B: I have a lunch date with your family!\nA: Oh my god, I forgot!",
     "tag": "갈등/화해"
   },
   {
@@ -3368,9 +3368,9 @@
     "jp": "",
     "jp_a": "B: 一緒に夕食を食べに来てください、もう仕事はしないでください。\nA: レポートは10時までに提出しなければなりません。",
     "jp_b": "B: 健康はもっと大切です。\nA: そうですね、今回はここでやめておきます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "work first",
+    "en_a": "B: Come have dinner with me, don't work anymore.\nA: You must submit the report before 10 o'clock.",
+    "en_b": "B: Health is more important.\nA: You're right, I'll stop here for now.",
     "tag": "갈등/화해"
   },
   {
@@ -3382,9 +3382,9 @@
     "jp": "",
     "jp_a": "B: なぜ私の電話に出てくれないのですか？\nA: 会議中なのでマナーモードにしています。",
     "jp_b": "B: 私はあなたのことが死ぬほど心配です。\nA: 次回からは最初にテキストを送信します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Don't answer the phone",
+    "en_a": "B: Why don't you answer my phone?\nA: I'm in a meeting so I'm on silent mode.",
+    "en_b": "B: I'm worried about you to death.\nA: Next time, text first.",
     "tag": "갈등/화해"
   },
   {
@@ -3396,9 +3396,9 @@
     "jp": "",
     "jp_a": "B: 眠いですか？代わりに私が運転させてください。\nA: 起きていますね。",
     "jp_b": "B: 目が垂れ下がっていますね。\nA: それはそれです、私は立ち止まって少し休憩します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Drowsy driving",
+    "en_a": "B: Are you sleepy? Let me drive instead.\nA: You're awake.",
+    "en_b": "B: Your eyes are drooping.\nA: That's it, I'll stop and rest for a bit.",
     "tag": "갈등/화해"
   },
   {
@@ -3410,9 +3410,9 @@
     "jp": "",
     "jp_a": "B: 今日が記念日だということを忘れていませんか？\nA: ごめんなさい、仕事が多忙です。",
     "jp_b": "B: 毎年同じですね！\nA: 来年は必ず覚えておくと誓います。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Forgot anniversaries",
+    "en_a": "B: Did you forget that today is your anniversary?\nA: I'm sorry, work overloads me.",
+    "en_b": "B: Every year is the same!\nA: I promise I'll remember for sure next year.",
     "tag": "갈등/화해"
   },
   {
@@ -3424,9 +3424,9 @@
     "jp": "",
     "jp_a": "B: 彼の母親はよくリンさんを褒めます。\nA: お母さんはただ冗談を言っただけです。",
     "jp_b": "B: とても悲しいです、私は最善を尽くしました。\nA: お母さんに教えてあげましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Comparison with others (mother)",
+    "en_a": "B: His mother often compliments Ms. Linh.\nA: Mom was just joking.",
+    "en_b": "B: I'm so sad, I tried my best.\nA: Let me tell mom.",
     "tag": "갈등/화해"
   },
   {
@@ -3438,9 +3438,9 @@
     "jp": "",
     "jp_a": "A: 生活と仕事のバランスを取らなければなりません。\nB: 私はとても一生懸命働いているので、あなたに会うことはほとんどありません。",
     "jp_b": "A: 今週彼は休みを求めた。\nB: それで、どこに行けばいいでしょうか？",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Balance between work and life",
+    "en_a": "A: I have to balance life with work.\nB: I work so hard, I rarely see you.",
+    "en_b": "A: This week he asked for a day off.\nB: So where should we go?",
     "tag": "미래 계획"
   },
   {
@@ -3452,9 +3452,9 @@
     "jp": "",
     "jp_a": "B: 新しい洗濯機を購入しました。\nA: もういいものは見つかりましたか？",
     "jp_b": "B: LGはプロモーションを提供しています。\nA: そこで便宜上Tikiに付けてみました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Household appliance fraud",
+    "en_a": "B: I bought a new washing machine.\nA: Have you found a good one yet?",
+    "en_b": "B: LG is offering a promotion.\nA: So I put it on Tiki for convenience.",
     "tag": "미래 계획"
   },
   {
@@ -3466,9 +3466,9 @@
     "jp": "",
     "jp_a": "A: 新しい部屋には大きな本棚があります。\nB: 韓国の小説をたくさん持っています。",
     "jp_b": "A: 私は経済学の本を読みます。\nB: 一人一人をコンパートメントに分けました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "make a bookshelf",
+    "en_a": "A: I have a large bookcase in my new room.\nB: I have many Korean novels.",
+    "en_b": "A: I read economics books.\nB: I divided each person into a compartment.",
     "tag": "미래 계획"
   },
   {
@@ -3480,9 +3480,9 @@
     "jp": "",
     "jp_a": "B: 個別指導は高すぎる。\nA: これから教育資金を貯めていきます。",
     "jp_b": "B: 毎月500万入れることは可能でしょうか？\nA: リーズナブルな別口座開設。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "children's education costs",
+    "en_a": "B: Private tuition is too expensive.\nA: I'll accumulate education funds from now on.",
+    "en_b": "B: Is it possible to put in 5 million each month?\nA: Reasonable, open separate account.",
     "tag": "미래 계획"
   },
   {
@@ -3494,9 +3494,9 @@
     "jp": "",
     "jp_a": "A: 投資用に土地を購入することをお考えですか?\nB: 私はリスクをとても恐れています。",
     "jp_b": "A: 値上がりしていたところを購入しました。\nB: したがって、最初に注意深く調べてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "real estate investment",
+    "en_a": "A: Are you thinking about buying land for investment?\nB: I'm very afraid of risks.",
+    "en_b": "A: I bought a place that was going up in price.\nB: So research carefully first.",
     "tag": "미래 계획"
   },
   {
@@ -3508,9 +3508,9 @@
     "jp": "",
     "jp_a": "B: あなたの会社の株は上がっています。\nA: 去年購入しました。",
     "jp_b": "B: 言葉がたくさんありますか？\nA: 一時的なもので、旅行するには十分です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "stock investment",
+    "en_a": "B: Your company's stock is going up.\nA: I bought it last year.",
+    "en_b": "B: Are there many words?\nA: It's temporary, enough for me to travel.",
     "tag": "미래 계획"
   },
   {
@@ -3522,9 +3522,9 @@
     "jp": "",
     "jp_a": "A: 緊急基金を設立しましょう。\nB: いくらあれば十分ですか？",
     "jp_b": "A: 半年分の生活費。\nB: そこで、自動転送スケジュールを設定しました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "emergency fund",
+    "en_a": "A: Let's set up an emergency fund.\nB: How much is enough?",
+    "en_b": "A: Six months of living expenses.\nB: So I set up an automatic transfer schedule.",
     "tag": "미래 계획"
   },
   {
@@ -3536,9 +3536,9 @@
     "jp": "",
     "jp_a": "B: 旅行用の貯金帳を開いてみましょう。\nA: どこに行きますか？",
     "jp_b": "B: 日本の桜の季節。\nA: だから2年後に行きます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Vacation savings",
+    "en_a": "B: Let's open a savings book for travel.\nA: Where to go?",
+    "en_b": "B: Japan cherry blossom season.\nA: So I'll go in two years.",
     "tag": "미래 계획"
   },
   {
@@ -3550,9 +3550,9 @@
     "jp": "",
     "jp_a": "A: 老後は小さなコーヒーショップを開くつもりです。\nB: あなたはコーヒーを淹れ、私はゲストを迎えます。",
     "jp_b": "A: 隅っこには犬も寝ています。\nB: とても綺麗で、夢を見ていました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Coffee shop after retirement",
+    "en_a": "A: When I'm old, I'll open a small coffee shop.\nB: You make coffee, I receive guests.",
+    "en_b": "A: There's a dog lying in the corner too.\nB: So beautiful, I was dreaming.",
     "tag": "미래 계획"
   },
   {
@@ -3564,9 +3564,9 @@
     "jp": "",
     "jp_a": "B: 高齢の両親の病気が心配です。\nA: 私は両親のために健康保険に加入しました。",
     "jp_b": "B: 本当に思慮深いですね。\nA: あなたの家族も私の家族だから。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Parents' health insurance",
+    "en_a": "B: I worry about my elderly parents' illness.\nA: I bought health insurance for my parents.",
+    "en_b": "B: You're really thoughtful.\nA: Because your family is also mine.",
     "tag": "미래 계획"
   },
   {
@@ -3578,9 +3578,9 @@
     "jp": "",
     "jp_a": "B: 友達が結婚することになったので、私も結婚したいと思っています。\nA: ゆっくりやってみます。",
     "jp_b": "B: 見逃してしまったらどうすればいいですか？\nA: 私は決して負担にはなりません。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Jealous of your friends' marriages",
+    "en_a": "B: My friend is getting married, I want it too.\nA: I'll take it slow.",
+    "en_b": "B: What if I miss it?\nA: I will never be a burden.",
     "tag": "감정/위로"
   },
   {
@@ -3592,9 +3592,9 @@
     "jp": "",
     "jp_a": "B: 私の友人はとても贅沢に住んでいます。\nA: つまり、美しい部分だけを共有するということです。",
     "jp_b": "B: とても羨ましいです。\nA: 人それぞれ幸せは異なります。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Compare Instagram",
+    "en_a": "B: My friend lives very luxuriously.\nA: That is they only share the beautiful part.",
+    "en_b": "B: I'm so jealous.\nA: Each person has different happiness.",
     "tag": "감정/위로"
   },
   {
@@ -3606,9 +3606,9 @@
     "jp": "",
     "jp_a": "B: このテトはとても疲れた。\nA: なぜ私が？",
     "jp_b": "B: 親戚との儀式が多すぎる。\nA: 短くしましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "stressful vacation",
+    "en_a": "B: I'm so tired this Tet.\nA: Why me?",
+    "en_b": "B: Too many rituals with relatives.\nA: Let's shorten it.",
     "tag": "감정/위로"
   },
   {
@@ -3620,9 +3620,9 @@
     "jp": "",
     "jp_a": "A: 私の父は最近腰痛を患っています。\nB: 父を一般健康診断に連れて行きましょう。",
     "jp_b": "A: 彼は自分が重病であることが父親に知られるのを恐れていた。\nB: 早期発見して治療しましょう、恐れることはありません。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Parents' health concerns",
+    "en_a": "A: My father has been having back pain lately.\nB: Let's take my dad for a general checkup.",
+    "en_b": "A: He was afraid that his father would find out he was seriously ill.\nB: Detect early to cure, don't be afraid.",
     "tag": "감정/위로"
   },
   {
@@ -3634,9 +3634,9 @@
     "jp": "",
     "jp_a": "B: 兄と私は喧嘩した。\nA: 何のために？",
     "jp_b": "B: ただお金。\nA: 兄弟はお互いに寛容でなければなりません。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "sibling conflict",
+    "en_a": "B: My brother and I quarreled.\nA: For what?",
+    "en_b": "B: Just money.\nA: Siblings should tolerate each other.",
     "tag": "감정/위로"
   },
   {
@@ -3648,9 +3648,9 @@
     "jp": "",
     "jp_a": "A: 会社を変えるのが怖いですか？\nB: 怖いし、給料は高いけどプレッシャーもある。",
     "jp_b": "A: あなたは大丈夫です、私はあなたを信じています。\nB: 兄弟がいると安心感が増します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "afraid of new challenges",
+    "en_a": "A: Are you afraid of changing companies?\nB: Scared, high salary but pressure.",
+    "en_b": "A: You're good, I believe in you.\nB: Having brothers makes me feel more secure.",
     "tag": "감정/위로"
   },
   {
@@ -3662,9 +3662,9 @@
     "jp": "",
     "jp_a": "B: 自分の髪が白髪であることに気づきました。\nA: 1本だけでも、とても可愛いです。",
     "jp_b": "B: 年をとるのが怖いです。\nA: あなたと一緒に歳を重ねていくことが私が一番望んでいることです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "grow old",
+    "en_a": "B: I discovered my hair is gray.\nA: Just one strand, so cute.",
+    "en_b": "B: I'm afraid of getting old.\nA: Growing old with you is what I hope for the most.",
     "tag": "감정/위로"
   },
   {
@@ -3676,9 +3676,9 @@
     "jp": "",
     "jp_a": "B: 私はとても醜くて、顔はニキビだらけです。\nA: あなたはまだ可愛いと思います。",
     "jp_b": "B: ただ楽しんでくださいと言ったばかりです。\nA: 本当のことを言うと、あなたは生まれつき美しいのです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "complex appearance",
+    "en_a": "B: I'm so ugly, my face is full of acne.\nA: I think you're still adorable.",
+    "en_b": "B: I just told you to have fun.\nA: I tell the truth, you are naturally beautiful.",
     "tag": "감정/위로"
   },
   {
@@ -3690,9 +3690,9 @@
     "jp": "",
     "jp_a": "B: 私の友人が亡くなりました。\nA: ああ、一体なぜこんなことになってしまったのでしょうか？",
     "jp_b": "B: 車の事故。\nA: あなたは泣いています、私はここにいます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "the sadness of losing a friend",
+    "en_a": "B: My friend has passed away.\nA: Oh my god, why did this happen?",
+    "en_b": "B: Car accident.\nA: You cry, I'm here.",
     "tag": "감정/위로"
   },
   {
@@ -3704,9 +3704,9 @@
     "jp": "",
     "jp_a": "B: 明日は議会に提出しなければなりません。\nA: あなたは私と一緒に練習します。",
     "jp_b": "B: ぜひ聞いてフィードバックをお寄せください。\nA: あなたは最も要求の厳しい聴衆です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "motivational presentation",
+    "en_a": "B: Tomorrow I have to present to the council.\nA: You practice with me.",
+    "en_b": "B: Please listen and give your feedback.\nA: You are the most demanding audience.",
     "tag": "감정/위로"
   },
   {
@@ -3718,9 +3718,9 @@
     "jp": "",
     "jp_a": "B: あなたの誘いを断る方法がわかりません。\nA: 自分の時間を守る方法を知らなければなりません。",
     "jp_b": "B: あなたを失うのが怖いです。\nA: あなたは本当に私のことを理解してくれるでしょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Difficulty of refusal",
+    "en_a": "B: I don't know how to refuse your invitation.\nA: You must know how to protect your time.",
+    "en_b": "B: I'm afraid of losing you.\nA: You will really understand me.",
     "tag": "감정/위로"
   },
   {
@@ -3732,9 +3732,9 @@
     "jp": "",
     "jp_a": "A: ハニー、起きて、今日は早く出発します。\nB: 起きたくないので寝させてください。",
     "jp_b": "A: だから私はあなたを連れて行きます。\nB: やめて、起きてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "I don't want to wake up early",
+    "en_a": "A: Honey, wake up, leave early today.\nB: I don't want to wake up, let me sleep.",
+    "en_b": "A: So I carry you out.\nB: Don't don't, wake up.",
     "tag": "감정/위로"
   },
   {
@@ -3746,9 +3746,9 @@
     "jp": "",
     "jp_a": "B: 十分に眠れず、頭が重いです。\nA: 昼寝をします。",
     "jp_b": "B: まだまだやるべきことはたくさんあります。\nA: 健康が第一、仕事は後です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "lack of sleep",
+    "en_a": "B: I don't sleep enough, my mind is heavy.\nA: I'm going to take a nap.",
+    "en_b": "B: There's still a lot of work.\nA: Health first, work later.",
     "tag": "건강/돌봄"
   },
   {
@@ -3760,9 +3760,9 @@
     "jp": "",
     "jp_a": "A: 腰がとても痛いです。\nB: コンピューターの前に座りすぎます。",
     "jp_b": "A: あなたの背中をさすってあげましょう。\nB: 明日は理学療法に行きます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "back-ache",
+    "en_a": "A: My back hurts so much.\nB: You sit at the computer too much.",
+    "en_b": "A: Let me rub your back for you.\nB: I'll go to physical therapy tomorrow.",
     "tag": "건강/돌봄"
   },
   {
@@ -3774,9 +3774,9 @@
     "jp": "",
     "jp_a": "B: この靴は私の足をとても痛めます。\nA: 脱いでハニカムサンダルを履きます。",
     "jp_b": "B: ドレスやサンダルを履くのが怖いです。\nA: 私もあなたを連れて行きます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "foot pain",
+    "en_a": "B: These shoes hurt my feet so much.\nA: Take them off and wear honeycomb sandals.",
+    "en_b": "B: I'm afraid to wear dresses and sandals.\nA: I'll carry you too.",
     "tag": "건강/돌봄"
   },
   {
@@ -3788,9 +3788,9 @@
     "jp": "",
     "jp_a": "B: エビを食べたらアレルギーが出ました。\nA: 顔が赤く腫れているのですぐに病院へ行きましょう。",
     "jp_b": "B: 私は注射がとても怖いです。\nA: 私にはあなたがいます、恐れることはありません。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "allergy",
+    "en_a": "B: I was allergic to shrimp when I ate it.\nA: My face is red and swollen, go to the hospital right away.",
+    "en_b": "B: I'm very afraid of injections.\nA: I have you, don't be afraid.",
     "tag": "건강/돌봄"
   },
   {
@@ -3802,9 +3802,9 @@
     "jp": "",
     "jp_a": "A: 昨夜からお腹が痛いです。\nB: 何か悪いものを食べましたか？",
     "jp_b": "A: 昨日のレストランの外でのシーフード。\nB: 私はすぐに救急治療室に行きました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "food poisoning",
+    "en_a": "A: His stomach hurts since last night.\nB: Did you eat something bad?",
+    "en_b": "A: Seafood outside the restaurant yesterday.\nB: I went to the emergency room immediately.",
     "tag": "건강/돌봄"
   },
   {
@@ -3816,9 +3816,9 @@
     "jp": "",
     "jp_a": "B: くしゃみがずっと出て、鼻が詰まっています。\nA: アレルギー性鼻炎はありますか？",
     "jp_b": "B: それぞれの季節が交差する。\nA: 空気清浄機を買いましょう。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "rhinitis",
+    "en_a": "B: I sneeze all the time, my nose is stuffy.\nA: Do you have allergic rhinitis?",
+    "en_b": "B: Each season intersects.\nA: Let me buy an air purifier.",
     "tag": "건강/돌봄"
   },
   {
@@ -3830,9 +3830,9 @@
     "jp": "",
     "jp_a": "B: 全くやる気がありません。\nA: 心理学者に診てもらいたいですか？",
     "jp_b": "B: 人々は私を弱いと思うのではないかと心配しています。\nA: 心理学も健康です、隠さないでください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "depression symptoms",
+    "en_a": "B: I have no motivation at all.\nA: Do you want to see a psychologist?",
+    "en_b": "B: I'm afraid people will think I'm weak.\nA: Psychology is also health, don't hide it.",
     "tag": "건강/돌봄"
   },
   {
@@ -3844,9 +3844,9 @@
     "jp": "",
     "jp_a": "A: 朝、一緒にストレッチしましょう。\nB: とても体が硬いんです。",
     "jp_b": "A: ゆっくりと練習して、時間をかけて柔軟になっていきましょう。\nB: 試みる兄弟もいます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "lengthen",
+    "en_a": "A: Let's stretch together in the morning.\nB: I'm very stiff.",
+    "en_b": "A: Practice slowly and over time you will be flexible.\nB: Some brothers try.",
     "tag": "건강/돌봄"
   },
   {
@@ -3858,9 +3858,9 @@
     "jp": "",
     "jp_a": "B: 食べすぎてお腹が痛くなりました。\nA: 消化のために外に出て散歩しましょう。",
     "jp_b": "B: お腹が膨れて歩けない。\nA: 彼は私がゆっくり歩くのを手伝ってくれました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "redundancy",
+    "en_a": "B: I eat too much, my stomach hurts.\nA: Let's go out and take a walk to digest.",
+    "en_b": "B: I can't walk, my stomach is bloated.\nA: He helped me walk slowly.",
     "tag": "건강/돌봄"
   },
   {
@@ -3872,9 +3872,9 @@
     "jp": "",
     "jp_a": "B: 最近肌の調子がとても悪いです。\nA: 水をたくさん飲んで、十分な睡眠を取っていますか？",
     "jp_b": "B: 私はよく遅くまで起きています。\nA: 早く寝るように注意します。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "skin care",
+    "en_a": "B: My skin is so bad these days.\nA: Are you drinking lots of water and getting enough sleep?",
+    "en_b": "B: I often stay up late.\nA: I remind you to go to bed early.",
     "tag": "건강/돌봄"
   },
   {
@@ -3886,9 +3886,9 @@
     "jp": "",
     "jp_a": "B: 今日母は私にたくさんのことを思い出させてくれました。\nA: お母さんはあなたを愛しているので、私にアドバイスをくれました。",
     "jp_b": "B: ちょっとごめんなさい。\nA: 母と個人的に話させてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "mother-in-law grumbled",
+    "en_a": "B: My mother reminded me a lot today.\nA: Mom loves you so she gave me advice.",
+    "en_b": "B: I'm a bit sorry.\nA: Let me talk to my mother privately.",
     "tag": "가족/사회"
   },
   {
@@ -3900,9 +3900,9 @@
     "jp": "",
     "jp_a": "A: 弟は私からお金を借りました。\nB: 繰り返しますが、返済せずに借り続けます。",
     "jp_b": "A: どうすればいいですか？\nB: 丁重にお断りしてください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "borrowed money from my brother-in-law",
+    "en_a": "A: My younger brother borrowed money from me.\nB: Again, keep borrowing and not repaying.",
+    "en_b": "A: What should I do?\nB: Please refuse politely.",
     "tag": "가족/사회"
   },
   {
@@ -3914,9 +3914,9 @@
     "jp": "",
     "jp_a": "A: 今週末、いとこの結婚式に出席します。\nB: はい、何を着ればいいですか？",
     "jp_b": "A: 赤いアオザイを着て、あなたはとても美しいです。\nB: それで、すぐに注文しました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "cousin's wedding",
+    "en_a": "A: Going to my cousin's wedding this weekend.\nB: Yes, what should I wear?",
+    "en_b": "A: Wear a red ao dai, you're very beautiful.\nB: So I ordered it right away.",
     "tag": "가족/사회"
   },
   {
@@ -3928,9 +3928,9 @@
     "jp": "",
     "jp_a": "B: 週末には母の家に行きます。\nA: 一緒に来てください。",
     "jp_b": "B: 母は私の好きな料理を作ります。\nA: 彼は熱心に食べた。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "visit my parents' house",
+    "en_a": "B: On weekends I go to my mother's house.\nA: Please come with me.",
+    "en_b": "B: My mother makes my favorite dish.\nA: He eagerly ate.",
     "tag": "가족/사회"
   },
   {
@@ -3942,9 +3942,9 @@
     "jp": "",
     "jp_a": "B: 私の友人が赤ちゃんを出産しました。\nA: 何日に病院に行けばいいですか？",
     "jp_b": "B: 明日の午後、プレゼントを買いましょう。\nA: 子供服は大丈夫ですか？",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "friend gives birth",
+    "en_a": "B: My friend gave birth to a baby.\nA: What day should I visit the hospital?",
+    "en_b": "B: Tomorrow afternoon, let's buy a gift.\nA: Are children's clothes okay?",
     "tag": "가족/사회"
   },
   {
@@ -3956,9 +3956,9 @@
     "jp": "",
     "jp_a": "A: 3日間チームビルディングに行ってきました。\nB: 家に一人でいるととても悲しいです。",
     "jp_b": "A: 私は毎晩あなたに電話します。\nB: はい、楽しんでください。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "company workshop",
+    "en_a": "A: I went to team building for 3 days.\nB: I'm so sad at home alone.",
+    "en_b": "A: I call you every night.\nB: Yes, have fun.",
     "tag": "가족/사회"
   },
   {
@@ -3970,9 +3970,9 @@
     "jp": "",
     "jp_a": "B: 私の友人は週末に家の掃除を手伝う必要があります。\nA: 私も一緒に行きます。",
     "jp_b": "B: 重いものを持ち上げるのを手伝ってくれます。\nA: 私がいれば、心配する必要はありません。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Help a friend move",
+    "en_a": "B: My friend needs help cleaning the house over the weekend.\nA: I'll go with you too.",
+    "en_b": "B: I help you lift heavy things for me.\nA: With me, you don't have to worry.",
     "tag": "가족/사회"
   },
   {
@@ -3984,9 +3984,9 @@
     "jp": "",
     "jp_a": "A: 来週は母の誕生日です。\nB: 小さなパーティーを企画しましょう。",
     "jp_b": "A: お母さんにぴったりのプレゼントは何ですか？\nB: シルクスカーフとブレスレット。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "parents birthday",
+    "en_a": "A: Next week is my mother's birthday.\nB: Let's organize a small party.",
+    "en_b": "A: What gift is suitable for mom?\nB: Silk scarf and a bracelet.",
     "tag": "가족/사회"
   },
   {
@@ -3998,9 +3998,9 @@
     "jp": "",
     "jp_a": "B: 近所の人がとても迷惑で、一晩中騒音を立てています。\nA: こっちに来て話しましょう。",
     "jp_b": "B: 議論しないでください、おい。\nA: 彼はそっと言いました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Neighbors quarreled",
+    "en_a": "B: The neighbors are so annoying, making noise all night.\nA: Let me come over and talk.",
+    "en_b": "B: Don't argue, man.\nA: He said softly.",
     "tag": "가족/사회"
   },
   {
@@ -4012,9 +4012,9 @@
     "jp": "",
     "jp_a": "A: 同僚の結婚式に行かなければなりません。\nB: 一緒に行ってもいいですか？",
     "jp_b": "A: もちろん、私は将来の妻です。\nB: それでドレスを選びます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "colleague marriage",
+    "en_a": "A: I have to go to a colleague's wedding.\nB: Can I go with you?",
+    "en_b": "A: Of course, I'm the future wife.\nB: So I choose a dress.",
     "tag": "가족/사회"
   },
   {
@@ -4026,9 +4026,9 @@
     "jp": "",
     "jp_a": "B: テトにはバインチョンを作りましょう。\nA: パッケージをご存知ですか？",
     "jp_b": "B: 母が見せてくれました。\nA: ということで、今年は我が家では手作りケーキを作りました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Holiday cooking",
+    "en_a": "B: Let's make banh chung for Tet.\nA: Do you know the package?",
+    "en_b": "B: My mother showed me.\nA: So this year our family has homemade cakes.",
     "tag": "가족/사회"
   },
   {
@@ -4040,9 +4040,9 @@
     "jp": "",
     "jp_a": "A: 彼のお母さんは最高の春雨麺を作ります。\nB: 明日は母にレシピを習ってもらうつもりです。",
     "jp_b": "A: 私が勉強するとお母さんはとても幸せです。\nB: 毎週あなたに料理を作りたいと思っています。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "mother learned to cook",
+    "en_a": "A: His mother cooks the best vermicelli noodles.\nB: Tomorrow I will ask my mother to learn the recipe.",
+    "en_b": "A: Mom is very happy when I study.\nB: I want to cook for you every week.",
     "tag": "가족/사회"
   },
   {
@@ -4054,9 +4054,9 @@
     "jp": "",
     "jp_a": "B: 友達が新しいおいしいフォーのレストランを紹介してくれました。\nA: 試しに行ってみましょう。",
     "jp_b": "B: 行列はとても長いです。\nA: 待つ価値があるなら、待ちます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "The restaurant was recommended by friends",
+    "en_a": "B: My friend introduced me to a delicious new pho restaurant.\nA: Let's go try it.",
+    "en_b": "B: The queue is very long.\nA: If it's worth the wait, I'll wait.",
     "tag": "가족/사회"
   },
   {
@@ -4068,9 +4068,9 @@
     "jp": "",
     "jp_a": "B: ダラットへの最初の旅行を覚えていますか?\nA: その夜は寒かったので、あなたに私のシャツをあげました。",
     "jp_b": "B: その瞬間から私は感動しました。\nA: 彼は以前震えていました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "maiden voyage",
+    "en_a": "B: Do you remember your first trip to Da Lat?\nA: That night was cold, so I gave you my shirt.",
+    "en_b": "B: I was moved from that moment.\nA: He was shaken before.",
     "tag": "특별한 순간"
   },
   {
@@ -4082,9 +4082,9 @@
     "jp": "",
     "jp_a": "A: 私の故郷であなたと初めてのテト。\nB: 両親に会うときはとても緊張しました。",
     "jp_b": "A: 誰もが最初からあなたを愛していました。\nB: 感動のあまり泣いてしまいました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "first vacation together",
+    "en_a": "A: First Tet with you in my hometown.\nB: I was very nervous when I met my parents.",
+    "en_b": "A: Everyone loved you from the beginning.\nB: I was so moved that I cried.",
     "tag": "특별한 순간"
   },
   {
@@ -4096,9 +4096,9 @@
     "jp": "",
     "jp_a": "B: 私はちょうどあなたの提案について母に話しました。\nA: お母さんはどう反応しましたか？",
     "jp_b": "B: お母さんは嬉しくて泣いた。\nA: 明日、母に伝えます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Post-proposal announcement",
+    "en_a": "B: I just told my mother about your proposal.\nA: How did mom react?",
+    "en_b": "B: Mom cried because of happiness.\nA: Tomorrow I will tell my mother.",
     "tag": "특별한 순간"
   },
   {
@@ -4110,9 +4110,9 @@
     "jp": "",
     "jp_a": "A: 明日は結婚式の写真を撮ります。\nB: 早朝から温泉に行ってきました。",
     "jp_b": "A: とても緊張しています。\nB: 私たちは最も美しいカップルになります。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "wedding photography",
+    "en_a": "A: Tomorrow I'll take wedding photos.\nB: I went to the spa early in the morning.",
+    "en_b": "A: I'm so nervous.\nB: We will be the most beautiful couple.",
     "tag": "특별한 순간"
   },
   {
@@ -4124,9 +4124,9 @@
     "jp": "",
     "jp_a": "B: 新婚旅行でモルディブに行きましょう。\nA: もうリゾートを予約しました。",
     "jp_b": "B: なんと、とてもお金を使いますね。\nA: 一生に一度だけ。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "honeymoon",
+    "en_a": "B: Let's go to the Maldives for our honeymoon.\nA: I already booked the resort.",
+    "en_b": "B: Oh my god, you spend so much.\nA: Just once in a lifetime.",
     "tag": "특별한 순간"
   },
   {
@@ -4138,9 +4138,9 @@
     "jp": "",
     "jp_a": "A: これは私の家の鍵です。\nB: 信じられない。",
     "jp_b": "A: やってしまいました。\nB: 泣いてしまうほど嬉しいです。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "Get the keys to your first home",
+    "en_a": "A: This is the key to my house.\nB: I can't believe it.",
+    "en_b": "A: I have done it.\nB: I'm so happy that I cry.",
     "tag": "특별한 순간"
   },
   {
@@ -4152,9 +4152,9 @@
     "jp": "",
     "jp_a": "B: 私の車はとてもキラキラしています！\nA: 私の隣の助手席に座ってください。",
     "jp_b": "B: まずどこに行きますか？\nA: 初めて恋に落ちたとき、喫茶店に行きました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "first car together",
+    "en_a": "B: My car is so sparkling!\nA: Please sit in the passenger seat next to me.",
+    "en_b": "B: Where to go first?\nA: Went to the coffee shop when we first fell in love.",
     "tag": "특별한 순간"
   },
   {
@@ -4166,9 +4166,9 @@
     "jp": "",
     "jp_a": "A: 私が正式にあなたの家に来た日のことを覚えていますか？\nB: 彼は手が震えるほど震えていました。",
     "jp_b": "A: 父はたくさんの難しい質問をしました。\nB: しかし、彼はすべてに答えました。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "The day I greeted my parents",
+    "en_a": "A: Do you remember the day I officially came to your house?\nB: He was shaking so much that his hands were shaking.",
+    "en_b": "A: My father asked many difficult questions.\nB: But he answered everything.",
     "tag": "특별한 순간"
   },
   {
@@ -4180,9 +4180,9 @@
     "jp": "",
     "jp_a": "B: 今日は私の100日間の恋です！\nA: あなたにプレゼントがあります。",
     "jp_b": "B: なんとペアのブレスレットです！\nA: 一緒に着ていきます。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "100 day anniversary",
+    "en_a": "B: Today is my 100 days of love!\nA: I have a gift for you.",
+    "en_b": "B: What a pair of bracelets!\nA: We will wear them together.",
     "tag": "특별한 순간"
   },
   {
@@ -4194,9 +4194,9 @@
     "jp": "",
     "jp_a": "A: おはようございます、親愛なる妻。\nB: 突然奇妙に聞こえます。",
     "jp_b": "A: ただ慣れてください。\nB: 今日から私はあなたの夫です。",
-    "en": "",
-    "en_a": "",
-    "en_b": "",
+    "en": "the first morning after getting married",
+    "en_a": "A: Good morning dear wife.\nB: It suddenly sounds strange.",
+    "en_b": "A: Just get used to it.\nB: I am your husband from now on.",
     "tag": "특별한 순간"
   }
 ]
