@@ -437,7 +437,7 @@ async function autoPlayCurrent() {
   const d = current[idx];
   const myToken = ++_autoSeq;
   const isBack = document.getElementById("card").classList.contains("flipped");
-  if (isBack) await speak(d.vn_ex, d.no, "vn_ex");
+  if (isBack) await speak(d.vn_ex || d.vn_a, d.no, "vn_ex");
   else await speak(d.vn, d.no, "vn");
   if (myToken !== _autoSeq) return;
   if (!S.autoAdvance || !S.audioOn) return;

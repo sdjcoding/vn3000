@@ -40,8 +40,10 @@ for c in cards:
     no = f"{c['no']:04d}"
     if c.get("vn"):
         jobs.append((AUDIO / f"w_{no}_vn.mp3", c["vn"]))
-    if c.get("vn_ex"):
-        jobs.append((AUDIO / f"w_{no}_vn_ex.mp3", c["vn_ex"]))
+    # Example: prefer vn_ex (legacy schema) else vn_a (mirrored A/B schema)
+    ex = c.get("vn_ex") or c.get("vn_a")
+    if ex and ex != c.get("vn"):
+        jobs.append((AUDIO / f"w_{no}_vn_ex.mp3", ex))
 todo = [j for j in jobs if not j[0].exists()]
 print(f"Total: {len(jobs)}  Done: {len(jobs)-len(todo)}  To do: {len(todo)}")
 
