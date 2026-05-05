@@ -214,6 +214,15 @@ main{
 }
 .nav-btn:active{background:var(--soft)}
 .nav-btn:disabled{opacity:.4;cursor:not-allowed}
+.nav-btn-mid{
+  flex:0 0 110px;
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;
+}
+.auto-icon{font-size:18px;line-height:1}
+.auto-label{font-size:13px;color:var(--text);font-weight:600;white-space:nowrap}
+.nav-btn-mid.on{background:#0ea5e9;color:#fff;border-color:#0ea5e9;animation:pulse 1.2s ease-in-out infinite}
+.nav-btn-mid.on .auto-label{color:#fff}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
 .nav-btn-mid{flex:0 0 56px;padding:14px 0;font-size:20px}
 .empty{text-align:center;padding:60px 20px;color:var(--muted);font-size:14px}
 @media (max-width:500px){
@@ -333,6 +342,10 @@ main{
   <div class="flip-hint">点击卡片翻面 · Space 翻面 · ←/→ 切换 · 手机滑动</div>
   <div class="nav-bar">
     <button class="nav-btn" id="prevBtn">← 上一张</button>
+    <button class="nav-btn nav-btn-mid" id="autoToggle" title="자동 재생">
+      <span class="auto-icon" id="autoIcon">▶️</span>
+      <span class="auto-label" id="autoLabel">자동</span>
+    </button>
     <button class="nav-btn" id="nextBtn">下一张 →</button>
   </div>
   <div class="empty" id="emptyMsg" style="display:none">没有匹配的卡片。请调整筛选条件。</div>
@@ -414,15 +427,33 @@ async function speak(text, no, suffix) {
   }
 }
 
-function autoPlayCurrent() {
+let _autoSeq = 0; // bumps on stopSpeak; used to cancel pending auto-advance steps
+async function autoPlayCurrent() {
   if (!S.audioOn || current.length === 0) return;
   const d = current[idx];
+  const myToken = ++_autoSeq;
   const isBack = document.getElementById("card").classList.contains("flipped");
-  if (isBack) speak(d.vn_ex, d.no, "vn_ex");
-  else speak(d.vn, d.no, "vn");
+  if (isBack) await speak(d.vn_ex, d.no, "vn_ex");
+  else await speak(d.vn, d.no, "vn");
+  if (myToken !== _autoSeq) return;
+  if (!S.autoAdvance || !S.audioOn) return;
+  await new Promise(r => setTimeout(r, 600));
+  if (myToken !== _autoSeq || !S.autoAdvance || !S.audioOn) return;
+  const nowBack = document.getElementById("card").classList.contains("flipped");
+  if (!nowBack) {
+    toggleFlip();              // -> autoPlayCurrent fires for back
+  } else if (idx < current.length - 1) {
+    nav(1);                    // -> autoPlayCurrent fires for next front
+  } else {
+    // End of deck — stop
+    S.autoAdvance = false;
+    updateAutoButton();
+    saveState();
+  }
 }
 
 function stopSpeak() {
+  _autoSeq++;  // cancel any pending auto-advance step
   if ("speechSynthesis" in window) speechSynthesis.cancel();
   if (currentAudio) { try { currentAudio.pause(); } catch(e) {} }
   document.getElementById("audioToggle")?.classList.remove("playing");
@@ -445,12 +476,13 @@ function loadState() {
       onlyBookmarked: !!s.onlyBookmarked,
       order: s.order === "random" ? "random" : "sequential",
       audioOn: !!s.audioOn,
+      autoAdvance: !!s.autoAdvance,
       ratings: ratings,
       bookmarked: Array.isArray(s.bookmarked) ? s.bookmarked : [],
       theme: s.theme || null,
     };
   } catch(e) {
-    return { version:2, position:1, category:"all", ratingFilter:"all", onlyBookmarked:false, order:"sequential", audioOn:false, ratings:{}, bookmarked:[], theme:null };
+    return { version:2, position:1, category:"all", ratingFilter:"all", onlyBookmarked:false, order:"sequential", audioOn:false, autoAdvance:false, ratings:{}, bookmarked:[], theme:null };
   }
 }
 
@@ -463,6 +495,7 @@ function saveState() {
       onlyBookmarked: S.onlyBookmarked,
       order: S.order,
       audioOn: S.audioOn,
+      autoAdvance: S.autoAdvance,
       ratingFilter: S.ratingFilter,
       ratings: S.ratings,
       bookmarked: S.bookmarked,
@@ -646,6 +679,29 @@ function toggleAudio() {
   }
 }
 
+function toggleAuto() {
+  S.autoAdvance = !S.autoAdvance;
+  if (S.autoAdvance && !S.audioOn) {
+    S.audioOn = true;
+    updateAudioButton();
+    unlockAudio();
+  }
+  updateAutoButton();
+  saveState();
+  if (S.autoAdvance) autoPlayCurrent();
+  else stopSpeak();
+}
+
+function updateAutoButton() {
+  const btn = document.getElementById("autoToggle");
+  const icon = document.getElementById("autoIcon");
+  const label = document.getElementById("autoLabel");
+  btn.classList.toggle("on", S.autoAdvance);
+  btn.title = S.autoAdvance ? "자동 재생 중" : "자동 재생";
+  if (icon) icon.textContent = S.autoAdvance ? "⏸️" : "▶️";
+  if (label) label.textContent = S.autoAdvance ? "정지" : "자동";
+}
+
 function updateAudioButton() {
   const btn = document.getElementById("audioToggle");
   if (S.audioOn) { btn.textContent = "🔊 朗读"; btn.classList.add("on"); }
@@ -790,6 +846,7 @@ document.getElementById("orderToggle").addEventListener("click", toggleOrder);
   });
 });
 document.getElementById("audioToggle").addEventListener("click", toggleAudio);
+document.getElementById("autoToggle").addEventListener("click", toggleAuto);
 
 document.getElementById("themeBtn").addEventListener("click", () => {
   const cur = document.documentElement.getAttribute("data-theme");
@@ -846,6 +903,7 @@ document.getElementById("onlyBm").classList.toggle("on", S.onlyBookmarked);
 updateRatingFilterBtn();
 updateOrderButton();
 updateAudioButton();
+updateAutoButton();
 updateCatButton();
 initTheme();
 applyFilter();
