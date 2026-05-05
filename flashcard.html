@@ -88,6 +88,10 @@ h1{font-size:16px;color:var(--accent);font-weight:700}
   color:var(--text);margin:2px 0}
 .cat-item:hover{background:var(--soft)}
 .cat-item.active{background:var(--accent);color:#fff;font-weight:600}
+.cat-item.review{background:rgba(245,158,11,.15);color:#b45309;font-weight:700;
+  border:1px dashed #f59e0b;margin-bottom:6px}
+.cat-item.review:hover{background:rgba(245,158,11,.25)}
+[data-theme="dark"] .cat-item.review{color:#fbbf24}
 .cat-item-count{font-size:11px;color:var(--muted);font-weight:500}
 .cat-item.active .cat-item-count{color:rgba(255,255,255,.8)}
 .status{
@@ -478,11 +482,12 @@ function loadState() {
       audioOn: !!s.audioOn,
       autoAdvance: !!s.autoAdvance,
       ratings: ratings,
+      review: (s.review && typeof s.review === "object") ? s.review : {},
       bookmarked: Array.isArray(s.bookmarked) ? s.bookmarked : [],
       theme: s.theme || null,
     };
   } catch(e) {
-    return { version:2, position:1, category:"all", ratingFilter:"all", onlyBookmarked:false, order:"sequential", audioOn:false, autoAdvance:false, ratings:{}, bookmarked:[], theme:null };
+    return { version:2, position:1, category:"all", ratingFilter:"all", onlyBookmarked:false, order:"sequential", audioOn:false, autoAdvance:false, ratings:{}, review:{}, bookmarked:[], theme:null };
   }
 }
 
@@ -498,6 +503,7 @@ function saveState() {
       autoAdvance: S.autoAdvance,
       ratingFilter: S.ratingFilter,
       ratings: S.ratings,
+      review: S.review,
       bookmarked: S.bookmarked,
       theme: S.theme,
     }));
@@ -506,12 +512,59 @@ function saveState() {
 
 const S = loadState();
 // ratings: {no: 1|2|3}
+// review schedule (Ebbinghaus): S.review[no] = { stage: 0..6, due: timestampMs }
+const REVIEW_INTERVAL_DAYS = [0, 1, 3, 7, 15, 30, 60];   // index by stage
+const DAY_MS = 86400000;
+const TEN_MIN_MS = 600000;
+
+function scheduleReview(no, rating) {
+  const r = S.review[no] || { stage: 0, due: 0 };
+  const now = Date.now();
+  if (rating === 1) {
+    r.stage = 0;
+    r.due = now + TEN_MIN_MS;
+  } else if (rating === 2) {
+    // keep stage; just refresh due
+    const days = REVIEW_INTERVAL_DAYS[Math.min(r.stage, REVIEW_INTERVAL_DAYS.length - 1)];
+    r.due = now + (days * DAY_MS) || (now + TEN_MIN_MS);
+  } else if (rating === 3) {
+    r.stage = Math.min(r.stage + 1, REVIEW_INTERVAL_DAYS.length - 1);
+    const days = REVIEW_INTERVAL_DAYS[r.stage];
+    r.due = now + (days * DAY_MS) || (now + TEN_MIN_MS);
+  }
+  S.review[no] = r;
+}
+
+function reviewDueCount() {
+  const now = Date.now();
+  let n = 0;
+  for (const d of D) {
+    const r = S.review[d.no];
+    if (!r || r.due <= now) n++;
+  }
+  return n;
+}
 const bookmarkedSet = new Set(S.bookmarked);
 
 let current = [];
 let idx = 0;
 
 function applyFilter() {
+  if (S.category === "__review__") {
+    // Ebbinghaus review mode: due cards only, ordered by most overdue first
+    const now = Date.now();
+    current = D.filter(d => {
+      const r = S.review[d.no];
+      if (!r) return true;          // never reviewed
+      return r.due <= now;
+    });
+    current.sort((a, b) => {
+      const da = (S.review[a.no]?.due) || 0;
+      const db = (S.review[b.no]?.due) || 0;
+      return da - db;
+    });
+    return;
+  }
   current = D.filter(d => {
     if (S.category !== "all" && d.cat !== S.category) return false;
     if (S.onlyBookmarked && !bookmarkedSet.has(d.no)) return false;
@@ -617,11 +670,15 @@ function setCategory(c) {
 
 function updateCatButton() {
   const btn = document.getElementById("catBtn");
-  const total = S.category === "all"
-    ? D.length
-    : D.filter(d => d.cat === S.category).length;
-  const label = S.category === "all" ? "전체" : S.category;
-  btn.textContent = `📂 ${label} · ${total}`;
+  let label, total;
+  if (S.category === "__review__") {
+    label = "📚 오늘 복습";
+    total = current.length || reviewDueCount();
+  } else {
+    total = S.category === "all" ? D.length : D.filter(d => d.cat === S.category).length;
+    label = S.category === "all" ? "전체" : S.category;
+  }
+  btn.textContent = S.category === "__review__" ? `${label} · ${total}` : `📂 ${label} · ${total}`;
   btn.title = label;
 }
 
@@ -631,14 +688,17 @@ function buildCatList(filter = "") {
   const counts = new Map();
   for (const d of D) counts.set(d.cat, (counts.get(d.cat) || 0) + 1);
   const cats = [...counts.entries()].sort((a, b) => b[1] - a[1]);
-  const items = [["all", D.length], ...cats];
+  const items = [["__review__", reviewDueCount()], ["all", D.length], ...cats];
   const filtered = items.filter(([name]) =>
-    !q || name === "all" || name.toLowerCase().includes(q)
+    !q || name === "__review__" || name === "all" || name.toLowerCase().includes(q)
   );
   list.innerHTML = filtered.map(([name, n]) => {
-    const label = name === "all" ? "전체 (All)" : name;
+    let label, extra = "";
+    if (name === "__review__") { label = "📚 오늘 복습 (Ebbinghaus)"; extra = " review"; }
+    else if (name === "all") label = "전체 (All)";
+    else label = name;
     const active = name === S.category ? " active" : "";
-    return `<div class="cat-item${active}" data-cat="${name.replace(/"/g,"&quot;")}">
+    return `<div class="cat-item${active}${extra}" data-cat="${name.replace(/"/g,"&quot;")}">
       <span>${label}</span><span class="cat-item-count">${n}</span>
     </div>`;
   }).join("");
@@ -758,9 +818,17 @@ function setRating(rating) {
   const next = cur === rating ? 0 : rating;
   if (next === 0) delete S.ratings[d.no];
   else S.ratings[d.no] = next;
-  if (S.ratingFilter !== "all") applyFilter();
+  // Update Ebbinghaus schedule on a real rating (not on cancel-toggle)
+  if (next !== 0) scheduleReview(d.no, next);
+  // In review mode, the just-rated card should disappear from the queue
+  if (S.category === "__review__" && next !== 0) {
+    applyFilter();
+    if (current.length > 0 && idx >= current.length) idx = current.length - 1;
+    if (current.length > 0) S.position = current[idx].no;
+  } else if (S.ratingFilter !== "all") applyFilter();
   saveState();
   render(false);
+  updateCatButton();
 }
 
 function toggleOnlyBm() {
